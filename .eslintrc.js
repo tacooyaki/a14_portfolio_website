@@ -14,11 +14,12 @@ module.exports = {
     },
   },
   rules: {
-    // Your custom rules
+    // Custom rules
   },
   settings: {
     react: {
       version: 'detect',
     },
   },
+  ignorePatterns: ['*.md'],
 };

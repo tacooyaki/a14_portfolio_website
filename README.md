@@ -1,7 +1,6 @@
 # Running this React App for Docker
 
-This project includes a Create React App and Storybook for accessing and 
-using components. Additionally, it includes pre-commit checks using Husky.
+This project includes a Create React App to display a portfolio website.
 
 ## Prerequisites
 
@@ -57,6 +56,6 @@ Tests
 
 ## GitHub Actions Workflow
 
-The GitHub Actions workflow is configured in .github/workflows/ci.yml so 
-that the same checks are run for every code submission, and the user will 
+The GitHub Actions workflow is configured in .github/workflows/ci.yml so
+that the same checks are run for every code submission, and the user will
 be notified if the build fails.
