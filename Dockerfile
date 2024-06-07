@@ -4,24 +4,23 @@ FROM node:latest
 # Set the working directory
 WORKDIR /usr/src/app/mercredi_patrick_ui_garden
 
-# Copy the current directory contents into the container
-COPY . .
+# Copy package.json and package-lock.json
+COPY package*.json ./
 
 # Install dependencies
 RUN npm install
 
+# Copy the rest of the application files
+COPY . .
+
 # Build the Create React App for production
 RUN npm run build
 
-# Build Storybook as a static web application
-RUN npm run build-storybook -o ./storybook-static
+# Install serve globally
+RUN npm install -g serve
 
-# Install serve and http-server globally
-RUN npm install -g serve http-server
+# Expose the port the app will run on
+EXPOSE 5575
 
-# Expose the ports http-server will run on
-EXPOSE 8018
-EXPOSE 8084
-
-# Serve both the CRA and Storybook
-CMD ["sh", "-c", "serve -s build -l 8018 & http-server ./storybook-static -p 8084"]
+# Serve the build directory
+CMD ["serve", "-s", "build", "-l", "5575"]
