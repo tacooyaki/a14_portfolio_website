@@ -9,7 +9,7 @@ describe('Dropdown Component', () => {
       <Dropdown
         options={[{ value: '1', label: 'Option 1' }]}
         onChange={() => {}}
-      />
+      />,
     );
     const dropdownElement = screen.getByRole('combobox');
     expect(dropdownElement).toBeVisible();
@@ -21,7 +21,7 @@ describe('Dropdown Component', () => {
         options={[{ value: '1', label: 'Option 1' }]}
         onChange={() => {}}
         disabled
-      />
+      />,
     );
     const dropdownElement = screen.getByRole('combobox');
     expect(dropdownElement).toHaveStyle('background-color: #f0f0f0');

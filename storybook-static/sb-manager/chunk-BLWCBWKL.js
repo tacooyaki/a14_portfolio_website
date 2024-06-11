@@ -138,7 +138,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
   }, []),
   placements = [].concat(basePlacements, [auto]).reduce(function (
     acc,
-    placement
+    placement,
   ) {
     return acc.concat([
       placement,
@@ -231,7 +231,7 @@ function effect(_ref2) {
           styleProperties = Object.keys(
             state.styles.hasOwnProperty(name)
               ? state.styles[name]
-              : initialStyles[name]
+              : initialStyles[name],
           ),
           style = styleProperties.reduce(function (style2, property) {
             return (style2[property] = ''), style2;
@@ -432,13 +432,13 @@ var toPaddingObject = function (padding, state) {
     (padding =
       typeof padding == 'function'
         ? padding(
-            Object.assign({}, state.rects, { placement: state.placement })
+            Object.assign({}, state.rects, { placement: state.placement }),
           )
         : padding),
     mergePaddingObject(
       typeof padding != 'number'
         ? padding
-        : expandToHashMap(padding, basePlacements)
+        : expandToHashMap(padding, basePlacements),
     )
   );
 };
@@ -589,7 +589,7 @@ function mapToStyles(_ref2) {
         (win.devicePixelRatio || 1) <= 1
           ? 'translate(' + x + 'px, ' + y + 'px)'
           : 'translate3d(' + x + 'px, ' + y + 'px, 0)'),
-      _Object$assign)
+      _Object$assign),
     );
   }
   return Object.assign(
@@ -599,7 +599,7 @@ function mapToStyles(_ref2) {
     (_Object$assign2[sideY] = hasY ? y + 'px' : ''),
     (_Object$assign2[sideX] = hasX ? x + 'px' : ''),
     (_Object$assign2.transform = ''),
-    _Object$assign2)
+    _Object$assign2),
   );
 }
 function computeStyles(_ref5) {
@@ -631,8 +631,8 @@ function computeStyles(_ref5) {
           position: state.options.strategy,
           adaptive,
           roundOffsets,
-        })
-      )
+        }),
+      ),
     )),
     state.modifiersData.arrow != null &&
       (state.styles.arrow = Object.assign(
@@ -644,8 +644,8 @@ function computeStyles(_ref5) {
             position: 'absolute',
             adaptive: !1,
             roundOffsets,
-          })
-        )
+          }),
+        ),
       )),
     (state.attributes.popper = Object.assign({}, state.attributes.popper, {
       'data-popper-placement': state.placement,
@@ -670,7 +670,7 @@ function effect3(_ref) {
     window2 = getWindow(state.elements.popper),
     scrollParents = [].concat(
       state.scrollParents.reference,
-      state.scrollParents.popper
+      state.scrollParents.popper,
     );
   return (
     scroll &&
@@ -748,13 +748,13 @@ function getDocumentRect(element) {
       html.scrollWidth,
       html.clientWidth,
       body ? body.scrollWidth : 0,
-      body ? body.clientWidth : 0
+      body ? body.clientWidth : 0,
     ),
     height = max(
       html.scrollHeight,
       html.clientHeight,
       body ? body.scrollHeight : 0,
-      body ? body.clientHeight : 0
+      body ? body.clientHeight : 0,
     ),
     x = -winScroll.scrollLeft + getWindowScrollBarX(element),
     y = -winScroll.scrollTop;
@@ -791,7 +791,7 @@ function listScrollParents(element, list) {
     target = isBody
       ? [win].concat(
           win.visualViewport || [],
-          isScrollParent(scrollParent) ? scrollParent : []
+          isScrollParent(scrollParent) ? scrollParent : [],
         )
       : scrollParent,
     updatedList = list.concat(target);
@@ -858,7 +858,7 @@ function getClippingRect(element, boundary, rootBoundary, strategy) {
         var rect = getClientRectFromMixedType(
           element,
           clippingParent,
-          strategy
+          strategy,
         );
         return (
           (accRect.top = max(rect.top, accRect.top)),
@@ -868,7 +868,7 @@ function getClippingRect(element, boundary, rootBoundary, strategy) {
           accRect
         );
       },
-      getClientRectFromMixedType(element, firstClippingParent, strategy)
+      getClientRectFromMixedType(element, firstClippingParent, strategy),
     );
   return (
     (clippingRect.width = clippingRect.right - clippingRect.left),
@@ -944,7 +944,7 @@ function detectOverflow(state, options) {
     paddingObject = mergePaddingObject(
       typeof padding != 'number'
         ? padding
-        : expandToHashMap(padding, basePlacements)
+        : expandToHashMap(padding, basePlacements),
     ),
     altContext = elementContext === popper ? reference : popper,
     popperRect = state.rects.popper,
@@ -955,7 +955,7 @@ function detectOverflow(state, options) {
         : element.contextElement || getDocumentElement(state.elements.popper),
       boundary,
       rootBoundary,
-      strategy
+      strategy,
     ),
     referenceClientRect = getBoundingClientRect(state.elements.reference),
     popperOffsets2 = computeOffsets({
@@ -965,7 +965,7 @@ function detectOverflow(state, options) {
       placement,
     }),
     popperClientRect = rectToClientRect(
-      Object.assign({}, popperRect, popperOffsets2)
+      Object.assign({}, popperRect, popperOffsets2),
     ),
     elementClientRect =
       elementContext === popper ? popperClientRect : referenceClientRect,
@@ -1080,7 +1080,7 @@ function flip(_ref) {
                     flipVariations,
                     allowedAutoPlacements,
                   })
-                : placement2
+                : placement2,
             );
           }, []),
         referenceRect = state.rects.reference,
@@ -1120,7 +1120,7 @@ function flip(_ref) {
         checkAltAxis &&
           checks.push(
             overflow[mainVariationSide] <= 0,
-            overflow[altVariationSide] <= 0
+            overflow[altVariationSide] <= 0,
           ),
         checks.every(function (check) {
           return check;
@@ -1194,7 +1194,7 @@ function hide(_ref) {
     popperEscapeOffsets = getSideOffsets(
       popperAltOverflow,
       popperRect,
-      preventedOffsets
+      preventedOffsets,
     ),
     isReferenceHidden = isAnySideFullyClipped(referenceClippingOffsets),
     hasPopperEscaped = isAnySideFullyClipped(popperEscapeOffsets);
@@ -1244,7 +1244,7 @@ function offset(_ref2) {
         (acc[placement] = distanceAndSkiddingToXY(
           placement,
           state.rects,
-          offset2
+          offset2,
         )),
         acc
       );
@@ -1317,7 +1317,7 @@ function preventOverflow(_ref) {
     tetherOffsetValue =
       typeof tetherOffset == 'function'
         ? tetherOffset(
-            Object.assign({}, state.rects, { placement: state.placement })
+            Object.assign({}, state.rects, { placement: state.placement }),
           )
         : tetherOffset,
     normalizedTetherOffsetValue =
@@ -1387,7 +1387,7 @@ function preventOverflow(_ref) {
         preventedOffset = within(
           tether ? min(min2, tetherMin) : min2,
           offset2,
-          tether ? max(max2, tetherMax) : max2
+          tether ? max(max2, tetherMax) : max2,
         );
       (popperOffsets2[mainAxis] = preventedOffset),
         (data[mainAxis] = preventedOffset - offset2);
@@ -1425,7 +1425,7 @@ function preventOverflow(_ref) {
             : within(
                 tether ? _tetherMin : _min,
                 _offset,
-                tether ? _tetherMax : _max
+                tether ? _tetherMax : _max,
               );
       (popperOffsets2[altAxis] = _preventedOffset),
         (data[altAxis] = _preventedOffset - _offset);
@@ -1463,7 +1463,7 @@ function getCompositeRect(elementOrVirtualElement, offsetParent, isFixed) {
     rect = getBoundingClientRect(
       elementOrVirtualElement,
       offsetParentIsScaled,
-      isFixed
+      isFixed,
     ),
     scroll = { scrollLeft: 0, scrollTop: 0 },
     offsets = { x: 0, y: 0 };
@@ -1497,7 +1497,7 @@ function order(modifiers) {
     visited.add(modifier.name);
     var requires = [].concat(
       modifier.requires || [],
-      modifier.requiresIfExists || []
+      modifier.requiresIfExists || [],
     );
     requires.forEach(function (dep) {
       if (!visited.has(dep)) {
@@ -1520,7 +1520,7 @@ function orderModifiers(modifiers) {
     return acc.concat(
       orderedModifiers.filter(function (modifier) {
         return modifier.phase === phase;
-      })
+      }),
     );
   }, []);
 }
@@ -1607,7 +1607,7 @@ function popperGenerator(generatorOptions) {
               {},
               defaultOptions,
               state.options,
-              options2
+              options2,
             )),
             (state.scrollParents = {
               reference: isElement(reference2)
@@ -1618,7 +1618,7 @@ function popperGenerator(generatorOptions) {
               popper: listScrollParents(popper2),
             });
           var orderedModifiers = orderModifiers(
-            mergeByName([].concat(defaultModifiers2, state.options.modifiers))
+            mergeByName([].concat(defaultModifiers2, state.options.modifiers)),
           );
           return (
             (state.orderedModifiers = orderedModifiers.filter(function (m) {
@@ -1638,7 +1638,7 @@ function popperGenerator(generatorOptions) {
                 reference: getCompositeRect(
                   reference3,
                   getOffsetParent(popper3),
-                  state.options.strategy === 'fixed'
+                  state.options.strategy === 'fixed',
                 ),
                 popper: getLayoutRect(popper3),
               }),
@@ -1647,7 +1647,7 @@ function popperGenerator(generatorOptions) {
                 state.orderedModifiers.forEach(function (modifier) {
                   return (state.modifiersData[modifier.name] = Object.assign(
                     {},
-                    modifier.data
+                    modifier.data,
                   ));
                 });
               for (
@@ -1758,12 +1758,12 @@ var defaultModifiers = [
                 styles: fromEntries(
                   elements.map(function (element) {
                     return [element, state2.styles[element] || {}];
-                  })
+                  }),
                 ),
                 attributes: fromEntries(
                   elements.map(function (element) {
                     return [element, state2.attributes[element]];
-                  })
+                  }),
                 ),
               });
             });
@@ -1784,7 +1784,7 @@ var defaultModifiers = [
           };
           return (0, import_react_fast_compare.default)(
             prevOptions.current,
-            newOptions
+            newOptions,
           )
             ? prevOptions.current || newOptions
             : ((prevOptions.current = newOptions), newOptions);
@@ -1795,7 +1795,7 @@ var defaultModifiers = [
           optionsWithDefaults.strategy,
           optionsWithDefaults.modifiers,
           updateStateModifier,
-        ]
+        ],
       ),
       popperInstanceRef = React3.useRef();
     return (
@@ -1804,7 +1804,7 @@ var defaultModifiers = [
           popperInstanceRef.current &&
             popperInstanceRef.current.setOptions(popperOptions);
         },
-        [popperOptions]
+        [popperOptions],
       ),
       useIsomorphicLayoutEffect(
         function () {
@@ -1813,7 +1813,7 @@ var defaultModifiers = [
               popperInstance = createPopper2(
                 referenceElement,
                 popperElement,
-                popperOptions
+                popperOptions,
               );
             return (
               (popperInstanceRef.current = popperInstance),
@@ -1823,7 +1823,7 @@ var defaultModifiers = [
             );
           }
         },
-        [referenceElement, popperElement, options.createPopper]
+        [referenceElement, popperElement, options.createPopper],
       ),
       {
         state: popperInstanceRef.current
@@ -1857,7 +1857,7 @@ function useControlledState(_ref) {
     onChange = _ref$onChange === void 0 ? noop : _ref$onChange;
   if (initial === void 0 && value === void 0)
     throw new TypeError(
-      'Either "value" or "initial" variable must be set. Now both are undefined'
+      'Either "value" or "initial" variable must be set. Now both are undefined',
     );
   var _React$useState = React3.useState(initial),
     state = _React$useState[0],
@@ -1872,7 +1872,7 @@ function useControlledState(_ref) {
           setState(updatedState),
           typeof onChange == 'function' && onChange(updatedState);
       },
-      [getLatest, onChange]
+      [getLatest, onChange],
     ),
     isControlled = value !== void 0;
   return [isControlled ? value : state, isControlled ? onChange : set];
@@ -1924,14 +1924,14 @@ function usePopperTooltip(config, popperOptions) {
         ((_extends2 = {}),
         (_extends2[key] =
           config2[key] !== void 0 ? config2[key] : defaultConfig[key]),
-        _extends2)
+        _extends2),
       );
     }, config),
     defaultModifiers2 = React3.useMemo(
       function () {
         return [{ name: 'offset', options: { offset: finalConfig.offset } }];
       },
-      Array.isArray(finalConfig.offset) ? finalConfig.offset : []
+      Array.isArray(finalConfig.offset) ? finalConfig.offset : [],
     ),
     finalPopperOptions = _extends({}, popperOptions, {
       placement: popperOptions.placement || finalConfig.placement,
@@ -1959,7 +1959,7 @@ function usePopperTooltip(config, popperOptions) {
   var _usePopper = usePopper(
       finalConfig.followCursor ? virtualElement : triggerRef,
       tooltipRef,
-      finalPopperOptions
+      finalPopperOptions,
     ),
     styles = _usePopper.styles,
     attributes = _usePopper.attributes,
@@ -1974,7 +1974,7 @@ function usePopperTooltip(config, popperOptions) {
       },
       Array.isArray(finalConfig.trigger)
         ? finalConfig.trigger
-        : [finalConfig.trigger]
+        : [finalConfig.trigger],
     ),
     hideTooltip = React3.useCallback(
       function () {
@@ -1983,7 +1983,7 @@ function usePopperTooltip(config, popperOptions) {
             return setVisible(!1);
           }, finalConfig.delayHide));
       },
-      [finalConfig.delayHide, setVisible]
+      [finalConfig.delayHide, setVisible],
     ),
     showTooltip = React3.useCallback(
       function () {
@@ -1992,13 +1992,13 @@ function usePopperTooltip(config, popperOptions) {
             return setVisible(!0);
           }, finalConfig.delayShow));
       },
-      [finalConfig.delayShow, setVisible]
+      [finalConfig.delayShow, setVisible],
     ),
     toggleTooltip = React3.useCallback(
       function () {
         getLatest().visible ? hideTooltip() : showTooltip();
       },
-      [getLatest, hideTooltip, showTooltip]
+      [getLatest, hideTooltip, showTooltip],
     );
   React3.useEffect(
     function () {
@@ -2025,13 +2025,13 @@ function usePopperTooltip(config, popperOptions) {
           function () {
             return document.removeEventListener(
               'mousedown',
-              handleClickOutside
+              handleClickOutside,
             );
           }
         );
       }
     },
-    [getLatest, hideTooltip]
+    [getLatest, hideTooltip],
   ),
     React3.useEffect(
       function () {
@@ -2043,7 +2043,7 @@ function usePopperTooltip(config, popperOptions) {
             }
           );
       },
-      [triggerRef, isTriggeredBy, toggleTooltip]
+      [triggerRef, isTriggeredBy, toggleTooltip],
     ),
     React3.useEffect(
       function () {
@@ -2055,7 +2055,7 @@ function usePopperTooltip(config, popperOptions) {
             }
           );
       },
-      [triggerRef, isTriggeredBy, toggleTooltip]
+      [triggerRef, isTriggeredBy, toggleTooltip],
     ),
     React3.useEffect(
       function () {
@@ -2068,13 +2068,13 @@ function usePopperTooltip(config, popperOptions) {
             function () {
               return triggerRef.removeEventListener(
                 'contextmenu',
-                preventDefaultAndToggle
+                preventDefaultAndToggle,
               );
             }
           );
         }
       },
-      [triggerRef, isTriggeredBy, toggleTooltip]
+      [triggerRef, isTriggeredBy, toggleTooltip],
     ),
     React3.useEffect(
       function () {
@@ -2088,7 +2088,7 @@ function usePopperTooltip(config, popperOptions) {
             }
           );
       },
-      [triggerRef, isTriggeredBy, showTooltip, hideTooltip]
+      [triggerRef, isTriggeredBy, showTooltip, hideTooltip],
     ),
     React3.useEffect(
       function () {
@@ -2102,7 +2102,7 @@ function usePopperTooltip(config, popperOptions) {
             }
           );
       },
-      [triggerRef, isTriggeredBy, showTooltip, hideTooltip]
+      [triggerRef, isTriggeredBy, showTooltip, hideTooltip],
     ),
     React3.useEffect(
       function () {
@@ -2122,7 +2122,7 @@ function usePopperTooltip(config, popperOptions) {
             }
           );
       },
-      [tooltipRef, isTriggeredBy, showTooltip, hideTooltip, getLatest]
+      [tooltipRef, isTriggeredBy, showTooltip, hideTooltip, getLatest],
     );
   var isReferenceHidden =
     popperProps == null ||
@@ -2135,7 +2135,7 @@ function usePopperTooltip(config, popperOptions) {
     function () {
       finalConfig.closeOnTriggerHidden && isReferenceHidden && hideTooltip();
     },
-    [finalConfig.closeOnTriggerHidden, hideTooltip, isReferenceHidden]
+    [finalConfig.closeOnTriggerHidden, hideTooltip, isReferenceHidden],
   ),
     React3.useEffect(
       function () {
@@ -2145,7 +2145,7 @@ function usePopperTooltip(config, popperOptions) {
             clientY = _ref.clientY;
           (virtualElement.getBoundingClientRect = generateBoundingClientRect(
             clientX,
-            clientY
+            clientY,
           )),
             update?.();
         }
@@ -2154,12 +2154,12 @@ function usePopperTooltip(config, popperOptions) {
           function () {
             return triggerRef.removeEventListener(
               'mousemove',
-              setMousePosition
+              setMousePosition,
             );
           }
         );
       },
-      [finalConfig.followCursor, triggerRef, update]
+      [finalConfig.followCursor, triggerRef, update],
     ),
     React3.useEffect(
       function () {
@@ -2179,7 +2179,7 @@ function usePopperTooltip(config, popperOptions) {
           );
         }
       },
-      [finalConfig.mutationObserverOptions, tooltipRef, update]
+      [finalConfig.mutationObserverOptions, tooltipRef, update],
     );
   var getTooltipProps = function (args) {
       return (
@@ -2189,7 +2189,7 @@ function usePopperTooltip(config, popperOptions) {
           args,
           { style: _extends({}, args.style, styles.popper) },
           attributes.popper,
-          { 'data-popper-interactive': finalConfig.interactive }
+          { 'data-popper-interactive': finalConfig.interactive },
         )
       );
     },
@@ -2212,12 +2212,12 @@ function usePopperTooltip(config, popperOptions) {
       triggerRef,
       visible,
     },
-    popperProps
+    popperProps,
   );
 }
 var match = (0, import_memoizerific.default)(1e3)(
     (requests, actual, value, fallback = 0) =>
-      actual.split('-')[0] === requests ? value : fallback
+      actual.split('-')[0] === requests ? value : fallback,
   ),
   ArrowSpacing = 8,
   Arrow = newStyled.div(
@@ -2252,7 +2252,7 @@ var match = (0, import_memoizerific.default)(1e3)(
         theme.color[color] || color || theme.base === 'light'
           ? lightenColor(theme.background.app)
           : theme.background.app,
-        'transparent'
+        'transparent',
       ),
       borderBottomColor: match(
         'bottom',
@@ -2260,7 +2260,7 @@ var match = (0, import_memoizerific.default)(1e3)(
         theme.color[color] || color || theme.base === 'light'
           ? lightenColor(theme.background.app)
           : theme.background.app,
-        'transparent'
+        'transparent',
       ),
       borderLeftColor: match(
         'left',
@@ -2268,7 +2268,7 @@ var match = (0, import_memoizerific.default)(1e3)(
         theme.color[color] || color || theme.base === 'light'
           ? lightenColor(theme.background.app)
           : theme.background.app,
-        'transparent'
+        'transparent',
       ),
       borderRightColor: match(
         'right',
@@ -2276,9 +2276,9 @@ var match = (0, import_memoizerific.default)(1e3)(
         theme.color[color] || color || theme.base === 'light'
           ? lightenColor(theme.background.app)
           : theme.background.app,
-        'transparent'
+        'transparent',
       ),
-    })
+    }),
   ),
   Wrapper = newStyled.div(
     ({ hidden }) => ({
@@ -2299,7 +2299,7 @@ var match = (0, import_memoizerific.default)(1e3)(
             borderRadius: theme.appBorderRadius,
             fontSize: theme.typography.size.s1,
           }
-        : {}
+        : {},
   ),
   Tooltip = import_react.default.forwardRef(
     (
@@ -2313,7 +2313,7 @@ var match = (0, import_memoizerific.default)(1e3)(
         withArrows,
         ...props
       },
-      ref
+      ref,
     ) =>
       import_react.default.createElement(
         Wrapper,
@@ -2325,8 +2325,8 @@ var match = (0, import_memoizerific.default)(1e3)(
             ...arrowProps,
             color,
           }),
-        children
-      )
+        children,
+      ),
   );
 Tooltip.displayName = 'Tooltip';
 var { document: document2 } = scope,
@@ -2388,7 +2388,7 @@ var { document: document2 } = scope,
           visible,
           offset: offset2,
         },
-        { modifiers, strategy }
+        { modifiers, strategy },
       ),
       tooltipComponent = import_react.default.createElement(
         Tooltip,
@@ -2402,7 +2402,7 @@ var { document: document2 } = scope,
         },
         typeof tooltip == 'function'
           ? tooltip({ onHide: () => onVisibleChange(!1) })
-          : tooltip
+          : tooltip,
       );
     return import_react.default.createElement(
       import_react.default.Fragment,
@@ -2410,10 +2410,10 @@ var { document: document2 } = scope,
       import_react.default.createElement(
         Container,
         { trigger, ref: setTriggerRef, ...props },
-        children
+        children,
       ),
       isVisible &&
-        import_react_dom.default.createPortal(tooltipComponent, document2.body)
+        import_react_dom.default.createPortal(tooltipComponent, document2.body),
     );
   },
   WithToolTipState = ({
@@ -2427,7 +2427,7 @@ var { document: document2 } = scope,
           (onChange && onChange(visibility) === !1) ||
             setTooltipShown(visibility);
         },
-        [onChange]
+        [onChange],
       );
     return (
       (0, import_react.useEffect)(() => {
@@ -2442,13 +2442,13 @@ var { document: document2 } = scope,
                 iframe.contentWindow.document &&
                   (iframe.contentWindow.document.addEventListener(
                     'click',
-                    hide2
+                    hide2,
                   ),
                   unbinders.push(() => {
                     try {
                       iframe.contentWindow.document.removeEventListener(
                         'click',
-                        hide2
+                        hide2,
                       );
                     } catch {}
                   }));

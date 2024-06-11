@@ -5,7 +5,7 @@
     './node_modules/@storybook/blocks/dist/Color-PRSJMWNM.mjs': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       __webpack_require__.r(__webpack_exports__),
@@ -14,7 +14,7 @@
           default: () => Color_default,
         });
       var chunk_GWAJ4KRU = __webpack_require__(
-          './node_modules/@storybook/blocks/dist/chunk-GWAJ4KRU.mjs'
+          './node_modules/@storybook/blocks/dist/chunk-GWAJ4KRU.mjs',
         ),
         react = __webpack_require__('./node_modules/react/index.js');
       function u() {
@@ -135,7 +135,7 @@
                   t,
                 ];
               },
-              [p, g]
+              [p, g],
             ),
             C = x[0],
             E = x[1],
@@ -145,7 +145,7 @@
               function () {
                 return H;
               },
-              [H]
+              [H],
             ),
             react.createElement(
               'div',
@@ -157,7 +157,7 @@
                 onKeyDown: E,
                 tabIndex: 0,
                 role: 'slider',
-              })
+              }),
             )
           );
         }),
@@ -179,7 +179,7 @@
             react.createElement('div', {
               className: 'react-colorful__pointer-fill',
               style: { backgroundColor: t },
-            })
+            }),
           );
         },
         b = function (e, r, t) {
@@ -220,7 +220,7 @@
         H = function (e) {
           var r =
             /hsla?\(?\s*(-?\d*\.?\d+)(deg|rad|grad|turn)?[,\s]+(-?\d*\.?\d+)%?[,\s]+(-?\d*\.?\d+)%?,?\s*[/\s]*(-?\d*\.?\d+)?(%)?\s*\)?/i.exec(
-              e
+              e,
             );
           return r
             ? N({
@@ -257,7 +257,7 @@
             s: b(
               o > 0 && o < 200
                 ? ((r * t) / 100 / (o <= 100 ? o : 200 - o)) * 100
-                : 0
+                : 0,
             ),
             l: b(o / 2),
             a: b(n, 2),
@@ -292,7 +292,7 @@
         z = function (e) {
           var r =
             /rgba?\(?\s*(-?\d*\.?\d+)(%)?[,\s]+(-?\d*\.?\d+)(%)?[,\s]+(-?\d*\.?\d+)(%)?,?\s*[/\s]*(-?\d*\.?\d+)?(%)?\s*\)?/i.exec(
-              e
+              e,
             );
           return r
             ? L({
@@ -361,8 +361,8 @@
                 className: 'react-colorful__hue-pointer',
                 left: t / 360,
                 color: q({ h: t, s: 100, v: 100, a: 1 }),
-              })
-            )
+              }),
+            ),
           );
         }),
         T = react.memo(function (r) {
@@ -393,8 +393,8 @@
                 top: 1 - t.v / 100,
                 left: t.s / 100,
                 color: q(t),
-              })
-            )
+              }),
+            ),
           );
         }),
         F = function (e, r) {
@@ -423,7 +423,7 @@
               (v.current = { hsva: r, color: t }), f(r);
             }
           },
-          [t, e]
+          [t, e],
         ),
           (0, react.useEffect)(
             function () {
@@ -432,7 +432,7 @@
                 e.equal((r = e.fromHsva(s)), v.current.color) ||
                 ((v.current = { hsva: s, color: r }), u(r));
             },
-            [s, e, u]
+            [s, e, u],
           );
         var d = (0, react.useCallback)(function (e) {
           f(function (r) {
@@ -482,7 +482,7 @@
               hue: d.h,
               onChange: h,
               className: 'react-colorful__last-control',
-            })
+            }),
           );
         },
         W = {
@@ -533,8 +533,8 @@
                 className: 'react-colorful__alpha-pointer',
                 left: n.a,
                 color: k(n),
-              })
-            )
+              }),
+            ),
           );
         },
         re = function (t) {
@@ -559,7 +559,7 @@
               hsva: d,
               onChange: h,
               className: 'react-colorful__last-control',
-            })
+            }),
           );
         },
         le = {
@@ -578,19 +578,19 @@
           equal: P,
         },
         color_convert = __webpack_require__(
-          './node_modules/color-convert/index.js'
+          './node_modules/color-convert/index.js',
         ),
         color_convert_default = __webpack_require__.n(color_convert),
         throttle = __webpack_require__('./node_modules/lodash/throttle.js'),
         throttle_default = __webpack_require__.n(throttle),
         dist = __webpack_require__(
-          './node_modules/@storybook/theming/dist/index.mjs'
+          './node_modules/@storybook/theming/dist/index.mjs',
         ),
         components_dist = __webpack_require__(
-          './node_modules/@storybook/components/dist/index.mjs'
+          './node_modules/@storybook/components/dist/index.mjs',
         ),
         icons_dist = __webpack_require__(
-          './node_modules/@storybook/icons/dist/index.mjs'
+          './node_modules/@storybook/icons/dist/index.mjs',
         ),
         Wrapper = dist.I4.div({
           position: 'relative',
@@ -646,7 +646,7 @@
             paddingRight: 30,
             boxSizing: 'border-box',
             fontFamily: theme.typography.fonts.base,
-          })
+          }),
         ),
         ToggleIcon = (0, dist.I4)(icons_dist.QDE)(({ theme }) => ({
           position: 'absolute',
@@ -762,7 +762,7 @@
           let [value, setValue] = (0, react.useState)(initialValue || ''),
             [color, setColor] = (0, react.useState)(() => parseValue(value)),
             [colorSpace, setColorSpace] = (0, react.useState)(
-              color?.colorSpace || 'hex'
+              color?.colorSpace || 'hex',
             );
           (0, react.useEffect)(() => {
             let nextValue = initialValue || '',
@@ -791,7 +791,7 @@
                   let [r, g, b] = short[1].split('');
                   return `#${r}${r}${g}${g}${b}${b}`;
                 })(value, color, colorSpace).toLowerCase(),
-              [value, color, colorSpace]
+              [value, color, colorSpace],
             ),
             updateValue = (0, react.useCallback)(
               (update) => {
@@ -804,7 +804,7 @@
                     setColorSpace(parsed.colorSpace),
                     onChange(parsed.value));
               },
-              [onChange]
+              [onChange],
             ),
             cycleColorSpace = (0, react.useCallback)(() => {
               let next = COLOR_SPACES.indexOf(colorSpace) + 1;
@@ -835,7 +835,7 @@
         }) => {
           let throttledOnChange = (0, react.useCallback)(
               throttle_default()(onChange, 200),
-              [onChange]
+              [onChange],
             ),
             {
               value,
@@ -848,10 +848,10 @@
             { presets, addPreset } = ((
               presetColors,
               currentColor,
-              colorSpace
+              colorSpace,
             ) => {
               let [selectedColors, setSelectedColors] = (0, react.useState)(
-                currentColor?.valid ? [currentColor] : []
+                currentColor?.valid ? [currentColor] : [],
               );
               (0, react.useEffect)(() => {
                 void 0 === currentColor && setSelectedColors([]);
@@ -867,23 +867,23 @@
                                 ...parseValue(preset.color),
                                 keyword: preset.title,
                               }
-                            : parseValue(preset.color)
+                            : parseValue(preset.color),
                       )
                       .concat(selectedColors)
                       .filter(Boolean)
                       .slice(-27),
-                  [presetColors, selectedColors]
+                  [presetColors, selectedColors],
                 ),
                 addPreset = (0, react.useCallback)(
                   (color) => {
                     color?.valid &&
                       (presets.some(
                         (preset) =>
-                          id(preset[colorSpace]) === id(color[colorSpace])
+                          id(preset[colorSpace]) === id(color[colorSpace]),
                       ) ||
                         setSelectedColors((arr) => arr.concat(color)));
                   },
-                  [colorSpace, presets]
+                  [colorSpace, presets],
                 );
               return { presets, addPreset };
             })(presetColors, color, colorSpace),
@@ -928,16 +928,16 @@
                               color &&
                               id(preset[colorSpace]) === id(color[colorSpace]),
                             onClick: () => updateValue(preset.value),
-                          })
-                        )
-                      )
-                    )
+                          }),
+                        ),
+                      ),
+                    ),
                 ),
               },
               react.createElement(Swatch, {
                 value: realValue,
                 style: { margin: 4 },
-              })
+              }),
             ),
             react.createElement(Input, {
               id: (0, chunk_GWAJ4KRU.Z)(name),
@@ -949,7 +949,7 @@
             }),
             value
               ? react.createElement(ToggleIcon, { onClick: cycleColorSpace })
-              : null
+              : null,
           );
         },
         Color_default = ColorControl;
@@ -957,10 +957,10 @@
     './node_modules/color-convert/conversions.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       const cssKeywords = __webpack_require__(
-          './node_modules/color-name/index.js'
+          './node_modules/color-name/index.js',
         ),
         reverseKeywords = {};
       for (const key of Object.keys(cssKeywords))
@@ -1546,10 +1546,10 @@
     './node_modules/color-convert/index.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       const conversions = __webpack_require__(
-          './node_modules/color-convert/conversions.js'
+          './node_modules/color-convert/conversions.js',
         ),
         route = __webpack_require__('./node_modules/color-convert/route.js'),
         convert = {};
@@ -1599,10 +1599,10 @@
     './node_modules/color-convert/route.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       const conversions = __webpack_require__(
-        './node_modules/color-convert/conversions.js'
+        './node_modules/color-convert/conversions.js',
       );
       function deriveBFS(fromModel) {
         const graph = (function buildGraph() {
@@ -1810,10 +1810,10 @@
     './node_modules/lodash/_baseTrim.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       var trimmedEndIndex = __webpack_require__(
-          './node_modules/lodash/_trimmedEndIndex.js'
+          './node_modules/lodash/_trimmedEndIndex.js',
         ),
         reTrimStart = /^\s+/;
       module.exports = function baseTrim(string) {
@@ -1838,7 +1838,7 @@
     './node_modules/lodash/debounce.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       var isObject = __webpack_require__('./node_modules/lodash/isObject.js'),
         now = __webpack_require__('./node_modules/lodash/now.js'),
@@ -1886,7 +1886,7 @@
               return maxing
                 ? nativeMin(timeWaiting, maxWait - (time - lastInvokeTime))
                 : timeWaiting;
-            })(time)
+            })(time),
           );
         }
         function trailingEdge(time) {
@@ -1949,7 +1949,7 @@
     './node_modules/lodash/now.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       var root = __webpack_require__('./node_modules/lodash/_root.js');
       module.exports = function () {
@@ -1959,7 +1959,7 @@
     './node_modules/lodash/throttle.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       var debounce = __webpack_require__('./node_modules/lodash/debounce.js'),
         isObject = __webpack_require__('./node_modules/lodash/isObject.js');
@@ -1979,7 +1979,7 @@
     './node_modules/lodash/toNumber.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       var baseTrim = __webpack_require__('./node_modules/lodash/_baseTrim.js'),
         isObject = __webpack_require__('./node_modules/lodash/isObject.js'),

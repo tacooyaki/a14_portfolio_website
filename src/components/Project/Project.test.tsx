@@ -21,7 +21,7 @@ describe('Project Component', () => {
   test('renders project description', () => {
     render(<Project {...projectProps} />);
     const descriptionElement = screen.getByText(
-      /This is a description of the project./i
+      /This is a description of the project./i,
     );
     expect(descriptionElement).toBeInTheDocument();
   });

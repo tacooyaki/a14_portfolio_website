@@ -38,7 +38,7 @@ try {
         t || !e || !e.__esModule
           ? H(r, 'default', { value: e, enumerable: !0 })
           : r,
-        e
+        e,
       )
     );
     var d = P(() => {});
@@ -84,7 +84,7 @@ try {
                 s,
                 a,
                 S,
-                u
+                u,
               );
             }
             return S[c].exports;
@@ -161,7 +161,7 @@ try {
                         o || this,
                         this.list[f].val,
                         this.list[f].key,
-                        this
+                        this,
                       );
                   }),
                   (u.prototype.indexOf = function (i) {
@@ -194,7 +194,7 @@ try {
                         C;
                       if ((n.numArgs || n.numArgs === 0) && n.numArgs !== y + 1)
                         throw new Error(
-                          'Memoizerific functions should always be called with the same number of arguments'
+                          'Memoizerific functions should always be called with the same number of arguments',
                         );
                       for (C = 0; C < y; C++) {
                         if (
@@ -272,7 +272,7 @@ try {
             ],
           },
           {},
-          [3]
+          [3],
         )(3);
       });
     });
@@ -776,7 +776,7 @@ try {
             onClick: () => {
               r({ viewport: a.id }), s();
             },
-          }))
+          })),
       ),
       ve = ({ width: e, height: t, ...r }) => ({ ...r, height: e, width: t }),
       _e = A.div(() => ({ display: 'inline-flex', alignItems: 'center' })),
@@ -818,7 +818,7 @@ try {
           S &&
             !i.find((n) => n.id === S) &&
             console.warn(
-              `Cannot find "defaultViewport" of "${S}" in addon-viewport configs, please check the "viewports" setting in the configuration.`
+              `Cannot find "defaultViewport" of "${S}" in addon-viewport configs, please check the "viewports" setting in the configuration.`,
             ),
             L(() => {
               Se(o, t, r, Object.keys(s));
@@ -870,10 +870,10 @@ try {
                             null,
                             t.viewportRotated
                               ? `${I.title} (L)`
-                              : `${I.title} (P)`
+                              : `${I.title} (P)`,
                           )
-                        : null
-                    )
+                        : null,
+                    ),
                   ),
                   g
                     ? w.createElement(
@@ -889,7 +889,7 @@ try {
                         w.createElement(
                           ne,
                           { title: 'Viewport width' },
-                          g.width.replace('px', '')
+                          g.width.replace('px', ''),
                         ),
                         w.createElement(
                           V,
@@ -900,18 +900,18 @@ try {
                               r({ viewportRotated: !t.viewportRotated });
                             },
                           },
-                          w.createElement(oe, null)
+                          w.createElement(oe, null),
                         ),
                         w.createElement(
                           ne,
                           { title: 'Viewport height' },
-                          g.height.replace('px', '')
-                        )
+                          g.height.replace('px', ''),
+                        ),
                       )
-                    : null
+                    : null,
                 )
           );
-        })
+        }),
       );
     M.register(k, () => {
       M.add(k, {
@@ -925,6 +925,6 @@ try {
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

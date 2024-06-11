@@ -15,7 +15,7 @@ describe('RadioButton Component', () => {
         checked={false}
         onChange={noOp}
         value=""
-      />
+      />,
     );
     const radioButton = screen.getByLabelText('Option 1');
     expect(radioButton).toBeVisible();
@@ -30,7 +30,7 @@ describe('RadioButton Component', () => {
         checked={false}
         onChange={noOp}
         value=""
-      />
+      />,
     );
     const radioButton = screen.getByLabelText('Option 1');
     expect(radioButton).toBeDisabled();

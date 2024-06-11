@@ -5,7 +5,7 @@
     './src/stories/Page.stories.ts': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       __webpack_require__.r(__webpack_exports__),
@@ -16,12 +16,12 @@
           default: () => Page_stories,
         });
       var dist = __webpack_require__(
-          './node_modules/@storybook/test/dist/index.mjs'
+          './node_modules/@storybook/test/dist/index.mjs',
         ),
         react = __webpack_require__('./node_modules/react/index.js'),
         Header = __webpack_require__('./src/stories/Header.tsx'),
         jsx_runtime = __webpack_require__(
-          './node_modules/react/jsx-runtime.js'
+          './node_modules/react/jsx-runtime.js',
         );
       const Page = () => {
         const [user, setUser] = react.useState();
@@ -180,13 +180,13 @@
     './src/stories/Button.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       __webpack_require__.d(__webpack_exports__, { $: () => Button });
       __webpack_require__('./node_modules/react/index.js');
       var jsx_runtime = __webpack_require__(
-        './node_modules/react/jsx-runtime.js'
+        './node_modules/react/jsx-runtime.js',
       );
       const Button = (_ref) => {
         let {
@@ -262,14 +262,14 @@
     './src/stories/Header.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       __webpack_require__.d(__webpack_exports__, { Y: () => Header });
       __webpack_require__('./node_modules/react/index.js');
       var Button = __webpack_require__('./src/stories/Button.tsx'),
         jsx_runtime = __webpack_require__(
-          './node_modules/react/jsx-runtime.js'
+          './node_modules/react/jsx-runtime.js',
         );
       const Header = (_ref) => {
         let { user, onLogin, onLogout, onCreateAccount } = _ref;

@@ -400,7 +400,7 @@ try {
               title: 'Apply outlines to the preview',
               onClick: a,
             },
-            t.createElement(A, null)
+            t.createElement(A, null),
           )
         );
       });
@@ -417,6 +417,6 @@ try {
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

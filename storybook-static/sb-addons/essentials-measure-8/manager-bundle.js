@@ -395,7 +395,7 @@ try {
           t.createElement(
             C,
             { key: b, active: I, title: 'Enable measure', onClick: a },
-            t.createElement(h, null)
+            t.createElement(h, null),
           )
         );
       };
@@ -411,6 +411,6 @@ try {
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

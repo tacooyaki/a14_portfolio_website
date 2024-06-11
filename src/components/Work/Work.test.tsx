@@ -43,10 +43,10 @@ describe('Work Component', () => {
   test('renders project descriptions', () => {
     render(<Work projects={mockProjects} />);
     const project1DescriptionElement = screen.getByText(
-      /Description of project 1/i
+      /Description of project 1/i,
     );
     const project2DescriptionElement = screen.getByText(
-      /Description of project 2/i
+      /Description of project 2/i,
     );
 
     expect(project1DescriptionElement).toBeInTheDocument();

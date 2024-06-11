@@ -43,7 +43,7 @@ var __toESM = (mod, isNodeMode, target) => (
     isNodeMode || !mod || !mod.__esModule
       ? __defProp(target, 'default', { value: mod, enumerable: !0 })
       : target,
-    mod
+    mod,
   )
 );
 var require_memoizerific = __commonJS({
@@ -87,7 +87,7 @@ var require_memoizerific = __commonJS({
               e,
               t,
               n,
-              r
+              r,
             );
           }
           return n[o2].exports;
@@ -172,7 +172,7 @@ var require_memoizerific = __commonJS({
                       thisArg || this,
                       this.list[i].val,
                       this.list[i].key,
-                      this
+                      this,
                     );
                 }),
                 (Similar.prototype.indexOf = function (key) {
@@ -208,7 +208,7 @@ var require_memoizerific = __commonJS({
                       memoizerific.numArgs !== argsLengthMinusOne + 1
                     )
                       throw new Error(
-                        'Memoizerific functions should always be called with the same number of arguments'
+                        'Memoizerific functions should always be called with the same number of arguments',
                       );
                     for (i = 0; i < argsLengthMinusOne; i++) {
                       if (
@@ -230,14 +230,14 @@ var require_memoizerific = __commonJS({
                       isMemoized &&
                         (currentCache.has(arguments[argsLengthMinusOne])
                           ? (fnResult = currentCache.get(
-                              arguments[argsLengthMinusOne]
+                              arguments[argsLengthMinusOne],
                             ))
                           : (isMemoized = !1)),
                       isMemoized ||
                         ((fnResult = fn.apply(null, arguments)),
                         currentCache.set(
                           arguments[argsLengthMinusOne],
-                          fnResult
+                          fnResult,
                         )),
                       limit > 0 &&
                         ((lruPath[argsLengthMinusOne] = {
@@ -302,7 +302,7 @@ var require_memoizerific = __commonJS({
           ],
         },
         {},
-        [3]
+        [3],
       )(3);
     });
   },
@@ -319,7 +319,7 @@ var __create2 = Object.create,
         mod ||
           (0, cb[__getOwnPropNames2(cb)[0]])(
             (mod = { exports: {} }).exports,
-            mod
+            mod,
           ),
         mod.exports
       );
@@ -346,7 +346,7 @@ var __create2 = Object.create,
       isNodeMode || !mod || !mod.__esModule
         ? __defProp2(target, 'default', { value: mod, enumerable: !0 })
         : target,
-      mod
+      mod,
     )
   );
 export {

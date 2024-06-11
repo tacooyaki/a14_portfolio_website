@@ -23,7 +23,7 @@ import { __commonJS, __toESM } from './chunk-ZR5JZWHI.js';
 var require_browser_dtector_umd_min = __commonJS({
   '../../node_modules/browser-dtector/browser-dtector.umd.min.js'(
     exports,
-    module
+    module,
   ) {
     (function (e, o) {
       typeof exports == 'object' && typeof module < 'u'
@@ -53,14 +53,14 @@ var require_browser_dtector_umd_min = __commonJS({
                   var n3 = r3.call(e3, o3 || 'default');
                   if (typeof n3 != 'object') return n3;
                   throw new TypeError(
-                    '@@toPrimitive must return a primitive value.'
+                    '@@toPrimitive must return a primitive value.',
                   );
                 }
                 return (o3 === 'string' ? String : Number)(e3);
               })(i2, 'string')) == 'symbol'
                 ? t2
                 : String(t2)),
-              n2
+              n2,
             );
         }
         var i2, t2;
@@ -107,8 +107,8 @@ var require_browser_dtector_umd_min = __commonJS({
                 arguments.length > 1 && arguments[1] !== void 0
                   ? arguments[1]
                   : -1,
-                '})?'
-              )
+                '})?',
+              ),
             ),
             r2 = Number(e2).toString().match(o2);
           return r2 ? r2[0] : null;
@@ -157,10 +157,10 @@ var require_browser_dtector_umd_min = __commonJS({
                       /(crios)[/]([\w.]+)/.exec(d) ||
                       /(opios)[/]([\w.]+)/.exec(d) ||
                       /(version)(applewebkit)[/]([\w.]+).*(safari)[/]([\w.]+)/.exec(
-                        d
+                        d,
                       ) ||
                       /(webkit)[/]([\w.]+).*(version)[/]([\w.]+).*(safari)[/]([\w.]+)/.exec(
-                        d
+                        d,
                       ) ||
                       /(applewebkit)[/]([\w.]+).*(safari)[/]([\w.]+)/.exec(d) ||
                       /(webkit)[/]([\w.]+)/.exec(d) ||
@@ -308,7 +308,7 @@ function getBrowserInfo() {
   return (
     browserInfo ||
       (browserInfo = new import_browser_dtector.default(
-        scope.navigator?.userAgent
+        scope.navigator?.userAgent,
       ).getBrowserInfo()),
     browserInfo
   );
@@ -340,7 +340,7 @@ scope.sendTelemetryError = (error) => {
   shouldSkipError(error) ||
     scope.__STORYBOOK_ADDONS_CHANNEL__.emit(
       TELEMETRY_ERROR,
-      prepareForTelemetry(error)
+      prepareForTelemetry(error),
     );
 };
 scope.addEventListener('error', (args) => {

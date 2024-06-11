@@ -41,7 +41,7 @@ try {
         t || !e || !e.__esModule
           ? ua(r, 'default', { value: e, enumerable: !0 })
           : r,
-        e
+        e,
       )
     );
     var l = He(() => {});
@@ -1197,9 +1197,9 @@ try {
               .replace(tE, '\\$&')
               .replace(
                 /hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-                '$1.*?'
+                '$1.*?',
               ) +
-            '$'
+            '$',
         );
       function sE(e) {
         if (!Zb(e) || Qb(e)) return !1;
@@ -1806,7 +1806,7 @@ try {
         yv = Ml(
           (function () {
             return arguments;
-          })()
+          })(),
         )
           ? Ml
           : function (e) {
@@ -2917,7 +2917,7 @@ try {
                 n,
                 a,
                 o,
-                u
+                u,
               );
             }
             return o[g].exports;
@@ -2994,7 +2994,7 @@ try {
                         s || this,
                         this.list[h].val,
                         this.list[h].key,
-                        this
+                        this,
                       );
                   }),
                   (u.prototype.indexOf = function (i) {
@@ -3027,7 +3027,7 @@ try {
                         F;
                       if ((A.numArgs || A.numArgs === 0) && A.numArgs !== O + 1)
                         throw new Error(
-                          'Memoizerific functions should always be called with the same number of arguments'
+                          'Memoizerific functions should always be called with the same number of arguments',
                         );
                       for (F = 0; F < O; F++) {
                         if (
@@ -3105,7 +3105,7 @@ try {
             ],
           },
           {},
-          [3]
+          [3],
         )(3);
       });
     });
@@ -4156,7 +4156,7 @@ try {
             'binder',
             'return function (' +
               KB(i, ',') +
-              '){ return binder.apply(this,arguments); }'
+              '){ return binder.apply(this,arguments); }',
           )(o)),
           r.prototype)
         ) {
@@ -4435,7 +4435,7 @@ try {
               throw new Vt(
                 'intrinsic ' +
                   t +
-                  ' exists, but is not available. Please file an issue!'
+                  ' exists, but is not available. Please file an issue!',
               );
             return { alias: a, name: n, value: o };
           }
@@ -4448,7 +4448,7 @@ try {
           throw new Vt('"allowMissing" argument must be a boolean');
         if (cT(/^%?[^%]*%?$/, t) === null)
           throw new Kt(
-            '`%` may not be present anywhere but at the beginning and end of the intrinsic name'
+            '`%` may not be present anywhere but at the beginning and end of the intrinsic name',
           );
         var n = fT(t),
           a = n.length > 0 ? n[0] : '',
@@ -4472,7 +4472,7 @@ try {
             m !== A
           )
             throw new Kt(
-              'property names with quotes must have matching quotes'
+              'property names with quotes must have matching quotes',
             );
           if (
             ((y === 'constructor' || !E) && (s = !0),
@@ -4487,7 +4487,7 @@ try {
                 throw new Vt(
                   'base intrinsic for ' +
                     t +
-                    ' exists, but the property is not available.'
+                    ' exists, but the property is not available.',
                 );
               return;
             }
@@ -4554,7 +4554,7 @@ try {
           arguments[3] !== null
         )
           throw new Yt(
-            '`nonEnumerable`, if provided, must be a boolean or null'
+            '`nonEnumerable`, if provided, must be a boolean or null',
           );
         if (
           arguments.length > 4 &&
@@ -4568,7 +4568,7 @@ try {
           arguments[5] !== null
         )
           throw new Yt(
-            '`nonConfigurable`, if provided, must be a boolean or null'
+            '`nonConfigurable`, if provided, must be a boolean or null',
           );
         if (arguments.length > 6 && typeof arguments[6] != 'boolean')
           throw new Yt('`loose`, if provided, must be a boolean');
@@ -4587,7 +4587,7 @@ try {
         else if (i || (!a && !o && !u)) t[r] = n;
         else
           throw new gT(
-            'This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.'
+            'This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.',
           );
       };
     });
@@ -4776,7 +4776,7 @@ try {
           o.quoteStyle !== 'double'
         )
           throw new TypeError(
-            'option "quoteStyle" must be "single" or "double"'
+            'option "quoteStyle" must be "single" or "double"',
           );
         if (
           ct(o, 'maxStringLength') &&
@@ -4785,12 +4785,12 @@ try {
             : o.maxStringLength !== null)
         )
           throw new TypeError(
-            'option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`'
+            'option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`',
           );
         var u = ct(o, 'customInspect') ? o.customInspect : !0;
         if (typeof u != 'boolean' && u !== 'symbol')
           throw new TypeError(
-            'option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`'
+            'option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`',
           );
         if (
           ct(o, 'indent') &&
@@ -4799,11 +4799,11 @@ try {
           !(parseInt(o.indent, 10) === o.indent && o.indent > 0)
         )
           throw new TypeError(
-            'option "indent" must be "\\t", an integer > 0, or `null`'
+            'option "indent" must be "\\t", an integer > 0, or `null`',
           );
         if (ct(o, 'numericSeparator') && typeof o.numericSeparator != 'boolean')
           throw new TypeError(
-            'option "numericSeparator", if provided, must be `true` or `false`'
+            'option "numericSeparator", if provided, must be `true` or `false`',
           );
         var i = o.numericSeparator;
         if (typeof t > 'u') return 'undefined';
@@ -5141,7 +5141,7 @@ try {
             nm(
               e[t],
               `
-`
+`,
             ) >= 0
           )
             return !1;
@@ -5620,8 +5620,8 @@ try {
                     b,
                     x,
                     T,
-                    K
-                  )
+                    K,
+                  ),
                 );
             }
           }
@@ -5634,14 +5634,14 @@ try {
             typeof t.allowEmptyArrays != 'boolean'
           )
             throw new TypeError(
-              '`allowEmptyArrays` option can only be `true` or `false`, when provided'
+              '`allowEmptyArrays` option can only be `true` or `false`, when provided',
             );
           if (
             typeof t.encodeDotInKeys < 'u' &&
             typeof t.encodeDotInKeys != 'boolean'
           )
             throw new TypeError(
-              '`encodeDotInKeys` option can only be `true` or `false`, when provided'
+              '`encodeDotInKeys` option can only be `true` or `false`, when provided',
             );
           if (
             t.encoder !== null &&
@@ -5656,7 +5656,7 @@ try {
             t.charset !== 'iso-8859-1'
           )
             throw new TypeError(
-              'The charset option must be either utf-8, iso-8859-1, or undefined'
+              'The charset option must be either utf-8, iso-8859-1, or undefined',
             );
           var n = Rr.default;
           if (typeof t.format < 'u') {
@@ -5677,7 +5677,7 @@ try {
             'commaRoundTrip' in t && typeof t.commaRoundTrip != 'boolean')
           )
             throw new TypeError(
-              '`commaRoundTrip` must be a boolean, or absent'
+              '`commaRoundTrip` must be a boolean, or absent',
             );
           var i =
             typeof t.allowDots > 'u'
@@ -5765,8 +5765,8 @@ try {
                 n.formatter,
                 n.encodeValuesOnly,
                 n.charset,
-                h
-              )
+                h,
+              ),
             );
         }
         var y = u.join(n.delimiter),
@@ -5933,14 +5933,14 @@ try {
             typeof t.allowEmptyArrays != 'boolean'
           )
             throw new TypeError(
-              '`allowEmptyArrays` option can only be `true` or `false`, when provided'
+              '`allowEmptyArrays` option can only be `true` or `false`, when provided',
             );
           if (
             typeof t.decodeDotInKeys < 'u' &&
             typeof t.decodeDotInKeys != 'boolean'
           )
             throw new TypeError(
-              '`decodeDotInKeys` option can only be `true` or `false`, when provided'
+              '`decodeDotInKeys` option can only be `true` or `false`, when provided',
             );
           if (
             t.decoder !== null &&
@@ -5954,13 +5954,13 @@ try {
             t.charset !== 'iso-8859-1'
           )
             throw new TypeError(
-              'The charset option must be either utf-8, iso-8859-1, or undefined'
+              'The charset option must be either utf-8, iso-8859-1, or undefined',
             );
           var r = typeof t.charset > 'u' ? fe.charset : t.charset,
             n = typeof t.duplicates > 'u' ? fe.duplicates : t.duplicates;
           if (n !== 'combine' && n !== 'first' && n !== 'last')
             throw new TypeError(
-              'The duplicates option must be either combine, first, or last'
+              'The duplicates option must be either combine, first, or last',
             );
           var a =
             typeof t.allowDots > 'u'
@@ -6899,7 +6899,7 @@ try {
                 F(t.COLON),
                 (N = A(
                   { type: e.ParameterType, name: N.name, expression: K() },
-                  [ce, o]
+                  [ce, o],
                 ))),
               u === t.EQUAL
                 ? (F(t.EQUAL),
@@ -6921,7 +6921,7 @@ try {
           return (
             h.assert(
               u === t.NAME && i === 'function',
-              "FunctionType should start with 'function'"
+              "FunctionType should start with 'function'",
             ),
             F(t.NAME),
             q(t.LPAREN),
@@ -7037,18 +7037,18 @@ try {
                           t.RBRACK,
                           'expected an array-style type declaration (' +
                             i +
-                            '[])'
+                            '[])',
                         ),
                         A(
                           {
                             type: e.TypeApplication,
                             expression: A(
                               { type: e.NameExpression, name: 'Array' },
-                              [P, o]
+                              [P, o],
                             ),
                             applications: [w],
                           },
-                          [P, o]
+                          [P, o],
                         ))
                       : w);
         }
@@ -7504,7 +7504,7 @@ try {
                     ((this._tag.type = Y(
                       this._title,
                       this._last,
-                      this._options.range
+                      this._options.range,
                     )),
                     !this._tag.type &&
                       !s(this._title) &&
@@ -7521,7 +7521,7 @@ try {
                   this._tag.type = Y(
                     this._title,
                     this._last,
-                    this._options.range
+                    this._options.range,
                   );
                 } catch {}
               return !0;
@@ -7548,7 +7548,7 @@ try {
                   ((this._tag.name = oe(
                     this._last,
                     J && A(this._title),
-                    m(this._title)
+                    m(this._title),
                   )),
                   this._tag.name)
                 )
@@ -7595,7 +7595,7 @@ try {
                 ce >= 0 && re >= 0
                   ? ((this._tag.caption = _.substring(
                       ce + $.length,
-                      re
+                      re,
                     ).trim()),
                     (this._tag.description = _.substring(re + z.length).trim()))
                   : (this._tag.description = _),
@@ -7849,7 +7849,7 @@ try {
             (i.current = { hsva: h, color: t }), u(h);
           }
         },
-        [t, e]
+        [t, e],
       ),
         he(
           function () {
@@ -7858,7 +7858,7 @@ try {
               e.equal((h = e.fromHsva(o)), i.current.color) ||
               ((i.current = { hsva: o, color: h }), n(h));
           },
-          [o, e, n]
+          [o, e, n],
         );
       var s = Ee(function (h) {
         u(function (g) {
@@ -8005,7 +8005,7 @@ try {
                     b,
                   ];
                 },
-                [u, o]
+                [u, o],
               ),
               g = h[0],
               E = h[1],
@@ -8015,7 +8015,7 @@ try {
                 function () {
                   return y;
                 },
-                [y]
+                [y],
               ),
               p.createElement(
                 'div',
@@ -8027,7 +8027,7 @@ try {
                   onKeyDown: E,
                   tabIndex: 0,
                   role: 'slider',
-                })
+                }),
               )
             );
           })),
@@ -8049,7 +8049,7 @@ try {
               p.createElement('div', {
                 className: 'react-colorful__pointer-fill',
                 style: { backgroundColor: t },
-              })
+              }),
             );
           }),
           (ve = function (e, t, r) {
@@ -8093,7 +8093,7 @@ try {
           (sO = function (e) {
             var t =
               /hsla?\(?\s*(-?\d*\.?\d+)(deg|rad|grad|turn)?[,\s]+(-?\d*\.?\d+)%?[,\s]+(-?\d*\.?\d+)%?,?\s*[/\s]*(-?\d*\.?\d+)?(%)?\s*\)?/i.exec(
-                e
+                e,
               );
             return t
               ? lO({
@@ -8130,7 +8130,7 @@ try {
               s: ve(
                 a > 0 && a < 200
                   ? ((t * r) / 100 / (a <= 100 ? a : 200 - a)) * 100
-                  : 0
+                  : 0,
               ),
               l: ve(a / 2),
               a: ve(n, 2),
@@ -8165,7 +8165,7 @@ try {
           (dO = function (e) {
             var t =
               /rgba?\(?\s*(-?\d*\.?\d+)(%)?[,\s]+(-?\d*\.?\d+)(%)?[,\s]+(-?\d*\.?\d+)(%)?,?\s*[/\s]*(-?\d*\.?\d+)?(%)?\s*\)?/i.exec(
-                e
+                e,
               );
             return t
               ? by({
@@ -8234,8 +8234,8 @@ try {
                   className: 'react-colorful__hue-pointer',
                   left: t / 360,
                   color: xu({ h: t, s: 100, v: 100, a: 1 }),
-                })
-              )
+                }),
+              ),
             );
           })),
           (Ay = p.memo(function (e) {
@@ -8266,8 +8266,8 @@ try {
                   top: 1 - t.v / 100,
                   left: t.s / 100,
                   color: xu(t),
-                })
-              )
+                }),
+              ),
             );
           })),
           (vy = function (e, t) {
@@ -8322,7 +8322,7 @@ try {
                 hue: h.h,
                 onChange: g,
                 className: 'react-colorful__last-control',
-              })
+              }),
             );
           }),
           (bO = {
@@ -8376,8 +8376,8 @@ try {
                   className: 'react-colorful__alpha-pointer',
                   left: r.a,
                   color: Jn(r),
-                })
-              )
+                }),
+              ),
             );
           }),
           (Fy = function (e) {
@@ -8402,7 +8402,7 @@ try {
                 hsva: h,
                 onChange: g,
                 className: 'react-colorful__last-control',
-              })
+              }),
             );
           }),
           (AO = {
@@ -9519,7 +9519,7 @@ try {
             color: e.input.color,
           }))),
           (rg = ((e) => ((e.RGB = 'rgb'), (e.HSL = 'hsl'), (e.HEX = 'hex'), e))(
-            rg || {}
+            rg || {},
           )),
           (Qn = Object.values(rg)),
           (l4 = /\(([0-9]+),\s*([0-9]+)%?,\s*([0-9]+)%?,?\s*([0-9.]+)?\)/),
@@ -9627,7 +9627,7 @@ try {
                     m === '' && (o(void 0), t(void 0)),
                     y && (o(y), i(y.colorSpace), t(y.value));
                 },
-                [t]
+                [t],
               ),
               g = Ee(() => {
                 let E = Qn.indexOf(u) + 1;
@@ -9658,12 +9658,12 @@ try {
                         ? or(i)
                         : i.title
                           ? { ...or(i.color), keyword: i.title }
-                          : or(i.color)
+                          : or(i.color),
                     )
                     .concat(n)
                     .filter(Boolean)
                     .slice(-27),
-                [e, n]
+                [e, n],
               ),
               u = Ee(
                 (i) => {
@@ -9671,7 +9671,7 @@ try {
                     (o.some((s) => ea(s[r]) === ea(i[r])) ||
                       a((s) => s.concat(i)));
                 },
-                [r, o]
+                [r, o],
               );
             return { presets: o, addPreset: u };
           }),
@@ -9734,13 +9734,13 @@ try {
                               value: R[m],
                               active: y && ea(R[m]) === ea(y[m]),
                               onClick: () => E(R.value),
-                            })
-                          )
-                        )
-                      )
+                            }),
+                          ),
+                        ),
+                      ),
                   ),
                 },
-                p.createElement(Zy, { value: g, style: { margin: 4 } })
+                p.createElement(Zy, { value: g, style: { margin: 4 } }),
               ),
               p.createElement(i4, {
                 id: Be(e),
@@ -9750,7 +9750,7 @@ try {
                 readOnly: O,
                 placeholder: 'Choose color...',
               }),
-              h ? p.createElement(s4, { onClick: A }) : null
+              h ? p.createElement(s4, { onClick: A }) : null,
             );
           }),
           (g4 = ng);
@@ -9962,7 +9962,7 @@ try {
     function Ba(e) {
       if (e === void 0)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return e;
     }
@@ -10022,7 +10022,7 @@ try {
     function Kr() {
       try {
         var e = !Boolean.prototype.valueOf.call(
-          Reflect.construct(Boolean, [], function () {})
+          Reflect.construct(Boolean, [], function () {}),
         );
       } catch {}
       return (Kr = function () {
@@ -10043,7 +10043,7 @@ try {
           if (n === null || !_a(n)) return n;
           if (typeof n != 'function')
             throw new TypeError(
-              'Super expression must either be null or a function'
+              'Super expression must either be null or a function',
             );
           if (typeof t < 'u') {
             if (t.has(n)) return t.get(n);
@@ -10080,7 +10080,7 @@ try {
               this,
               'An error occurred. See https://github.com/styled-components/polished/blob/main/src/internalHelpers/errors.md#' +
                 r +
-                ' for more information.'
+                ' for more information.',
             ) || this;
         else for (var a, o, u; u < a; u++);
         return Ba(n);
@@ -10582,7 +10582,7 @@ try {
       if (t === 'transparent') return t;
       var r = at(t);
       return ot(
-        Ce({}, r, { lightness: Ot(0, 1, r.lightness - parseFloat(e)) })
+        Ce({}, r, { lightness: Ot(0, 1, r.lightness - parseFloat(e)) }),
       );
     }
     var R1 = Oe(O1),
@@ -10591,7 +10591,7 @@ try {
       if (t === 'transparent') return t;
       var r = at(t);
       return ot(
-        Ce({}, r, { saturation: Ot(0, 1, r.saturation - parseFloat(e)) })
+        Ce({}, r, { saturation: Ot(0, 1, r.saturation - parseFloat(e)) }),
       );
     }
     var uN = Oe(P1);
@@ -10599,7 +10599,7 @@ try {
       if (t === 'transparent') return t;
       var r = at(t);
       return ot(
-        Ce({}, r, { lightness: Ot(0, 1, r.lightness + parseFloat(e)) })
+        Ce({}, r, { lightness: Ot(0, 1, r.lightness + parseFloat(e)) }),
       );
     }
     var N1 = Oe(k1),
@@ -10643,7 +10643,7 @@ try {
       if (t === 'transparent') return t;
       var r = at(t);
       return ot(
-        Ce({}, r, { saturation: Ot(0, 1, r.saturation + parseFloat(e)) })
+        Ce({}, r, { saturation: Ot(0, 1, r.saturation + parseFloat(e)) }),
       );
     }
     var iN = Oe($1);
@@ -10735,7 +10735,7 @@ try {
           t || !e || !e.__esModule
             ? Yd(r, 'default', { value: e, enumerable: !0 })
             : r,
-          e
+          e,
         )
       ),
       VS = zS((e) => {
@@ -10746,7 +10746,7 @@ try {
               n = Object.getOwnPropertySymbols
                 ? function (a) {
                     return Object.keys(a).concat(
-                      Object.getOwnPropertySymbols(a)
+                      Object.getOwnPropertySymbols(a),
                     );
                   }
                 : Object.keys;
@@ -10829,7 +10829,7 @@ try {
         let { exists: r, eq: n, neq: a, truthy: o } = e;
         if (Jd([r, n, a, o]) > 1)
           throw new Error(
-            `Invalid conditional test ${JSON.stringify({ exists: r, eq: n, neq: a })}`
+            `Invalid conditional test ${JSON.stringify({ exists: r, eq: n, neq: a })}`,
           );
         if (typeof n < 'u') return (0, Kd.isEqual)(t, n);
         if (typeof a < 'u') return !(0, Kd.isEqual)(t, a);
@@ -10844,7 +10844,7 @@ try {
         let { arg: n, global: a } = e.if;
         if (Jd([n, a]) !== 1)
           throw new Error(
-            `Invalid conditional value ${JSON.stringify({ arg: n, global: a })}`
+            `Invalid conditional value ${JSON.stringify({ arg: n, global: a })}`,
           );
         let o = n ? t[n] : r[a];
         return KS(e.if, o);
@@ -11008,7 +11008,7 @@ try {
           '[^\\n]*(?:\\n(?!\\1' +
           (e === 1 ? _o : Io) +
           ' )[^\\n]*)*(\\n|$)',
-        'gm'
+        'gm',
       );
     }
     var bp = gp(1),
@@ -11022,7 +11022,7 @@ try {
           t +
           ' (?!' +
           t +
-          ' ))\\n*|\\s*\\n*$)'
+          ' ))\\n*|\\s*\\n*$)',
       );
     }
     var vp = Ap(1),
@@ -11044,7 +11044,7 @@ try {
               .replace(
                 ZS,
                 `
-`
+`,
               )
               .match(a),
             E = !1;
@@ -11070,7 +11070,7 @@ try {
                       ep,
                       `
 
-`
+`,
                     )))
                   : ((s._ = !0), (F = x.replace(ep, '')));
               let q = i(F, s);
@@ -11086,7 +11086,7 @@ try {
             { key: s.k, start: u.g },
             u.p.map(function (h, g) {
               return e('li', { key: g }, i(h, s));
-            })
+            }),
           ),
       };
     }
@@ -11145,7 +11145,7 @@ try {
             .trim()
             .split(
               `
-`
+`,
             )
             .map(function (h) {
               return rp(h, i, s);
@@ -11188,7 +11188,7 @@ try {
       let n = '';
       e.split(
         `
-`
+`,
       ).every(
         (o) =>
           !Cp.some((u) => u.test(o)) &&
@@ -11196,7 +11196,7 @@ try {
             o +
             `
 `),
-          o.trim())
+          o.trim()),
       );
       let a = n.trimEnd();
       return a == '' ? null : [n, a];
@@ -11271,7 +11271,7 @@ try {
               : T;
           })(m, t.overrides),
           vt({}, A, x, { className: JF(A?.className, x.className) || void 0 }),
-          ...b
+          ...b,
         );
       }
       function a(m) {
@@ -11284,8 +11284,8 @@ try {
               : `${m.trimEnd().replace(kF, '')}
 
 `,
-            { _: A }
-          )
+            { _: A },
+          ),
         );
         for (; typeof b[b.length - 1] == 'string' && !b[b.length - 1].trim(); )
           b.pop();
@@ -11335,7 +11335,7 @@ try {
                           return (
                             (V[
                               se.replace(/(-[a-z])/g, (te) =>
-                                te[1].toUpperCase()
+                                te[1].toUpperCase(),
                               )
                             ] = U.slice(se.length + 1).trim()),
                             V
@@ -11389,8 +11389,8 @@ try {
                 n(
                   'code',
                   vt({}, m.O, { className: m.M ? `lang-${m.M}` : '' }),
-                  m.v
-                )
+                  m.v,
+                ),
               ),
           },
           codeFenced: {
@@ -11554,7 +11554,7 @@ try {
                 ? n(
                     'a',
                     { key: b.k, href: Ut(i[m.P].B), title: i[m.P].F },
-                    A(m.v, b)
+                    A(m.v, b),
                   )
                 : n('span', { key: b.k }, A(m.Z, b)),
           },
@@ -11574,8 +11574,8 @@ try {
                     null,
                     m.L.map(function (x, T) {
                       return n('th', { key: T, style: np(m, T) }, A(x, b));
-                    })
-                  )
+                    }),
+                  ),
                 ),
                 n(
                   'tbody',
@@ -11586,10 +11586,10 @@ try {
                       { key: T },
                       x.map(function (O, R) {
                         return n('td', { key: R, style: np(m, R) }, A(O, b));
-                      })
+                      }),
                     );
-                  })
-                )
+                  }),
+                ),
               ),
           },
           tableSeparator: {
@@ -11607,7 +11607,7 @@ try {
             i: Z.MIN,
             l: (m) => ({
               v: m[0].replace(cF, (A, b) =>
-                t.namedCodesToUnicode[b] ? t.namedCodesToUnicode[b] : A
+                t.namedCodesToUnicode[b] ? t.namedCodesToUnicode[b] : A,
               ),
             }),
             h: (m) => m.v,
@@ -11701,12 +11701,12 @@ try {
                   return O.replace(
                     oF,
                     `
-`
+`,
                   )
                     .replace(sF, '')
                     .replace(DF, '    ');
                 })(x),
-                T
+                T,
               );
             }
           );
@@ -11748,10 +11748,10 @@ try {
                   'div',
                   { id: t.slugify(m.j), key: m.j },
                   m.j,
-                  g(h(m.I, { _: !0 }))
+                  g(h(m.I, { _: !0 })),
                 );
-              })
-            )
+              }),
+            ),
           )
         : y;
     }
@@ -11824,7 +11824,7 @@ try {
                     : E.length) !== null && y !== void 0
                   ? y
                   : 0;
-              })
+              }),
             )
           : i;
       }, []);
@@ -11834,13 +11834,13 @@ try {
 [	 ]{` +
             Math.min.apply(Math, a) +
             '}',
-          'g'
+          'g',
         );
         n = n.map(function (i) {
           return i.replace(
             o,
             `
-`
+`,
           );
         });
       }
@@ -11857,7 +11857,7 @@ try {
             (E = String(i)
               .split(
                 `
-`
+`,
               )
               .map(function (y, m) {
                 return m === 0 ? y : '' + g + y;
@@ -11925,13 +11925,13 @@ try {
           t || !e || !e.__esModule
             ? _m(r, 'default', { value: e, enumerable: !0 })
             : r,
-          e
+          e,
         )
       ),
       Om = et({
         '../../node_modules/ansi-to-html/node_modules/entities/lib/maps/entities.json'(
           e,
-          t
+          t,
         ) {
           t.exports = {
             Aacute: '\xC1',
@@ -14066,7 +14066,7 @@ try {
       V8 = et({
         '../../node_modules/ansi-to-html/node_modules/entities/lib/maps/legacy.json'(
           e,
-          t
+          t,
         ) {
           t.exports = {
             Aacute: '\xC1',
@@ -14181,7 +14181,7 @@ try {
       Rm = et({
         '../../node_modules/ansi-to-html/node_modules/entities/lib/maps/xml.json'(
           e,
-          t
+          t,
         ) {
           t.exports = { amp: '&', apos: "'", gt: '>', lt: '<', quot: '"' };
         },
@@ -14189,7 +14189,7 @@ try {
       K8 = et({
         '../../node_modules/ansi-to-html/node_modules/entities/lib/maps/decode.json'(
           e,
-          t
+          t,
         ) {
           t.exports = {
             0: 65533,
@@ -14225,7 +14225,7 @@ try {
       }),
       Y8 = et({
         '../../node_modules/ansi-to-html/node_modules/entities/lib/decode_codepoint.js'(
-          e
+          e,
         ) {
           var t =
             (e && e.__importDefault) ||
@@ -14257,7 +14257,7 @@ try {
       }),
       xm = et({
         '../../node_modules/ansi-to-html/node_modules/entities/lib/decode.js'(
-          e
+          e,
         ) {
           var t =
             (e && e.__importDefault) ||
@@ -14293,7 +14293,7 @@ try {
               g[m] === E[y] ? ((E[y] += ';?'), m++) : (E[y] += ';');
             var A = new RegExp(
                 '&(?:' + E.join('|') + '|#[xX][\\da-fA-F]+;?|#\\d+;?)',
-                'g'
+                'g',
               ),
               b = h(r.default);
             function x(T) {
@@ -14318,7 +14318,7 @@ try {
       }),
       Sm = et({
         '../../node_modules/ansi-to-html/node_modules/entities/lib/encode.js'(
-          e
+          e,
         ) {
           var t =
             (e && e.__importDefault) ||
@@ -14423,7 +14423,7 @@ try {
       }),
       J8 = et({
         '../../node_modules/ansi-to-html/node_modules/entities/lib/index.js'(
-          e
+          e,
         ) {
           Object.defineProperty(e, '__esModule', { value: !0 }),
             (e.decodeXMLStrict =
@@ -14757,7 +14757,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 22: function () {
                   return k(
                     I,
-                    'font-weight:normal;text-decoration:none;font-style:normal'
+                    'font-weight:normal;text-decoration:none;font-style:normal',
                   );
                 },
                 23: function () {
@@ -15013,8 +15013,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     var tne = (0, wm.default)(1)((e) =>
       Object.values(e).reduce(
         (t, r) => ((t[r.importPath] = t[r.importPath] || r), t),
-        {}
-      )
+        {},
+      ),
     );
     var rne = Symbol('incompatible');
     var nne = Symbol('Deeply equal');
@@ -15040,7 +15040,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             }),
             a
           ),
-          {}
+          {},
         );
       return (
         Object.keys(t).forEach((a) => {
@@ -15117,7 +15117,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             if (o === 'string') return { control: { type: 'color' } };
             o !== 'enum' &&
               At.warn(
-                `Addon controls: Control of type color only supports string, received "${o}" instead`
+                `Addon controls: Control of type color only supports string, received "${o}" instead`,
               );
           }
           if (r.date && r.date.test(t)) return { control: { type: 'date' } };
@@ -15232,7 +15232,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           t || !e || !e.__esModule
             ? Vm(r, 'default', { value: e, enumerable: !0 })
             : r,
-          e
+          e,
         )
       ),
       b6 = [
@@ -15355,7 +15355,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 'binder',
                 'return function (' +
                   m.join(',') +
-                  '){ return binder.apply(this,arguments); }'
+                  '){ return binder.apply(this,arguments); }',
               )(E)),
               s.prototype)
             ) {
@@ -15613,7 +15613,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   throw new o(
                     'intrinsic ' +
                       J +
-                      ' exists, but is not available. Please file an issue!'
+                      ' exists, but is not available. Please file an issue!',
                   );
                 return { alias: j, name: B, value: G };
               }
@@ -15626,7 +15626,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               throw new o('"allowMissing" argument must be a boolean');
             if (k(/^%?[^%]*%?$/, J) === null)
               throw new n(
-                '`%` may not be present anywhere but at the beginning and end of the intrinsic name'
+                '`%` may not be present anywhere but at the beginning and end of the intrinsic name',
               );
             var B = U(J),
               j = B.length > 0 ? B[0] : '',
@@ -15650,7 +15650,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 Le !== w
               )
                 throw new n(
-                  'property names with quotes must have matching quotes'
+                  'property names with quotes must have matching quotes',
                 );
               if (
                 ((X === 'constructor' || !Ie) && (ee = !0),
@@ -15665,7 +15665,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                     throw new o(
                       'base intrinsic for ' +
                         J +
-                        ' exists, but the property is not available.'
+                        ' exists, but the property is not available.',
                     );
                   return;
                 }
@@ -15958,9 +15958,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             .replace(g_, '\\$&')
             .replace(
               /hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-              '$1.*?'
+              '$1.*?',
             ) +
-          '$'
+          '$',
       );
     function x_(e) {
       if (!iy(e) || p_(e)) return !1;
@@ -16321,7 +16321,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               let { name: E } = s,
                 y = s.toString();
               return y.match(
-                /(\[native code\]|WEBPACK_IMPORTED_MODULE|__webpack_exports__|__webpack_require__)/
+                /(\[native code\]|WEBPACK_IMPORTED_MODULE|__webpack_exports__|__webpack_require__)/,
               )
                 ? `_function_${E}|${(() => {}).toString()}`
                 : `_function_${E}|${KI(YI(i, y))}`;
@@ -16412,7 +16412,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             let e = value['_constructor-name_'];
             if (e !== 'Object') {
               let t = new Function(
-                `return function ${e.replace(/[^a-zA-Z0-9$_]+/g, '')}(){}`
+                `return function ${e.replace(/[^a-zA-Z0-9$_]+/g, '')}(){}`,
               )();
               Object.setPrototypeOf(value, new t());
             }
@@ -16592,7 +16592,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           p.createElement(ta, null),
           p.createElement(ta, { style: { width: '80%' } }),
           p.createElement(ta, { style: { width: '30%' } }),
-          p.createElement(ta, { style: { width: '80%' } })
+          p.createElement(ta, { style: { width: '80%' } }),
         ),
       D4 = ({
         isLoading: e,
@@ -16616,7 +16616,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             className: 'docblock-source sb-unstyled',
             ...u,
           },
-          n
+          n,
         );
         if (typeof a > 'u') return s;
         let h = a ? Sa.dark : Sa.light;
@@ -16625,7 +16625,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           {
             theme: mi({ ...h, fontCode: i.fonts.mono, fontBase: i.fonts.base }),
           },
-          s
+          s,
         );
       },
       ye = (e) =>
@@ -17002,7 +17002,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                       },
                       title: 'Zoom in',
                     },
-                    p.createElement(Ri, null)
+                    p.createElement(Ri, null),
                   ),
                   p.createElement(
                     qe,
@@ -17013,7 +17013,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                       },
                       title: 'Zoom out',
                     },
-                    p.createElement(Pi, null)
+                    p.createElement(Pi, null),
                   ),
                   p.createElement(
                     qe,
@@ -17024,10 +17024,10 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                       },
                       title: 'Reset zoom',
                     },
-                    p.createElement(ki, null)
-                  )
-                )
-          )
+                    p.createElement(ki, null),
+                  ),
+                ),
+          ),
         ),
       w4 = sr({ scale: 1 }),
       { window: Cue } = pe;
@@ -17076,7 +17076,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   minWidth: `calc(100% / ${e} - 20px)`,
                 },
               }
-            : {}
+            : {},
       ),
       ug = L(D4)(({ theme: e }) => ({
         margin: 0,
@@ -17108,7 +17108,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           borderBottomWidth: r && 0,
           'h3 + &': { marginTop: '16px' },
         }),
-        ({ withToolbar: e }) => e && { paddingTop: 40 }
+        ({ withToolbar: e }) => e && { paddingTop: 40 },
       ),
       _4 = (e, t, r) => {
         switch (!0) {
@@ -17194,7 +17194,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   M([...R, { title: 'Copied', onClick: () => {} }]),
                     q.setTimeout(
                       () => M(R.filter((se) => se.title !== 'Copied')),
-                      1500
+                      1500,
                     );
                 }));
           };
@@ -17224,13 +17224,13 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   { scale: b },
                   Array.isArray(n)
                     ? n.map((V, U) => p.createElement('div', { key: U }, V))
-                    : p.createElement('div', null, n)
-                )
+                    : p.createElement('div', null, n),
+                ),
               ),
-              p.createElement(sa, { actionItems: F })
-            )
+              p.createElement(sa, { actionItems: F }),
+            ),
           ),
-          a && E && m
+          a && E && m,
         );
       };
     L(P4)(() => ({ '.docs-story': { paddingTop: 32, paddingBottom: 40 } }));
@@ -17285,8 +17285,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                         { colSpan: 2 },
                         p.createElement('strong', null, 'Deprecated'),
                         ': ',
-                        e.deprecated.toString()
-                      )
+                        e.deprecated.toString(),
+                      ),
                     ),
                   r &&
                     t.map((o) =>
@@ -17296,10 +17296,10 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                         p.createElement(
                           'td',
                           null,
-                          p.createElement('code', null, o.name)
+                          p.createElement('code', null, o.name),
                         ),
-                        p.createElement('td', null, o.description)
-                      )
+                        p.createElement('td', null, o.description),
+                      ),
                     ),
                   a &&
                     p.createElement(
@@ -17308,12 +17308,12 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                       p.createElement(
                         'td',
                         null,
-                        p.createElement('code', null, 'Returns')
+                        p.createElement('code', null, 'Returns'),
                       ),
-                      p.createElement('td', null, e.returns.description)
-                    )
-                )
-              )
+                      p.createElement('td', null, e.returns.description),
+                    ),
+                ),
+              ),
             );
       },
       ku = 8,
@@ -17388,7 +17388,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
         return (
           t || (r = e.slice(0, ku)),
           r.map((n) =>
-            p.createElement(Cg, { key: n, text: n === '' ? '""' : n })
+            p.createElement(Cg, { key: n, text: n === '' ? '""' : n }),
           )
         );
       },
@@ -17410,8 +17410,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 p.createElement(
                   q4,
                   { onClick: () => i(!u) },
-                  u ? 'Show less...' : `Show ${g - ku} more...`
-                )
+                  u ? 'Show less...' : `Show ${g - ku} more...`,
+                ),
               )
             : p.createElement(ig, null, sg(h));
         }
@@ -17427,15 +17427,15 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             tooltip: p.createElement(
               j4,
               { width: z4(n) },
-              p.createElement(Hr, { language: 'jsx', format: !1 }, n)
+              p.createElement(Hr, { language: 'jsx', format: !1 }, n),
             ),
           },
           p.createElement(
             M4,
             { className: 'sbdocs-expandable' },
             p.createElement('span', null, s),
-            a ? p.createElement($4, null) : p.createElement(U4, null)
-          )
+            a ? p.createElement($4, null) : p.createElement(U4, null),
+          ),
         );
       },
       Ou = ({ value: e, initialExpandedArgs: t }) =>
@@ -17529,7 +17529,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               onClick: u,
               disabled: i,
             },
-            'Set boolean'
+            'Set boolean',
           );
         let s = Be(e),
           h = typeof t == 'string' ? K4(t) : t;
@@ -17548,7 +17548,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             onFocus: a,
           }),
           p.createElement('span', { 'aria-hidden': 'true' }, 'False'),
-          p.createElement('span', { 'aria-hidden': 'true' }, 'True')
+          p.createElement('span', { 'aria-hidden': 'true' }, 'True'),
         );
       },
       J4 = (e) => {
@@ -17650,7 +17650,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             onFocus: n,
             onBlur: a,
           }),
-          u ? null : p.createElement('div', null, 'invalid')
+          u ? null : p.createElement('div', null, 'invalid'),
         );
       },
       r9 = L.label({ display: 'flex' }),
@@ -17682,7 +17682,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 ? A(new Error(`'${R.target.value}' is not a number`))
                 : (r(M), A(null));
             },
-            [r, A]
+            [r, A],
           ),
           T = Ee(() => {
             g('0'), r(0), y(!0);
@@ -17705,7 +17705,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   onClick: T,
                   disabled: b,
                 },
-                'Set number'
+                'Set number',
               )
             : p.createElement(
                 r9,
@@ -17727,7 +17727,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   step: o,
                   onFocus: i,
                   onBlur: u,
-                })
+                }),
               )
         );
       },
@@ -17755,7 +17755,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
         (e) => {
           if (e['aria-readonly'] === 'true')
             return { input: { cursor: 'not-allowed' } };
-        }
+        },
       ),
       i9 = L.span({ '[aria-readonly=true] &': { opacity: 0.5 } }),
       s9 = L.label({
@@ -17809,9 +17809,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 onChange: g,
                 checked: i?.includes(y),
               }),
-              p.createElement(i9, null, y)
+              p.createElement(i9, null, y),
             );
-          })
+          }),
         );
       },
       l9 = L.div(
@@ -17827,7 +17827,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
         (e) => {
           if (e['aria-readonly'] === 'true')
             return { input: { cursor: 'not-allowed' } };
-        }
+        },
       ),
       c9 = L.span({ '[aria-readonly=true] &': { opacity: 0.5 } }),
       d9 = L.label({
@@ -17870,9 +17870,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 onChange: (y) => n(t[y.currentTarget.value]),
                 checked: h === u,
               }),
-              p.createElement(c9, null, h)
+              p.createElement(c9, null, h),
             );
-          })
+          }),
         );
       },
       p9 = {
@@ -17951,12 +17951,12 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             p.createElement(
               'option',
               { key: 'no-selection', disabled: !0 },
-              pg
+              pg,
             ),
             Object.keys(r).map((h) =>
-              p.createElement('option', { key: h, value: h }, h)
-            )
-          )
+              p.createElement('option', { key: h, value: h }, h),
+            ),
+          ),
         );
       },
       h9 = ({ name: e, value: t, options: r, onChange: n, argType: a }) => {
@@ -17976,9 +17976,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             Fg,
             { disabled: s, id: i, multiple: !0, value: u, onChange: o },
             Object.keys(r).map((h) =>
-              p.createElement('option', { key: h, value: h }, h)
-            )
-          )
+              p.createElement('option', { key: h, value: h }, h),
+            ),
+          ),
         );
       },
       fg = (e) => {
@@ -18121,7 +18121,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           E,
           g,
           s,
-          i
+          i,
         );
       }
     };
@@ -18254,9 +18254,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             '[...] ',
             t.length,
             ' ',
-            t.length === 1 ? 'item' : 'items'
+            t.length === 1 ? 'item' : 'items',
           ),
-          !E && y
+          !E && y,
         );
       }
       renderNotCollapsed() {
@@ -18308,7 +18308,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           p.createElement(
             'span',
             { className: 'rejt-not-collapsed-delimiter', style: U },
-            '['
+            '[',
           ),
           !a && I,
           p.createElement(
@@ -18340,8 +18340,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 beforeUpdateAction: F,
                 logger: q,
                 onSubmitValueParser: k,
-              })
-            )
+              }),
+            ),
           ),
           !J &&
             a &&
@@ -18358,14 +18358,14 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 keyPath: r,
                 deep: n,
                 onSubmitValueParser: k,
-              })
+              }),
             ),
           p.createElement(
             'span',
             { className: 'rejt-not-collapsed-delimiter', style: U },
-            ']'
+            ']',
           ),
-          !J && B
+          !J && B,
         );
       }
       render() {
@@ -18390,10 +18390,10 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               { className: 'rejt-name', style: s.name },
               e,
               ' :',
-              ' '
-            )
+              ' ',
+            ),
           ),
-          i
+          i,
         );
       }
     };
@@ -18515,7 +18515,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             q,
             ' ',
             F,
-            M
+            M,
           )),
             (T = null);
         } else {
@@ -18526,7 +18526,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               style: b.value,
               onClick: O ? null : this.handleEditMode,
             },
-            t
+            t,
           );
           let R = de(m, {
             onClick: o,
@@ -18543,10 +18543,10 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             { className: 'rejt-name', style: b.name },
             e,
             ' :',
-            ' '
+            ' ',
           ),
           x,
-          T
+          T,
         );
       }
     };
@@ -18952,9 +18952,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             ' ',
             E.length,
             ' ',
-            E.length === 1 ? 'key' : 'keys'
+            E.length === 1 ? 'key' : 'keys',
           ),
-          !y && m
+          !y && m,
         );
       }
       renderNotCollapsed() {
@@ -19027,7 +19027,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               beforeUpdateAction: F,
               logger: q,
               onSubmitValueParser: k,
-            })
+            }),
           );
         return p.createElement(
           'span',
@@ -19035,13 +19035,13 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           p.createElement(
             'span',
             { className: 'rejt-not-collapsed-delimiter', style: te },
-            '{'
+            '{',
           ),
           !I && B,
           p.createElement(
             'ul',
             { className: 'rejt-not-collapsed-list', style: se },
-            G
+            G,
           ),
           !I &&
             o &&
@@ -19057,14 +19057,14 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 keyPath: r,
                 deep: n,
                 onSubmitValueParser: k,
-              })
+              }),
             ),
           p.createElement(
             'span',
             { className: 'rejt-not-collapsed-delimiter', style: te },
-            '}'
+            '}',
           ),
-          !I && j
+          !I && j,
         );
       }
       render() {
@@ -19089,10 +19089,10 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               { className: 'rejt-name', style: s.name },
               e,
               ' :',
-              ' '
-            )
+              ' ',
+            ),
           ),
-          i
+          i,
         );
       }
     };
@@ -19218,7 +19218,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             'span',
             { className: 'rejt-name', style: b.name },
             e,
-            ' : '
+            ' : ',
           ),
           T
             ? p.createElement(
@@ -19227,7 +19227,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 F,
                 ' ',
                 M,
-                R
+                R,
               )
             : p.createElement(
                 'span',
@@ -19236,9 +19236,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   style: b.value,
                   onClick: x ? null : this.handleEditMode,
                 },
-                String(t)
+                String(t),
               ),
-          !x && !T && q
+          !x && !T && q,
         );
       }
     };
@@ -19356,7 +19356,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   beforeUpdateAction: b,
                   logger: x,
                   onSubmitValueParser: T,
-                })
+                }),
               )
             : O
         );
@@ -19581,7 +19581,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 g(M);
               }
             },
-            [r]
+            [r],
           ),
           [m, A] = ne(!1),
           b = Ee(() => {
@@ -19597,7 +19597,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           return p.createElement(
             Je,
             { disabled: E, id: cr(e), onClick: b },
-            'Set object'
+            'Set object',
           );
         let T = p.createElement(q9, {
             ref: x,
@@ -19625,7 +19625,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 },
               },
               i ? p.createElement(wi, null) : p.createElement(Bi, null),
-              p.createElement('span', null, 'RAW')
+              p.createElement('span', null, 'RAW'),
             ),
           i
             ? T
@@ -19639,17 +19639,17 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 cancelButtonElement: p.createElement(
                   Ru,
                   { type: 'button' },
-                  'Cancel'
+                  'Cancel',
                 ),
                 editButtonElement: p.createElement(
                   Ru,
                   { type: 'submit' },
-                  'Save'
+                  'Save',
                 ),
                 addButtonElement: p.createElement(
                   Ru,
                   { type: 'submit', primary: !0 },
-                  'Save'
+                  'Save',
                 ),
                 plusMenuElement: p.createElement(k9, null),
                 minusMenuElement: p.createElement(N9, null),
@@ -19658,7 +19658,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                     ? p.createElement(hg, { onFocus: $9, onBlur: j9 })
                     : p.createElement(hg, null),
                 fallback: T,
-              })
+              }),
         );
       },
       H9 = L.input(({ theme: e, min: t, max: r, value: n, disabled: a }) => ({
@@ -19844,8 +19844,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             { numberOFDecimalsPlaces: E, max: a },
             g ? t.toFixed(E) : '--',
             ' / ',
-            a
-          )
+            a,
+          ),
         );
       },
       K9 = L.label({ display: 'flex' }),
@@ -19881,7 +19881,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               id: cr(e),
               onClick: E,
             },
-            'Set string'
+            'Set string',
           );
         let y = typeof t == 'string';
         return p.createElement(
@@ -19907,8 +19907,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               { isMaxed: t?.length === o },
               t?.length ?? 0,
               ' / ',
-              o
-            )
+              o,
+            ),
         );
       },
       X9 = L(ke.Input)({ padding: 10 });
@@ -19953,7 +19953,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
         p.createElement(
           Gu,
           { fallback: p.createElement('div', null) },
-          p.createElement(eR, { ...e })
+          p.createElement(eR, { ...e }),
         ),
       rR = {
         array: mg,
@@ -19993,7 +19993,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   target: '_blank',
                   withArrow: !0,
                 },
-                'Setup controls'
+                'Setup controls',
               )
             : p.createElement(yg, null);
         }
@@ -20065,7 +20065,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             lR,
             { expandable: u },
             p.createElement(aR, null, s),
-            m ? p.createElement(oR, { title: 'Required' }, '*') : null
+            m ? p.createElement(oR, { title: 'Required' }, '*') : null,
           ),
           o
             ? null
@@ -20083,30 +20083,30 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                         p.createElement(Ou, {
                           value: E,
                           initialExpandedArgs: i,
-                        })
+                        }),
                       ),
-                      p.createElement(N4, { tags: g.jsDocTags })
+                      p.createElement(N4, { tags: g.jsDocTags }),
                     )
                   : p.createElement(
                       iR,
                       { hasDescription: A },
-                      p.createElement(Ou, { value: E, initialExpandedArgs: i })
-                    )
+                      p.createElement(Ou, { value: E, initialExpandedArgs: i }),
+                    ),
               ),
           o
             ? null
             : p.createElement(
                 'td',
                 null,
-                p.createElement(Ou, { value: y, initialExpandedArgs: i })
+                p.createElement(Ou, { value: y, initialExpandedArgs: i }),
               ),
           a
             ? p.createElement(
                 'td',
                 null,
-                p.createElement(nR, { ...e, isHovered: t })
+                p.createElement(nR, { ...e, isHovered: t }),
               )
-            : null
+            : null,
         );
       },
       dR = L(xi)(({ theme: e }) => ({
@@ -20208,8 +20208,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 fR,
                 null,
                 o ? p.createElement(dR, null) : p.createElement(pR, null),
-                t
-              )
+                t,
+              ),
             ),
             p.createElement(
               yR,
@@ -20221,12 +20221,12 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   tabIndex: -1,
                   style: { outline: 'none' },
                 },
-                g
+                g,
               ),
-              o ? null : h
-            )
+              o ? null : h,
+            ),
           ),
-          o ? r : null
+          o ? r : null,
         );
       },
       na = L.div(({ theme: e }) => ({
@@ -20260,23 +20260,23 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             p.createElement(
               Se,
               { numColumn: Fe[0] },
-              p.createElement(ge, { width: '60%' })
+              p.createElement(ge, { width: '60%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[1] },
-              p.createElement(ge, { width: '30%' })
+              p.createElement(ge, { width: '30%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[2] },
-              p.createElement(ge, { width: '60%' })
+              p.createElement(ge, { width: '60%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[3] },
-              p.createElement(ge, { width: '60%' })
-            )
+              p.createElement(ge, { width: '60%' }),
+            ),
           ),
           p.createElement(
             na,
@@ -20284,24 +20284,24 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             p.createElement(
               Se,
               { numColumn: Fe[0] },
-              p.createElement(ge, { width: '60%' })
+              p.createElement(ge, { width: '60%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[1] },
               p.createElement(ge, { width: '80%' }),
-              p.createElement(ge, { width: '30%' })
+              p.createElement(ge, { width: '30%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[2] },
-              p.createElement(ge, { width: '60%' })
+              p.createElement(ge, { width: '60%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[3] },
-              p.createElement(ge, { width: '60%' })
-            )
+              p.createElement(ge, { width: '60%' }),
+            ),
           ),
           p.createElement(
             na,
@@ -20309,24 +20309,24 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             p.createElement(
               Se,
               { numColumn: Fe[0] },
-              p.createElement(ge, { width: '60%' })
+              p.createElement(ge, { width: '60%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[1] },
               p.createElement(ge, { width: '80%' }),
-              p.createElement(ge, { width: '30%' })
+              p.createElement(ge, { width: '30%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[2] },
-              p.createElement(ge, { width: '60%' })
+              p.createElement(ge, { width: '60%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[3] },
-              p.createElement(ge, { width: '60%' })
-            )
+              p.createElement(ge, { width: '60%' }),
+            ),
           ),
           p.createElement(
             na,
@@ -20334,25 +20334,25 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             p.createElement(
               Se,
               { numColumn: Fe[0] },
-              p.createElement(ge, { width: '60%' })
+              p.createElement(ge, { width: '60%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[1] },
               p.createElement(ge, { width: '80%' }),
-              p.createElement(ge, { width: '30%' })
+              p.createElement(ge, { width: '30%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[2] },
-              p.createElement(ge, { width: '60%' })
+              p.createElement(ge, { width: '60%' }),
             ),
             p.createElement(
               Se,
               { numColumn: Fe[3] },
-              p.createElement(ge, { width: '60%' })
-            )
-          )
+              p.createElement(ge, { width: '60%' }),
+            ),
+          ),
         ),
       ER = L.div(({ inAddonPanel: e, theme: t }) => ({
         height: e ? '100%' : 'auto',
@@ -20398,7 +20398,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   description: p.createElement(
                     p.Fragment,
                     null,
-                    "Controls give you an easy to use interface to test your components. Set your story args and you'll see controls appearing here automatically."
+                    "Controls give you an easy to use interface to test your components. Set your story args and you'll see controls appearing here automatically.",
                   ),
                   footer: p.createElement(
                     AR,
@@ -20415,7 +20415,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                             withArrow: !0,
                           },
                           p.createElement(Oi, null),
-                          ' Watch 5m video'
+                          ' Watch 5m video',
                         ),
                         p.createElement(vR, null),
                         p.createElement(
@@ -20426,8 +20426,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                             withArrow: !0,
                           },
                           p.createElement(Xr, null),
-                          ' Read docs'
-                        )
+                          ' Read docs',
+                        ),
                       ),
                     !e &&
                       p.createElement(
@@ -20438,10 +20438,10 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                           withArrow: !0,
                         },
                         p.createElement(Xr, null),
-                        ' Learn how to set that up'
-                      )
+                        ' Learn how to set that up',
+                      ),
                   ),
-                })
+                }),
               )
         );
       },
@@ -20565,7 +20565,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             n
               ? Object.keys(o).reduce(
                   (u, i) => ({ ...u, [i]: o[i].sort(n) }),
-                  {}
+                  {},
                 )
               : o;
         return {
@@ -20579,7 +20579,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 subsections: a(r.sections[u].subsections),
               },
             }),
-            {}
+            {},
           ),
         };
       },
@@ -20615,8 +20615,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 withArrow: !0,
               },
               p.createElement(Xr, null),
-              ' Read the docs'
-            )
+              ' Read the docs',
+            ),
           );
         }
         if (i) return p.createElement(bR, null);
@@ -20624,9 +20624,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           E = wR(
             (0, bg.default)(
               s,
-              (O) => !O?.table?.disable && BR(O, h || {}, g || {})
+              (O) => !O?.table?.disable && BR(O, h || {}, g || {}),
             ),
-            u
+            u,
           ),
           y = E.ungrouped.length === 0,
           m = Object.entries(E.sections).length === 0,
@@ -20660,21 +20660,21 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 p.createElement(
                   'th',
                   null,
-                  p.createElement('span', null, 'Name')
+                  p.createElement('span', null, 'Name'),
                 ),
                 n
                   ? null
                   : p.createElement(
                       'th',
                       null,
-                      p.createElement('span', null, 'Description')
+                      p.createElement('span', null, 'Description'),
                     ),
                 n
                   ? null
                   : p.createElement(
                       'th',
                       null,
-                      p.createElement('span', null, 'Default')
+                      p.createElement('span', null, 'Default'),
                     ),
                 t
                   ? p.createElement(
@@ -20690,12 +20690,12 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                           p.createElement(
                             xR,
                             { onClick: () => r(), title: 'Reset controls' },
-                            p.createElement(Qr, { 'aria-hidden': !0 })
-                          )
-                      )
+                            p.createElement(Qr, { 'aria-hidden': !0 }),
+                          ),
+                      ),
                     )
-                  : null
-              )
+                  : null,
+              ),
             ),
             p.createElement(
               'tbody',
@@ -20706,7 +20706,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   row: O,
                   arg: h && h[O.key],
                   ...T,
-                })
+                }),
               ),
               Object.entries(E.ungroupedSubsections).map(([O, R]) =>
                 p.createElement(
@@ -20719,9 +20719,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                       arg: h && h[M.key],
                       expandable: x,
                       ...T,
-                    })
-                  )
-                )
+                    }),
+                  ),
+                ),
               ),
               Object.entries(E.sections).map(([O, R]) =>
                 p.createElement(
@@ -20733,7 +20733,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                       row: M,
                       arg: h && h[M.key],
                       ...T,
-                    })
+                    }),
                   ),
                   Object.entries(R.subsections).map(([M, F]) =>
                     p.createElement(
@@ -20746,14 +20746,14 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                           arg: h && h[q.key],
                           expandable: x,
                           ...T,
-                        })
-                      )
-                    )
-                  )
-                )
-              )
-            )
-          )
+                        }),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+            ),
+          ),
         );
       };
     var Sue = L.div(({ theme: e }) => ({
@@ -20915,7 +20915,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             '&:hover svg': { visibility: 'visible' },
           }),
         }),
-        {}
+        {},
       ),
       RR = L.a(() => ({
         float: 'left',
@@ -20942,9 +20942,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 _R.getElementById(t) && IR(a, u);
               },
             },
-            p.createElement(Ti, null)
+            p.createElement(Ti, null),
           ),
-          r
+          r,
         );
       },
       qg = (e) => {
@@ -20956,7 +20956,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
       },
       Yue = Lg.reduce(
         (e, t) => ({ ...e, [t]: (r) => p.createElement(qg, { as: t, ...r }) }),
-        {}
+        {},
       );
     var kR = ((e) => (
       (e.INFO = 'info'),
@@ -21148,7 +21148,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               .replace(/^[^a-z]/i, '')
               .replace(/[^a-z0-9-_ ]/gi, '')
               .replaceAll(/([-_ ]+[a-z0-9])/gi, (T) =>
-                T.toUpperCase().replace(/[-_ ]/g, '')
+                T.toUpperCase().replace(/[-_ ]/g, ''),
               );
             h(x.charAt(0).toUpperCase() + x.slice(1));
           };
@@ -21182,9 +21182,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   p.createElement(
                     $u,
                     { 'data-short-label': 'Save' },
-                    'Update story'
-                  )
-                )
+                    'Update story',
+                  ),
+                ),
               ),
               p.createElement(
                 nt,
@@ -21206,9 +21206,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   p.createElement(
                     $u,
                     { 'data-short-label': 'New' },
-                    'Create new story'
-                  )
-                )
+                    'Create new story',
+                  ),
+                ),
               ),
               p.createElement(
                 nt,
@@ -21222,9 +21222,9 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   qe,
                   { 'aria-label': 'Reset changes', onClick: () => r() },
                   p.createElement(Qr, null),
-                  p.createElement('span', null, 'Reset')
-                )
-              )
+                  p.createElement('span', null, 'Reset'),
+                ),
+              ),
             ),
             p.createElement(
               UR,
@@ -21232,8 +21232,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               p.createElement(
                 $u,
                 { 'data-short-label': 'Unsaved changes' },
-                'You modified this story. Do you want to save your changes?'
-              )
+                'You modified this story. Do you want to save your changes?',
+              ),
             ),
             p.createElement(
               Ge,
@@ -21249,7 +21249,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                           await t(
                             s
                               .replace(/^[^a-z]/i, '')
-                              .replaceAll(/[^a-z0-9]/gi, '')
+                              .replaceAll(/[^a-z0-9]/gi, ''),
                           ),
                           i(!1),
                           o(!1);
@@ -21268,8 +21268,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                     p.createElement(
                       Ge.Description,
                       null,
-                      'This will add a new story to your existing stories file.'
-                    )
+                      'This will add a new story to your existing stories file.',
+                    ),
                   ),
                   p.createElement(zR, {
                     onChange: A,
@@ -21289,7 +21289,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                         type: 'submit',
                         variant: 'solid',
                       },
-                      'Create'
+                      'Create',
                     ),
                     p.createElement(
                       Ge.Dialog.Close,
@@ -21297,21 +21297,21 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                       p.createElement(
                         Je,
                         { disabled: a, size: 'medium', type: 'reset' },
-                        'Cancel'
-                      )
-                    )
-                  )
-                )
+                        'Cancel',
+                      ),
+                    ),
+                  ),
+                ),
               ),
-              g && p.createElement(Ge.Error, null, g)
-            )
-          )
+              g && p.createElement(Ge.Error, null, g),
+            ),
+          ),
         );
       },
       jg = (e) =>
         Object.entries(e).reduce(
           (t, [r, n]) => (n !== void 0 ? Object.assign(t, { [r]: n }) : t),
-          {}
+          {},
         ),
       WR = L.div({
         display: 'grid',
@@ -21359,13 +21359,13 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           b &&
             T &&
             LR.CONFIG_TYPE === 'DEVELOPMENT' &&
-            p.createElement(GR, { resetArgs: u, saveStory: e, createStory: t })
+            p.createElement(GR, { resetArgs: u, saveStory: e, createStory: t }),
         );
       };
     function KR() {
       let e = Ca(),
         t = Object.values(e).filter(
-          (r) => r?.control && !r?.table?.disable
+          (r) => r?.control && !r?.table?.disable,
         ).length;
       return p.createElement(
         'div',
@@ -21376,15 +21376,15 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
           p.createElement(
             'span',
             { style: { display: 'inline-block', verticalAlign: 'middle' } },
-            'Controls'
+            'Controls',
           ),
-          t === 0 ? '' : p.createElement(ca, { status: 'neutral' }, t)
-        )
+          t === 0 ? '' : p.createElement(ca, { status: 'neutral' }, t),
+        ),
       );
     }
     var $g = (e) =>
       JSON.stringify(e, (t, r) =>
-        typeof r == 'function' ? '__sb_empty_function_arg__' : r
+        typeof r == 'function' ? '__sb_empty_function_arg__' : r,
       );
     Gr.register(Mg, (e) => {
       let t = Gr.getChannel(),
@@ -21396,8 +21396,8 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
               args: $g(
                 Object.entries(a.args || {}).reduce(
                   (u, [i, s]) => (rt(s, a.initialArgs?.[i]) || (u[i] = s), u),
-                  {}
-                )
+                  {},
+                ),
               ),
               csfId: a.id,
               importPath: a.importPath,
@@ -21412,7 +21412,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                   null,
                   'Updated story ',
                   p.createElement('b', null, o.sourceStoryName),
-                  '.'
+                  '.',
                 ),
               },
               duration: 8e3,
@@ -21455,7 +21455,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
                 p.createElement('b', null, u.newStoryName),
                 ' based on ',
                 p.createElement('b', null, u.sourceStoryName),
-                '.'
+                '.',
               ),
             },
             duration: 8e3,
@@ -21474,7 +21474,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
             : p.createElement(
                 la,
                 { active: a },
-                p.createElement(VR, { saveStory: r, createStory: n })
+                p.createElement(VR, { saveStory: r, createStory: n }),
               ),
       }),
         t.on(zr, (a) => {
@@ -21489,6 +21489,6 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

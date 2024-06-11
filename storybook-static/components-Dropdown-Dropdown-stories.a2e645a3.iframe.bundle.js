@@ -6,7 +6,7 @@
     './src/components/Dropdown/Dropdown.stories.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
@@ -17,13 +17,13 @@
       __webpack_require__('./node_modules/react/index.js');
       var _templateObject,
         taggedTemplateLiteral = __webpack_require__(
-          './node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+          './node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
         ),
         styled_components_browser_esm = __webpack_require__(
-          './node_modules/styled-components/dist/styled-components.browser.esm.js'
+          './node_modules/styled-components/dist/styled-components.browser.esm.js',
         ),
         jsx_runtime = __webpack_require__(
-          './node_modules/react/jsx-runtime.js'
+          './node_modules/react/jsx-runtime.js',
         );
       const StyledSelect = styled_components_browser_esm.Ay.select(
           _templateObject ||
@@ -35,7 +35,7 @@
             ])),
           (props) => (props.disabled ? 0.5 : 1),
           (props) => (props.disabled ? 'not-allowed' : 'pointer'),
-          (props) => (props.disabled ? '#f0f0f0' : 'white')
+          (props) => (props.disabled ? '#f0f0f0' : 'white'),
         ),
         Dropdown = (_ref) => {
           let { options, onChange, disabled } = _ref;
@@ -46,8 +46,8 @@
               (0, jsx_runtime.jsx)(
                 'option',
                 { value: option.value, children: option.label },
-                option.value
-              )
+                option.value,
+              ),
             ),
           });
         },
@@ -115,7 +115,7 @@
         },
         Default = Object.assign(
           ((args) => (0, jsx_runtime.jsx)(Dropdown_Dropdown, { ...args })).bind(
-            {}
+            {},
           ),
           {
             args: {
@@ -126,7 +126,7 @@
               ],
               onChange: (value) => console.log(value),
             },
-          }
+          },
         );
       Default.parameters = {
         ...Default.parameters,

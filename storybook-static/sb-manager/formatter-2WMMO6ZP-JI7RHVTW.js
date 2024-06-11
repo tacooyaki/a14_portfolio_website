@@ -236,9 +236,9 @@ function T(t8, e = rn) {
       ? Y(
           e,
           r.split(`
-`)
+`),
         )
-      : r
+      : r,
   );
 }
 var nr = class extends Error {
@@ -534,7 +534,7 @@ function _t(t8, e) {
     (t8.type === 'ieConditionalComment' && !t8.complete) ||
     (ge(t8) &&
       t8.children.some(
-        (r) => r.type !== 'text' && r.type !== 'interpolation'
+        (r) => r.type !== 'text' && r.type !== 'interpolation',
       )) ||
     (Dt(t8, e) && !V(t8) && t8.type !== 'interpolation')
   );
@@ -822,7 +822,7 @@ function cr(t8, e = Ti(t8)) {
     : t8
         .split(
           `
-`
+`,
         )
         .map((r) => r.slice(e)).join(`
 `);
@@ -986,7 +986,7 @@ var ne = class t {
     toString() {
       return this.start.file.content.substring(
         this.start.offset,
-        this.end.offset
+        this.end.offset,
       );
     }
   },
@@ -1081,7 +1081,7 @@ function Ii(t8) {
   return Ni(
     t8,
     (e) => e.type === 'cdata',
-    (e) => `<![CDATA[${e.value}]]>`
+    (e) => `<![CDATA[${e.value}]]>`,
   );
 }
 function Ri(t8) {
@@ -1192,7 +1192,7 @@ function Oi(t8) {
           ? ((i.value = o),
             (i.sourceSpan = new f(
               i.sourceSpan.start.moveBy(a.length),
-              i.sourceSpan.end.moveBy(-u.length)
+              i.sourceSpan.end.moveBy(-u.length),
             )),
             a && (p && (p.hasTrailingSpaces = !0), (i.hasLeadingSpaces = !0)),
             u && ((i.hasTrailingSpaces = !0), l && (l.hasLeadingSpaces = !0)))
@@ -1224,8 +1224,8 @@ function qi(t8, e) {
         /^<\s*\/\s*\/\s*>$/.test(
           e.originalText.slice(
             r.endSourceSpan.start.offset,
-            r.endSourceSpan.end.offset
-          )
+            r.endSourceSpan.end.offset,
+          ),
         ));
   });
 }
@@ -1391,7 +1391,7 @@ function ji(t8, e, r) {
           : () => !1,
     a = t8.map(
       ({ node: d }) => (i(d) ? T(e.originalText.slice(se(d), ie(d))) : r()),
-      'attrs'
+      'attrs',
     ),
     o =
       n.type === 'element' &&
@@ -1411,7 +1411,7 @@ function ji(t8, e, r) {
               : ''
             : n.isSelfClosing
               ? A
-              : b
+              : b,
         ),
     l
   );
@@ -1464,8 +1464,8 @@ function Qi(t8, e) {
       Cr.set(
         r,
         r.children.some(
-          (n) => yt(n, e) && ['ts', 'typescript'].includes(n.attrMap.lang)
-        )
+          (n) => yt(n, e) && ['ts', 'typescript'].includes(n.attrMap.lang),
+        ),
       ),
     Cr.get(r)
   );
@@ -1634,7 +1634,7 @@ var Wn = { width: 'w', height: 'h', density: 'x' },
 function aa(t8) {
   let e = Un(t8),
     r = ia.filter((l) =>
-      e.some((m) => Object.prototype.hasOwnProperty.call(m, l))
+      e.some((m) => Object.prototype.hasOwnProperty.call(m, l)),
     );
   if (r.length > 1)
     throw new Error('Mixed descriptor in srcset is not supported');
@@ -1661,8 +1661,8 @@ function aa(t8) {
           d.push(fe(P2, ' '), C + s);
         }
         return d;
-      })
-    )
+      }),
+    ),
   );
 }
 var zn = sa;
@@ -1689,7 +1689,7 @@ async function jn(t8, e, r, n) {
       await x(`function _(${i}) {}`, t8, {
         parser: u ? 'babel-ts' : 'babel',
         __isVueForBindingLeft: !0,
-      })
+      }),
     ),
     ' ',
     a,
@@ -1723,7 +1723,7 @@ function Kn(t8, e, r) {
     `type T<${s}> = any`,
     t8,
     { parser: 'babel-ts', __isEmbeddedTypescriptGenericParameters: !0 },
-    K
+    K,
   );
 }
 function Qn(t8, e, { parseWithTs: r }) {
@@ -1761,7 +1761,7 @@ function ca(t8, e, { parseWithTs: r }) {
         t8,
         e,
         { parser: r ? '__vue_ts_event_binding' : '__vue_event_binding' },
-        K
+        K,
       );
 }
 function pa(t8, e, { parseWithTs: r }) {
@@ -1769,7 +1769,7 @@ function pa(t8, e, { parseWithTs: r }) {
     t8,
     e,
     { parser: r ? '__vue_ts_expression' : '__vue_expression' },
-    K
+    K,
   );
 }
 function Jn(t8, e, { parseWithTs: r }) {
@@ -1796,7 +1796,7 @@ async function es(t8, e) {
             ]),
             A,
             '}}',
-          ])
+          ]),
         );
       } catch {
         r.push('{{', T(s), '}}');
@@ -1832,7 +1832,7 @@ function ga(t8, e) {
   if (r.value) {
     if (
       /^PRETTIER_HTML_PLACEHOLDER_\d+_\d+_IN_JS$/.test(
-        e.originalText.slice(r.valueSpan.start.offset, r.valueSpan.end.offset)
+        e.originalText.slice(r.valueSpan.start.offset, r.valueSpan.end.offset),
       ) ||
       (e.parser === 'lwc' && r.value.startsWith('{') && r.value.endsWith('}'))
     )
@@ -1849,7 +1849,7 @@ function Ca(t8) {
     if (i)
       return (
         (i = Ct(i, (a) =>
-          typeof a == 'string' ? v(!1, a, '"', '&quot;') : a
+          typeof a == 'string' ? v(!1, a, '"', '&quot;') : a,
         )),
         [n.node.rawName, '="', E(i), '"']
       );
@@ -1860,7 +1860,7 @@ function Sa(t8, e, r, n) {
   let { node: s } = r,
     i = n.originalText.slice(
       s.sourceSpan.start.offset,
-      s.sourceSpan.end.offset
+      s.sourceSpan.end.offset,
     );
   return /^\s*$/.test(i)
     ? ''
@@ -1872,7 +1872,7 @@ function Sa(t8, e, r, n) {
           __isInHtmlAttribute: !1,
           trailingComma: 'none',
         },
-        K
+        K,
       );
 }
 var ns = Sa,
@@ -1968,8 +1968,8 @@ function rt(t8, e, r) {
         T(
           e.originalText.slice(
             se(n) + (n.prev && Je(n.prev) ? Bt(n).length : 0),
-            ie(n) - (n.next && j(n.next) ? _e(n, e).length : 0)
-          )
+            ie(n) - (n.next && j(n.next) ? _e(n, e).length : 0),
+          ),
         ),
         U(n, e),
       ]
@@ -2098,7 +2098,7 @@ function is(t8, e, r) {
                     n.isWhitespaceSensitive &&
                     n.isIndentationSensitive)) &&
                 new RegExp(
-                  `\\n[\\t ]{${e.tabWidth * (t8.ancestors.length - 1)}}$`
+                  `\\n[\\t ]{${e.tabWidth * (t8.ancestors.length - 1)}}$`,
                 ).test(n.lastChild.value)
               ? ''
               : b;
@@ -2532,7 +2532,7 @@ var Rt = class {},
       innerHtml: 'innerHTML',
       readonly: 'readOnly',
       tabindex: 'tabIndex',
-    })
+    }),
   ),
   Pa = Array.from(Cs).reduce((t8, [e, r]) => (t8.set(e, r), t8), new Map()),
   $t = class extends Rt {
@@ -5132,7 +5132,7 @@ function _s(t8, e) {
     $a.forEach((s) => {
       if (s.test(r) || s.test(n))
         throw new Error(
-          `['${r}', '${n}'] contains unusable interpolation symbol.`
+          `['${r}', '${n}'] contains unusable interpolation symbol.`,
         );
     });
   }
@@ -5225,7 +5225,7 @@ var pt = class {
         : e.replace(
             ro,
             `
-`
+`,
           );
     }
     tokenize() {
@@ -5262,7 +5262,7 @@ var pt = class {
                     5,
                     8,
                     () => this._isTextEnd(),
-                    () => this._isTagStart()
+                    () => this._isTagStart(),
                   );
         } catch (r) {
           this.handleError(r);
@@ -5275,7 +5275,7 @@ var pt = class {
         r = this._cursor.clone();
       return (
         this._attemptCharCodeUntilFn((n) =>
-          wt(n) ? !e : xs(n) ? ((e = !0), !1) : !0
+          wt(n) ? !e : xs(n) ? ((e = !0), !1) : !0,
         ),
         this._cursor.getChars(r).trim()
       );
@@ -5354,20 +5354,20 @@ var pt = class {
         throw new ct(
           'Programming error - attempted to end a token when there was no start to the token',
           this._currentTokenType,
-          this._cursor.getSpan(r)
+          this._cursor.getSpan(r),
         );
       if (this._currentTokenType === null)
         throw new ct(
           'Programming error - attempted to end a token which has no token type',
           null,
-          this._cursor.getSpan(this._currentTokenStart)
+          this._cursor.getSpan(this._currentTokenStart),
         );
       let n = {
         type: this._currentTokenType,
         parts: e,
         sourceSpan: (r ?? this._cursor).getSpan(
           this._currentTokenStart,
-          this._leadingTriviaCodePoints
+          this._leadingTriviaCodePoints,
         ),
       };
       return (
@@ -5407,7 +5407,7 @@ var pt = class {
       if (!this._attemptCharCode(e))
         throw this._createError(
           Ue(this._cursor.peek()),
-          this._cursor.getSpan(r)
+          this._cursor.getSpan(r),
         );
     }
     _attemptStr(e) {
@@ -5429,7 +5429,7 @@ var pt = class {
       if (!this._attemptStr(e))
         throw this._createError(
           Ue(this._cursor.peek()),
-          this._cursor.getSpan(r)
+          this._cursor.getSpan(r),
         );
     }
     _requireStrCaseInsensitive(e) {
@@ -5437,7 +5437,7 @@ var pt = class {
       if (!this._attemptStrCaseInsensitive(e))
         throw this._createError(
           Ue(this._cursor.peek()),
-          this._cursor.getSpan(r)
+          this._cursor.getSpan(r),
         );
     }
     _attemptCharCodeUntilFn(e) {
@@ -5448,7 +5448,7 @@ var pt = class {
       if ((this._attemptCharCodeUntilFn(e), this._cursor.diff(n) < r))
         throw this._createError(
           Ue(this._cursor.peek()),
-          this._cursor.getSpan(n)
+          this._cursor.getSpan(n),
         );
     }
     _attemptUntilChar(e) {
@@ -5469,7 +5469,7 @@ var pt = class {
           let a = n ? jt.HEX : jt.DEC;
           throw this._createError(
             no(a, this._cursor.getChars(r)),
-            this._cursor.getSpan()
+            this._cursor.getSpan(),
           );
         }
         let i = this._cursor.getChars(s);
@@ -5480,7 +5480,7 @@ var pt = class {
         } catch {
           throw this._createError(
             ws(this._cursor.getChars(r)),
-            this._cursor.getSpan()
+            this._cursor.getSpan(),
           );
         }
       } else {
@@ -5568,7 +5568,7 @@ var pt = class {
         if (!bt(this._cursor.peek()))
           throw this._createError(
             Ue(this._cursor.peek()),
-            this._cursor.getSpan(e)
+            this._cursor.getSpan(e),
           );
         for (
           s = this._consumeTagOpenStart(e),
@@ -5613,7 +5613,7 @@ var pt = class {
         (this._attemptCharCodeUntilFn(k),
         !this._attemptStrCaseInsensitive(e ? `${e}:${r}` : r))
           ? !1
-          : (this._attemptCharCodeUntilFn(k), this._attemptCharCode(62))
+          : (this._attemptCharCodeUntilFn(k), this._attemptCharCode(62)),
       ),
         this._beginToken(3),
         this._requireCharCodeUntilFn((s) => s === 62, 3),
@@ -5916,7 +5916,7 @@ var Kt = class t3 {
       } else {
         if (!r)
           throw new Error(
-            'Programming error: the range argument must be provided with a file argument.'
+            'Programming error: the range argument must be provided with a file argument.',
           );
         (this.file = e),
           (this.input = e.content),
@@ -6056,7 +6056,7 @@ var Kt = class t3 {
     decodeHexDigits(e, r) {
       let n = this.input.slice(
           e.internalState.offset,
-          e.internalState.offset + r
+          e.internalState.offset + r,
         ),
         s = parseInt(n, 16);
       if (isNaN(s))
@@ -6106,7 +6106,7 @@ var Kt = class t3 {
                 return g !== void 0 ? g : u(D);
               }
             : u,
-          n
+          n,
         ),
         d = (n && n.canSelfClose) || !1,
         C = (n && n.allowHtmComponentClosingTags) || !1,
@@ -6160,7 +6160,7 @@ var Kt = class t3 {
       for (let e of this._containerStack)
         e instanceof J &&
           this.errors.push(
-            I.create(e.name, e.sourceSpan, `Unclosed block "${e.name}"`)
+            I.create(e.name, e.sourceSpan, `Unclosed block "${e.name}"`),
           );
     }
     _advance() {
@@ -6179,7 +6179,7 @@ var Kt = class t3 {
         n = this._getText(r),
         s = this._advanceIf(13);
       this._addToParent(
-        new Mt(n, new f(e.sourceSpan.start, (s || r).sourceSpan.end), [r])
+        new Mt(n, new f(e.sourceSpan.start, (s || r).sourceSpan.end), [r]),
       );
     }
     _consumeComment(e) {
@@ -6210,15 +6210,15 @@ var Kt = class t3 {
           I.create(
             null,
             this._peek.sourceSpan,
-            "Invalid ICU message. Missing '}'."
-          )
+            "Invalid ICU message. Missing '}'.",
+          ),
         );
         return;
       }
       let i = new f(
         e.sourceSpan.start,
         this._peek.sourceSpan.end,
-        e.sourceSpan.fullStart
+        e.sourceSpan.fullStart,
       );
       this._addToParent(new qt(r.parts[0], n.parts[0], s, i, r.sourceSpan)),
         this._advance();
@@ -6231,8 +6231,8 @@ var Kt = class t3 {
             I.create(
               null,
               this._peek.sourceSpan,
-              "Invalid ICU message. Missing '{'."
-            )
+              "Invalid ICU message. Missing '{'.",
+            ),
           ),
           null
         );
@@ -6246,14 +6246,14 @@ var Kt = class t3 {
         this.getTagDefinition,
         this.canSelfClose,
         this.allowHtmComponentClosingTags,
-        this.isTagNameCaseSensitive
+        this.isTagNameCaseSensitive,
       );
       if ((i.build(), i.errors.length > 0))
         return (this.errors = this.errors.concat(i.errors)), null;
       let a = new f(
           e.sourceSpan.start,
           s.sourceSpan.end,
-          e.sourceSpan.fullStart
+          e.sourceSpan.fullStart,
         ),
         o = new f(r.sourceSpan.start, s.sourceSpan.end, r.sourceSpan.fullStart);
       return new Ht(e.parts[0], i.rootNodes, a, e.sourceSpan, o);
@@ -6275,8 +6275,8 @@ var Kt = class t3 {
                 I.create(
                   null,
                   e.sourceSpan,
-                  "Invalid ICU message. Missing '}'."
-                )
+                  "Invalid ICU message. Missing '}'.",
+                ),
               ),
               null
             );
@@ -6288,15 +6288,15 @@ var Kt = class t3 {
                 I.create(
                   null,
                   e.sourceSpan,
-                  "Invalid ICU message. Missing '}'."
-                )
+                  "Invalid ICU message. Missing '}'.",
+                ),
               ),
               null
             );
         if (this._peek.type === 30)
           return (
             this.errors.push(
-              I.create(null, e.sourceSpan, "Invalid ICU message. Missing '}'.")
+              I.create(null, e.sourceSpan, "Invalid ICU message. Missing '}'."),
             ),
             null
           );
@@ -6351,7 +6351,7 @@ var Kt = class t3 {
       if (s.length > 0) {
         let i = e.sourceSpan;
         this._addToParent(
-          new Ot(s, new f(n.start, i.end, n.fullStart, n.details), r)
+          new Ot(s, new f(n.start, i.end, n.fullStart, n.details), r),
         );
       }
     }
@@ -6379,8 +6379,8 @@ var Kt = class t3 {
             I.create(
               i,
               e.sourceSpan,
-              `Only void, custom and foreign elements can be self closed "${e.parts[1]}"`
-            )
+              `Only void, custom and foreign elements can be self closed "${e.parts[1]}"`,
+            ),
           );
       } else this._peek.type === 1 && (this._advance(), (a = !1));
       let o = this._peek.sourceSpan.fullStart,
@@ -6391,14 +6391,14 @@ var Kt = class t3 {
         d = this._getContainer();
       this._pushContainer(
         m,
-        d instanceof z && this.getTagDefinition(d.name).isClosedByChild(m.name)
+        d instanceof z && this.getTagDefinition(d.name).isClosedByChild(m.name),
       ),
         a
           ? this._popContainer(i, z, u)
           : e.type === 4 &&
             (this._popContainer(i, z, null),
             this.errors.push(
-              I.create(i, u, `Opening tag "${i}" not terminated.`)
+              I.create(i, u, `Opening tag "${i}" not terminated.`),
             ));
     }
     _pushContainer(e, r) {
@@ -6413,15 +6413,15 @@ var Kt = class t3 {
           : this._getElementFullName(
               e.parts[0],
               e.parts[1],
-              this._getClosestParentElement()
+              this._getClosestParentElement(),
             );
       if (r && this.getTagDefinition(r).isVoid)
         this.errors.push(
           I.create(
             r,
             e.sourceSpan,
-            `Void elements do not have end tags "${e.parts[1]}"`
-          )
+            `Void elements do not have end tags "${e.parts[1]}"`,
+          ),
         );
       else if (!this._popContainer(r, z, e.sourceSpan)) {
         let n = `Unexpected closing tag "${r}". It may happen when the tag has already been closed by another tag. For more info see https://www.w3.org/TR/html5/syntax.html#closing-elements-that-have-implied-end-tags`;
@@ -6483,7 +6483,7 @@ var Kt = class t3 {
         new f(
           s?.sourceSpan.start ?? o.start,
           u,
-          s?.sourceSpan.fullStart ?? o.fullStart
+          s?.sourceSpan.fullStart ?? o.fullStart,
         );
       return new Vt(
         r,
@@ -6492,7 +6492,7 @@ var Kt = class t3 {
         e.sourceSpan,
         l,
         a.length > 0 ? a : void 0,
-        void 0
+        void 0,
       );
     }
     _consumeBlockOpen(e) {
@@ -6514,8 +6514,8 @@ var Kt = class t3 {
           I.create(
             null,
             e.sourceSpan,
-            'Unexpected closing block. The block may have been closed earlier. If you meant to write the } character, you should use the "&#125;" HTML entity instead.'
-          )
+            'Unexpected closing block. The block may have been closed earlier. If you meant to write the } character, you should use the "&#125;" HTML entity instead.',
+          ),
         );
     }
     _consumeIncompleteBlock(e) {
@@ -6534,8 +6534,8 @@ var Kt = class t3 {
           I.create(
             e.parts[0],
             s,
-            `Incomplete block "${e.parts[0]}". If you meant to write the @ character, you should use the "&#64;" HTML entity instead.`
-          )
+            `Incomplete block "${e.parts[0]}". If you meant to write the @ character, you should use the "&#64;" HTML entity instead.`,
+          ),
         );
     }
     _getContainer() {
@@ -6607,12 +6607,12 @@ function qr(t8, e = {}) {
       tokenizeBlocks: a,
     },
     s,
-    i
+    i,
   );
 }
 var po = new RegExp(
   '^(?<startDelimiter>-{3}|\\+{3})(?<language>[^\\n]*)\\n(?:|(?<value>.*?)\\n)(?<endDelimiter>\\k<startDelimiter>|\\.{3})[^\\S\\n]*(?:\\n|$)',
-  's'
+  's',
 );
 function ho(t8) {
   let e = t8.match(po);
@@ -6642,7 +6642,7 @@ function ho(t8) {
 var Rs = ho;
 function fo(t8, e) {
   let r = new SyntaxError(
-    t8 + ' (' + e.loc.start.line + ':' + e.loc.start.column + ')'
+    t8 + ' (' + e.loc.start.line + ':' + e.loc.start.column + ')',
   );
   return Object.assign(r, e);
 }
@@ -7410,7 +7410,7 @@ function Eo(t8) {
       children: t8.parameters,
       sourceSpan: new f(
         t8.parameters[0].sourceSpan.start,
-        me(!1, t8.parameters, -1).sourceSpan.end
+        me(!1, t8.parameters, -1).sourceSpan.end,
       ),
     };
   }
@@ -7437,7 +7437,7 @@ function Vs(t8, e, r) {
       l.some(
         (w2) =>
           (w2.type === 'docType' && w2.value === 'html') ||
-          (w2.type === 'element' && w2.name.toLowerCase() === 'html')
+          (w2.type === 'element' && w2.name.toLowerCase() === 'html'),
       )
     )
       return Vs(t8, Ws, r);
@@ -7452,7 +7452,7 @@ function Vs(t8, e, r) {
       $ = (w2) =>
         y2().rootNodes.find(
           ({ startSourceSpan: q2 }) =>
-            q2 && q2.start.offset === w2.startSourceSpan.start.offset
+            q2 && q2.start.offset === w2.startSourceSpan.start.offset,
         ) ?? w2;
     for (let [w2, q2] of l.entries()) {
       let { endSourceSpan: Wr2, startSourceSpan: js } = q2;
@@ -7461,7 +7461,7 @@ function Vs(t8, e, r) {
         let zr2 = y2().errors.find(
           (Gr2) =>
             Gr2.span.start.offset > js.start.offset &&
-            Gr2.span.start.offset < Wr2.end.offset
+            Gr2.span.start.offset < Wr2.end.offset,
         );
         zr2 && Hs(zr2), (l[w2] = $(q2));
       }
@@ -7514,7 +7514,7 @@ function Vs(t8, e, r) {
               g.name,
               (y2) =>
                 Jt.has(c.name) &&
-                (Jt.get('*').has(y2) || Jt.get(c.name).has(y2))
+                (Jt.get('*').has(y2) || Jt.get(c.name).has(y2)),
             ));
     },
     P2 = (c) => {
@@ -7537,7 +7537,7 @@ function Vs(t8, e, r) {
           C(c), B(c), D(c), P2(c);
         }
       })(),
-      l
+      l,
     ),
     l
   );
@@ -7587,7 +7587,7 @@ function Us(t8, e, r = {}, n = !0) {
           ? B.children.shift()
           : ((c.sourceSpan = new f(
               c.sourceSpan.start.moveBy(_2),
-              c.sourceSpan.end
+              c.sourceSpan.end,
             )),
             (c.value = c.value.slice(_2))),
         B
@@ -7631,7 +7631,7 @@ var Ws = {
         (t8 !== 'template' ||
           n.some(
             ({ name: s, value: i }) =>
-              s === 'lang' && i !== 'html' && i !== '' && i !== void 0
+              s === 'lang' && i !== 'html' && i !== '' && i !== void 0,
           ))
       );
     },
@@ -7809,7 +7809,7 @@ var Ws = {
       t8 || !e || !e.__esModule
         ? $e2(r, 'default', { value: e, enumerable: !0 })
         : r,
-      e
+      e,
     )
   ),
   Eu = (e) => nr2($e2({}, '__esModule', { value: !0 }), e),
@@ -8094,7 +8094,7 @@ var no2,
               if (Array.isArray(h2)) {
                 let $ = F2.slice(0, Math.max(h2[0] - 1, 0)).replace(
                     /[^\t]/g,
-                    ' '
+                    ' ',
                   ),
                   Q2 = h2[1] || 1;
                 (Z = [
@@ -8378,7 +8378,7 @@ function gr2(e) {
     e,
     /\r\n?/g,
     `
-`
+`,
   );
 }
 var yr2 = () =>
@@ -8752,9 +8752,9 @@ function Tr2(e, t8 = He2) {
       ? ke2(
           t8,
           r.split(`
-`)
+`),
         )
-      : r
+      : r,
   );
 }
 function Iu(e) {
@@ -8789,7 +8789,7 @@ function Yu(e, t8, r) {
                 type: typeof t8 == 'string' ? 'stringAlign' : 'numberAlign',
                 n: t8,
               },
-              r
+              r,
             )
         : e;
 }
@@ -8942,7 +8942,7 @@ function fe2(e, t8) {
                 l,
                 `
 `,
-                o
+                o,
               )
             : l;
         s.push(F2), i.length > 0 && (u += we2(F2));
@@ -9029,7 +9029,7 @@ function fe2(e, t8) {
           F2,
           a.length > 0,
           r,
-          !0
+          !0,
         )
           ? i.push(Q2, Z, g)
           : B
@@ -9418,7 +9418,7 @@ function et2({ plugins: e = [], showDeprecated: t8 = !1 } = {}) {
               ((i = u.defaultOptions) == null ? void 0 : i[o.name]) !== void 0
             );
           })
-          .map((u) => [u.name, u.defaultOptions[o.name]])
+          .map((u) => [u.name, u.defaultOptions[o.name]]),
       )),
       n.push(o));
   return { languages: r, options: n };
@@ -9432,7 +9432,7 @@ function* Vu(e, t8, r) {
           n.add(u);
           let i = r.find(
               (D) =>
-                D.parsers && Object.prototype.hasOwnProperty.call(D.parsers, u)
+                D.parsers && Object.prototype.hasOwnProperty.call(D.parsers, u),
             ),
             s = o.name;
           i != null && i.name && (s += ` (plugin: ${i.name})`),
@@ -9501,7 +9501,7 @@ var Rr = Uu,
     return (
       t8 &&
         n.push(
-          `we now treat it as ${bt2.default.blue(typeof t8 == 'string' ? r.key(t8) : r.pair(t8))}`
+          `we now treat it as ${bt2.default.blue(typeof t8 == 'string' ? r.key(t8) : r.pair(t8))}`,
         ),
       n.join('; ') + '.'
     );
@@ -9512,7 +9512,7 @@ var Rr = Uu,
   $r2 = ' '.repeat(2),
   Wr = (e, t8, r) => {
     let { text: n, list: o } = r.normalizeExpectedResult(
-        r.schemas[e].expected(r)
+        r.schemas[e].expected(r),
       ),
       u = [];
     return (
@@ -9520,9 +9520,9 @@ var Rr = Uu,
       o &&
         u.push(
           [Mr2(e, t8, o.title, r.descriptor)].concat(
-            o.values.map((i) => Ur2(i, r.loggerPrintWidth))
+            o.values.map((i) => Ur2(i, r.loggerPrintWidth)),
           ).join(`
-`)
+`),
         ),
       zr(u, r.loggerPrintWidth)
     );
@@ -9542,10 +9542,10 @@ function Ur2({ text: e, list: t8 }, r) {
       n.push(
         [`- ${se2.default.blue(t8.title)}:`].concat(
           t8.values.map((o) =>
-            Ur2(o, r - $r2.length).replace(/^|\n/g, `$&${$r2}`)
-          )
+            Ur2(o, r - $r2.length).replace(/^|\n/g, `$&${$r2}`),
+          ),
         ).join(`
-`)
+`),
       ),
     zr(n, r)
   );
@@ -9558,8 +9558,8 @@ function zr(e, t8) {
         i.split(
           `
 `,
-          1
-        )[0].length
+          1,
+        )[0].length,
     );
   return o > t8 && o > u ? n : r;
 }
@@ -9679,7 +9679,7 @@ var nt2 = class extends w {
     }
     expected(t8) {
       let { text: r, list: n } = t8.normalizeExpectedResult(
-        this._valueSchema.expected(t8)
+        this._valueSchema.expected(t8),
       );
       return {
         text: r && `an array of ${r}`,
@@ -9703,7 +9703,7 @@ var nt2 = class extends w {
       for (let o of t8) {
         let u = r.normalizeDeprecatedResult(
           this._valueSchema.deprecated(o, r),
-          o
+          o,
         );
         u !== !1 && n.push(...u.map(({ value: i }) => ({ value: [i] })));
       }
@@ -9801,7 +9801,7 @@ function St2(e) {
   return (
     Hu(
       (t8 || r) !== void 0,
-      'Unexpected `expected` result, there should be at least one field.'
+      'Unexpected `expected` result, there should be at least one field.',
     ),
     r
       ? { text: t8, list: { title: r.title, values: r.values.map(St2) } }
@@ -9854,7 +9854,7 @@ var Dt2 = class extends w {
       super(t8),
         (this._choices = Jr2(
           t8.choices.map((r) => (r && typeof r == 'object' ? r : { value: r })),
-          'value'
+          'value',
         ));
     }
     expected({ descriptor: t8 }) {
@@ -9999,7 +9999,7 @@ var Dt2 = class extends w {
               if (F2 === !0)
                 this._hasDeprecationWarned(i) ||
                   this._utils.logger.warn(
-                    this._deprecatedHandler(i, l, this._utils)
+                    this._deprecatedHandler(i, l, this._utils),
                   );
               else
                 for (let { value: m } of F2) {
@@ -10007,7 +10007,7 @@ var Dt2 = class extends w {
                   if (!this._hasDeprecationWarned(E2)) {
                     let C = typeof l == 'string' ? { key: l, value: m } : l;
                     this._utils.logger.warn(
-                      this._deprecatedHandler(E2, C, this._utils)
+                      this._deprecatedHandler(E2, C, this._utils),
                     );
                   }
                 }
@@ -10038,7 +10038,7 @@ var Dt2 = class extends w {
     _partitionOptionKeys(t8) {
       let [r, n] = Zr2(
         Object.keys(t8).filter((o) => !this._identifyMissing(o, t8)),
-        (o) => o in this._utils.schemas
+        (o) => o in this._utils.schemas,
       );
       return { knownKeys: r, unknownKeys: n };
     }
@@ -10061,7 +10061,7 @@ var Dt2 = class extends w {
         if (r.delete) for (let n of r.delete) delete t8[n];
         if (r.override) {
           let { knownKeys: n, unknownKeys: o } = this._partitionOptionKeys(
-            r.override
+            r.override,
           );
           for (let u of n) {
             let i = r.override[u];
@@ -10088,7 +10088,7 @@ function Ju(
     passThrough: o = !1,
     FlagSchema: u,
     descriptor: i,
-  } = {}
+  } = {},
 ) {
   if (n) {
     if (!u) throw new Error("'FlagSchema' option is required.");
@@ -10136,7 +10136,7 @@ function Zu(e, { isCLI: t8, optionInfos: r, FlagSchema: n }) {
         (u.choices = e.choices.map((D) =>
           D != null && D.redirect
             ? { ...D, redirect: { to: { key: e.name, value: D.redirect } } }
-            : D
+            : D,
         ));
       break;
     case 'boolean':
@@ -10149,7 +10149,7 @@ function Zu(e, { isCLI: t8, optionInfos: r, FlagSchema: n }) {
             D.alias,
             D.description && D.name,
             D.oppositeDescription && `no-${D.name}`,
-          ].filter(Boolean)
+          ].filter(Boolean),
         ));
       break;
     case 'path':
@@ -10237,7 +10237,7 @@ async function Qu(e, t8 = {}) {
         throw new ve2(`No parser could be inferred for file "${r.filepath}".`);
     } else
       throw new ve2(
-        "No parser and no file path given, couldn't infer a parser."
+        "No parser and no file path given, couldn't infer a parser.",
       );
   let n = et2({ plugins: e.plugins, showDeprecated: !0 }).options,
     o = {
@@ -10245,7 +10245,7 @@ async function Qu(e, t8 = {}) {
       ...Object.fromEntries(
         n
           .filter((f2) => f2.default !== void 0)
-          .map((f2) => [f2.name, f2.default])
+          .map((f2) => [f2.name, f2.default]),
       ),
     },
     u = Rt2(r.plugins, r.parser),
@@ -10259,7 +10259,7 @@ async function Qu(e, t8 = {}) {
   r.printer = D;
   let a = s.defaultOptions
       ? Object.fromEntries(
-          Object.entries(s.defaultOptions).filter(([, f2]) => f2 !== void 0)
+          Object.entries(s.defaultOptions).filter(([, f2]) => f2 !== void 0),
         )
       : {},
     c = { ...o, ...a };
@@ -10444,7 +10444,7 @@ var De2 = co2,
           (o, u, i) => {
             n[u] = t8(o, u, i);
           },
-          ...r
+          ...r,
         ),
         n
       );
@@ -10592,7 +10592,7 @@ function Eo2(e) {
         (e.key && (typeof e.key == 'object' ? e.key.name : e.key)) ||
         (e.value && (typeof e.value == 'object' ? '' : String(e.value))) ||
         e.operator ||
-        ''
+        '',
     );
   return (
     r.length > 20 && (r = r.slice(0, 19) + '\u2026'), t8 + (r ? ' ' + r : '')
@@ -10626,7 +10626,7 @@ function Et2(e, t8) {
   } = t8;
   if (!n) return [];
   let s = (r?.(e, t8) ?? [...Wt2(e, { getVisitorKeys: H2(o) })]).flatMap((D) =>
-    n(D) ? [D] : Et2(D, t8)
+    n(D) ? [D] : Et2(D, t8),
   );
   return s.sort((D, a) => u(D) - u(a) || i(D) - i(a)), zt2.set(e, s), s;
 }
@@ -10866,7 +10866,7 @@ function Pn(e) {
       throw new Error(
         'Comment "' +
           n.value.trim() +
-          '" was not printed. Please report this error!'
+          '" was not printed. Please report this error!',
       );
     delete n.printed;
   }
@@ -10879,7 +10879,7 @@ async function Ln2(e, t8, r, n, o) {
   if (!i || u !== 'auto') return;
   if (i.length > 2)
     throw new Error(
-      'printer.embed has too many parameters. The API changed in Prettier v3. Please update your plugin. See https://prettier.io/docs/en/plugins.html#optional-embed'
+      'printer.embed has too many parameters. The API changed in Prettier v3. Please update your plugin. See https://prettier.io/docs/en/plugins.html#optional-embed',
     );
   let a = H2(i.getVisitorKeys ?? D),
     c = [];
@@ -10914,7 +10914,7 @@ async function Ln2(e, t8, r, n, o) {
 async function _o2(e, t8, r, n) {
   let o = await re2(
       { ...r, ...t8, parentParser: r.parser, originalText: e },
-      { passThrough: !0 }
+      { passThrough: !0 },
     ),
     { ast: u } = await De2(e, o),
     i = await n(u, o);
@@ -11186,8 +11186,8 @@ async function vo2(e, t8) {
       n.lastIndexOf(
         `
 `,
-        o
-      ) + 1
+        o,
+      ) + 1,
     ),
     D = n.slice(s, o).match(/^\s*/)[0],
     a = Fe2(D, t8.tabWidth),
@@ -11203,7 +11203,7 @@ async function vo2(e, t8) {
             : -1,
         endOfLine: 'lf',
       },
-      a
+      a,
     ),
     d = c.formatted.trimEnd(),
     { cursorOffset: f2 } = t8;
@@ -11220,14 +11220,14 @@ async function vo2(e, t8) {
       (f2 += _t2(
         p.slice(0, f2),
         `
-`
+`,
       )),
       (p = ee2(
         !1,
         p,
         `
 `,
-        l
+        l,
       ));
   }
   return { formatted: p, cursorOffset: f2, comments: c.comments };
@@ -11263,7 +11263,7 @@ function Jn2(e, t8) {
       _t2(
         e.slice(0, Math.max(D, 0)),
         `\r
-`
+`,
       );
     (r -= s(r)), (n -= s(n)), (o -= s(o)), (e = gr2(e));
   }
@@ -11438,7 +11438,9 @@ function Uo(e, t8, r) {
         : D === t8
           ? '\\' + D
           : D ||
-            (r && /^[^\n\r"'0-7\\bfnrt-vx\u2028\u2029]$/.test(s) ? s : '\\' + s)
+            (r && /^[^\n\r"'0-7\\bfnrt-vx\u2028\u2029]$/.test(s)
+              ? s
+              : '\\' + s),
     );
   return t8 + u + t8;
 }
@@ -11541,7 +11543,7 @@ function dedent(templ) {
   var strings = Array.from(typeof templ == 'string' ? [templ] : templ);
   strings[strings.length - 1] = strings[strings.length - 1].replace(
     /\r?\n([\t ]*)$/,
-    ''
+    '',
   );
   var indentLengths = strings.reduce(function (arr, str) {
     var matches = str.match(/\n([\t ]+|(?!\s).)/g);
@@ -11555,7 +11557,7 @@ function dedent(templ) {
                 : _a2.length) !== null && _b !== void 0
               ? _b
               : 0;
-          })
+          }),
         )
       : arr;
   }, []);
@@ -11565,13 +11567,13 @@ function dedent(templ) {
 [	 ]{` +
         Math.min.apply(Math, indentLengths) +
         '}',
-      'g'
+      'g',
     );
     strings = strings.map(function (str) {
       return str.replace(
         pattern_1,
         `
-`
+`,
       );
     });
   }
@@ -11588,7 +11590,7 @@ function dedent(templ) {
         (indentedValue = String(value)
           .split(
             `
-`
+`,
           )
           .map(function (str, i2) {
             return i2 === 0 ? str : '' + endentation + str;
@@ -11610,6 +11612,6 @@ var formatter = (0, import_memoizerific.default)(2)(async (type, source) =>
             plugins: [dh],
             htmlWhitespaceSensitivity: 'ignore',
           })
-        ).trim()
+        ).trim(),
 );
 export { formatter };

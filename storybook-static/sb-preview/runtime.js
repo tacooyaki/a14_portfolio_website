@@ -45,7 +45,7 @@ var __toESM = (mod, isNodeMode, target) => (
     isNodeMode || !mod || !mod.__esModule
       ? __defProp(target, 'default', { value: mod, enumerable: !0 })
       : target,
-    mod
+    mod,
   )
 );
 var require_memoizerific = __commonJS({
@@ -90,7 +90,7 @@ var require_memoizerific = __commonJS({
               e,
               t,
               n,
-              r
+              r,
             );
           }
           return n[o2].exports;
@@ -175,7 +175,7 @@ var require_memoizerific = __commonJS({
                       thisArg || this,
                       this.list[i].val,
                       this.list[i].key,
-                      this
+                      this,
                     );
                 }),
                 (Similar.prototype.indexOf = function (key2) {
@@ -211,7 +211,7 @@ var require_memoizerific = __commonJS({
                       memoizerific.numArgs !== argsLengthMinusOne + 1
                     )
                       throw new Error(
-                        'Memoizerific functions should always be called with the same number of arguments'
+                        'Memoizerific functions should always be called with the same number of arguments',
                       );
                     for (i = 0; i < argsLengthMinusOne; i++) {
                       if (
@@ -233,14 +233,14 @@ var require_memoizerific = __commonJS({
                       isMemoized &&
                         (currentCache.has(arguments[argsLengthMinusOne])
                           ? (fnResult = currentCache.get(
-                              arguments[argsLengthMinusOne]
+                              arguments[argsLengthMinusOne],
                             ))
                           : (isMemoized = !1)),
                       isMemoized ||
                         ((fnResult = fn.apply(null, arguments)),
                         currentCache.set(
                           arguments[argsLengthMinusOne],
-                          fnResult
+                          fnResult,
                         )),
                       limit > 0 &&
                         ((lruPath[argsLengthMinusOne] = {
@@ -305,7 +305,7 @@ var require_memoizerific = __commonJS({
           ],
         },
         {},
-        [3]
+        [3],
       )(3);
     });
   },
@@ -441,7 +441,7 @@ var require_isMasked = __commonJS({
     var coreJsData2 = require_coreJsData(),
       maskSrcKey2 = (function () {
         var uid = /[^.]+$/.exec(
-          (coreJsData2 && coreJsData2.keys && coreJsData2.keys.IE_PROTO) || ''
+          (coreJsData2 && coreJsData2.keys && coreJsData2.keys.IE_PROTO) || '',
         );
         return uid ? 'Symbol(src)_1.' + uid : '';
       })();
@@ -490,9 +490,9 @@ var require_baseIsNative = __commonJS({
             .replace(reRegExpChar2, '\\$&')
             .replace(
               /hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-              '$1.*?'
+              '$1.*?',
             ) +
-          '$'
+          '$',
       );
     function baseIsNative2(value2) {
       if (!isObject5(value2) || isMasked2(value2)) return !1;
@@ -626,7 +626,7 @@ var require_isArguments = __commonJS({
       isArguments = baseIsArguments(
         (function () {
           return arguments;
-        })()
+        })(),
       )
         ? baseIsArguments
         : function (value2) {
@@ -1566,7 +1566,7 @@ var require_equalByTag = __commonJS({
       bitmask,
       customizer,
       equalFunc,
-      stack
+      stack,
     ) {
       switch (tag) {
         case dataViewTag:
@@ -1608,7 +1608,7 @@ var require_equalByTag = __commonJS({
             bitmask,
             customizer,
             equalFunc,
-            stack
+            stack,
           );
           return stack.delete(object), result2;
         case symbolTag2:
@@ -1724,7 +1724,7 @@ var require_equalObjects = __commonJS({
       bitmask,
       customizer,
       equalFunc,
-      stack
+      stack,
     ) {
       var isPartial = bitmask & COMPARE_PARTIAL_FLAG,
         objProps = getAllKeys(object),
@@ -1889,7 +1889,7 @@ var require_baseIsEqualDeep = __commonJS({
       bitmask,
       customizer,
       equalFunc,
-      stack
+      stack,
     ) {
       var objIsArr = isArray2(object),
         othIsArr = isArray2(other),
@@ -1916,7 +1916,7 @@ var require_baseIsEqualDeep = __commonJS({
                 bitmask,
                 customizer,
                 equalFunc,
-                stack
+                stack,
               )
         );
       if (!(bitmask & COMPARE_PARTIAL_FLAG)) {
@@ -1958,7 +1958,7 @@ var require_baseIsEqual = __commonJS({
               bitmask,
               customizer,
               baseIsEqual,
-              stack
+              stack,
             );
     }
     module.exports = baseIsEqual;
@@ -2001,7 +2001,7 @@ var require_baseIsMatch = __commonJS({
               key2,
               object,
               source2,
-              stack
+              stack,
             );
           if (
             !(result2 === void 0
@@ -2010,7 +2010,7 @@ var require_baseIsMatch = __commonJS({
                   objValue,
                   COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG,
                   customizer,
-                  stack
+                  stack,
                 )
               : result2)
           )
@@ -2174,9 +2174,11 @@ var require_stringToPath = __commonJS({
             rePropName2,
             function (match, number, quote, subString) {
               result2.push(
-                quote ? subString.replace(reEscapeChar2, '$1') : number || match
+                quote
+                  ? subString.replace(reEscapeChar2, '$1')
+                  : number || match,
               );
-            }
+            },
           ),
           result2
         );
@@ -2364,7 +2366,7 @@ var require_baseMatchesProperty = __commonJS({
               : baseIsEqual(
                   srcValue,
                   objValue,
-                  COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG
+                  COMPARE_PARTIAL_FLAG | COMPARE_UNORDERED_FLAG,
                 );
           };
     }
@@ -3062,7 +3064,7 @@ var require_implementation2 = __commonJS({
           'binder',
           'return function (' +
             joiny(boundArgs, ',') +
-            '){ return binder.apply(this,arguments); }'
+            '){ return binder.apply(this,arguments); }',
         )(binder)),
         target.prototype)
       ) {
@@ -3106,7 +3108,7 @@ var require_get_intrinsic2 = __commonJS({
       getEvalledConstructor = function (expressionSyntax) {
         try {
           return $Function(
-            '"use strict"; return (' + expressionSyntax + ').constructor;'
+            '"use strict"; return (' + expressionSyntax + ').constructor;',
           )();
         } catch {}
       },
@@ -3331,11 +3333,11 @@ var require_get_intrinsic2 = __commonJS({
           last = $strSlice(string, -1);
         if (first === '%' && last !== '%')
           throw new $SyntaxError(
-            'invalid intrinsic syntax, expected closing `%`'
+            'invalid intrinsic syntax, expected closing `%`',
           );
         if (last === '%' && first !== '%')
           throw new $SyntaxError(
-            'invalid intrinsic syntax, expected opening `%`'
+            'invalid intrinsic syntax, expected opening `%`',
           );
         var result2 = [];
         return (
@@ -3346,7 +3348,7 @@ var require_get_intrinsic2 = __commonJS({
               result2[result2.length] = quote
                 ? $replace(subString, reEscapeChar2, '$1')
                 : number || match;
-            }
+            },
           ),
           result2
         );
@@ -3368,7 +3370,7 @@ var require_get_intrinsic2 = __commonJS({
             throw new $TypeError(
               'intrinsic ' +
                 name2 +
-                ' exists, but is not available. Please file an issue!'
+                ' exists, but is not available. Please file an issue!',
             );
           return { alias, name: intrinsicName, value: value2 };
         }
@@ -3381,13 +3383,13 @@ var require_get_intrinsic2 = __commonJS({
         throw new $TypeError('"allowMissing" argument must be a boolean');
       if ($exec(/^%?[^%]*%?$/, name2) === null)
         throw new $SyntaxError(
-          '`%` may not be present anywhere but at the beginning and end of the intrinsic name'
+          '`%` may not be present anywhere but at the beginning and end of the intrinsic name',
         );
       var parts = stringToPath2(name2),
         intrinsicBaseName = parts.length > 0 ? parts[0] : '',
         intrinsic = getBaseIntrinsic(
           '%' + intrinsicBaseName + '%',
-          allowMissing
+          allowMissing,
         ),
         intrinsicRealName = intrinsic.name,
         value2 = intrinsic.value,
@@ -3410,7 +3412,7 @@ var require_get_intrinsic2 = __commonJS({
           first !== last
         )
           throw new $SyntaxError(
-            'property names with quotes must have matching quotes'
+            'property names with quotes must have matching quotes',
           );
         if (
           ((part === 'constructor' || !isOwn) && (skipFurtherCaching = !0),
@@ -3425,7 +3427,7 @@ var require_get_intrinsic2 = __commonJS({
               throw new $TypeError(
                 'base intrinsic for ' +
                   name2 +
-                  ' exists, but the property is not available.'
+                  ' exists, but the property is not available.',
               );
             return;
           }
@@ -3491,7 +3493,7 @@ var require_define_data_property = __commonJS({
         arguments[3] !== null
       )
         throw new $TypeError(
-          '`nonEnumerable`, if provided, must be a boolean or null'
+          '`nonEnumerable`, if provided, must be a boolean or null',
         );
       if (
         arguments.length > 4 &&
@@ -3499,7 +3501,7 @@ var require_define_data_property = __commonJS({
         arguments[4] !== null
       )
         throw new $TypeError(
-          '`nonWritable`, if provided, must be a boolean or null'
+          '`nonWritable`, if provided, must be a boolean or null',
         );
       if (
         arguments.length > 5 &&
@@ -3507,7 +3509,7 @@ var require_define_data_property = __commonJS({
         arguments[5] !== null
       )
         throw new $TypeError(
-          '`nonConfigurable`, if provided, must be a boolean or null'
+          '`nonConfigurable`, if provided, must be a boolean or null',
         );
       if (arguments.length > 6 && typeof arguments[6] != 'boolean')
         throw new $TypeError('`loose`, if provided, must be a boolean');
@@ -3531,7 +3533,7 @@ var require_define_data_property = __commonJS({
         obj[property] = value2;
       else
         throw new $SyntaxError(
-          'This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.'
+          'This environment does not support defining a property as non-configurable, non-writable, or non-enumerable.',
         );
     };
   },
@@ -3611,7 +3613,7 @@ var require_call_bind2 = __commonJS({
       return setFunctionLength(
         func,
         1 + $max(0, originalFunction.length - (arguments.length - 1)),
-        !0
+        !0,
       );
     };
     var applyBind = function () {
@@ -3755,12 +3757,12 @@ var require_object_inspect = __commonJS({
           : opts.maxStringLength !== null)
       )
         throw new TypeError(
-          'option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`'
+          'option "maxStringLength", if provided, must be a positive integer, Infinity, or `null`',
         );
       var customInspect = has2(opts, 'customInspect') ? opts.customInspect : !0;
       if (typeof customInspect != 'boolean' && customInspect !== 'symbol')
         throw new TypeError(
-          'option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`'
+          'option "customInspect", if provided, must be `true`, `false`, or `\'symbol\'`',
         );
       if (
         has2(opts, 'indent') &&
@@ -3769,14 +3771,14 @@ var require_object_inspect = __commonJS({
         !(parseInt(opts.indent, 10) === opts.indent && opts.indent > 0)
       )
         throw new TypeError(
-          'option "indent" must be "\\t", an integer > 0, or `null`'
+          'option "indent" must be "\\t", an integer > 0, or `null`',
         );
       if (
         has2(opts, 'numericSeparator') &&
         typeof opts.numericSeparator != 'boolean'
       )
         throw new TypeError(
-          'option "numericSeparator", if provided, must be `true` or `false`'
+          'option "numericSeparator", if provided, must be `true` or `false`',
         );
       var numericSeparator = opts.numericSeparator;
       if (typeof obj > 'u') return 'undefined';
@@ -3870,7 +3872,7 @@ var require_object_inspect = __commonJS({
               '] ' +
               $join.call(
                 $concat.call('[cause]: ' + inspect(obj.cause), parts),
-                ', '
+                ', ',
               ) +
               ' }'
           : parts.length === 0
@@ -3893,7 +3895,7 @@ var require_object_inspect = __commonJS({
           mapForEach &&
             mapForEach.call(obj, function (value2, key2) {
               mapParts.push(
-                inspect(key2, obj, !0) + ' => ' + inspect(value2, obj)
+                inspect(key2, obj, !0) + ' => ' + inspect(value2, obj),
               );
             }),
           collectionOf('Map', mapSize.call(obj), mapParts, indent)
@@ -3945,7 +3947,7 @@ var require_object_inspect = __commonJS({
               ? '[' +
                 $join.call(
                   $concat.call([], stringTag || [], protoTag || []),
-                  ': '
+                  ': ',
                 ) +
                 '] '
               : '');
@@ -4125,7 +4127,7 @@ var require_object_inspect = __commonJS({
       var s = $replace.call(
         $replace.call(str, /(['\\])/g, '\\$1'),
         /[\x00-\x1f]/g,
-        lowbyte
+        lowbyte,
       );
       return wrapQuotes(s, 'single', opts);
     }
@@ -4154,7 +4156,7 @@ var require_object_inspect = __commonJS({
           indexOf(
             xs[i],
             `
-`
+`,
           ) >= 0
         )
           return !1;
@@ -4212,7 +4214,7 @@ var require_object_inspect = __commonJS({
         for (var j = 0; j < syms.length; j++)
           isEnumerable.call(obj, syms[j]) &&
             xs.push(
-              '[' + inspect(syms[j]) + ']: ' + inspect(obj[syms[j]], obj)
+              '[' + inspect(syms[j]) + ']: ' + inspect(obj[syms[j]], obj),
             );
       return xs;
     }
@@ -4264,7 +4266,7 @@ var require_side_channel = __commonJS({
           assert: function (key2) {
             if (!channel.has(key2))
               throw new $TypeError(
-                'Side channel does not contain ' + inspect(key2)
+                'Side channel does not contain ' + inspect(key2),
               );
           },
           get: function (key2) {
@@ -4335,7 +4337,7 @@ var require_utils = __commonJS({
       hexTable = (function () {
         for (var array = [], i = 0; i < 256; ++i)
           array.push(
-            '%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase()
+            '%' + ((i < 16 ? '0' : '') + i.toString(16)).toUpperCase(),
           );
         return array;
       })(),
@@ -4603,7 +4605,7 @@ var require_stringify = __commonJS({
         formatter,
         encodeValuesOnly,
         charset,
-        sideChannel
+        sideChannel,
       ) {
         for (
           var obj = object, tmpSc = sideChannel, step = 0, findFlag = !1;
@@ -4646,7 +4648,7 @@ var require_stringify = __commonJS({
               formatter(keyValue) +
                 '=' +
                 formatter(
-                  encoder(obj, defaults.encoder, charset, 'value', format)
+                  encoder(obj, defaults.encoder, charset, 'value', format),
                 ),
             ];
           }
@@ -4710,8 +4712,8 @@ var require_stringify = __commonJS({
                   formatter,
                   encodeValuesOnly,
                   charset,
-                  valueSideChannel
-                )
+                  valueSideChannel,
+                ),
               );
           }
         }
@@ -4732,7 +4734,7 @@ var require_stringify = __commonJS({
           opts.charset !== 'iso-8859-1'
         )
           throw new TypeError(
-            'The charset option must be either utf-8, iso-8859-1, or undefined'
+            'The charset option must be either utf-8, iso-8859-1, or undefined',
           );
         var format = formats.default;
         if (typeof opts.format < 'u') {
@@ -4839,8 +4841,8 @@ var require_stringify = __commonJS({
               options2.formatter,
               options2.encodeValuesOnly,
               options2.charset,
-              sideChannel
-            )
+              sideChannel,
+            ),
           );
       }
       var joined = keys.join(options2.delimiter),
@@ -4928,14 +4930,14 @@ var require_parse = __commonJS({
                   part,
                   defaults.decoder,
                   charset,
-                  'key'
+                  'key',
                 )),
                 (val = options2.strictNullHandling ? null : ''))
               : ((key2 = options2.decoder(
                   part.slice(0, pos),
                   defaults.decoder,
                   charset,
-                  'key'
+                  'key',
                 )),
                 (val = utils.maybeMap(
                   parseArrayValue(part.slice(pos + 1), options2),
@@ -4944,9 +4946,9 @@ var require_parse = __commonJS({
                       encodedVal,
                       defaults.decoder,
                       charset,
-                      'value'
+                      'value',
                     );
-                  }
+                  },
                 ))),
               val &&
                 options2.interpretNumericEntities &&
@@ -5047,7 +5049,7 @@ var require_parse = __commonJS({
           opts.charset !== 'iso-8859-1'
         )
           throw new TypeError(
-            'The charset option must be either utf-8, iso-8859-1, or undefined'
+            'The charset option must be either utf-8, iso-8859-1, or undefined',
           );
         var charset =
           typeof opts.charset > 'u' ? defaults.charset : opts.charset;
@@ -5119,7 +5121,7 @@ var require_parse = __commonJS({
             key2,
             tempObj[key2],
             options2,
-            typeof str == 'string'
+            typeof str == 'string',
           );
         obj = utils.merge(obj, newObj, options2);
       }
@@ -5139,7 +5141,7 @@ var require_lib = __commonJS({
 var require_browser_dtector_umd_min = __commonJS({
   '../../node_modules/browser-dtector/browser-dtector.umd.min.js'(
     exports,
-    module
+    module,
   ) {
     'use strict';
     (function (e, o) {
@@ -5170,14 +5172,14 @@ var require_browser_dtector_umd_min = __commonJS({
                   var n3 = r3.call(e3, o3 || 'default');
                   if (typeof n3 != 'object') return n3;
                   throw new TypeError(
-                    '@@toPrimitive must return a primitive value.'
+                    '@@toPrimitive must return a primitive value.',
                   );
                 }
                 return (o3 === 'string' ? String : Number)(e3);
               })(i2, 'string')) == 'symbol'
                 ? t2
                 : String(t2)),
-              n2
+              n2,
             );
         }
         var i2, t2;
@@ -5224,8 +5226,8 @@ var require_browser_dtector_umd_min = __commonJS({
                 arguments.length > 1 && arguments[1] !== void 0
                   ? arguments[1]
                   : -1,
-                '})?'
-              )
+                '})?',
+              ),
             ),
             r2 = Number(e2).toString().match(o2);
           return r2 ? r2[0] : null;
@@ -5274,10 +5276,10 @@ var require_browser_dtector_umd_min = __commonJS({
                       /(crios)[/]([\w.]+)/.exec(d) ||
                       /(opios)[/]([\w.]+)/.exec(d) ||
                       /(version)(applewebkit)[/]([\w.]+).*(safari)[/]([\w.]+)/.exec(
-                        d
+                        d,
                       ) ||
                       /(webkit)[/]([\w.]+).*(version)[/]([\w.]+).*(safari)[/]([\w.]+)/.exec(
-                        d
+                        d,
                       ) ||
                       /(applewebkit)[/]([\w.]+).*(safari)[/]([\w.]+)/.exec(d) ||
                       /(webkit)[/]([\w.]+)/.exec(d) ||
@@ -5652,7 +5654,7 @@ var deprecate = once('warn'),
           reResultArray;
         for (
           argArray.push(
-            args2[0].replace(startTagRe, '%c').replace(endTagRe, '%c')
+            args2[0].replace(startTagRe, '%c').replace(endTagRe, '%c'),
           );
           (reResultArray = startTagRe.exec(args2[0]));
 
@@ -5679,7 +5681,7 @@ var __create2 = Object.create,
         mod ||
           (0, cb[__getOwnPropNames2(cb)[0]])(
             (mod = { exports: {} }).exports,
-            mod
+            mod,
           ),
         mod.exports
       );
@@ -5702,7 +5704,7 @@ var __create2 = Object.create,
       isNodeMode || !mod || !mod.__esModule
         ? __defProp2(target, 'default', { value: mod, enumerable: !0 })
         : target,
-      mod
+      mod,
     )
   ),
   eventProperties = [
@@ -5813,7 +5815,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
               if (this instanceof bound) {
                 var result2 = target.apply(
                   this,
-                  args2.concat(slice.call(arguments))
+                  args2.concat(slice.call(arguments)),
                 );
                 return Object(result2) === result2 ? result2 : this;
               } else
@@ -5831,7 +5833,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
             'binder',
             'return function (' +
               boundArgs.join(',') +
-              '){ return binder.apply(this,arguments); }'
+              '){ return binder.apply(this,arguments); }',
           )(binder)),
           target.prototype)
         ) {
@@ -5857,7 +5859,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
       var bind = require_function_bind();
       module.exports = bind.call(
         Function.call,
-        Object.prototype.hasOwnProperty
+        Object.prototype.hasOwnProperty,
       );
     },
   }),
@@ -5871,7 +5873,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
         getEvalledConstructor = function (expressionSyntax) {
           try {
             return $Function(
-              '"use strict"; return (' + expressionSyntax + ').constructor;'
+              '"use strict"; return (' + expressionSyntax + ').constructor;',
             )();
           } catch {}
         },
@@ -6086,11 +6088,11 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
             last = $strSlice(string, -1);
           if (first === '%' && last !== '%')
             throw new $SyntaxError(
-              'invalid intrinsic syntax, expected closing `%`'
+              'invalid intrinsic syntax, expected closing `%`',
             );
           if (last === '%' && first !== '%')
             throw new $SyntaxError(
-              'invalid intrinsic syntax, expected opening `%`'
+              'invalid intrinsic syntax, expected opening `%`',
             );
           var result2 = [];
           return (
@@ -6101,7 +6103,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
                 result2[result2.length] = quote
                   ? $replace(subString, reEscapeChar2, '$1')
                   : number || match;
-              }
+              },
             ),
             result2
           );
@@ -6123,7 +6125,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
               throw new $TypeError(
                 'intrinsic ' +
                   name2 +
-                  ' exists, but is not available. Please file an issue!'
+                  ' exists, but is not available. Please file an issue!',
               );
             return { alias, name: intrinsicName, value: value2 };
           }
@@ -6136,13 +6138,13 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
           throw new $TypeError('"allowMissing" argument must be a boolean');
         if ($exec(/^%?[^%]*%?$/, name2) === null)
           throw new $SyntaxError(
-            '`%` may not be present anywhere but at the beginning and end of the intrinsic name'
+            '`%` may not be present anywhere but at the beginning and end of the intrinsic name',
           );
         var parts = stringToPath2(name2),
           intrinsicBaseName = parts.length > 0 ? parts[0] : '',
           intrinsic = getBaseIntrinsic(
             '%' + intrinsicBaseName + '%',
-            allowMissing
+            allowMissing,
           ),
           intrinsicRealName = intrinsic.name,
           value2 = intrinsic.value,
@@ -6165,7 +6167,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
             first !== last
           )
             throw new $SyntaxError(
-              'property names with quotes must have matching quotes'
+              'property names with quotes must have matching quotes',
             );
           if (
             ((part === 'constructor' || !isOwn) && (skipFurtherCaching = !0),
@@ -6180,7 +6182,7 @@ var import_memoizerific = __toESM(require_memoizerific(), 1),
                 throw new $TypeError(
                   'base intrinsic for ' +
                     name2 +
-                    ' exists, but the property is not available.'
+                    ' exists, but the property is not available.',
                 );
               return;
             }
@@ -6469,7 +6471,7 @@ var isFunction_default = isFunction,
       (coreJsData_default &&
         coreJsData_default.keys &&
         coreJsData_default.keys.IE_PROTO) ||
-        ''
+        '',
     );
     return uid ? 'Symbol(src)_1.' + uid : '';
   })();
@@ -6504,9 +6506,9 @@ var toSource_default = toSource,
         .replace(reRegExpChar, '\\$&')
         .replace(
           /hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g,
-          '$1.*?'
+          '$1.*?',
         ) +
-      '$'
+      '$',
   );
 function baseIsNative(value2) {
   if (!isObject_default(value2) || isMasked_default(value2)) return !1;
@@ -6758,7 +6760,7 @@ var memoizeCapped_default = memoizeCapped,
       string.charCodeAt(0) === 46 && result2.push(''),
       string.replace(rePropName, function (match, number, quote, subString) {
         result2.push(
-          quote ? subString.replace(reEscapeChar, '$1') : number || match
+          quote ? subString.replace(reEscapeChar, '$1') : number || match,
         );
       }),
       result2
@@ -6842,7 +6844,7 @@ var get_default = get,
     return newCode;
   },
   cleanCode = (0, import_memoizerific.default)(1e4)((code) =>
-    removeCodeComments(code).replace(/\n\s*/g, '').trim()
+    removeCodeComments(code).replace(/\n\s*/g, '').trim(),
   ),
   convertShorthandMethods = function (key2, stringified) {
     let fnHead = stringified.slice(0, stringified.indexOf('{')),
@@ -6918,7 +6920,7 @@ var replacer = function (options2) {
           let { name: name2 } = value2,
             stringified = value2.toString();
           return stringified.match(
-            /(\[native code\]|WEBPACK_IMPORTED_MODULE|__webpack_exports__|__webpack_require__)/
+            /(\[native code\]|WEBPACK_IMPORTED_MODULE|__webpack_exports__|__webpack_require__)/,
           )
             ? `_function_${name2}|${(() => {}).toString()}`
             : `_function_${name2}|${cleanCode(convertShorthandMethods(key2, stringified))}`;
@@ -7017,7 +7019,7 @@ var replacer = function (options2) {
         let name2 = value['_constructor-name_'];
         if (name2 !== 'Object') {
           let Fn = new Function(
-            `return function ${name2.replace(/[^a-zA-Z0-9$_]+/g, '')}(){}`
+            `return function ${name2.replace(/[^a-zA-Z0-9$_]+/g, '')}(){}`,
           )();
           Object.setPrototypeOf(value, new Fn());
         }
@@ -7100,7 +7102,7 @@ var replacer = function (options2) {
     return JSON.stringify(
       convertUnconventionalData(data),
       replacer(mergedOptions),
-      options2.space
+      options2.space,
     );
   },
   mutator = () => {
@@ -7227,7 +7229,7 @@ var isMulti = (args2) => args2.transports !== void 0,
   },
   getEventSourceUrl = (event) => {
     let frames = Array.from(
-        document.querySelectorAll('iframe[data-is-storybook]')
+        document.querySelectorAll('iframe[data-is-storybook]'),
       ),
       [frame, ...remainder] = frames.filter((element) => {
         try {
@@ -7255,7 +7257,7 @@ var isMulti = (args2) => args2.transports !== void 0,
     if (src && remainder.length === 0) {
       let { protocol, host, pathname } = new URL(
         src,
-        document.location.toString()
+        document.location.toString(),
       );
       return `${protocol}//${host}${pathname}`;
     }
@@ -7279,7 +7281,7 @@ var isMulti = (args2) => args2.transports !== void 0,
         config.page !== 'manager' && config.page !== 'preview')
       )
         throw new Error(
-          `postmsg-channel: "config.page" cannot be "${config.page}"`
+          `postmsg-channel: "config.page" cannot be "${config.page}"`,
         );
     }
     setHandler(handler) {
@@ -7316,7 +7318,7 @@ var isMulti = (args2) => args2.transports !== void 0,
             maxDepth,
             space,
             lazyEval,
-          }).filter(([k2, v2]) => typeof v2 < 'u')
+          }).filter(([k2, v2]) => typeof v2 < 'u'),
         ),
         stringifyOptions = {
           ...defaultEventOptions,
@@ -7327,7 +7329,7 @@ var isMulti = (args2) => args2.transports !== void 0,
         query = new URLSearchParams(location?.search || ''),
         data = stringify(
           { key: KEY, event, refId: query.get('refId') },
-          stringifyOptions
+          stringifyOptions,
         );
       return frames.length
         ? (this.buffer.length && this.flush(),
@@ -7354,8 +7356,8 @@ var isMulti = (args2) => args2.transports !== void 0,
       if (this.config.page === 'manager') {
         let list = Array.from(
           document2.querySelectorAll(
-            'iframe[data-is-storybook][data-is-loaded]'
-          )
+            'iframe[data-is-storybook][data-is-loaded]',
+          ),
         ).flatMap((e) => {
           try {
             return e.contentWindow &&
@@ -7376,7 +7378,7 @@ var isMulti = (args2) => args2.transports !== void 0,
     getCurrentFrames() {
       return this.config.page === 'manager'
         ? Array.from(
-            document2.querySelectorAll('[data-is-storybook="true"]')
+            document2.querySelectorAll('[data-is-storybook="true"]'),
           ).flatMap((e) => (e.contentWindow ? [e.contentWindow] : []))
         : scope && scope.parent
           ? [scope.parent]
@@ -7385,7 +7387,7 @@ var isMulti = (args2) => args2.transports !== void 0,
     getLocalFrame() {
       return this.config.page === 'manager'
         ? Array.from(
-            document2.querySelectorAll('#storybook-preview-iframe')
+            document2.querySelectorAll('#storybook-preview-iframe'),
           ).flatMap((e) => (e.contentWindow ? [e.contentWindow] : []))
         : scope && scope.parent
           ? [scope.parent]
@@ -7418,7 +7420,7 @@ var isMulti = (args2) => args2.transports !== void 0,
             !event.source)
           ) {
             pretty.error(
-              `${pageString} received ${eventString} but was unable to determine the source of the event`
+              `${pageString} received ${eventString} but was unable to determine the source of the event`,
             );
             return;
           }
@@ -7427,7 +7429,7 @@ var isMulti = (args2) => args2.transports !== void 0,
             location.origin !== event.source
               ? message
               : `${message} <span style="color: gray">(on ${location.origin} from ${event.source})</span>`,
-            ...event.args
+            ...event.args,
           ),
             invariant(this.handler, 'ChannelHandler should be set'),
             this.handler(event);
@@ -7495,7 +7497,7 @@ function createBrowserChannel({ page, extraTransports = [] }) {
       { hostname, port } = window.location,
       channelUrl = `${protocol}://${hostname}:${port}/storybook-server-channel`;
     transports.push(
-      new WebsocketTransport({ url: channelUrl, onError: () => {}, page })
+      new WebsocketTransport({ url: channelUrl, onError: () => {}, page }),
     );
   }
   return new Channel({ transports });
@@ -7563,7 +7565,7 @@ function dedent(templ) {
   var strings = Array.from(typeof templ == 'string' ? [templ] : templ);
   strings[strings.length - 1] = strings[strings.length - 1].replace(
     /\r?\n([\t ]*)$/,
-    ''
+    '',
   );
   var indentLengths = strings.reduce(function (arr, str) {
     var matches2 = str.match(/\n([\t ]+|(?!\s).)/g);
@@ -7577,7 +7579,7 @@ function dedent(templ) {
                 : _a.length) !== null && _b !== void 0
               ? _b
               : 0;
-          })
+          }),
         )
       : arr;
   }, []);
@@ -7587,13 +7589,13 @@ function dedent(templ) {
 [	 ]{` +
         Math.min.apply(Math, indentLengths) +
         '}',
-      'g'
+      'g',
     );
     strings = strings.map(function (str) {
       return str.replace(
         pattern_1,
         `
-`
+`,
       );
     });
   }
@@ -7610,7 +7612,7 @@ function dedent(templ) {
         (indentedValue = String(value2)
           .split(
             `
-`
+`,
           )
           .map(function (str, i2) {
             return i2 === 0 ? str : '' + endentation + str;
@@ -8014,7 +8016,7 @@ var B = Object.create,
       e || !r || !r.__esModule
         ? u(n, 'default', { value: r, enumerable: !0 })
         : n,
-      r
+      r,
     )
   ),
   x = E((T) => {
@@ -8116,7 +8118,7 @@ var c = k(x()),
     let { exists: n, eq: t, neq: a, truthy: i } = r;
     if (S([n, t, a, i]) > 1)
       throw new Error(
-        `Invalid conditional test ${JSON.stringify({ exists: n, eq: t, neq: a })}`
+        `Invalid conditional test ${JSON.stringify({ exists: n, eq: t, neq: a })}`,
       );
     if (typeof t < 'u') return (0, c.isEqual)(e, t);
     if (typeof a < 'u') return !(0, c.isEqual)(e, a);
@@ -8131,7 +8133,7 @@ var c = k(x()),
     let { arg: t, global: a } = r.if;
     if (S([t, a]) !== 1)
       throw new Error(
-        `Invalid conditional value ${JSON.stringify({ arg: t, global: a })}`
+        `Invalid conditional value ${JSON.stringify({ arg: t, global: a })}`,
       );
     let i = t ? e[t] : n[a];
     return v(r.if, i);
@@ -8147,7 +8149,7 @@ var c = k(x()),
     let n = O(r);
     if (n === '')
       throw new Error(
-        `Invalid ${e} '${r}', must include alphanumeric characters`
+        `Invalid ${e} '${r}', must include alphanumeric characters`,
       );
     return n;
   },
@@ -8162,7 +8164,7 @@ function G(r, { includeStories: e, excludeStories: n }) {
 var z = (...r) => {
   let e = r.reduce(
     (n, t) => (t.startsWith('!') ? n.delete(t.slice(1)) : n.add(t), n),
-    new Set()
+    new Set(),
   );
   return Array.from(e);
 };
@@ -8181,7 +8183,7 @@ var import_qs = __toESM(require_lib(), 1),
         mod ||
           (0, cb[__getOwnPropNames3(cb)[0]])(
             (mod = { exports: {} }).exports,
-            mod
+            mod,
           ),
         mod.exports
       );
@@ -8204,13 +8206,13 @@ var import_qs = __toESM(require_lib(), 1),
       isNodeMode || !mod || !mod.__esModule
         ? __defProp3(target, 'default', { value: mod, enumerable: !0 })
         : target,
-      mod
+      mod,
     )
   ),
   require_entities = __commonJS3({
     '../../node_modules/ansi-to-html/node_modules/entities/lib/maps/entities.json'(
       exports,
-      module
+      module,
     ) {
       module.exports = {
         Aacute: '\xC1',
@@ -10345,7 +10347,7 @@ var import_qs = __toESM(require_lib(), 1),
   require_legacy = __commonJS3({
     '../../node_modules/ansi-to-html/node_modules/entities/lib/maps/legacy.json'(
       exports,
-      module
+      module,
     ) {
       module.exports = {
         Aacute: '\xC1',
@@ -10460,7 +10462,7 @@ var import_qs = __toESM(require_lib(), 1),
   require_xml = __commonJS3({
     '../../node_modules/ansi-to-html/node_modules/entities/lib/maps/xml.json'(
       exports,
-      module
+      module,
     ) {
       module.exports = { amp: '&', apos: "'", gt: '>', lt: '<', quot: '"' };
     },
@@ -10468,7 +10470,7 @@ var import_qs = __toESM(require_lib(), 1),
   require_decode = __commonJS3({
     '../../node_modules/ansi-to-html/node_modules/entities/lib/maps/decode.json'(
       exports,
-      module
+      module,
     ) {
       module.exports = {
         0: 65533,
@@ -10504,7 +10506,7 @@ var import_qs = __toESM(require_lib(), 1),
   }),
   require_decode_codepoint = __commonJS3({
     '../../node_modules/ansi-to-html/node_modules/entities/lib/decode_codepoint.js'(
-      exports
+      exports,
     ) {
       var __importDefault =
         (exports && exports.__importDefault) ||
@@ -10521,7 +10523,7 @@ var import_qs = __toESM(require_lib(), 1),
               codePoint > 65535 &&
                 ((codePoint -= 65536),
                 (output += String.fromCharCode(
-                  ((codePoint >>> 10) & 1023) | 55296
+                  ((codePoint >>> 10) & 1023) | 55296,
                 )),
                 (codePoint = 56320 | (codePoint & 1023))),
               (output += String.fromCharCode(codePoint)),
@@ -10540,7 +10542,7 @@ var import_qs = __toESM(require_lib(), 1),
   }),
   require_decode2 = __commonJS3({
     '../../node_modules/ansi-to-html/node_modules/entities/lib/decode.js'(
-      exports
+      exports,
     ) {
       var __importDefault =
         (exports && exports.__importDefault) ||
@@ -10580,7 +10582,7 @@ var import_qs = __toESM(require_lib(), 1),
           legacy[j] === keys[i] ? ((keys[i] += ';?'), j++) : (keys[i] += ';');
         var re = new RegExp(
             '&(?:' + keys.join('|') + '|#[xX][\\da-fA-F]+;?|#\\d+;?)',
-            'g'
+            'g',
           ),
           replace = getReplacer(entities_json_1.default);
         function replacer3(str) {
@@ -10605,7 +10607,7 @@ var import_qs = __toESM(require_lib(), 1),
   }),
   require_encode = __commonJS3({
     '../../node_modules/ansi-to-html/node_modules/entities/lib/encode.js'(
-      exports
+      exports,
     ) {
       var __importDefault =
         (exports && exports.__importDefault) ||
@@ -10697,7 +10699,7 @@ var import_qs = __toESM(require_lib(), 1),
       }
       var reEscapeChars = new RegExp(
         xmlReplacer.source + '|' + reNonASCII.source,
-        'g'
+        'g',
       );
       function escape2(data) {
         return data.replace(reEscapeChars, singleCharReplacer);
@@ -10718,7 +10720,7 @@ var import_qs = __toESM(require_lib(), 1),
   }),
   require_lib2 = __commonJS3({
     '../../node_modules/ansi-to-html/node_modules/entities/lib/index.js'(
-      exports
+      exports,
     ) {
       Object.defineProperty(exports, '__esModule', { value: !0 }),
         (exports.decodeXMLStrict =
@@ -11037,7 +11039,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             .join('');
         return pushStyle(
           stack,
-          (operation === 38 ? 'color:#' : 'background-color:#') + rgb
+          (operation === 38 ? 'color:#' : 'background-color:#') + rgb,
         );
       }
       function handleDisplay(stack, code, options2) {
@@ -11067,7 +11069,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             22: function () {
               return pushStyle(
                 stack,
-                'font-weight:normal;text-decoration:none;font-style:normal'
+                'font-weight:normal;text-decoration:none;font-style:normal',
               );
             },
             23: function () {
@@ -11095,23 +11097,23 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               : 29 < code && code < 38
                 ? (result2 = pushForegroundColor(
                     stack,
-                    options2.colors[code - 30]
+                    options2.colors[code - 30],
                   ))
                 : 39 < code && code < 48
                   ? (result2 = pushBackgroundColor(
                       stack,
-                      options2.colors[code - 40]
+                      options2.colors[code - 40],
                     ))
                   : 89 < code && code < 98
                     ? (result2 = pushForegroundColor(
                         stack,
-                        options2.colors[8 + (code - 90)]
+                        options2.colors[8 + (code - 90)],
                       ))
                     : 99 < code &&
                       code < 108 &&
                       (result2 = pushBackgroundColor(
                         stack,
-                        options2.colors[8 + (code - 100)]
+                        options2.colors[8 + (code - 100)],
                       )),
           result2
         );
@@ -11270,7 +11272,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return (
           token !== 'text' &&
             ((stickyStack = stickyStack.filter(
-              notCategory(categoryForCode(data))
+              notCategory(categoryForCode(data)),
             )),
             stickyStack.push({ token, data, category: categoryForCode(data) })),
           stickyStack
@@ -11284,7 +11286,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               (options2.colors = Object.assign(
                 {},
                 defaults.colors,
-                options2.colors
+                options2.colors,
               )),
             (this.options = Object.assign({}, defaults, options2)),
             (this.stack = []),
@@ -11306,7 +11308,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       stack,
                       element.token,
                       element.data,
-                      options2
+                      options2,
                     );
                     output && buf.push(output);
                   }),
@@ -11317,7 +11319,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         (_this.stickyStack = updateStickyStack(
                           _this.stickyStack,
                           token,
-                          data
+                          data,
                         ));
                   }),
                   stack.length && buf.push(resetStyles(stack)),
@@ -11450,7 +11452,7 @@ function hookify(fn) {
       hooks.currentPhase === 'UPDATE' && hooks.getNextHook() != null)
     )
       throw new Error(
-        'Rendered fewer hooks than expected. This may be caused by an accidental early return statement.'
+        'Rendered fewer hooks than expected. This may be caused by an accidental early return statement.',
       );
     return (
       (hooks.currentPhase = prevPhase),
@@ -11467,7 +11469,7 @@ var numberOfRenders = 0,
   applyHooks = (applyDecorators) => (storyFn, decorators) => {
     let decorated = applyDecorators(
       hookify(storyFn),
-      decorators.map((decorator) => hookify(decorator))
+      decorators.map((decorator) => hookify(decorator)),
     );
     return (context) => {
       let { hooks } = context;
@@ -11485,7 +11487,7 @@ var numberOfRenders = 0,
           numberOfRenders > RENDER_LIMIT)
         )
           throw new Error(
-            'Too many re-renders. Storybook limits the number of renders to prevent an infinite loop.'
+            'Too many re-renders. Storybook limits the number of renders to prevent an infinite loop.',
           );
       return hooks.addRenderListeners(), result2;
     };
@@ -11495,7 +11497,7 @@ var numberOfRenders = 0,
     deps.every((dep, i) => dep === nextDeps[i]),
   invalidHooksError = () =>
     new Error(
-      'Storybook preview hooks can only be called inside decorators and story functions.'
+      'Storybook preview hooks can only be called inside decorators and story functions.',
     );
 function getHooksContextOrNull() {
   return scope.STORYBOOK_HOOKS_CONTEXT || null;
@@ -11511,7 +11513,7 @@ function useHook(name2, callback, deps) {
     deps != null &&
       !Array.isArray(deps) &&
       logger.warn(
-        `${name2} received a final argument that is not an array (instead, received ${deps}). When specified, the final argument must be an array.`
+        `${name2} received a final argument that is not an array (instead, received ${deps}). When specified, the final argument must be an array.`,
       );
     let hook = { name: name2, deps };
     return hooks.currentHooks.push(hook), callback(hook), hook;
@@ -11523,12 +11525,12 @@ function useHook(name2, callback, deps) {
     return (
       hook.name !== name2 &&
         logger.warn(
-          `Storybook has detected a change in the order of Hooks${hooks.currentDecoratorName ? ` called by ${hooks.currentDecoratorName}` : ''}. This will lead to bugs and errors if not fixed.`
+          `Storybook has detected a change in the order of Hooks${hooks.currentDecoratorName ? ` called by ${hooks.currentDecoratorName}` : ''}. This will lead to bugs and errors if not fixed.`,
         ),
       deps != null &&
         hook.deps == null &&
         logger.warn(
-          `${name2} received a final argument during this render, but not during the previous render. Even though the final argument is optional, its type cannot change between renders.`
+          `${name2} received a final argument during this render, but not during the previous render. Even though the final argument is optional, its type cannot change between renders.`,
         ),
       deps != null &&
         hook.deps != null &&
@@ -11549,7 +11551,7 @@ function useMemoLike(name2, nextCreate, deps) {
     (hook) => {
       hook.memoizedState = nextCreate();
     },
-    deps
+    deps,
   );
   return memoizedState;
 }
@@ -11573,14 +11575,14 @@ function triggerUpdate() {
       addons.getChannel().emit(FORCE_RE_RENDER);
     } catch {
       logger.warn(
-        'State updates of Storybook preview hooks work only in browser'
+        'State updates of Storybook preview hooks work only in browser',
       );
     }
 }
 function useStateLike(name2, initialState) {
   let stateRef = useRefLike(
       name2,
-      typeof initialState == 'function' ? initialState() : initialState
+      typeof initialState == 'function' ? initialState() : initialState,
     ),
     setState = (update) => {
       (stateRef.current =
@@ -11611,15 +11613,15 @@ function useChannel(eventMap, deps = []) {
     useEffect(
       () => (
         Object.entries(eventMap).forEach(([type, listener]) =>
-          channel.on(type, listener)
+          channel.on(type, listener),
         ),
         () => {
           Object.entries(eventMap).forEach(([type, listener]) =>
-            channel.removeListener(type, listener)
+            channel.removeListener(type, listener),
           );
         }
       ),
-      [...Object.keys(eventMap), ...deps]
+      [...Object.keys(eventMap), ...deps],
     ),
     useCallback(channel.emit.bind(channel), [channel])
   );
@@ -11639,11 +11641,11 @@ function useArgs() {
     updateArgs = useCallback(
       (updatedArgs) =>
         channel.emit(UPDATE_STORY_ARGS, { storyId, updatedArgs }),
-      [channel, storyId]
+      [channel, storyId],
     ),
     resetArgs = useCallback(
       (argNames) => channel.emit(RESET_STORY_ARGS, { storyId, argNames }),
-      [channel, storyId]
+      [channel, storyId],
     );
   return [args2, updateArgs, resetArgs];
 }
@@ -11652,7 +11654,7 @@ function useGlobals() {
     { globals } = useStoryContext(),
     updateGlobals = useCallback(
       (newGlobals) => channel.emit(UPDATE_GLOBALS, { globals: newGlobals }),
-      [channel]
+      [channel],
     );
   return [globals, updateGlobals];
 }
@@ -11686,8 +11688,8 @@ var makeDecorator = ({
       (acc, entry) => (
         (acc[entry.importPath] = acc[entry.importPath] || entry), acc
       ),
-      {}
-    )
+      {},
+    ),
   ),
   StoryIndexStore = class {
     constructor({ entries } = { v: 4, entries: {} }) {
@@ -11702,7 +11704,7 @@ var makeDecorator = ({
           : entries.find((entry) => entry.id.startsWith(specifier));
       let { name: name2, title } = specifier;
       return entries.find(
-        (entry) => entry.name === name2 && entry.title === title
+        (entry) => entry.name === name2 && entry.title === title,
       );
     }
     storyIdToEntry(storyId) {
@@ -11764,7 +11766,7 @@ var makeDecorator = ({
             (acc, upd, index) => (
               (acc[index] = combineArgs(value2[index], update[index])), acc
             ),
-            [...value2]
+            [...value2],
           )
           .filter((v2) => v2 !== void 0)
       : !(0, import_isPlainObject.default)(value2) ||
@@ -11794,7 +11796,7 @@ var makeDecorator = ({
         );
       if (
         options2.some(
-          (opt) => opt && ['object', 'function'].includes(typeof opt)
+          (opt) => opt && ['object', 'function'].includes(typeof opt),
         )
       )
         return (
@@ -11821,7 +11823,7 @@ var makeDecorator = ({
           .join(', ');
       return (
         once.warn(
-          `Received illegal value for '${field}'. Supported options: ${supportedOptions}`
+          `Received illegal value for '${field}'. Supported options: ${supportedOptions}`,
         ),
         acc
       );
@@ -11864,7 +11866,7 @@ function groupArgsByTarget({ args: args2, argTypes }) {
 function deleteUndefined(obj) {
   return (
     Object.keys(obj).forEach(
-      (key2) => obj[key2] === void 0 && delete obj[key2]
+      (key2) => obj[key2] === void 0 && delete obj[key2],
     ),
     obj
   );
@@ -11876,7 +11878,7 @@ var ArgsStore = class {
     get(storyId) {
       if (!(storyId in this.argsByStoryId))
         throw new Error(
-          `No args known for ${storyId} -- has it been rendered yet?`
+          `No args known for ${storyId} -- has it been rendered yet?`,
         );
       return this.argsByStoryId[storyId];
     }
@@ -11887,7 +11889,7 @@ var ArgsStore = class {
       else if (this.initialArgsByStoryId[story.id] !== story.initialArgs) {
         let delta = deepDiff(
           this.initialArgsByStoryId[story.id],
-          this.argsByStoryId[story.id]
+          this.argsByStoryId[story.id],
         );
         (this.initialArgsByStoryId[story.id] = story.initialArgs),
           (this.argsByStoryId[story.id] = story.initialArgs),
@@ -11898,7 +11900,7 @@ var ArgsStore = class {
       let validatedDelta = validateOptions(delta, story.argTypes);
       this.argsByStoryId[story.id] = combineArgs(
         this.argsByStoryId[story.id],
-        validatedDelta
+        validatedDelta,
       );
     }
     updateFromPersisted(story, persisted) {
@@ -11908,7 +11910,7 @@ var ArgsStore = class {
     update(storyId, argsUpdate) {
       if (!(storyId in this.argsByStoryId))
         throw new Error(
-          `No args known for ${storyId} -- has it been rendered yet?`
+          `No args known for ${storyId} -- has it been rendered yet?`,
         );
       this.argsByStoryId[storyId] = deleteUndefined({
         ...this.argsByStoryId[storyId],
@@ -11921,7 +11923,7 @@ var ArgsStore = class {
       (acc, [arg, { defaultValue }]) => (
         typeof defaultValue < 'u' && (acc[arg] = defaultValue), acc
       ),
-      {}
+      {},
     ),
   GlobalsStore = class {
     constructor({ globals = {}, globalTypes = {} }) {
@@ -11945,11 +11947,11 @@ var ArgsStore = class {
           this.allowedGlobalNames.has(key2)
             ? (acc[key2] = value2)
             : logger.warn(
-                `Attempted to set a global (${key2}) that is not defined in initial globals or globalTypes`
+                `Attempted to set a global (${key2}) that is not defined in initial globals or globalTypes`,
               ),
           acc
         ),
-        {}
+        {},
       );
     }
     updateFromPersisted(persisted) {
@@ -11992,7 +11994,7 @@ See https://github.com/storybookjs/storybook/blob/next/MIGRATION.md#hoisted-csf-
 `,
   deprecatedStoryAnnotationWarning = (0, import_util_deprecate.default)(
     () => {},
-    deprecatedStoryAnnotation
+    deprecatedStoryAnnotation,
   );
 function normalizeStory(key2, storyAnnotations, meta) {
   let storyObject = storyAnnotations,
@@ -12044,7 +12046,7 @@ function normalizeStory(key2, storyAnnotations, meta) {
 function normalizeComponentAnnotations(
   defaultExport,
   title = defaultExport.title,
-  importPath
+  importPath,
 ) {
   let { id, argTypes } = defaultExport;
   return {
@@ -12060,7 +12062,7 @@ var checkGlobals = (parameters) => {
     (globals || globalTypes) &&
       logger.error(
         'Global args/argTypes can only be set globally',
-        JSON.stringify({ globals, globalTypes })
+        JSON.stringify({ globals, globalTypes }),
       );
   },
   checkStorySort = (parameters) => {
@@ -12107,7 +12109,7 @@ var combineParameters = (...parameterSets) => {
         }),
         acc
       ),
-      {}
+      {},
     );
   return (
     Object.keys(mergeKeys).forEach((key2) => {
@@ -12155,7 +12157,7 @@ function defaultDecorateStory(storyFn, decorators) {
     },
     decoratedWithContextStore = decorators.reduce(
       (story, decorator) => decorateStory(story, decorator, bindWithContext),
-      storyFn
+      storyFn,
     );
   return (context) => (
     (contextStore.value = context), decoratedWithContextStore(context)
@@ -12164,13 +12166,13 @@ function defaultDecorateStory(storyFn, decorators) {
 function prepareStory(
   storyAnnotations,
   componentAnnotations,
-  projectAnnotations
+  projectAnnotations,
 ) {
   let { moduleExport, id, name: name2 } = storyAnnotations || {},
     partialAnnotations = preparePartialAnnotations(
       storyAnnotations,
       componentAnnotations,
-      projectAnnotations
+      projectAnnotations,
     ),
     applyLoaders = async (context) => {
       let updatedContext = { ...context, loaded: {} };
@@ -12184,7 +12186,7 @@ function prepareStory(
         normalizeArrays(storyAnnotations.loaders),
       ]) {
         let loadResults = await Promise.all(
-            loaders.map((loader) => loader(updatedContext))
+            loaders.map((loader) => loader(updatedContext)),
           ),
           loaded = Object.assign({}, ...loadResults);
         updatedContext = {
@@ -12222,7 +12224,7 @@ function prepareStory(
     throw new Error(`No render function available for storyId '${id}'`);
   let decoratedStoryFn = applyHooks(applyDecorators)(
       undecoratedStoryFn,
-      decorators
+      decorators,
     ),
     unboundStoryFn = (context) => decoratedStoryFn(context),
     play = storyAnnotations?.play || componentAnnotations.play;
@@ -12253,7 +12255,7 @@ function prepareMeta(componentAnnotations, projectAnnotations, moduleExport) {
     ...preparePartialAnnotations(
       void 0,
       componentAnnotations,
-      projectAnnotations
+      projectAnnotations,
     ),
     moduleExport,
   };
@@ -12261,7 +12263,7 @@ function prepareMeta(componentAnnotations, projectAnnotations, moduleExport) {
 function preparePartialAnnotations(
   storyAnnotations,
   componentAnnotations,
-  projectAnnotations
+  projectAnnotations,
 ) {
   let defaultTags = ['dev', 'test'],
     extraTags = scope.DOCS_OPTIONS?.autodocs === !0 ? ['autodocs'] : [],
@@ -12270,18 +12272,18 @@ function preparePartialAnnotations(
       ...extraTags,
       ...(projectAnnotations.tags ?? []),
       ...(componentAnnotations.tags ?? []),
-      ...(storyAnnotations?.tags ?? [])
+      ...(storyAnnotations?.tags ?? []),
     ),
     parameters = combineParameters(
       projectAnnotations.parameters,
       componentAnnotations.parameters,
-      storyAnnotations?.parameters
+      storyAnnotations?.parameters,
     ),
     { argTypesEnhancers = [], argsEnhancers = [] } = projectAnnotations,
     passedArgTypes = combineParameters(
       projectAnnotations.argTypes,
       componentAnnotations.argTypes,
-      storyAnnotations?.argTypes
+      storyAnnotations?.argTypes,
     );
   if (storyAnnotations) {
     let render =
@@ -12313,7 +12315,7 @@ function preparePartialAnnotations(
   contextForEnhancers.argTypes = argTypesEnhancers.reduce(
     (accumulatedArgTypes, enhancer) =>
       enhancer({ ...contextForEnhancers, argTypes: accumulatedArgTypes }),
-    contextForEnhancers.argTypes
+    contextForEnhancers.argTypes,
   );
   let initialArgsBeforeEnhancers = { ...passedArgs };
   contextForEnhancers.initialArgs = argsEnhancers.reduce(
@@ -12321,7 +12323,7 @@ function preparePartialAnnotations(
       ...accumulatedArgs,
       ...enhancer({ ...contextForEnhancers, initialArgs: accumulatedArgs }),
     }),
-    initialArgsBeforeEnhancers
+    initialArgsBeforeEnhancers,
   );
   let { name: name2, story, ...withoutStoryIdentifiers } = contextForEnhancers;
   return withoutStoryIdentifiers;
@@ -12355,7 +12357,7 @@ function prepareContext(context) {
           acc
         );
       },
-      {}
+      {},
     ),
     includedArgs = Object.entries(mappedArgs).reduce((acc, [key2, val]) => {
       let argType = targetedContext.argTypes[key2] || {};
@@ -12398,7 +12400,7 @@ var inferType = (value2, name2, visited) => {
             : {
                 name: 'object',
                 value: (0, import_mapValues.default)(value2, (field) =>
-                  inferType(field, name2, new Set(visited))
+                  inferType(field, name2, new Set(visited)),
                 ),
               })
       : { name: 'object', value: {} };
@@ -12411,7 +12413,7 @@ var inferType = (value2, name2, visited) => {
       })),
       userArgTypesNames = (0, import_mapValues.default)(
         userArgTypes,
-        (argType, key2) => ({ name: key2 })
+        (argType, key2) => ({ name: key2 }),
       );
     return combineParameters(argTypes, userArgTypesNames, userArgTypes);
   };
@@ -12439,7 +12441,7 @@ var matches = (name2, descriptor) =>
         if (controlType === 'string') return { control: { type: 'color' } };
         controlType !== 'enum' &&
           logger.warn(
-            `Addon controls: Control of type color only supports string, received "${controlType}" instead`
+            `Addon controls: Control of type color only supports string, received "${controlType}" instead`,
           );
       }
       if (matchers.date && matchers.date.test(name2))
@@ -12481,7 +12483,7 @@ var matches = (name2, descriptor) =>
       withControls = (0, import_mapValues.default)(
         filteredArgTypes,
         (argType, name2) =>
-          argType?.type && inferControl(argType, name2, matchers)
+          argType?.type && inferControl(argType, name2, matchers),
       );
     return combineParameters(withControls, filteredArgTypes);
   };
@@ -12514,7 +12516,7 @@ function composeStepRunners(stepRunners) {
     await stepRunners.reduceRight(
       (innerPlay, stepRunner) => async () =>
         stepRunner(label, innerPlay, playContext),
-      async () => play(playContext)
+      async () => play(playContext),
     )();
   };
 }
@@ -12540,7 +12542,7 @@ function getSingletonField(moduleExportList, field) {
 function composeConfigs(moduleExportList) {
   let allArgTypeEnhancers = getArrayField(
       moduleExportList,
-      'argTypesEnhancers'
+      'argTypesEnhancers',
     ),
     stepRunners = getField(moduleExportList, 'runStep');
   return {
@@ -12585,7 +12587,7 @@ function composeStory(
   componentAnnotations,
   projectAnnotations,
   defaultConfig,
-  exportsName
+  exportsName,
 ) {
   if (storyAnnotations === void 0)
     throw new Error('Expected a story but received undefined.');
@@ -12602,22 +12604,22 @@ function composeStory(
     normalizedStory = normalizeStory(
       storyName,
       storyAnnotations,
-      normalizedComponentAnnotations
+      normalizedComponentAnnotations,
     ),
     normalizedProjectAnnotations = normalizeProjectAnnotations(
       composeConfigs([
         defaultConfig ?? {},
         globalProjectAnnotations,
         projectAnnotations ?? {},
-      ])
+      ]),
     ),
     story = prepareStory(
       normalizedStory,
       normalizedComponentAnnotations,
-      normalizedProjectAnnotations
+      normalizedProjectAnnotations,
     ),
     globalsFromGlobalTypes = getValuesFromArgTypes(
-      normalizedProjectAnnotations.globalTypes
+      normalizedProjectAnnotations.globalTypes,
     ),
     context = {
       hooks: new HooksContext(),
@@ -12671,14 +12673,14 @@ function composeStory(
           cleanups.push(
             ...(await story.applyBeforeEach(context))
               .filter(Boolean)
-              .map((callback) => ({ storyName, callback }))
+              .map((callback) => ({ storyName, callback })),
           );
       },
       args: story.initialArgs,
       parameters: story.parameters,
       argTypes: story.argTypes,
       play: playFunction,
-    }
+    },
   );
 }
 function composeStories(storiesImport, globalConfig, composeStoryFn) {
@@ -12696,11 +12698,11 @@ function composeStories(storiesImport, globalConfig, composeStoryFn) {
               story,
               meta,
               globalConfig,
-              exportsName
+              exportsName,
             ),
           })
         : storiesMap,
-    {}
+    {},
   );
 }
 function createPlaywrightTest(baseTest) {
@@ -12776,7 +12778,7 @@ var CSF_CACHE_SIZE = 1e3,
                 parameters: {
                   ...(0, import_pick.default)(
                     story.parameters,
-                    allowedParameters
+                    allowedParameters,
                   ),
                   fileName: importPath,
                 },
@@ -12793,13 +12795,13 @@ var CSF_CACHE_SIZE = 1e3,
         (this.hooks = {}),
         (this.cleanupCallbacks = {}),
         (this.processCSFFileWithCache = (0, import_memoizerific2.default)(
-          CSF_CACHE_SIZE
+          CSF_CACHE_SIZE,
         )(processCSFFile)),
         (this.prepareMetaWithCache = (0, import_memoizerific2.default)(
-          CSF_CACHE_SIZE
+          CSF_CACHE_SIZE,
         )(prepareMeta)),
         (this.prepareStoryWithCache = (0, import_memoizerific2.default)(
-          STORY_CACHE_SIZE
+          STORY_CACHE_SIZE,
         )(prepareStory));
     }
     setProjectAnnotations(projectAnnotations) {
@@ -12826,18 +12828,18 @@ var CSF_CACHE_SIZE = 1e3,
         Object.entries(this.storyIndex.entries).forEach(
           ([storyId, { importPath }]) => {
             importPaths[importPath] = storyId;
-          }
+          },
         ),
         (
           await Promise.all(
             Object.entries(importPaths).map(async ([importPath, storyId]) => ({
               importPath,
               csfFile: await this.loadCSFFileByStoryId(storyId),
-            }))
+            })),
           )
         ).reduce(
           (acc, { importPath, csfFile }) => ((acc[importPath] = csfFile), acc),
-          {}
+          {},
         )
       );
     }
@@ -12849,7 +12851,7 @@ var CSF_CACHE_SIZE = 1e3,
       return this.prepareMetaWithCache(
         componentAnnotations,
         this.projectAnnotations,
-        csfFile.moduleExports.default
+        csfFile.moduleExports.default,
       );
     }
     async loadStory({ storyId }) {
@@ -12864,7 +12866,7 @@ var CSF_CACHE_SIZE = 1e3,
         story = this.prepareStoryWithCache(
           storyAnnotations,
           componentAnnotations,
-          this.projectAnnotations
+          this.projectAnnotations,
         );
       return (
         this.args.setInitial(story),
@@ -12927,19 +12929,19 @@ var CSF_CACHE_SIZE = 1e3,
                           [key2]: value2.slice().sort(),
                         })
                       : Object.assign(storyAcc, { [key2]: value2 }),
-                { args: story.initialArgs }
+                { args: story.initialArgs },
               )),
             acc
           );
         },
-        {}
+        {},
       );
     }
     getSetStoriesPayload() {
       let stories = this.extract({ includeDocsOnly: !0 }),
         kindParameters = Object.values(stories).reduce(
           (acc, { title }) => ((acc[title] = {}), acc),
-          {}
+          {},
         );
       return {
         v: 2,
@@ -12952,7 +12954,7 @@ var CSF_CACHE_SIZE = 1e3,
     raw() {
       return (
         deprecate(
-          'StoryStore.raw() is deprecated and will be removed in 9.0, please use extract() instead'
+          'StoryStore.raw() is deprecated and will be removed in 9.0, please use extract() instead',
         ),
         Object.values(this.extract())
           .map(({ id }) => this.fromId(id))
@@ -12962,12 +12964,12 @@ var CSF_CACHE_SIZE = 1e3,
     fromId(storyId) {
       if (
         (deprecate(
-          'StoryStore.fromId() is deprecated and will be removed in 9.0, please use loadStory() instead'
+          'StoryStore.fromId() is deprecated and will be removed in 9.0, please use loadStory() instead',
         ),
         !this.cachedCSFFiles)
       )
         throw new Error(
-          'Cannot call fromId/raw() unless you call cacheAllCSFFiles() first.'
+          'Cannot call fromId/raw() unless you call cacheAllCSFFiles() first.',
         );
       let importPath;
       try {
@@ -13034,7 +13036,7 @@ var userOrAutoTitleFromSpecifier = (fileName, entry, userTitle) => {
       let title = userOrAutoTitleFromSpecifier(
         fileName,
         storiesEntries[i],
-        userTitle
+        userTitle,
       );
       if (title) return title;
     }
@@ -13076,7 +13078,7 @@ var userOrAutoTitleFromSpecifier = (fileName, entry, userTitle) => {
               : nameA.localeCompare(
                   nameB,
                   options2.locales ? options2.locales : void 0,
-                  { numeric: !0, sensitivity: 'accent' }
+                  { numeric: !0, sensitivity: 'accent' },
                 );
         }
         let index = order.indexOf(nameA);
@@ -13100,7 +13102,7 @@ var userOrAutoTitleFromSpecifier = (fileName, entry, userTitle) => {
       stories.sort(
         (s1, s2) =>
           fileNameOrder.indexOf(s1.importPath) -
-          fileNameOrder.indexOf(s2.importPath)
+          fileNameOrder.indexOf(s2.importPath),
       );
     return stories;
   },
@@ -13138,7 +13140,7 @@ var StoryRender = class {
       id,
       viewMode,
       renderOptions = { autoplay: !0, forceInitialArgs: !1 },
-      story
+      story,
     ) {
       (this.channel = channel),
         (this.store = store),
@@ -13177,7 +13179,7 @@ var StoryRender = class {
           'preparing',
           async () => {
             this.story = await this.store.loadStory({ storyId: this.id });
-          }
+          },
         ),
         this.abortController.signal.aborted)
       )
@@ -13195,7 +13197,7 @@ var StoryRender = class {
     }
     isPending() {
       return ['loading', 'beforeEach', 'rendering', 'playing'].includes(
-        this.phase
+        this.phase,
       );
     }
     async renderToElement(canvasElement) {
@@ -13282,7 +13284,7 @@ var StoryRender = class {
           (await this.runPhase(abortSignal, 'rendering', async () => {
             let teardown = await this.renderToScreen(
               renderContext,
-              canvasElement
+              canvasElement,
             );
             this.teardownRender = teardown || (() => {});
           }),
@@ -13317,7 +13319,7 @@ var StoryRender = class {
               (await this.runPhase(abortSignal, 'errored', async () => {
                 this.channel.emit(
                   PLAY_FUNCTION_THREW_EXCEPTION,
-                  serializeError(error)
+                  serializeError(error),
                 );
               }),
               this.story.parameters.throwPlayFunctionExceptions !== !1)
@@ -13330,7 +13332,7 @@ var StoryRender = class {
               unhandledErrors.size > 0 &&
               this.channel.emit(
                 UNHANDLED_ERRORS_WHILE_PLAYING,
-                Array.from(unhandledErrors).map(serializeError)
+                Array.from(unhandledErrors).map(serializeError),
               ),
             (this.disableKeyListeners = !1),
             window.removeEventListener('unhandledrejection', onError),
@@ -13340,7 +13342,7 @@ var StoryRender = class {
             return;
         }
         await this.runPhase(abortSignal, 'completed', async () =>
-          this.channel.emit(STORY_RENDERED, id)
+          this.channel.emit(STORY_RENDERED, id),
         );
       } catch (err) {
         (this.phase = 'errored'), this.callbacks.showException(err);
@@ -13379,7 +13381,7 @@ var StoryRender = class {
       importFn,
       getProjectAnnotations,
       channel = addons.getChannel(),
-      shouldInitialize = !0
+      shouldInitialize = !0,
     ) {
       (this.importFn = importFn),
         (this.getProjectAnnotations = getProjectAnnotations),
@@ -13399,13 +13401,13 @@ var StoryRender = class {
             if (this.storyStoreValue)
               return (
                 deprecate(
-                  'Accessing the Story Store is deprecated and will be removed in 9.0'
+                  'Accessing the Story Store is deprecated and will be removed in 9.0',
                 ),
                 this.storyStoreValue[method]
               );
             throw new StoryStoreAccessedBeforeInitializationError();
           },
-        }
+        },
       );
     }
     async initialize() {
@@ -13424,13 +13426,13 @@ var StoryRender = class {
     setupListeners() {
       this.channel.on(
         STORY_INDEX_INVALIDATED,
-        this.onStoryIndexChanged.bind(this)
+        this.onStoryIndexChanged.bind(this),
       ),
         this.channel.on(UPDATE_GLOBALS, this.onUpdateGlobals.bind(this)),
         this.channel.on(UPDATE_STORY_ARGS, this.onUpdateArgs.bind(this)),
         this.channel.on(
           ARGTYPES_INFO_REQUEST,
-          this.onRequestArgTypesInfo.bind(this)
+          this.onRequestArgTypesInfo.bind(this),
         ),
         this.channel.on(RESET_STORY_ARGS, this.onResetArgs.bind(this)),
         this.channel.on(FORCE_RE_RENDER, this.onForceReRender.bind(this)),
@@ -13470,12 +13472,12 @@ var StoryRender = class {
     initializeWithStoryIndex(storyIndex) {
       if (!this.projectAnnotationsBeforeInitialization)
         throw new Error(
-          'Cannot call initializeWithStoryIndex until project annotations resolve'
+          'Cannot call initializeWithStoryIndex until project annotations resolve',
         );
       (this.storyStoreValue = new StoryStore(
         storyIndex,
         this.importFn,
-        this.projectAnnotationsBeforeInitialization
+        this.projectAnnotationsBeforeInitialization,
       )),
         delete this.projectAnnotationsBeforeInitialization,
         this.setInitialGlobals(),
@@ -13555,9 +13557,9 @@ var StoryRender = class {
         await Promise.all(
           this.storyRenders
             .filter(
-              (r) => r.id === storyId && !r.renderOptions.forceInitialArgs
+              (r) => r.id === storyId && !r.renderOptions.forceInitialArgs,
             )
-            .map((r) => r.rerender())
+            .map((r) => r.rerender()),
         ),
         this.channel.emit(STORY_ARGS_UPDATED, {
           storyId,
@@ -13599,7 +13601,7 @@ var StoryRender = class {
           ]
         ).reduce(
           (acc, argName) => ((acc[argName] = story.initialArgs[argName]), acc),
-          {}
+          {},
         );
       await this.onUpdateArgs({ storyId, updatedArgs });
     }
@@ -13610,7 +13612,7 @@ var StoryRender = class {
       await Promise.all(
         this.storyRenders
           .filter((r) => r.id === storyId)
-          .map((r) => r.remount())
+          .map((r) => r.remount()),
       );
     }
     renderStoryToElement(story, element, callbacks, options2) {
@@ -13626,7 +13628,7 @@ var StoryRender = class {
         story.id,
         'docs',
         options2,
-        story
+        story,
       );
       return (
         render.renderToElement(element),
@@ -13689,14 +13691,14 @@ var StoryRender = class {
           if (!storyId) {
             if (!this.primaryStory)
               throw new Error(
-                'No primary story defined for docs entry. Did you forget to use `<Meta>`?'
+                'No primary story defined for docs entry. Did you forget to use `<Meta>`?',
               );
             return this.primaryStory;
           }
           let csfFile = this.storyIdToCSFFile.get(storyId);
           if (!csfFile)
             throw new Error(
-              `Called \`storyById\` for story that was never loaded: ${storyId}`
+              `Called \`storyById\` for story that was never loaded: ${storyId}`,
             );
           return this.store.storyFromCSFFile({ storyId, csfFile });
         }),
@@ -13727,7 +13729,7 @@ var StoryRender = class {
     attachCSFFile(csfFile) {
       if (!this.exportsToCSFFile.has(csfFile.moduleExports))
         throw new Error(
-          'Cannot attach a CSF file that has not been referenced'
+          'Cannot attach a CSF file that has not been referenced',
         );
       this.attachedCSFFiles.has(csfFile) ||
         (this.attachedCSFFiles.add(csfFile),
@@ -13741,7 +13743,7 @@ var StoryRender = class {
       let resolved = this.resolveModuleExport(metaExports);
       if (resolved.type !== 'meta')
         throw new Error(
-          '<Meta of={} /> must reference a CSF file module export or meta export. Did you mistakenly reference your component instead of your CSF file?'
+          '<Meta of={} /> must reference a CSF file module export or meta export. Did you mistakenly reference your component instead of your CSF file?',
         );
       attach && this.attachCSFFile(resolved.csfFile);
     }
@@ -13749,7 +13751,7 @@ var StoryRender = class {
       let { projectAnnotations } = this.store;
       if (!projectAnnotations)
         throw new Error(
-          "Can't get projectAnnotations from DocsContext before they are initialized"
+          "Can't get projectAnnotations from DocsContext before they are initialized",
         );
       return projectAnnotations;
     }
@@ -13757,13 +13759,13 @@ var StoryRender = class {
       if (moduleExportType === 'story') {
         if (!this.primaryStory)
           throw new Error(
-            'No primary story attached to this docs file, did you forget to use <Meta of={} />?'
+            'No primary story attached to this docs file, did you forget to use <Meta of={} />?',
           );
         return { type: 'story', story: this.primaryStory };
       }
       if (this.attachedCSFFiles.size === 0)
         throw new Error(
-          'No CSF file attached to this docs file, did you forget to use <Meta of={} />?'
+          'No CSF file attached to this docs file, did you forget to use <Meta of={} />?',
         );
       let firstAttachedCSFFile = Array.from(this.attachedCSFFiles)[0];
       if (moduleExportType === 'meta')
@@ -13771,7 +13773,7 @@ var StoryRender = class {
       let { component } = firstAttachedCSFFile.meta;
       if (!component)
         throw new Error(
-          'Attached CSF file does not defined a component, did you forget to export one?'
+          'Attached CSF file does not defined a component, did you forget to export one?',
         );
       return { type: 'component', component };
     }
@@ -13839,7 +13841,7 @@ var StoryRender = class {
         primaryCsfFile = this.store.processCSFFileWithCache(
           entryExports,
           importPath,
-          title
+          title,
         ),
         primaryStoryId = Object.keys(primaryCsfFile.stories)[0];
       (this.story = this.store.storyFromCSFFile({
@@ -13863,7 +13865,7 @@ var StoryRender = class {
         this.channel,
         this.store,
         renderStoryToElement,
-        this.csfFiles
+        this.csfFiles,
       );
       return (
         this.csfFiles.forEach((csfFile) => docsContext.attachCSFFile(csfFile)),
@@ -13877,7 +13879,7 @@ var StoryRender = class {
         { docs: docsParameter } = this.story.parameters || {};
       if (!docsParameter)
         throw new Error(
-          'Cannot render a story in viewMode=docs if `@storybook/addon-docs` is not installed'
+          'Cannot render a story in viewMode=docs if `@storybook/addon-docs` is not installed',
         );
       let renderer = await docsParameter.renderer(),
         { render } = renderer,
@@ -13939,7 +13941,7 @@ var StoryRender = class {
         this.channel,
         this.store,
         renderStoryToElement,
-        this.csfFiles
+        this.csfFiles,
       );
     }
     async renderToElement(canvasElement, renderStoryToElement) {
@@ -13949,7 +13951,7 @@ var StoryRender = class {
         { docs } = this.store.projectAnnotations.parameters || {};
       if (!docs)
         throw new Error(
-          'Cannot render a story in viewMode=docs if `@storybook/addon-docs` is not installed'
+          'Cannot render a story in viewMode=docs if `@storybook/addon-docs` is not installed',
         );
       let docsParameter = { ...docs, page: this.exports.default },
         renderer = await docs.renderer(),
@@ -14013,7 +14015,7 @@ var PreviewWithSelection = class extends Preview {
         this.channel.on(SET_CURRENT_STORY, this.onSetCurrentStory.bind(this)),
         this.channel.on(
           UPDATE_QUERY_PARAMS,
-          this.onUpdateQueryParams.bind(this)
+          this.onUpdateQueryParams.bind(this),
         ),
         this.channel.on(PRELOAD_ENTRIES, this.onPreloadStories.bind(this));
     }
@@ -14053,13 +14055,13 @@ var PreviewWithSelection = class extends Preview {
         storySpecifier === '*'
           ? this.renderStoryLoadingException(
               storySpecifier,
-              new EmptyIndexError()
+              new EmptyIndexError(),
             )
           : this.renderStoryLoadingException(
               storySpecifier,
               new NoStoryMatchError({
                 storySpecifier: storySpecifier.toString(),
-              })
+              }),
             );
         return;
       }
@@ -14128,7 +14130,7 @@ var PreviewWithSelection = class extends Preview {
       await this.storeInitializationPromise,
         this.storyStoreValue &&
           (await Promise.allSettled(
-            ids.map((id) => this.storyStoreValue?.loadEntry(id))
+            ids.map((id) => this.storyStoreValue?.loadEntry(id)),
           ));
     }
     async renderSelection({ persistedArgs } = {}) {
@@ -14166,20 +14168,20 @@ var PreviewWithSelection = class extends Preview {
             ),
             this.mainStoryCallbacks(storyId),
             storyId,
-            'story'
+            'story',
           ))
         : isMdxEntry(entry)
           ? (render = new MdxDocsRender(
               this.channel,
               this.storyStoreValue,
               entry,
-              this.mainStoryCallbacks(storyId)
+              this.mainStoryCallbacks(storyId),
             ))
           : (render = new CsfDocsRender(
               this.channel,
               this.storyStoreValue,
               entry,
-              this.mainStoryCallbacks(storyId)
+              this.mainStoryCallbacks(storyId),
             ));
       let lastSelection = this.currentSelection;
       this.currentSelection = selection;
@@ -14201,7 +14203,7 @@ var PreviewWithSelection = class extends Preview {
           (invariant(!!render.story),
           this.storyStoreValue.args.updateFromPersisted(
             render.story,
-            persistedArgs
+            persistedArgs,
           )),
         lastRender &&
           !lastRender.torndown &&
@@ -14250,11 +14252,11 @@ var PreviewWithSelection = class extends Preview {
         ? (invariant(!!render.story),
           this.storyRenders.push(render),
           this.currentRender.renderToElement(
-            this.view.prepareForStory(render.story)
+            this.view.prepareForStory(render.story),
           ))
         : this.currentRender.renderToElement(
             this.view.prepareForDocs(),
-            this.renderStoryToElement.bind(this)
+            this.renderStoryToElement.bind(this),
           );
     }
     async teardownRender(render, { viewModeChanged = !1 } = {}) {
@@ -14359,7 +14361,7 @@ var PreviewWithSelection = class extends Preview {
       .split(';')
       .map((part) => part.replace('=', '~').replace(':', '='));
     return Object.entries(
-      import_qs.default.parse(parts.join(';'), QS_OPTIONS)
+      import_qs.default.parse(parts.join(';'), QS_OPTIONS),
     ).reduce(
       (acc, [key2, value2]) =>
         validateArgs(key2, value2)
@@ -14370,7 +14372,7 @@ var PreviewWithSelection = class extends Preview {
       More info: https://storybook.js.org/docs/react/writing-stories/args#setting-args-through-the-url
     `),
             acc),
-      {}
+      {},
     );
   },
   { history, document: document22 } = scope;
@@ -14384,7 +14386,7 @@ var getQueryString = ({ selection, extraParams }) => {
     let search = typeof document22 < 'u' ? document22.location.search : '',
       { path, selectedKind, selectedStory, ...rest } = import_qs.default.parse(
         search,
-        { ignoreQueryPrefix: !0 }
+        { ignoreQueryPrefix: !0 },
       );
     return import_qs.default.stringify(
       {
@@ -14395,7 +14397,7 @@ var getQueryString = ({ selection, extraParams }) => {
           viewMode: selection.viewMode,
         }),
       },
-      { encode: !1, addQueryPrefix: !0 }
+      { encode: !1, addQueryPrefix: !0 },
     );
   },
   setPath = (selection) => {
@@ -14406,7 +14408,7 @@ var getQueryString = ({ selection, extraParams }) => {
       history.replaceState(
         {},
         '',
-        `${document22.location.pathname}${query}${hash}`
+        `${document22.location.pathname}${query}${hash}`,
       );
   },
   isObject4 = (val) =>
@@ -14453,7 +14455,7 @@ var getQueryString = ({ selection, extraParams }) => {
       history.replaceState(
         {},
         '',
-        `${document22.location.pathname}${query}${hash}`
+        `${document22.location.pathname}${query}${hash}`,
       );
     }
   },
@@ -14486,7 +14488,7 @@ var getQueryString = ({ selection, extraParams }) => {
       if (((this.testing = !1), typeof document3 < 'u')) {
         let { __SPECIAL_TEST_PARAMETER__ } = import_qs.default.parse(
           document3.location.search,
-          { ignoreQueryPrefix: !0 }
+          { ignoreQueryPrefix: !0 },
         );
         switch (__SPECIAL_TEST_PARAMETER__) {
           case 'preparing-story': {
@@ -14563,7 +14565,7 @@ var getQueryString = ({ selection, extraParams }) => {
           .slice(1)
           .join(
             `
-`
+`,
           )
           .replace(/^\n/, ''))),
         (document3.getElementById('error-message').innerHTML =
@@ -14584,7 +14586,7 @@ var getQueryString = ({ selection, extraParams }) => {
           ? this.showMode('PREPARING_STORY')
           : (this.preparingTimeout = setTimeout(
               () => this.showMode('PREPARING_STORY'),
-              PREPARING_DELAY
+              PREPARING_DELAY,
             ));
     }
     showPreparingDocs({ immediate = !1 } = {}) {
@@ -14593,7 +14595,7 @@ var getQueryString = ({ selection, extraParams }) => {
           ? this.showMode('PREPARING_DOCS')
           : (this.preparingTimeout = setTimeout(
               () => this.showMode('PREPARING_DOCS'),
-              PREPARING_DELAY
+              PREPARING_DELAY,
             ));
     }
     showMain() {
@@ -14682,14 +14684,14 @@ function simulatePageLoad($container) {
       let typeAttr = $script.getAttribute('type');
       (!typeAttr || runScriptTypes.includes(typeAttr)) &&
         scriptsToExecute.push((callback) =>
-          insertScript($script, callback, $scriptsRoot)
+          insertScript($script, callback, $scriptsRoot),
         );
     }),
       scriptsToExecute.length &&
         insertScriptsSequentially(
           scriptsToExecute,
           simulateDOMContentLoaded,
-          void 0
+          void 0,
         );
   } else simulateDOMContentLoaded();
 }
@@ -14721,7 +14723,7 @@ function getBrowserInfo() {
   return (
     browserInfo ||
       (browserInfo = new import_browser_dtector.default(
-        scope.navigator?.userAgent
+        scope.navigator?.userAgent,
       ).getBrowserInfo()),
     browserInfo
   );
@@ -14735,7 +14737,7 @@ globalPackages.forEach((key2) => {
 scope.sendTelemetryError = (error) => {
   scope.__STORYBOOK_ADDONS_CHANNEL__.emit(
     TELEMETRY_ERROR,
-    prepareForTelemetry(error)
+    prepareForTelemetry(error),
   );
 };
 scope.addEventListener('error', (args2) => {

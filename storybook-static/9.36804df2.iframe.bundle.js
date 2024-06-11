@@ -17,7 +17,7 @@
           });
         var _chunk_WDXN43AK_mjs__WEBPACK_IMPORTED_MODULE_0__ =
           __webpack_require__(
-            './node_modules/@storybook/components/dist/chunk-WDXN43AK.mjs'
+            './node_modules/@storybook/components/dist/chunk-WDXN43AK.mjs',
           );
       },
   },

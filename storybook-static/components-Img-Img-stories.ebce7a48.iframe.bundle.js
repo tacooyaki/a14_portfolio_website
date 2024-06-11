@@ -6,7 +6,7 @@
     './src/components/Img/Img.stories.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
@@ -17,13 +17,13 @@
       __webpack_require__('./node_modules/react/index.js');
       var _templateObject,
         taggedTemplateLiteral = __webpack_require__(
-          './node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+          './node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
         ),
         styled_components_browser_esm = __webpack_require__(
-          './node_modules/styled-components/dist/styled-components.browser.esm.js'
+          './node_modules/styled-components/dist/styled-components.browser.esm.js',
         ),
         jsx_runtime = __webpack_require__(
-          './node_modules/react/jsx-runtime.js'
+          './node_modules/react/jsx-runtime.js',
         );
       const StyledImg = styled_components_browser_esm.Ay.img(
           _templateObject ||
@@ -33,7 +33,7 @@
               ';\n',
             ])),
           (props) => (props.disabled ? 0.5 : 1),
-          (props) => (props.disabled ? 'not-allowed' : 'pointer')
+          (props) => (props.disabled ? 'not-allowed' : 'pointer'),
         ),
         Img = (_ref) => {
           let { src, alt, disabled } = _ref;
@@ -67,7 +67,7 @@
               alt: 'Placeholder Image',
               disabled: !1,
             },
-          }
+          },
         );
       Default.parameters = {
         ...Default.parameters,

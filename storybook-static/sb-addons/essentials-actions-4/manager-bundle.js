@@ -306,7 +306,7 @@ try {
     function te(e) {
       if (e === void 0)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return e;
     }
@@ -345,7 +345,7 @@ try {
     function V() {
       try {
         var e = !Boolean.prototype.valueOf.call(
-          Reflect.construct(Boolean, [], function () {})
+          Reflect.construct(Boolean, [], function () {}),
         );
       } catch {}
       return (V = function () {
@@ -366,7 +366,7 @@ try {
           if (n === null || !ne(n)) return n;
           if (typeof n != 'function')
             throw new TypeError(
-              'Super expression must either be null or a function'
+              'Super expression must either be null or a function',
             );
           if (typeof t < 'u') {
             if (t.has(n)) return t.get(n);
@@ -400,7 +400,7 @@ try {
               this,
               'An error occurred. See https://github.com/styled-components/polished/blob/main/src/internalHelpers/errors.md#' +
                 r +
-                ' for more information.'
+                ' for more information.',
             ) || this;
         else for (var a, i, s; s < a; s++);
         return te(n);
@@ -1019,7 +1019,7 @@ try {
           t || !e || !e.__esModule
             ? ge(r, 'default', { value: e, enumerable: !0 })
             : r,
-          e
+          e,
         )
       ),
       Qt = be({
@@ -1367,14 +1367,14 @@ try {
           return o.createElement(
             rt.Provider,
             { value: n },
-            o.createElement(e, { ...r })
+            o.createElement(e, { ...r }),
           );
         },
       ar = ({ expanded: e, styles: t }) =>
         o.createElement(
           'span',
           { style: { ...t.base, ...(e ? t.expanded : t.collapsed) } },
-          '\u25B6'
+          '\u25B6',
         ),
       or = k((e) => {
         e = {
@@ -1413,15 +1413,15 @@ try {
                   o.createElement(
                     'span',
                     { style: u.treeNodePlaceholder },
-                    '\xA0'
+                    '\xA0',
                   ),
-            o.createElement(c, { ...e })
+            o.createElement(c, { ...e }),
           ),
           o.createElement(
             'ol',
             { role: 'group', style: u.treeNodeChildNodesContainer },
-            t ? n : void 0
-          )
+            t ? n : void 0,
+          ),
         );
       }),
       Z = '$',
@@ -1431,7 +1431,7 @@ try {
     }
     var ir = (e) =>
         Array.from({ length: e }, (t, r) =>
-          [Z].concat(Array.from({ length: r }, () => '*')).join('.')
+          [Z].concat(Array.from({ length: r }, () => '*')).join('.'),
         ),
       sr = (e, t, r, n, a) => {
         let i = []
@@ -1495,9 +1495,9 @@ try {
                   dataIterator: r,
                   nodeRenderer: i,
                   ...E,
-                })
+                }),
               )
-            : null
+            : null,
         );
       }),
       at = k(
@@ -1527,11 +1527,11 @@ try {
                   depth: 0,
                   path: Z,
                   nodeRenderer: n,
-                })
-              )
+                }),
+              ),
             )
           );
-        }
+        },
       ),
       Ee = ({ name: e, dimmed: t = !1, styles: r = {} }) => {
         let n = S('ObjectName'),
@@ -1547,13 +1547,13 @@ try {
               'span',
               { style: n('objectValueNumber') },
               String(e),
-              'n'
+              'n',
             );
           case 'number':
             return o.createElement(
               'span',
               { style: n('objectValueNumber') },
-              String(e)
+              String(e),
             );
           case 'string':
             return o.createElement(
@@ -1561,19 +1561,19 @@ try {
               { style: n('objectValueString') },
               '"',
               e,
-              '"'
+              '"',
             );
           case 'boolean':
             return o.createElement(
               'span',
               { style: n('objectValueBoolean') },
-              String(e)
+              String(e),
             );
           case 'undefined':
             return o.createElement(
               'span',
               { style: n('objectValueUndefined') },
-              'undefined'
+              'undefined',
             );
           case 'object':
             return e === null
@@ -1584,7 +1584,7 @@ try {
                   ? o.createElement(
                       'span',
                       { style: n('objectValueRegExp') },
-                      e.toString()
+                      e.toString(),
                     )
                   : Array.isArray(e)
                     ? o.createElement('span', null, `Array(${e.length})`)
@@ -1601,20 +1601,20 @@ try {
               o.createElement(
                 'span',
                 { style: n('objectValueFunctionPrefix') },
-                '\u0192\xA0'
+                '\u0192\xA0',
               ),
               o.createElement(
                 'span',
                 { style: n('objectValueFunctionName') },
                 e.name,
-                '()'
-              )
+                '()',
+              ),
             );
           case 'symbol':
             return o.createElement(
               'span',
               { style: n('objectValueSymbol') },
-              e.toString()
+              e.toString(),
             );
           default:
             return o.createElement('span', null);
@@ -1661,9 +1661,15 @@ try {
             o.createElement(
               'span',
               { style: t.objectDescription },
-              i === 0 ? '' : `(${i})\xA0`
+              i === 0 ? '' : `(${i})\xA0`,
             ),
-            o.createElement('span', { style: t.preview }, '[', Ze(a, ', '), ']')
+            o.createElement(
+              'span',
+              { style: t.preview },
+              '[',
+              Ze(a, ', '),
+              ']',
+            ),
           );
         } else {
           let n = t.objectMaxProperties,
@@ -1683,8 +1689,8 @@ try {
                     o.createElement(Ee, { name: s || '""' }),
                     ':\xA0',
                     o.createElement(j, { object: u }),
-                    l
-                  )
+                    l,
+                  ),
                 ),
                 l)
               )
@@ -1697,9 +1703,15 @@ try {
             o.createElement(
               'span',
               { style: t.objectDescription },
-              i === 'Object' ? '' : `${i} `
+              i === 'Object' ? '' : `${i} `,
             ),
-            o.createElement('span', { style: t.preview }, '{', Ze(a, ', '), '}')
+            o.createElement(
+              'span',
+              { style: t.preview },
+              '{',
+              Ze(a, ', '),
+              '}',
+            ),
           );
         }
       },
@@ -1710,7 +1722,7 @@ try {
               null,
               o.createElement(Ee, { name: e }),
               o.createElement('span', null, ': '),
-              o.createElement(de, { data: t })
+              o.createElement(de, { data: t }),
             )
           : o.createElement(de, { data: t }),
       cr = ({ name: e, data: t, isNonenumerable: r = !1 }) => {
@@ -1722,7 +1734,7 @@ try {
             ? o.createElement(Ee, { name: e, dimmed: r })
             : o.createElement(de, { data: e }),
           o.createElement('span', null, ': '),
-          o.createElement(j, { object: n })
+          o.createElement(j, { object: n }),
         );
       },
       pr = (e, t) =>
@@ -1792,7 +1804,7 @@ try {
               i !== null &&
               Object.keys(i).reduce(
                 (s, l) => (s.includes(l) || s.push(l), s),
-                n
+                n,
               ),
             n
           );
@@ -1824,17 +1836,17 @@ try {
                       ? o.createElement(
                           'td',
                           { key: l, style: { ...n.td, ...a.solid } },
-                          o.createElement(j, { object: u[l] })
+                          o.createElement(j, { object: u[l] }),
                         )
                       : o.createElement('td', {
                           key: l,
                           style: { ...n.td, ...a.solid },
                         });
-                  })
-                )
-              )
-            )
-          )
+                  }),
+                ),
+              ),
+            ),
+          ),
         );
       },
       hr = (e) =>
@@ -1850,7 +1862,7 @@ try {
               alignItems: 'center',
             },
           },
-          e.children
+          e.children,
         ),
       Er = ({ sortAscending: e }) => {
         let t = S('TableInspectorSortIcon'),
@@ -1880,7 +1892,11 @@ try {
           },
           o.createElement('div', { style: s.div }, a),
           t &&
-            o.createElement(hr, null, o.createElement(Er, { sortAscending: e }))
+            o.createElement(
+              hr,
+              null,
+              o.createElement(Er, { sortAscending: e }),
+            ),
         );
       },
       yr = ({
@@ -1915,7 +1931,7 @@ try {
                     sortAscending: i,
                     onClick: l,
                   },
-                  e
+                  e,
                 ),
                 t.map((p) =>
                   o.createElement(
@@ -1927,12 +1943,12 @@ try {
                       sortAscending: i,
                       onClick: s.bind(null, p),
                     },
-                    p
-                  )
-                )
-              )
-            )
-          )
+                    p,
+                  ),
+                ),
+              ),
+            ),
+          ),
         );
       },
       Or = ({ data: e, columns: t }) => {
@@ -1971,7 +1987,7 @@ try {
         if (
           (i !== void 0
             ? (E = f.map((m, y) =>
-                typeof m == 'object' && m !== null ? [m[i], y] : [void 0, y]
+                typeof m == 'object' && m !== null ? [m[i], y] : [void 0, y],
               ))
             : a && (E = p.map((m, y) => [p[y], y])),
           E !== void 0)
@@ -2013,7 +2029,7 @@ try {
             onTHClick: c,
             onIndexTHClick: u,
           }),
-          o.createElement(br, { rows: p, columns: d, rowsData: f })
+          o.createElement(br, { rows: p, columns: d, rowsData: f }),
         );
       },
       Tr = he(Or),
@@ -2042,22 +2058,22 @@ try {
                     o.createElement(
                       'span',
                       { style: r.htmlAttributeName },
-                      i.name
+                      i.name,
                     ),
                     '="',
                     o.createElement(
                       'span',
                       { style: r.htmlAttributeValue },
-                      i.value
+                      i.value,
                     ),
-                    '"'
-                  )
+                    '"',
+                  ),
                 );
               }
               return n;
             }
           })(),
-          '>'
+          '>',
         ),
       Qe = ({ tagName: e, isChildNode: t = !1, styles: r }) =>
         o.createElement(
@@ -2065,7 +2081,7 @@ try {
           { style: Object.assign({}, r.base, t && r.offsetLeft) },
           '</',
           o.createElement('span', { style: r.tagName }, e),
-          '>'
+          '>',
         ),
       Sr = {
         1: 'ELEMENT_NODE',
@@ -2099,7 +2115,7 @@ try {
                 o.createElement(Qe, {
                   tagName: t.tagName,
                   styles: n.htmlCloseTag,
-                })
+                }),
             );
           case Node.TEXT_NODE:
             return o.createElement('span', null, t.textContent);
@@ -2107,7 +2123,7 @@ try {
             return o.createElement(
               'span',
               null,
-              '<![CDATA[' + t.textContent + ']]>'
+              '<![CDATA[' + t.textContent + ']]>',
             );
           case Node.COMMENT_NODE:
             return o.createElement(
@@ -2115,7 +2131,7 @@ try {
               { style: n.htmlComment },
               '<!--',
               t.textContent,
-              '-->'
+              '-->',
             );
           case Node.PROCESSING_INSTRUCTION_NODE:
             return o.createElement('span', null, t.nodeName);
@@ -2128,7 +2144,7 @@ try {
               t.publicId ? ` PUBLIC "${t.publicId}"` : '',
               !t.publicId && t.systemId ? ' SYSTEM' : '',
               t.systemId ? ` "${t.systemId}"` : '',
-              '>'
+              '>',
             );
           case Node.DOCUMENT_NODE:
             return o.createElement('span', null, t.nodeName);
@@ -2189,8 +2205,8 @@ try {
         o.createElement(
           ze,
           { ref: r, horizontal: !0, vertical: !0, className: t },
-          e
-        )
+          e,
+        ),
       );
     st.displayName = 'UnstyledWrapped';
     var Mr = B(st)({ margin: 0, padding: '10px 5px 20px' }),
@@ -2199,7 +2215,7 @@ try {
           theme: e.addonActionsTheme || 'chromeLight',
           table: !1,
           ...t,
-        })
+        }),
       ),
       Br = ({ actions: e, onClear: t }) => {
         let r = Ie(null),
@@ -2228,14 +2244,14 @@ try {
                       showNonenumerable: !1,
                       name: i.data.name,
                       data: i.data.args ?? i.data,
-                    })
-                  )
-                )
-              )
+                    }),
+                  ),
+                ),
+              ),
             ),
             o.createElement(Be, {
               actionItems: [{ title: 'Clear', onClick: t }],
-            })
+            }),
           )
         );
       },
@@ -2319,10 +2335,10 @@ try {
             o.createElement(
               'span',
               { style: { display: 'inline-block', verticalAlign: 'middle' } },
-              'Actions'
+              'Actions',
             ),
-            e === 0 ? '' : o.createElement(Fe, { status: 'neutral' }, e)
-          )
+            e === 0 ? '' : o.createElement(Fe, { status: 'neutral' }, e),
+          ),
         )
       );
     }
@@ -2338,6 +2354,6 @@ try {
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

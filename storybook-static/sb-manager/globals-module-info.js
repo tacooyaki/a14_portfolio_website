@@ -550,6 +550,6 @@ var globalsModuleInfoMap = globalPackages.reduce(
     }),
     acc
   ),
-  {}
+  {},
 );
 0 && (module.exports = { globalsModuleInfoMap });

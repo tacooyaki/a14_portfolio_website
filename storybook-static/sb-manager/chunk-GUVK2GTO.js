@@ -36,7 +36,7 @@ var require_markdown = __commonJS({
               /__/g,
               function () {
                 return tableCell;
-              }
+              },
             ),
           tableLine =
             /\|?[ \t]*:?-{3,}:?[ \t]*(?:\|[ \t]*:?-{3,}:?[ \t]*)+\|?(?:\n|\r\n?)/
@@ -60,12 +60,12 @@ var require_markdown = __commonJS({
             table: {
               pattern: RegExp(
                 '^' + tableRow + tableLine + '(?:' + tableRow + ')*',
-                'm'
+                'm',
               ),
               inside: {
                 'table-data-rows': {
                   pattern: RegExp(
-                    '^(' + tableRow + tableLine + ')(?:' + tableRow + ')*$'
+                    '^(' + tableRow + tableLine + ')(?:' + tableRow + ')*$',
                   ),
                   lookbehind: !0,
                   inside: {
@@ -152,7 +152,7 @@ var require_markdown = __commonJS({
             bold: {
               pattern: createInline(
                 /\b__(?:(?!_)<inner>|_(?:(?!_)<inner>)+_)+__\b|\*\*(?:(?!\*)<inner>|\*(?:(?!\*)<inner>)+\*)+\*\*/
-                  .source
+                  .source,
               ),
               lookbehind: !0,
               greedy: !0,
@@ -168,7 +168,7 @@ var require_markdown = __commonJS({
             italic: {
               pattern: createInline(
                 /\b_(?:(?!_)<inner>|__(?:(?!_)<inner>)+__)+_\b|\*(?:(?!\*)<inner>|\*\*(?:(?!\*)<inner>)+\*\*)+\*/
-                  .source
+                  .source,
               ),
               lookbehind: !0,
               greedy: !0,
@@ -204,7 +204,7 @@ var require_markdown = __commonJS({
             url: {
               pattern: createInline(
                 /!?\[(?:(?!\])<inner>)+\](?:\([^\s)]+(?:[\t ]+"(?:\\.|[^"\\])*")?\)|[ \t]?\[(?:(?!\])<inner>)+\])/
-                  .source
+                  .source,
               ),
               lookbehind: !0,
               greedy: !0,
@@ -234,7 +234,7 @@ var require_markdown = __commonJS({
                   (Prism2.languages.markdown[token].inside.content.inside[
                     inside
                   ] = Prism2.languages.markdown[inside]);
-              }
+              },
             );
           }),
           Prism2.hooks.add('after-tokenize', function (env) {
@@ -290,7 +290,7 @@ var require_markdown = __commonJS({
                 env.content = Prism2.highlight(
                   textContent(env.content.value),
                   grammar,
-                  codeLang
+                  codeLang,
                 );
               else if (
                 codeLang &&
@@ -311,16 +311,16 @@ var require_markdown = __commonJS({
                         (ele.innerHTML = Prism2.highlight(
                           ele.textContent,
                           Prism2.languages[codeLang],
-                          codeLang
+                          codeLang,
                         ));
-                    }
+                    },
                   );
               }
             }
           });
         var tagPattern = RegExp(
             Prism2.languages.markup.tag.pattern.source,
-            'gi'
+            'gi',
           ),
           KNOWN_ENTITY_NAMES = { amp: '&', lt: '<', gt: '>', quot: '"' },
           fromCodePoint = String.fromCodePoint || String.fromCharCode;
@@ -342,7 +342,7 @@ var require_markdown = __commonJS({
                   var known = KNOWN_ENTITY_NAMES[code];
                   return known || m;
                 }
-              }
+              },
             )),
             text
           );
@@ -378,7 +378,7 @@ var require_yaml = __commonJS({
               function () {
                 return /[^\s\x00-\x08\x0e-\x1f,[\]{}\x7f-\x84\x86-\x9f\ud800-\udfff\ufffe\uffff]/
                   .source;
-              }
+              },
             ),
           string = /"(?:[^"\\\r\n]|\\.)*"|'(?:[^'\\\r\n]|\\.)*'/.source;
         function createValuePattern(value, flags) {
@@ -400,8 +400,8 @@ var require_yaml = __commonJS({
                 /<<prop>>/g,
                 function () {
                   return properties;
-                }
-              )
+                },
+              ),
             ),
             lookbehind: !0,
             alias: 'string',
@@ -415,7 +415,7 @@ var require_yaml = __commonJS({
                 })
                 .replace(/<<key>>/g, function () {
                   return '(?:' + plainKey + '|' + string + ')';
-                })
+                }),
             ),
             lookbehind: !0,
             greedy: !0,
@@ -429,7 +429,7 @@ var require_yaml = __commonJS({
           datetime: {
             pattern: createValuePattern(
               /\d{4}-\d\d?-\d\d?(?:[tT]|[ \t]+)\d\d?:\d{2}:\d{2}(?:\.\d*)?(?:[ \t]*(?:Z|[-+]\d\d?(?::\d{2})?))?|\d{4}-\d{2}-\d{2}|\d\d?:\d{2}(?::\d{2}(?:\.\d*)?)?/
-                .source
+                .source,
             ),
             lookbehind: !0,
             alias: 'number',
@@ -453,7 +453,7 @@ var require_yaml = __commonJS({
             pattern: createValuePattern(
               /[+-]?(?:0x[\da-f]+|0o[0-7]+|(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?|\.inf|\.nan)/
                 .source,
-              'i'
+              'i',
             ),
             lookbehind: !0,
           },
@@ -487,7 +487,7 @@ var require_typescript = __commonJS({
           Prism2.languages.typescript.keyword.push(
             /\b(?:abstract|declare|is|keyof|readonly|require)\b/,
             /\b(?:asserts|infer|interface|module|namespace|type)\b(?=\s*(?:[{_$a-zA-Z\xA0-\uFFFF]|$))/,
-            /\btype\b(?=\s*(?:[\{*]|$))/
+            /\btype\b(?=\s*(?:[\{*]|$))/,
           ),
           delete Prism2.languages.typescript.parameter,
           delete Prism2.languages.typescript['literal-property'];
@@ -549,11 +549,11 @@ var require_jsx = __commonJS({
         (spread = re(spread).source),
           (Prism2.languages.jsx = Prism2.languages.extend(
             'markup',
-            javascript
+            javascript,
           )),
           (Prism2.languages.jsx.tag.pattern = re(
             /<\/?(?:[\w.:-]+(?:<S>+(?:[\w.:$-]+(?:=(?:"(?:\\[\s\S]|[^\\"])*"|'(?:\\[\s\S]|[^\\'])*'|[^\s{'"/>=]+|<BRACES>))?|<SPREAD>))*<S>*\/?)?>/
-              .source
+              .source,
           )),
           (Prism2.languages.jsx.tag.inside.tag.pattern = /^<\/?[^\s>\/]*/),
           (Prism2.languages.jsx.tag.inside['attr-value'].pattern =
@@ -570,7 +570,7 @@ var require_jsx = __commonJS({
                 inside: Prism2.languages.jsx,
               },
             },
-            Prism2.languages.jsx.tag
+            Prism2.languages.jsx.tag,
           ),
           Prism2.languages.insertBefore(
             'inside',
@@ -588,7 +588,7 @@ var require_jsx = __commonJS({
                 },
               },
             },
-            Prism2.languages.jsx.tag
+            Prism2.languages.jsx.tag,
           );
         var stringifyToken = function (token) {
             return token
@@ -649,7 +649,7 @@ var require_jsx = __commonJS({
                     'plain-text',
                     plainText,
                     null,
-                    plainText
+                    plainText,
                   ));
               }
               token.content &&
@@ -681,7 +681,7 @@ var require_tsx = __commonJS({
           var tag = Prism2.languages.tsx.tag;
           (tag.pattern = RegExp(
             /(^|[^\w$]|(?=<\/))/.source + '(?:' + tag.pattern.source + ')',
-            tag.pattern.flags
+            tag.pattern.flags,
           )),
             (tag.lookbehind = !0);
         })(Prism);
@@ -766,7 +766,7 @@ var require_javascript = __commonJS({
                 /(?:\d+(?:_\d+)*(?:\.(?:\d+(?:_\d+)*)?)?|\.\d+(?:_\d+)*)(?:[Ee][+-]?\d+(?:_\d+)*)?/
                   .source) +
               ')' +
-              /(?![\w$])/.source
+              /(?![\w$])/.source,
           ),
           lookbehind: !0,
         },
@@ -869,7 +869,7 @@ var require_javascript = __commonJS({
           Prism.languages.markup.tag.addAttribute(
             /on(?:abort|blur|change|click|composition(?:end|start|update)|dblclick|error|focus(?:in|out)?|key(?:down|up)|load|mouse(?:down|enter|leave|move|out|over|up)|reset|resize|scroll|select|slotchange|submit|unload|wheel)/
               .source,
-            'javascript'
+            'javascript',
           )),
         (Prism.languages.js = Prism.languages.javascript);
     }
@@ -907,7 +907,7 @@ var require_css = __commonJS({
                 '|' +
                 /(?:[^\\\r\n()"']|\\[\s\S])*/.source +
                 ')\\)',
-              'i'
+              'i',
             ),
             greedy: !0,
             inside: {
@@ -923,7 +923,7 @@ var require_css = __commonJS({
             pattern: RegExp(
               `(^|[{}\\s])[^{}\\s](?:[^{};"'\\s]|\\s+(?![\\s{])|` +
                 string.source +
-                ')*(?=\\s*\\{)'
+                ')*(?=\\s*\\{)',
             ),
             lookbehind: !0,
           },
@@ -1046,9 +1046,9 @@ var require_markup = __commonJS({
                   /__/g,
                   function () {
                     return tagName;
-                  }
+                  },
                 ),
-                'i'
+                'i',
               ),
               lookbehind: !0,
               greedy: !0,
@@ -1066,7 +1066,7 @@ var require_markup = __commonJS({
                   attrName +
                   ')' +
                   /\s*=\s*(?:"[^"]*"|'[^']*'|[^\s'">=]+(?=[\s>]))/.source,
-                'i'
+                'i',
               ),
               lookbehind: !0,
               inside: {
@@ -1117,7 +1117,7 @@ var require_immutable = __commonJS({
   require_schema = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/util/schema.js'(
       exports,
-      module
+      module,
     ) {
       module.exports = Schema;
       var proto = Schema.prototype;
@@ -1132,7 +1132,7 @@ var require_immutable = __commonJS({
   require_merge = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/util/merge.js'(
       exports,
-      module
+      module,
     ) {
       var xtend = require_immutable(),
         Schema = require_schema();
@@ -1155,7 +1155,7 @@ var require_immutable = __commonJS({
         return new Schema(
           xtend.apply(null, property),
           xtend.apply(null, normal),
-          space
+          space,
         );
       }
     },
@@ -1163,7 +1163,7 @@ var require_immutable = __commonJS({
   require_normalize = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/normalize.js'(
       exports,
-      module
+      module,
     ) {
       module.exports = normalize;
       function normalize(value) {
@@ -1174,7 +1174,7 @@ var require_immutable = __commonJS({
   require_info = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/util/info.js'(
       exports,
-      module
+      module,
     ) {
       module.exports = Info;
       var proto = Info.prototype;
@@ -1197,7 +1197,7 @@ var require_immutable = __commonJS({
   }),
   require_types = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/util/types.js'(
-      exports
+      exports,
     ) {
       var powers = 0;
       (exports.boolean = increment()),
@@ -1215,7 +1215,7 @@ var require_immutable = __commonJS({
   require_defined_info = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/util/defined-info.js'(
       exports,
-      module
+      module,
     ) {
       var Info = require_info(),
         types = require_types();
@@ -1251,7 +1251,7 @@ var require_immutable = __commonJS({
   require_create = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/util/create.js'(
       exports,
-      module
+      module,
     ) {
       var normalize = require_normalize(),
         Schema = require_schema(),
@@ -1272,7 +1272,7 @@ var require_immutable = __commonJS({
             prop,
             transform(attributes, prop),
             props[prop],
-            space
+            space,
           )),
             mustUseProperty.indexOf(prop) !== -1 && (info.mustUseProperty = !0),
             (property[prop] = info),
@@ -1285,7 +1285,7 @@ var require_immutable = __commonJS({
   require_xlink = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/xlink.js'(
       exports,
-      module
+      module,
     ) {
       var create = require_create();
       module.exports = create({
@@ -1309,7 +1309,7 @@ var require_immutable = __commonJS({
   require_xml = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/xml.js'(
       exports,
-      module
+      module,
     ) {
       var create = require_create();
       module.exports = create({
@@ -1325,7 +1325,7 @@ var require_immutable = __commonJS({
   require_case_sensitive_transform = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/util/case-sensitive-transform.js'(
       exports,
-      module
+      module,
     ) {
       module.exports = caseSensitiveTransform;
       function caseSensitiveTransform(attributes, attribute) {
@@ -1336,7 +1336,7 @@ var require_immutable = __commonJS({
   require_case_insensitive_transform = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/util/case-insensitive-transform.js'(
       exports,
-      module
+      module,
     ) {
       var caseSensitiveTransform = require_case_sensitive_transform();
       module.exports = caseInsensitiveTransform;
@@ -1348,7 +1348,7 @@ var require_immutable = __commonJS({
   require_xmlns = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/xmlns.js'(
       exports,
-      module
+      module,
     ) {
       var create = require_create(),
         caseInsensitiveTransform = require_case_insensitive_transform();
@@ -1363,7 +1363,7 @@ var require_immutable = __commonJS({
   require_aria = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/aria.js'(
       exports,
-      module
+      module,
     ) {
       var types = require_types(),
         create = require_create(),
@@ -1432,7 +1432,7 @@ var require_immutable = __commonJS({
   require_html = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/lib/html.js'(
       exports,
-      module
+      module,
     ) {
       var types = require_types(),
         create = require_create(),
@@ -1738,7 +1738,7 @@ var require_immutable = __commonJS({
   require_html2 = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/html.js'(
       exports,
-      module
+      module,
     ) {
       var merge = require_merge(),
         xlink = require_xlink(),
@@ -1752,7 +1752,7 @@ var require_immutable = __commonJS({
   require_find = __commonJS({
     '../../node_modules/hastscript/node_modules/property-information/find.js'(
       exports,
-      module
+      module,
     ) {
       var normalize = require_normalize(),
         DefinedInfo = require_defined_info(),
@@ -1837,7 +1837,7 @@ var require_immutable = __commonJS({
   }),
   require_space_separated_tokens = __commonJS({
     '../../node_modules/hastscript/node_modules/space-separated-tokens/index.js'(
-      exports
+      exports,
     ) {
       (exports.parse = parse), (exports.stringify = stringify);
       var empty = '',
@@ -1854,7 +1854,7 @@ var require_immutable = __commonJS({
   }),
   require_comma_separated_tokens = __commonJS({
     '../../node_modules/hastscript/node_modules/comma-separated-tokens/index.js'(
-      exports
+      exports,
     ) {
       (exports.parse = parse), (exports.stringify = stringify);
       var comma = ',',
@@ -1982,7 +1982,7 @@ var require_immutable = __commonJS({
         }
         if (typeof value != 'object' || !('type' in value))
           throw new Error(
-            'Expected node, nodes, or string, got `' + value + '`'
+            'Expected node, nodes, or string, got `' + value + '`',
           );
         nodes.push(value);
       }
@@ -2039,7 +2039,7 @@ var require_immutable = __commonJS({
   require_character_entities_legacy = __commonJS({
     '../../node_modules/refractor/node_modules/character-entities-legacy/index.json'(
       exports,
-      module
+      module,
     ) {
       module.exports = {
         AElig: '\xC6',
@@ -2154,7 +2154,7 @@ var require_immutable = __commonJS({
   require_character_reference_invalid = __commonJS({
     '../../node_modules/refractor/node_modules/character-reference-invalid/index.json'(
       exports,
-      module
+      module,
     ) {
       module.exports = {
         0: '\uFFFD',
@@ -2191,7 +2191,7 @@ var require_immutable = __commonJS({
   require_is_decimal = __commonJS({
     '../../node_modules/refractor/node_modules/is-decimal/index.js'(
       exports,
-      module
+      module,
     ) {
       module.exports = decimal;
       function decimal(character) {
@@ -2204,7 +2204,7 @@ var require_immutable = __commonJS({
   require_is_hexadecimal = __commonJS({
     '../../node_modules/refractor/node_modules/is-hexadecimal/index.js'(
       exports,
-      module
+      module,
     ) {
       module.exports = hexadecimal;
       function hexadecimal(character) {
@@ -2221,7 +2221,7 @@ var require_immutable = __commonJS({
   require_is_alphabetical = __commonJS({
     '../../node_modules/refractor/node_modules/is-alphabetical/index.js'(
       exports,
-      module
+      module,
     ) {
       module.exports = alphabetical;
       function alphabetical(character) {
@@ -2234,7 +2234,7 @@ var require_immutable = __commonJS({
   require_is_alphanumerical = __commonJS({
     '../../node_modules/refractor/node_modules/is-alphanumerical/index.js'(
       exports,
-      module
+      module,
     ) {
       var alphabetical = require_is_alphabetical(),
         decimal = require_is_decimal();
@@ -2247,7 +2247,7 @@ var require_immutable = __commonJS({
   require_decode_entity_browser = __commonJS({
     '../../node_modules/refractor/node_modules/parse-entities/decode-entity.browser.js'(
       exports,
-      module
+      module,
     ) {
       var el,
         semicolon = 59;
@@ -2271,7 +2271,7 @@ var require_immutable = __commonJS({
   require_parse_entities = __commonJS({
     '../../node_modules/refractor/node_modules/parse-entities/index.js'(
       exports,
-      module
+      module,
     ) {
       var legacy = require_character_entities_legacy(),
         invalid = require_character_reference_invalid(),
@@ -2484,7 +2484,7 @@ var require_immutable = __commonJS({
                             reference > 65535 &&
                               ((reference -= 65536),
                               (output += fromCharCode(
-                                (reference >>> 10) | 55296
+                                (reference >>> 10) | 55296,
                               )),
                               (reference = 56320 | (reference & 1023))),
                             (reference = output + fromCharCode(reference))))
@@ -2502,7 +2502,7 @@ var require_immutable = __commonJS({
                       referenceContext,
                       reference,
                       { start: prev, end: next },
-                      value.slice(start - 1, end)
+                      value.slice(start - 1, end),
                     ),
                   (prev = next))
                 : ((characters = value.slice(start - 1, end)),
@@ -2551,7 +2551,7 @@ var require_immutable = __commonJS({
   require_prism_core = __commonJS({
     '../../node_modules/refractor/node_modules/prismjs/components/prism-core.js'(
       exports,
-      module
+      module,
     ) {
       var _self =
           typeof window < 'u'
@@ -2574,7 +2574,7 @@ var require_immutable = __commonJS({
                     ? new Token(
                         tokens.type,
                         encode(tokens.content),
-                        tokens.alias
+                        tokens.alias,
                       )
                     : Array.isArray(tokens)
                       ? tokens.map(encode)
@@ -2632,7 +2632,7 @@ var require_immutable = __commonJS({
                 setLanguage: function (element, language) {
                   (element.className = element.className.replace(
                     RegExp(lang, 'gi'),
-                    ''
+                    '',
                   )),
                     element.classList.add('language-' + language);
                 },
@@ -2644,7 +2644,7 @@ var require_immutable = __commonJS({
                     throw new Error();
                   } catch (err) {
                     var src = (/at [^(\r\n]*\((.*):[^:]+:[^:]+\)$/i.exec(
-                      err.stack
+                      err.stack,
                     ) || [])[1];
                     if (src) {
                       var scripts = document.getElementsByTagName('script');
@@ -2727,7 +2727,7 @@ var require_immutable = __commonJS({
                 };
                 _.hooks.run('before-highlightall', env),
                   (env.elements = Array.prototype.slice.apply(
-                    env.container.querySelectorAll(env.selector)
+                    env.container.querySelectorAll(env.selector),
                   )),
                   _.hooks.run('before-all-elements-highlight', env);
                 for (var i = 0, element; (element = env.elements[i++]); )
@@ -2778,18 +2778,18 @@ var require_immutable = __commonJS({
                         language: env.language,
                         code: env.code,
                         immediateClose: !0,
-                      })
+                      }),
                     );
                 } else
                   insertHighlightedCode(
-                    _.highlight(env.code, env.grammar, env.language)
+                    _.highlight(env.code, env.grammar, env.language),
                   );
               },
               highlight: function (text, grammar, language) {
                 var env = { code: text, grammar, language };
                 if ((_.hooks.run('before-tokenize', env), !env.grammar))
                   throw new Error(
-                    'The language "' + env.language + '" has no grammar.'
+                    'The language "' + env.language + '" has no grammar.',
                   );
                 return (
                   (env.tokens = _.tokenize(env.code, env.grammar)),
@@ -2895,7 +2895,7 @@ var require_immutable = __commonJS({
             grammar,
             startNode,
             startPos,
-            rematch
+            rematch,
           ) {
             for (var token in grammar)
               if (!(!grammar.hasOwnProperty(token) || !grammar[token])) {
@@ -2914,7 +2914,7 @@ var require_immutable = __commonJS({
                       .match(/[imsuy]*$/)[0];
                     patternObj.pattern = RegExp(
                       patternObj.pattern.source,
-                      flags + 'g'
+                      flags + 'g',
                     );
                   }
                   for (
@@ -2937,7 +2937,7 @@ var require_immutable = __commonJS({
                             pattern,
                             pos,
                             text,
-                            lookbehind
+                            lookbehind,
                           )),
                           !match || match.index >= text.length)
                         )
@@ -2986,13 +2986,13 @@ var require_immutable = __commonJS({
                         token,
                         inside ? _.tokenize(matchStr, inside) : matchStr,
                         alias,
-                        matchStr
+                        matchStr,
                       );
                       if (
                         ((currentNode = addAfter(
                           tokenList,
                           removeFrom,
-                          wrapped
+                          wrapped,
                         )),
                         after && addAfter(tokenList, currentNode, after),
                         removeCount > 1)
@@ -3004,7 +3004,7 @@ var require_immutable = __commonJS({
                           grammar,
                           currentNode.prev,
                           pos,
-                          nestedRematch
+                          nestedRematch,
                         ),
                           rematch &&
                             nestedRematch.reach > rematch.reach &&
@@ -3059,11 +3059,11 @@ var require_immutable = __commonJS({
                         code = message.code,
                         immediateClose = message.immediateClose;
                       _self2.postMessage(
-                        _.highlight(code, _.languages[lang2], lang2)
+                        _.highlight(code, _.languages[lang2], lang2),
                       ),
                         immediateClose && _self2.close();
                     },
-                    !1
+                    !1,
                   )),
               _
             );
@@ -3080,7 +3080,7 @@ var require_immutable = __commonJS({
             (readyState === 'interactive' && script && script.defer)
               ? document.addEventListener(
                   'DOMContentLoaded',
-                  highlightAutomaticallyCallback
+                  highlightAutomaticallyCallback,
                 )
               : window.requestAnimationFrame
                 ? window.requestAnimationFrame(highlightAutomaticallyCallback)
@@ -3133,7 +3133,7 @@ var require_immutable = __commonJS({
       function register(grammar) {
         if (typeof grammar != 'function' || !grammar.displayName)
           throw new Error(
-            'Expected `function` for `grammar`, got `' + grammar + '`'
+            'Expected `function` for `grammar`, got `' + grammar + '`',
           );
         refract.languages[grammar.displayName] === void 0 && grammar(refract);
       }
@@ -3170,7 +3170,7 @@ var require_immutable = __commonJS({
             grammar = refract.languages[name];
           else
             throw new Error(
-              'Unknown language: `' + name + '` is not registered'
+              'Unknown language: `' + name + '` is not registered',
             );
         }
         return sup.call(this, value, grammar, name);
@@ -3178,7 +3178,7 @@ var require_immutable = __commonJS({
       function registered(language) {
         if (typeof language != 'string')
           throw new Error(
-            'Expected `string` for `language`, got `' + language + '`'
+            'Expected `string` for `language`, got `' + language + '`',
           );
         return own.call(refract.languages, language);
       }
@@ -3203,7 +3203,7 @@ var require_immutable = __commonJS({
                 content: refract.Token.stringify(
                   value.content,
                   language,
-                  parent
+                  parent,
                 ),
                 tag: 'span',
                 classes: ['token', value.type],
@@ -3216,7 +3216,7 @@ var require_immutable = __commonJS({
               h(
                 env.tag + '.' + env.classes.join('.'),
                 attributes(env.attributes),
-                env.content
+                env.content,
               ));
       }
       function stringifyAll(values, language) {
@@ -3447,7 +3447,7 @@ var require_js_extras = __commonJS({
           'method-variable': {
             pattern: RegExp(
               '(\\.\\s*)' +
-                Prism2.languages.javascript['function-variable'].pattern.source
+                Prism2.languages.javascript['function-variable'].pattern.source,
             ),
             lookbehind: !0,
             alias: [
@@ -3461,7 +3461,7 @@ var require_js_extras = __commonJS({
           Prism2.languages.insertBefore('javascript', 'function', {
             method: {
               pattern: RegExp(
-                '(\\.\\s*)' + Prism2.languages.javascript.function.source
+                '(\\.\\s*)' + Prism2.languages.javascript.function.source,
               ),
               lookbehind: !0,
               alias: ['function', 'property-access'],
@@ -3483,14 +3483,14 @@ var require_js_extras = __commonJS({
               return /(?!\s)[_$a-zA-Z\xA0-\uFFFF](?:(?!\s)[$\w\xA0-\uFFFF])*/
                 .source;
             }),
-            flags
+            flags,
           );
         }
         Prism2.languages.insertBefore('javascript', 'keyword', {
           imports: {
             pattern: withId(
               /(\bimport\b\s*)(?:<ID>(?:\s*,\s*(?:\*\s*as\s+<ID>|\{[^{}]*\}))?|\*\s*as\s+<ID>|\{[^{}]*\})(?=\s*\bfrom\b)/
-                .source
+                .source,
             ),
             lookbehind: !0,
             inside: Prism2.languages.javascript,
@@ -3498,7 +3498,7 @@ var require_js_extras = __commonJS({
           exports: {
             pattern: withId(
               /(\bexport\b\s*)(?:\*(?:\s*as\s+<ID>)?(?=\s*\bfrom\b)|\{[^{}]*\})/
-                .source
+                .source,
             ),
             lookbehind: !0,
             inside: Prism2.languages.javascript,
@@ -3515,7 +3515,7 @@ var require_js_extras = __commonJS({
               alias: 'control-flow',
             },
             { pattern: /\bnull\b/, alias: ['null', 'nil'] },
-            { pattern: /\bundefined\b/, alias: 'nil' }
+            { pattern: /\bundefined\b/, alias: 'nil' },
           ),
           Prism2.languages.insertBefore('javascript', 'operator', {
             spread: { pattern: /\.{3}/, alias: 'operator' },
@@ -3776,7 +3776,7 @@ function $6ed0406888f73fc4$export$43e446d32b3d21af(...refs) {
 function $6ed0406888f73fc4$export$c7b2cbe3552a0d05(...refs) {
   return (0, import_react.useCallback)(
     $6ed0406888f73fc4$export$43e446d32b3d21af(...refs),
-    refs
+    refs,
   );
 }
 var $5e63c961fc1ce211$export$8c6ed5c666ac1360 = (0, import_react2.forwardRef)(
@@ -3793,22 +3793,22 @@ var $5e63c961fc1ce211$export$8c6ed5c666ac1360 = (0, import_react2.forwardRef)(
               : (0, import_react2.isValidElement)(newElement)
                 ? newElement.props.children
                 : null
-            : child
+            : child,
         );
       return (0, import_react2.createElement)(
         $5e63c961fc1ce211$var$SlotClone,
         _extends2({}, slotProps, { ref: forwardedRef }),
         (0, import_react2.isValidElement)(newElement)
           ? (0, import_react2.cloneElement)(newElement, void 0, newChildren)
-          : null
+          : null,
       );
     }
     return (0, import_react2.createElement)(
       $5e63c961fc1ce211$var$SlotClone,
       _extends2({}, slotProps, { ref: forwardedRef }),
-      children
+      children,
     );
-  }
+  },
 );
 $5e63c961fc1ce211$export$8c6ed5c666ac1360.displayName = 'Slot';
 var $5e63c961fc1ce211$var$SlotClone = (0, import_react2.forwardRef)(
@@ -3820,14 +3820,14 @@ var $5e63c961fc1ce211$var$SlotClone = (0, import_react2.forwardRef)(
           ref: forwardedRef
             ? $6ed0406888f73fc4$export$43e446d32b3d21af(
                 forwardedRef,
-                children.ref
+                children.ref,
               )
             : children.ref,
         })
       : import_react2.Children.count(children) > 1
         ? import_react2.Children.only(null)
         : null;
-  }
+  },
 );
 $5e63c961fc1ce211$var$SlotClone.displayName = 'SlotClone';
 var $5e63c961fc1ce211$export$d9f1ccf0bdb05d45 = ({ children }) =>
@@ -4004,13 +4004,13 @@ function _objectSpread(target) {
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(
             target,
-            Object.getOwnPropertyDescriptors(source)
+            Object.getOwnPropertyDescriptors(source),
           )
         : ownKeys(Object(source)).forEach(function (key) {
             Object.defineProperty(
               target,
               key,
-              Object.getOwnPropertyDescriptor(source, key)
+              Object.getOwnPropertyDescriptor(source, key),
             );
           });
   }
@@ -4268,12 +4268,12 @@ function createElement(_ref) {
       props = _objectSpread(
         _objectSpread({}, properties),
         {},
-        { className: createClassNameString(properties.className) }
+        { className: createClassNameString(properties.className) },
       );
     else {
       var allStylesheetSelectors = Object.keys(stylesheet).reduce(function (
           classes,
-          selector
+          selector,
         ) {
           return (
             selector.split('.').forEach(function (className2) {
@@ -4291,7 +4291,7 @@ function createElement(_ref) {
           startingClassName.concat(
             properties.className.filter(function (className2) {
               return !allStylesheetSelectors.includes(className2);
-            })
+            }),
           );
       props = _objectSpread(
         _objectSpread({}, properties),
@@ -4301,16 +4301,16 @@ function createElement(_ref) {
           style: createStyleObject(
             properties.className,
             Object.assign({}, properties.style, style),
-            stylesheet
+            stylesheet,
           ),
-        }
+        },
       );
     }
     var children = childrenCreator(node.children);
     return import_react3.default.createElement(
       TagName,
       _extends({ key }, props),
-      children
+      children,
     );
   }
 }
@@ -4361,13 +4361,13 @@ function _objectSpread2(target) {
       : Object.getOwnPropertyDescriptors
         ? Object.defineProperties(
             target,
-            Object.getOwnPropertyDescriptors(source)
+            Object.getOwnPropertyDescriptors(source),
           )
         : ownKeys2(Object(source)).forEach(function (key) {
             Object.defineProperty(
               target,
               key,
-              Object.getOwnPropertyDescriptor(source, key)
+              Object.getOwnPropertyDescriptor(source, key),
             );
           });
   }
@@ -4393,8 +4393,8 @@ function getAllLineNumbers(_ref) {
       ''.concat(
         number,
         `
-`
-      )
+`,
+      ),
     );
   });
 }
@@ -4417,7 +4417,7 @@ function AllLineNumbers(_ref2) {
 `),
       style: numberStyle,
       startingLineNumber,
-    })
+    }),
   );
 }
 function getEmWidthOfNumber(num) {
@@ -4442,7 +4442,7 @@ function getInlineLineNumber(lineNumber, inlineLineNumberStyle) {
 function assembleLineNumberStyles(
   lineNumberStyle,
   lineNumber,
-  largestLineNumber
+  largestLineNumber,
 ) {
   var defaultLineNumberStyle = {
       display: 'inline-block',
@@ -4457,7 +4457,7 @@ function assembleLineNumberStyles(
         : lineNumberStyle,
     assembledStyle = _objectSpread2(
       _objectSpread2({}, defaultLineNumberStyle),
-      customLineNumberStyle
+      customLineNumberStyle,
     );
   return assembledStyle;
 }
@@ -4481,7 +4481,7 @@ function createLineElement(_ref3) {
     var inlineLineNumberStyle = assembleLineNumberStyles(
       lineNumberStyle,
       lineNumber,
-      largestLineNumber
+      largestLineNumber,
     );
     children.unshift(getInlineLineNumber(lineNumber, inlineLineNumberStyle));
   }
@@ -4490,7 +4490,7 @@ function createLineElement(_ref3) {
       (properties.style = _objectSpread2(
         _objectSpread2({}, properties.style),
         {},
-        { display: 'flex' }
+        { display: 'flex' },
       )),
     { type: 'element', tagName: 'span', properties, children }
   );
@@ -4511,7 +4511,7 @@ function flattenCodeTree(tree) {
         createLineElement({
           children: [node],
           className: _toConsumableArray(new Set(className)),
-        })
+        }),
       );
     else if (node.children) {
       var classNames = className.concat(node.properties.className);
@@ -4531,7 +4531,7 @@ function processLines(
   startingLineNumber,
   largestLineNumber,
   lineNumberStyle,
-  wrapLongLines
+  wrapLongLines,
 ) {
   var _ref4,
     tree = flattenCodeTree(codeTree.value),
@@ -4558,10 +4558,10 @@ function processLines(
       var inlineLineNumberStyle = assembleLineNumberStyles(
         lineNumberStyle,
         lineNumber2,
-        largestLineNumber
+        largestLineNumber,
       );
       children2.unshift(
-        getInlineLineNumber(lineNumber2, inlineLineNumberStyle)
+        getInlineLineNumber(lineNumber2, inlineLineNumberStyle),
       );
     }
     return children2;
@@ -4589,7 +4589,7 @@ function processLines(
               value: ''.concat(
                 text,
                 `
-`
+`,
               ),
             };
           if (i === 0) {
@@ -4597,7 +4597,7 @@ function processLines(
                 createLineElement({
                   children: [newChild],
                   className: node.properties.className,
-                })
+                }),
               ),
               _line = createLine(_children, lineNumber2);
             newTree.push(_line);
@@ -4618,7 +4618,7 @@ function processLines(
                 _line2 = createLine(
                   _children2,
                   lineNumber2,
-                  node.properties.className
+                  node.properties.className,
                 );
               newTree.push(_line2);
             }
@@ -4627,7 +4627,7 @@ function processLines(
               _line3 = createLine(
                 _children3,
                 lineNumber2,
-                node.properties.className
+                node.properties.className,
               );
             newTree.push(_line3);
           }
@@ -4702,7 +4702,7 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
               className: language ? 'language-'.concat(language) : void 0,
               style: _objectSpread2(
                 _objectSpread2({}, style['code[class*="language-"]']),
-                style['code[class*="language-'.concat(language, '"]')]
+                style['code[class*="language-'.concat(language, '"]')],
               ),
             }
           : _ref7$codeTagProps,
@@ -4767,12 +4767,12 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
         ? (codeTagProps.style = _objectSpread2(
             _objectSpread2({}, codeTagProps.style),
             {},
-            { whiteSpace: 'pre-wrap' }
+            { whiteSpace: 'pre-wrap' },
           ))
         : (codeTagProps.style = _objectSpread2(
             _objectSpread2({}, codeTagProps.style),
             {},
-            { whiteSpace: 'pre' }
+            { whiteSpace: 'pre' },
           )),
       !astGenerator)
     )
@@ -4780,7 +4780,7 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
         PreTag,
         preProps,
         allLineNumbers,
-        import_react3.default.createElement(CodeTag, codeTagProps, code)
+        import_react3.default.createElement(CodeTag, codeTagProps, code),
       );
     ((wrapLines === void 0 && renderer) || wrapLongLines) && (wrapLines = !0),
       (renderer = renderer || defaultRenderer);
@@ -4802,7 +4802,7 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
         startingLineNumber,
         largestLineNumber,
         lineNumberStyle,
-        wrapLongLines
+        wrapLongLines,
       );
     return import_react3.default.createElement(
       PreTag,
@@ -4811,8 +4811,8 @@ function highlight_default(defaultAstGenerator, defaultStyle) {
         CodeTag,
         codeTagProps,
         !showInlineLineNumbers && allLineNumbers,
-        renderer({ rows, stylesheet: style, useInlineStyles })
-      )
+        renderer({ rows, stylesheet: style, useInlineStyles }),
+      ),
     );
   };
 }
@@ -4864,7 +4864,7 @@ var prism_light_default = SyntaxHighlighter,
         outline: '0 none',
       },
     }),
-    ({ disabled }) => disabled && { cursor: 'not-allowed', opacity: 0.5 }
+    ({ disabled }) => disabled && { cursor: 'not-allowed', opacity: 0.5 },
   );
 ActionButton.displayName = 'ActionButton';
 var ActionBar = ({ actionItems, ...props }) =>
@@ -4875,9 +4875,9 @@ var ActionBar = ({ actionItems, ...props }) =>
         import_react3.default.createElement(
           ActionButton,
           { key: index, className, onClick, disabled },
-          title
-        )
-      )
+          title,
+        ),
+      ),
     ),
   $8927f6f2acc4f386$var$NODES = [
     'a',
@@ -4908,7 +4908,7 @@ var ActionBar = ({ actionItems, ...props }) =>
           }, []),
           (0, import_react3.createElement)(
             Comp,
-            _extends({}, primitiveProps, { ref: forwardedRef })
+            _extends({}, primitiveProps, { ref: forwardedRef }),
           )
         );
       });
@@ -4926,7 +4926,7 @@ function $6ed0406888f73fc4$export$43e446d32b3d21af2(...refs) {
 function $6ed0406888f73fc4$export$c7b2cbe3552a0d052(...refs) {
   return (0, import_react3.useCallback)(
     $6ed0406888f73fc4$export$43e446d32b3d21af2(...refs),
-    refs
+    refs,
   );
 }
 var $9f79659886946c16$export$e5c5a5f917a5871c = globalThis?.document
@@ -4935,7 +4935,7 @@ var $9f79659886946c16$export$e5c5a5f917a5871c = globalThis?.document
 function $fe963b355347cc68$export$3e6543de14f8614f(initialState, machine) {
   return (0, import_react3.useReducer)(
     (state, event) => machine[state][event] ?? state,
-    initialState
+    initialState,
   );
 }
 var $921a889cee6df7e8$export$99c2b779aa4e8b8b = (props) => {
@@ -4965,7 +4965,7 @@ function $921a889cee6df7e8$var$usePresence(present) {
   return (
     (0, import_react3.useEffect)(() => {
       let currentAnimationName = $921a889cee6df7e8$var$getAnimationName(
-        stylesRef.current
+        stylesRef.current,
       );
       prevAnimationNameRef.current =
         state === 'mounted' ? currentAnimationName : 'none';
@@ -4983,7 +4983,7 @@ function $921a889cee6df7e8$var$usePresence(present) {
             : send(
                 wasPresent && prevAnimationName !== currentAnimationName
                   ? 'ANIMATION_OUT'
-                  : 'UNMOUNT'
+                  : 'UNMOUNT',
               ),
           (prevPresentRef.current = present);
       }
@@ -4992,7 +4992,7 @@ function $921a889cee6df7e8$var$usePresence(present) {
       if (node1) {
         let handleAnimationEnd = (event) => {
             let isCurrentAnimation = $921a889cee6df7e8$var$getAnimationName(
-              stylesRef.current
+              stylesRef.current,
             ).includes(event.animationName);
             event.target === node1 &&
               isCurrentAnimation &&
@@ -5028,12 +5028,12 @@ function $921a889cee6df7e8$var$getAnimationName(styles) {
 }
 function $c512c27ab02ef895$export$50c7b4e9d9f19c1(
   scopeName,
-  createContextScopeDeps = []
+  createContextScopeDeps = [],
 ) {
   let defaultContexts = [];
   function $c512c27ab02ef895$export$fd42f52fd3ae1109(
     rootComponentName,
-    defaultContext
+    defaultContext,
   ) {
     let BaseContext = (0, import_react3.createContext)(defaultContext),
       index = defaultContexts.length;
@@ -5043,12 +5043,12 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(
         Context = scope2?.[scopeName][index] || BaseContext,
         value = (0, import_react3.useMemo)(
           () => context,
-          Object.values(context)
+          Object.values(context),
         );
       return (0, import_react3.createElement)(
         Context.Provider,
         { value },
-        children
+        children,
       );
     }
     function useContext$1(consumerName, scope2) {
@@ -5057,7 +5057,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(
       if (context) return context;
       if (defaultContext !== void 0) return defaultContext;
       throw new Error(
-        `\`${consumerName}\` must be used within \`${rootComponentName}\``
+        `\`${consumerName}\` must be used within \`${rootComponentName}\``,
       );
     }
     return (
@@ -5067,7 +5067,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(
   }
   let createScope = () => {
     let scopeContexts = defaultContexts.map((defaultContext) =>
-      (0, import_react3.createContext)(defaultContext)
+      (0, import_react3.createContext)(defaultContext),
     );
     return function (scope2) {
       let contexts = scope2?.[scopeName] || scopeContexts;
@@ -5075,7 +5075,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(
         () => ({
           [`__scope${scopeName}`]: { ...scope2, [scopeName]: contexts },
         }),
-        [scope2, contexts]
+        [scope2, contexts],
       );
     };
   };
@@ -5085,7 +5085,7 @@ function $c512c27ab02ef895$export$50c7b4e9d9f19c1(
       $c512c27ab02ef895$export$fd42f52fd3ae1109,
       $c512c27ab02ef895$var$composeContextScopes(
         createScope,
-        ...createContextScopeDeps
+        ...createContextScopeDeps,
       ),
     ]
   );
@@ -5104,11 +5104,11 @@ function $c512c27ab02ef895$var$composeContextScopes(...scopes) {
           let currentScope = useScope(overrideScopes)[`__scope${scopeName}`];
           return { ...nextScopes, ...currentScope };
         },
-        {}
+        {},
       );
       return (0, import_react3.useMemo)(
         () => ({ [`__scope${baseScope.scopeName}`]: nextScopes1 }),
-        [nextScopes1]
+        [nextScopes1],
       );
     };
   };
@@ -5129,16 +5129,16 @@ function $b1b2314f5f9a1d84$export$25bec8c6f54ee79a(callback) {
             ? void 0
             : _callbackRef$current.call(callbackRef, ...args);
         },
-      []
+      [],
     )
   );
 }
 var $f631663db3294ace$var$DirectionContext = (0, import_react3.createContext)(
-  void 0
+  void 0,
 );
 function $f631663db3294ace$export$b39126d51d94e6f3(localDir) {
   let globalDir = (0, import_react3.useContext)(
-    $f631663db3294ace$var$DirectionContext
+    $f631663db3294ace$var$DirectionContext,
   );
   return localDir || globalDir || 'ltr';
 }
@@ -5148,7 +5148,7 @@ function $ae6933e535247d3d$export$7d15b64cf5a3a4c4(value, [min, max]) {
 function $e42e1063c40fb3ef$export$b9ecd428b558ff10(
   originalEventHandler,
   ourEventHandler,
-  { checkForDefaultPrevented = !0 } = {}
+  { checkForDefaultPrevented = !0 } = {},
 ) {
   return function (event) {
     if (
@@ -5161,7 +5161,7 @@ function $e42e1063c40fb3ef$export$b9ecd428b558ff10(
 function $6c2e24571c90391f$export$3e6543de14f8614f(initialState, machine) {
   return (0, import_react3.useReducer)(
     (state, event) => machine[state][event] ?? state,
-    initialState
+    initialState,
   );
 }
 var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
@@ -5169,13 +5169,13 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
     $57acba87d6e25586$var$createScrollAreaContext,
     $57acba87d6e25586$export$488468afe3a6f2b1,
   ] = $c512c27ab02ef895$export$50c7b4e9d9f19c1(
-    $57acba87d6e25586$var$SCROLL_AREA_NAME
+    $57acba87d6e25586$var$SCROLL_AREA_NAME,
   ),
   [
     $57acba87d6e25586$var$ScrollAreaProvider,
     $57acba87d6e25586$var$useScrollAreaContext,
   ] = $57acba87d6e25586$var$createScrollAreaContext(
-    $57acba87d6e25586$var$SCROLL_AREA_NAME
+    $57acba87d6e25586$var$SCROLL_AREA_NAME,
   ),
   $57acba87d6e25586$export$ccf8d8d7bbf3c2cc = (0, import_react3.forwardRef)(
     (props, forwardedRef) => {
@@ -5194,14 +5194,14 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
         [cornerWidth, setCornerWidth] = (0, import_react3.useState)(0),
         [cornerHeight, setCornerHeight] = (0, import_react3.useState)(0),
         [scrollbarXEnabled, setScrollbarXEnabled] = (0, import_react3.useState)(
-          !1
+          !1,
         ),
         [scrollbarYEnabled, setScrollbarYEnabled] = (0, import_react3.useState)(
-          !1
+          !1,
         ),
         composedRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d052(
           forwardedRef,
-          (node) => setScrollArea(node)
+          (node) => setScrollArea(node),
         ),
         direction = $f631663db3294ace$export$b39126d51d94e6f3(dir);
       return (0, import_react3.createElement)(
@@ -5237,10 +5237,10 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
               '--radix-scroll-area-corner-height': cornerHeight + 'px',
               ...props.style,
             },
-          })
-        )
+          }),
+        ),
       );
-    }
+    },
   ),
   $57acba87d6e25586$var$VIEWPORT_NAME = 'ScrollAreaViewport',
   $57acba87d6e25586$export$a21cbf9f11fca853 = (0, import_react3.forwardRef)(
@@ -5248,13 +5248,13 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
       let { __scopeScrollArea, children, ...viewportProps } = props,
         context = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$VIEWPORT_NAME,
-          __scopeScrollArea
+          __scopeScrollArea,
         ),
         ref = (0, import_react3.useRef)(null),
         composedRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d052(
           forwardedRef,
           ref,
-          context.onViewportChange
+          context.onViewportChange,
         );
       return (0, import_react3.createElement)(
         import_react3.Fragment,
@@ -5281,11 +5281,11 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
               ref: context.onContentChange,
               style: { minWidth: '100%', display: 'table' },
             },
-            children
-          )
-        )
+            children,
+          ),
+        ),
       );
-    }
+    },
   ),
   $57acba87d6e25586$var$SCROLLBAR_NAME = 'ScrollAreaScrollbar',
   $57acba87d6e25586$export$2fabd85d0eba3c57 = (0, import_react3.forwardRef)(
@@ -5293,7 +5293,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
       let { forceMount, ...scrollbarProps } = props,
         context = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$SCROLLBAR_NAME,
-          props.__scopeScrollArea
+          props.__scopeScrollArea,
         ),
         { onScrollbarXEnabledChange, onScrollbarYEnabledChange } = context,
         isHorizontal = props.orientation === 'horizontal';
@@ -5309,17 +5309,17 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                 : onScrollbarYEnabledChange(!1);
             }
           ),
-          [isHorizontal, onScrollbarXEnabledChange, onScrollbarYEnabledChange]
+          [isHorizontal, onScrollbarXEnabledChange, onScrollbarYEnabledChange],
         ),
         context.type === 'hover'
           ? (0, import_react3.createElement)(
               $57acba87d6e25586$var$ScrollAreaScrollbarHover,
-              _extends({}, scrollbarProps, { ref: forwardedRef, forceMount })
+              _extends({}, scrollbarProps, { ref: forwardedRef, forceMount }),
             )
           : context.type === 'scroll'
             ? (0, import_react3.createElement)(
                 $57acba87d6e25586$var$ScrollAreaScrollbarScroll,
-                _extends({}, scrollbarProps, { ref: forwardedRef, forceMount })
+                _extends({}, scrollbarProps, { ref: forwardedRef, forceMount }),
               )
             : context.type === 'auto'
               ? (0, import_react3.createElement)(
@@ -5327,23 +5327,23 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                   _extends({}, scrollbarProps, {
                     ref: forwardedRef,
                     forceMount,
-                  })
+                  }),
                 )
               : context.type === 'always'
                 ? (0, import_react3.createElement)(
                     $57acba87d6e25586$var$ScrollAreaScrollbarVisible,
-                    _extends({}, scrollbarProps, { ref: forwardedRef })
+                    _extends({}, scrollbarProps, { ref: forwardedRef }),
                   )
                 : null
       );
-    }
+    },
   ),
   $57acba87d6e25586$var$ScrollAreaScrollbarHover = (0,
   import_react3.forwardRef)((props, forwardedRef) => {
     let { forceMount, ...scrollbarProps } = props,
       context = $57acba87d6e25586$var$useScrollAreaContext(
         $57acba87d6e25586$var$SCROLLBAR_NAME,
-        props.__scopeScrollArea
+        props.__scopeScrollArea,
       ),
       [visible, setVisible] = (0, import_react3.useState)(!1);
     return (
@@ -5357,7 +5357,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
             handlePointerLeave = () => {
               hideTimer = window.setTimeout(
                 () => setVisible(!1),
-                context.scrollHideDelay
+                context.scrollHideDelay,
               );
             };
           return (
@@ -5367,11 +5367,11 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
               window.clearTimeout(hideTimer),
                 scrollArea.removeEventListener(
                   'pointerenter',
-                  handlePointerEnter
+                  handlePointerEnter,
                 ),
                 scrollArea.removeEventListener(
                   'pointerleave',
-                  handlePointerLeave
+                  handlePointerLeave,
                 );
             }
           );
@@ -5385,9 +5385,9 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
           _extends(
             { 'data-state': visible ? 'visible' : 'hidden' },
             scrollbarProps,
-            { ref: forwardedRef }
-          )
-        )
+            { ref: forwardedRef },
+          ),
+        ),
       )
     );
   }),
@@ -5396,12 +5396,12 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
     let { forceMount, ...scrollbarProps } = props,
       context = $57acba87d6e25586$var$useScrollAreaContext(
         $57acba87d6e25586$var$SCROLLBAR_NAME,
-        props.__scopeScrollArea
+        props.__scopeScrollArea,
       ),
       isHorizontal = props.orientation === 'horizontal',
       debounceScrollEnd = $57acba87d6e25586$var$useDebounceCallback(
         () => send('SCROLL_END'),
-        100
+        100,
       ),
       [state, send] = $6c2e24571c90391f$export$3e6543de14f8614f('hidden', {
         hidden: { SCROLL: 'scrolling' },
@@ -5418,7 +5418,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
         if (state === 'idle') {
           let hideTimer = window.setTimeout(
             () => send('HIDE'),
-            context.scrollHideDelay
+            context.scrollHideDelay,
           );
           return () => window.clearTimeout(hideTimer);
         }
@@ -5452,15 +5452,15 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
               ref: forwardedRef,
               onPointerEnter: $e42e1063c40fb3ef$export$b9ecd428b558ff10(
                 props.onPointerEnter,
-                () => send('POINTER_ENTER')
+                () => send('POINTER_ENTER'),
               ),
               onPointerLeave: $e42e1063c40fb3ef$export$b9ecd428b558ff10(
                 props.onPointerLeave,
-                () => send('POINTER_LEAVE')
+                () => send('POINTER_LEAVE'),
               ),
-            }
-          )
-        )
+            },
+          ),
+        ),
       )
     );
   }),
@@ -5468,7 +5468,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
     (props, forwardedRef) => {
       let context = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$SCROLLBAR_NAME,
-          props.__scopeScrollArea
+          props.__scopeScrollArea,
         ),
         { forceMount, ...scrollbarProps } = props,
         [visible, setVisible] = (0, import_react3.useState)(!1),
@@ -5493,19 +5493,19 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
             _extends(
               { 'data-state': visible ? 'visible' : 'hidden' },
               scrollbarProps,
-              { ref: forwardedRef }
-            )
-          )
+              { ref: forwardedRef },
+            ),
+          ),
         )
       );
-    }
+    },
   ),
   $57acba87d6e25586$var$ScrollAreaScrollbarVisible = (0,
   import_react3.forwardRef)((props, forwardedRef) => {
     let { orientation = 'vertical', ...scrollbarProps } = props,
       context = $57acba87d6e25586$var$useScrollAreaContext(
         $57acba87d6e25586$var$SCROLLBAR_NAME,
-        props.__scopeScrollArea
+        props.__scopeScrollArea,
       ),
       thumbRef = (0, import_react3.useRef)(null),
       pointerOffsetRef = (0, import_react3.useRef)(0),
@@ -5516,7 +5516,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
       }),
       thumbRatio = $57acba87d6e25586$var$getThumbRatio(
         sizes.viewport,
-        sizes.content
+        sizes.content,
       ),
       commonProps = {
         ...scrollbarProps,
@@ -5533,7 +5533,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
         pointerPos,
         pointerOffsetRef.current,
         sizes,
-        dir
+        dir,
       );
     }
     return orientation === 'horizontal'
@@ -5547,7 +5547,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                   offset = $57acba87d6e25586$var$getThumbOffsetFromScroll(
                     scrollPos,
                     sizes,
-                    context.dir
+                    context.dir,
                   );
                 thumbRef.current.style.transform = `translate3d(${offset}px, 0, 0)`;
               }
@@ -5559,10 +5559,10 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
               context.viewport &&
                 (context.viewport.scrollLeft = getScrollPosition(
                   pointerPos,
-                  context.dir
+                  context.dir,
                 ));
             },
-          })
+          }),
         )
       : orientation === 'vertical'
         ? (0, import_react3.createElement)(
@@ -5574,7 +5574,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                   let scrollPos = context.viewport.scrollTop,
                     offset = $57acba87d6e25586$var$getThumbOffsetFromScroll(
                       scrollPos,
-                      sizes
+                      sizes,
                     );
                   thumbRef.current.style.transform = `translate3d(0, ${offset}px, 0)`;
                 }
@@ -5586,7 +5586,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                 context.viewport &&
                   (context.viewport.scrollTop = getScrollPosition(pointerPos));
               },
-            })
+            }),
           )
         : null;
   }),
@@ -5595,14 +5595,14 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
       let { sizes, onSizesChange, ...scrollbarProps } = props,
         context = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$SCROLLBAR_NAME,
-          props.__scopeScrollArea
+          props.__scopeScrollArea,
         ),
         [computedStyle, setComputedStyle] = (0, import_react3.useState)(),
         ref = (0, import_react3.useRef)(null),
         composeRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d052(
           forwardedRef,
           ref,
-          context.onScrollbarXChange
+          context.onScrollbarXChange,
         );
       return (
         (0, import_react3.useEffect)(() => {
@@ -5636,7 +5636,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                 props.onWheelScroll(scrollPos),
                   $57acba87d6e25586$var$isScrollingWithinScrollbarBounds(
                     scrollPos,
-                    maxScrollPos
+                    maxScrollPos,
                   ) && event.preventDefault();
               }
             },
@@ -5650,32 +5650,32 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                   scrollbar: {
                     size: ref.current.clientWidth,
                     paddingStart: $57acba87d6e25586$var$toInt(
-                      computedStyle.paddingLeft
+                      computedStyle.paddingLeft,
                     ),
                     paddingEnd: $57acba87d6e25586$var$toInt(
-                      computedStyle.paddingRight
+                      computedStyle.paddingRight,
                     ),
                   },
                 });
             },
-          })
+          }),
         )
       );
-    }
+    },
   ),
   $57acba87d6e25586$var$ScrollAreaScrollbarY = (0, import_react3.forwardRef)(
     (props, forwardedRef) => {
       let { sizes, onSizesChange, ...scrollbarProps } = props,
         context = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$SCROLLBAR_NAME,
-          props.__scopeScrollArea
+          props.__scopeScrollArea,
         ),
         [computedStyle, setComputedStyle] = (0, import_react3.useState)(),
         ref = (0, import_react3.useRef)(null),
         composeRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d052(
           forwardedRef,
           ref,
-          context.onScrollbarYChange
+          context.onScrollbarYChange,
         );
       return (
         (0, import_react3.useEffect)(() => {
@@ -5704,7 +5704,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                 props.onWheelScroll(scrollPos),
                   $57acba87d6e25586$var$isScrollingWithinScrollbarBounds(
                     scrollPos,
-                    maxScrollPos
+                    maxScrollPos,
                   ) && event.preventDefault();
               }
             },
@@ -5718,24 +5718,24 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                   scrollbar: {
                     size: ref.current.clientHeight,
                     paddingStart: $57acba87d6e25586$var$toInt(
-                      computedStyle.paddingTop
+                      computedStyle.paddingTop,
                     ),
                     paddingEnd: $57acba87d6e25586$var$toInt(
-                      computedStyle.paddingBottom
+                      computedStyle.paddingBottom,
                     ),
                   },
                 });
             },
-          })
+          }),
         )
       );
-    }
+    },
   ),
   [
     $57acba87d6e25586$var$ScrollbarProvider,
     $57acba87d6e25586$var$useScrollbarContext,
   ] = $57acba87d6e25586$var$createScrollAreaContext(
-    $57acba87d6e25586$var$SCROLLBAR_NAME
+    $57acba87d6e25586$var$SCROLLBAR_NAME,
   ),
   $57acba87d6e25586$var$ScrollAreaScrollbarImpl = (0, import_react3.forwardRef)(
     (props, forwardedRef) => {
@@ -5754,12 +5754,12 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
         } = props,
         context = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$SCROLLBAR_NAME,
-          __scopeScrollArea
+          __scopeScrollArea,
         ),
         [scrollbar, setScrollbar] = (0, import_react3.useState)(null),
         composeRefs = $6ed0406888f73fc4$export$c7b2cbe3552a0d052(
           forwardedRef,
-          (node) => setScrollbar(node)
+          (node) => setScrollbar(node),
         ),
         rectRef = (0, import_react3.useRef)(null),
         prevWebkitUserSelectRef = (0, import_react3.useRef)(''),
@@ -5768,7 +5768,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
         handleWheelScroll =
           $b1b2314f5f9a1d84$export$25bec8c6f54ee79a(onWheelScroll),
         handleThumbPositionChange = $b1b2314f5f9a1d84$export$25bec8c6f54ee79a(
-          onThumbPositionChange
+          onThumbPositionChange,
         ),
         handleResize = $57acba87d6e25586$var$useDebounceCallback(onResize, 10);
       function handleDragScroll(event) {
@@ -5830,11 +5830,11 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                     context.viewport &&
                       (context.viewport.style.scrollBehavior = 'auto'),
                     handleDragScroll(event));
-                }
+                },
               ),
               onPointerMove: $e42e1063c40fb3ef$export$b9ecd428b558ff10(
                 props.onPointerMove,
-                handleDragScroll
+                handleDragScroll,
               ),
               onPointerUp: $e42e1063c40fb3ef$export$b9ecd428b558ff10(
                 props.onPointerUp,
@@ -5847,13 +5847,13 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                     context.viewport &&
                       (context.viewport.style.scrollBehavior = ''),
                     (rectRef.current = null);
-                }
+                },
               ),
-            })
-          )
+            }),
+          ),
         )
       );
-    }
+    },
   ),
   $57acba87d6e25586$var$THUMB_NAME = 'ScrollAreaThumb',
   $57acba87d6e25586$export$9fba1154677d7cd2 = (0, import_react3.forwardRef)(
@@ -5861,33 +5861,33 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
       let { forceMount, ...thumbProps } = props,
         scrollbarContext = $57acba87d6e25586$var$useScrollbarContext(
           $57acba87d6e25586$var$THUMB_NAME,
-          props.__scopeScrollArea
+          props.__scopeScrollArea,
         );
       return (0, import_react3.createElement)(
         $921a889cee6df7e8$export$99c2b779aa4e8b8b,
         { present: forceMount || scrollbarContext.hasThumb },
         (0, import_react3.createElement)(
           $57acba87d6e25586$var$ScrollAreaThumbImpl,
-          _extends({ ref: forwardedRef }, thumbProps)
-        )
+          _extends({ ref: forwardedRef }, thumbProps),
+        ),
       );
-    }
+    },
   ),
   $57acba87d6e25586$var$ScrollAreaThumbImpl = (0, import_react3.forwardRef)(
     (props, forwardedRef) => {
       let { __scopeScrollArea, style, ...thumbProps } = props,
         scrollAreaContext = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$THUMB_NAME,
-          __scopeScrollArea
+          __scopeScrollArea,
         ),
         scrollbarContext = $57acba87d6e25586$var$useScrollbarContext(
           $57acba87d6e25586$var$THUMB_NAME,
-          __scopeScrollArea
+          __scopeScrollArea,
         ),
         { onThumbPositionChange } = scrollbarContext,
         composedRef = $6ed0406888f73fc4$export$c7b2cbe3552a0d052(
           forwardedRef,
-          (node) => scrollbarContext.onThumbChange(node)
+          (node) => scrollbarContext.onThumbChange(node),
         ),
         removeUnlinkedScrollListenerRef = (0, import_react3.useRef)(),
         debounceScrollEnd = $57acba87d6e25586$var$useDebounceCallback(() => {
@@ -5905,7 +5905,7 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
               ) {
                 let listener = $57acba87d6e25586$var$addUnlinkedScrollListener(
                   viewport,
-                  onThumbPositionChange
+                  onThumbPositionChange,
                 );
                 (removeUnlinkedScrollListenerRef.current = listener),
                   onThumbPositionChange();
@@ -5941,40 +5941,40 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                     x = event.clientX - thumbRect.left,
                     y = event.clientY - thumbRect.top;
                   scrollbarContext.onThumbPointerDown({ x, y });
-                }
+                },
               ),
               onPointerUp: $e42e1063c40fb3ef$export$b9ecd428b558ff10(
                 props.onPointerUp,
-                scrollbarContext.onThumbPointerUp
+                scrollbarContext.onThumbPointerUp,
               ),
-            }
-          )
+            },
+          ),
         )
       );
-    }
+    },
   ),
   $57acba87d6e25586$var$CORNER_NAME = 'ScrollAreaCorner',
   $57acba87d6e25586$export$56969d565df7cc4b = (0, import_react3.forwardRef)(
     (props, forwardedRef) => {
       let context = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$CORNER_NAME,
-          props.__scopeScrollArea
+          props.__scopeScrollArea,
         ),
         hasBothScrollbarsVisible = !!(context.scrollbarX && context.scrollbarY);
       return context.type !== 'scroll' && hasBothScrollbarsVisible
         ? (0, import_react3.createElement)(
             $57acba87d6e25586$var$ScrollAreaCornerImpl,
-            _extends({}, props, { ref: forwardedRef })
+            _extends({}, props, { ref: forwardedRef }),
           )
         : null;
-    }
+    },
   ),
   $57acba87d6e25586$var$ScrollAreaCornerImpl = (0, import_react3.forwardRef)(
     (props, forwardedRef) => {
       let { __scopeScrollArea, ...cornerProps } = props,
         context = $57acba87d6e25586$var$useScrollAreaContext(
           $57acba87d6e25586$var$CORNER_NAME,
-          __scopeScrollArea
+          __scopeScrollArea,
         ),
         [width1, setWidth] = (0, import_react3.useState)(0),
         [height1, setHeight] = (0, import_react3.useState)(0),
@@ -6012,11 +6012,11 @@ var $57acba87d6e25586$var$SCROLL_AREA_NAME = 'ScrollArea',
                   bottom: 0,
                   ...props.style,
                 },
-              })
+              }),
             )
           : null
       );
-    }
+    },
   );
 function $57acba87d6e25586$var$toInt(value) {
   return value ? parseInt(value, 10) : 0;
@@ -6028,7 +6028,7 @@ function $57acba87d6e25586$var$getThumbRatio(viewportSize, contentSize) {
 function $57acba87d6e25586$var$getThumbSize(sizes) {
   let ratio = $57acba87d6e25586$var$getThumbRatio(
       sizes.viewport,
-      sizes.content
+      sizes.content,
     ),
     scrollbarPadding =
       sizes.scrollbar.paddingStart + sizes.scrollbar.paddingEnd,
@@ -6039,7 +6039,7 @@ function $57acba87d6e25586$var$getScrollPositionFromPointer(
   pointerPos,
   pointerOffset,
   sizes,
-  dir = 'ltr'
+  dir = 'ltr',
 ) {
   let thumbSizePx = $57acba87d6e25586$var$getThumbSize(sizes),
     thumbCenter = thumbSizePx / 2,
@@ -6052,13 +6052,13 @@ function $57acba87d6e25586$var$getScrollPositionFromPointer(
     scrollRange = dir === 'ltr' ? [0, maxScrollPos] : [maxScrollPos * -1, 0];
   return $57acba87d6e25586$var$linearScale(
     [minPointerPos, maxPointerPos],
-    scrollRange
+    scrollRange,
   )(pointerPos);
 }
 function $57acba87d6e25586$var$getThumbOffsetFromScroll(
   scrollPos,
   sizes,
-  dir = 'ltr'
+  dir = 'ltr',
 ) {
   let thumbSizePx = $57acba87d6e25586$var$getThumbSize(sizes),
     scrollbarPadding =
@@ -6070,11 +6070,11 @@ function $57acba87d6e25586$var$getThumbOffsetFromScroll(
       dir === 'ltr' ? [0, maxScrollPos] : [maxScrollPos * -1, 0],
     scrollWithoutMomentum = $ae6933e535247d3d$export$7d15b64cf5a3a4c4(
       scrollPos,
-      scrollClampRange
+      scrollClampRange,
     );
   return $57acba87d6e25586$var$linearScale(
     [0, maxScrollPos],
-    [0, maxThumbPos]
+    [0, maxThumbPos],
   )(scrollWithoutMomentum);
 }
 function $57acba87d6e25586$var$linearScale(input, output) {
@@ -6086,13 +6086,13 @@ function $57acba87d6e25586$var$linearScale(input, output) {
 }
 function $57acba87d6e25586$var$isScrollingWithinScrollbarBounds(
   scrollPos,
-  maxScrollPos
+  maxScrollPos,
 ) {
   return scrollPos > 0 && scrollPos < maxScrollPos;
 }
 var $57acba87d6e25586$var$addUnlinkedScrollListener = (
   node,
-  handler = () => {}
+  handler = () => {},
 ) => {
   let prevPosition = { left: node.scrollLeft, top: node.scrollTop },
     rAF = 0;
@@ -6114,7 +6114,7 @@ function $57acba87d6e25586$var$useDebounceCallback(callback, delay) {
   return (
     (0, import_react3.useEffect)(
       () => () => window.clearTimeout(debounceTimerRef.current),
-      []
+      [],
     ),
     (0, import_react3.useCallback)(() => {
       window.clearTimeout(debounceTimerRef.current),
@@ -6157,7 +6157,7 @@ var $57acba87d6e25586$export$be92b6f5f03c0fe9 =
       overflow: 'hidden',
       '--scrollbar-size': `${scrollbarsize + offset}px`,
       '--radix-scroll-area-thumb-width': `${scrollbarsize}px`,
-    })
+    }),
   ),
   ScrollAreaViewport = newStyled($57acba87d6e25586$export$d5c6c08dc2d3ca7)({
     width: '100%',
@@ -6184,7 +6184,7 @@ var $57acba87d6e25586$export$be92b6f5f03c0fe9 =
         marginLeft: offset,
         marginRight: horizontal === 'true' && vertical === 'true' ? 0 : offset,
       },
-    })
+    }),
   ),
   ScrollAreaThumb = newStyled($57acba87d6e25586$export$6521433ed15a34db)(
     ({ theme }) => ({
@@ -6204,7 +6204,7 @@ var $57acba87d6e25586$export$be92b6f5f03c0fe9 =
         width: '100%',
         height: '100%',
       },
-    })
+    }),
   ),
   ScrollArea = (0, import_react3.forwardRef)(
     (
@@ -6216,7 +6216,7 @@ var $57acba87d6e25586$export$be92b6f5f03c0fe9 =
         scrollbarSize = 6,
         className,
       },
-      ref
+      ref,
     ) =>
       import_react3.default.createElement(
         ScrollAreaRoot,
@@ -6224,7 +6224,7 @@ var $57acba87d6e25586$export$be92b6f5f03c0fe9 =
         import_react3.default.createElement(
           ScrollAreaViewport,
           { ref },
-          children
+          children,
         ),
         horizontal &&
           import_react3.default.createElement(
@@ -6235,7 +6235,7 @@ var $57acba87d6e25586$export$be92b6f5f03c0fe9 =
               horizontal: horizontal.toString(),
               vertical: vertical.toString(),
             },
-            import_react3.default.createElement(ScrollAreaThumb, null)
+            import_react3.default.createElement(ScrollAreaThumb, null),
           ),
         vertical &&
           import_react3.default.createElement(
@@ -6246,15 +6246,15 @@ var $57acba87d6e25586$export$be92b6f5f03c0fe9 =
               horizontal: horizontal.toString(),
               vertical: vertical.toString(),
             },
-            import_react3.default.createElement(ScrollAreaThumb, null)
+            import_react3.default.createElement(ScrollAreaThumb, null),
           ),
         horizontal &&
           vertical &&
           import_react3.default.createElement(
             $57acba87d6e25586$export$ac61190d9fc311a9,
-            null
-          )
-      )
+            null,
+          ),
+      ),
   );
 ScrollArea.displayName = 'ScrollArea';
 var { navigator, document: document2, window: globalWindow } = scope,
@@ -6277,8 +6277,8 @@ Object.entries(supportedLanguages).forEach(([key, val]) => {
 var themedSyntax = (0, import_memoizerific.default)(2)((theme) =>
     Object.entries(theme.code || {}).reduce(
       (acc, [key, val]) => ({ ...acc, [`* .${key}`]: val }),
-      {}
-    )
+      {},
+    ),
   ),
   copyToClipboard = createCopyToClipboardFunction();
 function createCopyToClipboardFunction() {
@@ -6316,17 +6316,17 @@ var Wrapper = newStyled.div(
               content: 'attr(data-line-number)',
             },
           }
-        : {}
+        : {},
   ),
   UnstyledScroller = ({ children, className }) =>
     import_react3.default.createElement(
       ScrollArea,
       { horizontal: !0, vertical: !0, className },
-      children
+      children,
     ),
   Scroller = newStyled(UnstyledScroller)(
     { position: 'relative' },
-    ({ theme }) => themedSyntax(theme)
+    ({ theme }) => themedSyntax(theme),
   ),
   Pre = newStyled.pre(({ theme, padded }) => ({
     display: 'flex',
@@ -6363,7 +6363,7 @@ var Wrapper = newStyled.div(
         stylesheet,
         useInlineStyles,
         key: `code-segement${i}`,
-      })
+      }),
     ),
   wrapRenderer = (renderer, showLineNumbers) =>
     showLineNumbers
@@ -6389,7 +6389,7 @@ var Wrapper = newStyled.div(
   }) => {
     if (typeof children != 'string' || !children.trim()) return null;
     let [highlightableCode, setHighlightableCode] = (0, import_react3.useState)(
-      ''
+      '',
     );
     (0, import_react3.useEffect)(() => {
       formatter
@@ -6407,7 +6407,7 @@ var Wrapper = newStyled.div(
               })
               .catch(logger.error);
         },
-        [highlightableCode]
+        [highlightableCode],
       ),
       renderer = wrapRenderer(rest.renderer, showLineNumbers);
     return import_react3.default.createElement(
@@ -6430,14 +6430,14 @@ var Wrapper = newStyled.div(
             ...rest,
             renderer,
           },
-          highlightableCode
-        )
+          highlightableCode,
+        ),
       ),
       copyable
         ? import_react3.default.createElement(ActionBar, {
             actionItems: [{ title: copied ? 'Copied' : 'Copy', onClick }],
           })
-        : null
+        : null,
     );
   };
 SyntaxHighlighter2.registerLanguage = (...args) =>

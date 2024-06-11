@@ -30,7 +30,7 @@ try {
           t || !e || !e.__esModule
             ? Ir(r, 'default', { value: e, enumerable: !0 })
             : r,
-          e
+          e,
         )
       ),
       ni = (e) => ri(Ir({}, '__esModule', { value: !0 }), e);
@@ -491,7 +491,7 @@ try {
                     s,
                     function (u) {
                       return i[u];
-                    }.bind(null, s)
+                    }.bind(null, s),
                   );
               return a;
             }),
@@ -881,7 +881,7 @@ try {
                                 0,
                                 this.radius,
                                 0,
-                                2 * Math.PI
+                                2 * Math.PI,
                               ),
                               this.context.fill();
                             break;
@@ -890,7 +890,7 @@ try {
                               -this.w / 2,
                               -this.h / 2,
                               this.w,
-                              this.h
+                              this.h,
                             );
                             break;
                           case i.Strip:
@@ -898,7 +898,7 @@ try {
                               -this.w / 6,
                               -this.h / 2,
                               this.w / 3,
-                              this.h
+                              this.h,
                             );
                         }
                       this.context.closePath(), this.context.restore();
@@ -972,7 +972,7 @@ try {
                           wn - Jo > Yt ? Yt : Math.max(0, wn - Jo),
                           Gt,
                           Se,
-                          Yt
+                          Yt,
                         ),
                         Zo = Math.round(gu - Gt),
                         $o = 0;
@@ -990,7 +990,7 @@ try {
                       R.fillText(
                         'Particles: '.concat(xn),
                         k.width - 10,
-                        k.height - 20
+                        k.height - 20,
                       )),
                     T.particles.forEach(function (Xt, ei) {
                       Xt.update(),
@@ -1032,13 +1032,13 @@ try {
                   : Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(
                         g,
-                        Object.getOwnPropertyDescriptors(E)
+                        Object.getOwnPropertyDescriptors(E),
                       )
                     : S(Object(E)).forEach(function (T) {
                         Object.defineProperty(
                           g,
                           T,
-                          Object.getOwnPropertyDescriptor(E, T)
+                          Object.getOwnPropertyDescriptor(E, T),
                         );
                       });
               }
@@ -1175,7 +1175,7 @@ try {
                           this.generator &&
                             (Object.assign(
                               this.generator,
-                              this.options.confettiSource
+                              this.options.confettiSource,
                             ),
                             typeof M.recycle == 'boolean' &&
                               M.recycle &&
@@ -1260,13 +1260,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   : Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(
                         g,
-                        Object.getOwnPropertyDescriptors(E)
+                        Object.getOwnPropertyDescriptors(E),
                       )
                     : H(Object(E)).forEach(function (T) {
                         Object.defineProperty(
                           g,
                           T,
-                          Object.getOwnPropertyDescriptor(E, T)
+                          Object.getOwnPropertyDescriptor(E, T),
                         );
                       });
               }
@@ -1363,7 +1363,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 try {
                   return (
                     Date.prototype.toString.call(
-                      Reflect.construct(Date, [], function () {})
+                      Reflect.construct(Date, [], function () {}),
                     ),
                     !0
                   );
@@ -1389,7 +1389,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             function Ee(g) {
               if (g === void 0)
                 throw new ReferenceError(
-                  "this hasn't been initialised - super() hasn't been called"
+                  "this hasn't been initialised - super() hasn't been called",
                 );
               return g;
             }
@@ -1418,7 +1418,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (function (R, C) {
                   if (typeof C != 'function' && C !== null)
                     throw new TypeError(
-                      'Super expression must either be null or a function'
+                      'Super expression must either be null or a function',
                     );
                   (R.prototype = Object.create(C && C.prototype, {
                     constructor: { value: R, writable: !0, configurable: !0 },
@@ -1444,7 +1444,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     Z(
                       Ee((C = M.call.apply(M, [this, R].concat(K)))),
                       'canvas',
-                      s.a.createRef()
+                      s.a.createRef(),
                     ),
                     Z(Ee(C), 'confetti', void 0),
                     (C.canvas = R.canvasRef || A),
@@ -1493,7 +1493,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               bottom: 0,
                               right: 0,
                             },
-                            G.style
+                            G.style,
                           );
                         return s.a.createElement(
                           'canvas',
@@ -1504,8 +1504,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               ref: this.canvas,
                             },
                             G,
-                            { style: K }
-                          )
+                            { style: K },
+                          ),
                         );
                       },
                     },
@@ -2599,7 +2599,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           ? parseInt(r['offset' + e]) +
               parseInt(n['margin' + (e === 'Height' ? 'Top' : 'Left')]) +
               parseInt(n['margin' + (e === 'Height' ? 'Bottom' : 'Right')])
-          : 0
+          : 0,
       );
     }
     function xs(e) {
@@ -2823,7 +2823,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         n.forEach(function (i) {
           i.function &&
             console.warn(
-              '`modifier.function` is deprecated, use `modifier.fn`!'
+              '`modifier.function` is deprecated, use `modifier.fn`!',
             );
           var o = i.function || i.fn;
           i.enabled &&
@@ -2849,7 +2849,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.state,
           this.popper,
           this.reference,
-          this.options.positionFixed
+          this.options.positionFixed,
         )),
           (e.placement = Es(
             this.options.placement,
@@ -2857,14 +2857,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             this.popper,
             this.reference,
             this.options.modifiers.flip.boundariesElement,
-            this.options.modifiers.flip.padding
+            this.options.modifiers.flip.padding,
           )),
           (e.originalPlacement = e.placement),
           (e.positionFixed = this.options.positionFixed),
           (e.offsets.popper = Os(
             this.popper,
             e.offsets.reference,
-            e.placement
+            e.placement,
           )),
           (e.offsets.popper.position = this.options.positionFixed
             ? 'fixed'
@@ -2942,7 +2942,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.reference,
           this.options,
           this.state,
-          this.scheduleUpdate
+          this.scheduleUpdate,
         ));
     }
     function zc(e, t) {
@@ -3000,7 +3000,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           t,
           e,
           r.modifiers.flip.boundariesElement,
-          r.modifiers.flip.padding
+          r.modifiers.flip.padding,
         );
       return (
         t.setAttribute('x-placement', a),
@@ -3041,7 +3041,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }).gpuAcceleration;
       o !== void 0 &&
         console.warn(
-          'WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!'
+          'WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!',
         );
       var a = o !== void 0 ? o : t.gpuAcceleration,
         s = Nt(e.instance.popper),
@@ -3102,7 +3102,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             o +
             ' modifier in order to work, be sure to include it before ' +
             o +
-            '!'
+            '!',
         );
       }
       return i;
@@ -3116,7 +3116,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       } else if (!e.instance.popper.contains(n))
         return (
           console.warn(
-            'WARNING: `arrow.element` must be child of its popper element!'
+            'WARNING: `arrow.element` must be child of its popper element!',
           ),
           e
         );
@@ -3168,7 +3168,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           e.instance.reference,
           t.padding,
           t.boundariesElement,
-          e.positionFixed
+          e.positionFixed,
         ),
         n = e.placement.split('-')[0],
         i = Qr(n),
@@ -3230,7 +3230,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (e.offsets.popper = je(
               {},
               e.offsets.popper,
-              Os(e.instance.popper, e.offsets.reference, e.placement)
+              Os(e.instance.popper, e.offsets.reference, e.placement),
             )),
             (e = Cs(e.instance.modifiers, e, 'flip')));
         }),
@@ -3277,11 +3277,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a === 'vh'
             ? (l = Math.max(
                 document.documentElement.clientHeight,
-                window.innerHeight || 0
+                window.innerHeight || 0,
               ))
             : (l = Math.max(
                 document.documentElement.clientWidth,
-                window.innerWidth || 0
+                window.innerWidth || 0,
               )),
           (l / 100) * o
         );
@@ -3296,12 +3296,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         s = a.indexOf(
           br(a, function (c) {
             return c.search(/,|\s/) !== -1;
-          })
+          }),
         );
       a[s] &&
         a[s].indexOf(',') === -1 &&
         console.warn(
-          'Offsets separated by white space(s) are deprecated, use a comma (,) instead.'
+          'Offsets separated by white space(s) are deprecated, use a comma (,) instead.',
         );
       var u = /\s*,\s*|\s+/,
         l =
@@ -3370,7 +3370,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         e.instance.reference,
         t.padding,
         r,
-        e.positionFixed
+        e.positionFixed,
       );
       (i.top = o), (i.left = a), (i[n] = s), (t.boundaries = u);
       var l = t.priority,
@@ -3393,7 +3393,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 !t.escapeWithReference &&
                 (f = Math.min(
                   c[h],
-                  u[d] - (d === 'right' ? c.width : c.height)
+                  u[d] - (d === 'right' ? c.width : c.height),
                 )),
               Ft({}, h, f)
             );
@@ -3780,7 +3780,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         o = function (p, d) {
           return F.defined(p)
             ? (console.warn(
-                '`changedTo` is deprecated! Replace it with `change`'
+                '`changedTo` is deprecated! Replace it with `change`',
               ),
               n(p, d))
             : !1;
@@ -3875,7 +3875,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 Object.defineProperty(
                   e,
                   n,
-                  Object.getOwnPropertyDescriptor(r, n)
+                  Object.getOwnPropertyDescriptor(r, n),
                 );
               });
       }
@@ -3919,7 +3919,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function Tr(e, t) {
       if (typeof t != 'function' && t !== null)
         throw new TypeError(
-          'Super expression must either be null or a function'
+          'Super expression must either be null or a function',
         );
       (e.prototype = Object.create(t && t.prototype, {
         constructor: { value: e, writable: !0, configurable: !0 },
@@ -3954,7 +3954,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       try {
         return (
           Boolean.prototype.valueOf.call(
-            Reflect.construct(Boolean, [], function () {})
+            Reflect.construct(Boolean, [], function () {}),
           ),
           !0
         );
@@ -3990,7 +3990,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function Qe(e) {
       if (e === void 0)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return e;
     }
@@ -3998,7 +3998,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       if (t && (typeof t == 'object' || typeof t == 'function')) return t;
       if (t !== void 0)
         throw new TypeError(
-          'Derived constructors may only return object or undefined'
+          'Derived constructors may only return object or undefined',
         );
       return Qe(e);
     }
@@ -4047,7 +4047,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             'Required '
               .concat(e[t], ' `')
               .concat(t, '` was not specified in `')
-              .concat(r, '`.')
+              .concat(r, '`.'),
           );
     }
     function Dp(e, t) {
@@ -4095,7 +4095,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         r &&
         (console.groupCollapsed(
           '%creact-floater: '.concat(t),
-          'color: #9b00ff; font-weight: bold; font-size: 12px;'
+          'color: #9b00ff; font-weight: bold; font-size: 12px;',
         ),
         Array.isArray(r)
           ? r.forEach(function (u) {
@@ -4152,9 +4152,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             m.createElement('path', {
               d: 'M8.13911129,9.00268191 L0.171521827,17.0258467 C-0.0498027049,17.248715 -0.0498027049,17.6098394 0.171521827,17.8327545 C0.28204354,17.9443526 0.427188206,17.9998706 0.572051765,17.9998706 C0.71714958,17.9998706 0.862013139,17.9443526 0.972581703,17.8327545 L9.0000937,9.74924618 L17.0276057,17.8327545 C17.1384085,17.9443526 17.2832721,17.9998706 17.4281356,17.9998706 C17.5729992,17.9998706 17.718097,17.9443526 17.8286656,17.8327545 C18.0499901,17.6098862 18.0499901,17.2487618 17.8286656,17.0258467 L9.86135722,9.00268191 L17.8340066,0.973848225 C18.0553311,0.750979934 18.0553311,0.389855532 17.8340066,0.16694039 C17.6126821,-0.0556467968 17.254037,-0.0556467968 17.0329467,0.16694039 L9.00042166,8.25611765 L0.967006424,0.167268345 C0.745681892,-0.0553188426 0.387317931,-0.0553188426 0.165993399,0.167268345 C-0.0553311331,0.390136635 -0.0553311331,0.751261038 0.165993399,0.974176179 L8.13920499,9.00268191 L8.13911129,9.00268191 Z',
               fill: n,
-            })
-          )
-        )
+            }),
+          ),
+        ),
       );
     }
     function zs(e) {
@@ -4172,7 +4172,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             : m.createElement(
                 'div',
                 { className: '__floater__content', style: u.content },
-                t
+                t,
               ),
         };
       return (
@@ -4182,7 +4182,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             : m.createElement(
                 'div',
                 { className: '__floater__title', style: u.title },
-                s
+                s,
               )),
         r &&
           (l.footer = m.isValidElement(r)
@@ -4190,7 +4190,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             : m.createElement(
                 'div',
                 { className: '__floater__footer', style: u.footer },
-                r
+                r,
               )),
         (a || o) &&
           !F.boolean(i) &&
@@ -4201,7 +4201,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           l.close,
           l.title,
           l.content,
-          l.footer
+          l.footer,
         )
       );
     }
@@ -4313,7 +4313,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             e.offsetHeight,
             t.clientHeight,
             t.scrollHeight,
-            t.offsetHeight
+            t.offsetHeight,
           );
     }
     function ut(e) {
@@ -4404,7 +4404,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         wc.default.top(n, e, { duration: s < 100 ? 50 : r }, (u) =>
           u && u.message !== 'Element already at target scroll position'
             ? o(u)
-            : i()
+            : i(),
         );
       });
     }
@@ -4424,7 +4424,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   : window.chrome
                     ? (t = 'chrome')
                     : /(Version\/([\d._]+).*Safari|CriOS|FxiOS| Mobile\/)/.test(
-                        e
+                        e,
                       ) && (t = 'safari'),
         t
       );
@@ -4466,7 +4466,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         (r && e
           ? (console.groupCollapsed(
               `%creact-joyride: ${r}`,
-              'color: #ff0044; font-weight: bold; font-size: 12px;'
+              'color: #ff0044; font-weight: bold; font-size: 12px;',
             ),
             Array.isArray(e)
               ? e.forEach((o) => {
@@ -4644,7 +4644,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         'spotlightClicks',
         'spotlightPadding',
         'styles',
-        'tooltipComponent'
+        'tooltipComponent',
       );
     }
     function or(e, t) {
@@ -4664,7 +4664,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         (d.offset = l.offset),
         (d.styles = (0, Nr.default)(
           (i = d.styles) != null ? i : {},
-          c.floaterStyles
+          c.floaterStyles,
         )),
         (d.offset +=
           (a = (o = t.spotlightPadding) != null ? o : l.spotlightPadding) !=
@@ -4751,9 +4751,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             m.createElement('path', {
               d: 'M8.13911129,9.00268191 L0.171521827,17.0258467 C-0.0498027049,17.248715 -0.0498027049,17.6098394 0.171521827,17.8327545 C0.28204354,17.9443526 0.427188206,17.9998706 0.572051765,17.9998706 C0.71714958,17.9998706 0.862013139,17.9443526 0.972581703,17.8327545 L9.0000937,9.74924618 L17.0276057,17.8327545 C17.1384085,17.9443526 17.2832721,17.9998706 17.4281356,17.9998706 C17.5729992,17.9998706 17.718097,17.9443526 17.8286656,17.8327545 C18.0499901,17.6098862 18.0499901,17.2487618 17.8286656,17.0258467 L9.86135722,9.00268191 L17.8340066,0.973848225 C18.0553311,0.750979934 18.0553311,0.389855532 17.8340066,0.16694039 C17.6126821,-0.0556467968 17.254037,-0.0556467968 17.0329467,0.16694039 L9.00042166,8.25611765 L0.967006424,0.167268345 C0.745681892,-0.0553188426 0.387317931,-0.0553188426 0.165993399,0.167268345 C-0.0553311331,0.390136635 -0.0553311331,0.751261038 0.165993399,0.974176179 L8.13920499,9.00268191 L8.13911129,9.00268191 Z',
               fill: r,
-            })
-          )
-        )
+            }),
+          ),
+        ),
       );
     }
     function yd(e) {
@@ -4798,7 +4798,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               type: 'button',
               ...u,
             },
-            z
+            z,
           )),
         !d &&
           i > 0 &&
@@ -4810,7 +4810,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               type: 'button',
               ...t,
             },
-            P
+            P,
           )),
         (H.close =
           !h &&
@@ -4832,7 +4832,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             'div',
             { style: b.tooltipContainer },
             y && J('h1', { 'aria-label': lt(y), style: b.tooltipTitle }, y),
-            J('div', { style: b.tooltipContent }, p)
+            J('div', { style: b.tooltipContent }, p),
           ),
           !f &&
             J(
@@ -4848,10 +4848,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   type: 'button',
                   ...a,
                 },
-                H.primary
-              )
+                H.primary,
+              ),
             ),
-          H.close
+          H.close,
         )
       );
     }
@@ -4910,7 +4910,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           s.setAttribute('id', 'confetti-container'),
           s.setAttribute(
             'style',
-            'position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;'
+            'position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;',
           ),
           s
         );
@@ -4923,15 +4923,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               document.body.removeChild(a);
             }
           ),
-          []
+          [],
         ),
         Kt(
           m.createElement(
             Ed,
             { top: e, left: t, width: r, height: n },
-            m.createElement(is.default, { colors: i, drawShape: Pd, ...o })
+            m.createElement(is.default, { colors: i, drawShape: Pd, ...o }),
           ),
-          a
+          a,
         )
       );
     }
@@ -4995,7 +4995,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           () =>
             document.querySelector('#root div[role=main]') ||
             document.querySelector('#storybook-panel-root'),
-          []
+          [],
         ),
         l = t
           ? [
@@ -5005,7 +5005,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 content: m.createElement(
                   m.Fragment,
                   null,
-                  'You just created your first story. Continue setting up your project to write stories for your own components.'
+                  'You just created your first story. Continue setting up your project to write stories for your own components.',
                 ),
                 placement: 'right',
                 disableOverlay: !0,
@@ -5032,8 +5032,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       null,
                       'We automatically added four stories for this Button component in this example file:',
                       m.createElement('br', null),
-                      m.createElement(Wr, null, i.filename)
-                    )
+                      m.createElement(Wr, null, i.filename),
+                    ),
                 ),
                 placement: 'right',
                 disableBeacon: !0,
@@ -5058,7 +5058,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   m.createElement('br', null),
                   m.createElement('br', null),
                   'Try it out by pressing this button.',
-                  m.createElement(Td, { targetSelector: '#control-primary' })
+                  m.createElement(Td, { targetSelector: '#control-primary' }),
                 ),
                 placement: 'right',
                 spotlightClicks: !0,
@@ -5079,7 +5079,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     numberOfPieces: 800,
                     recycle: !1,
                     tweenDuration: 2e4,
-                  })
+                  }),
                 ),
                 placement: 'right',
                 floaterProps: {
@@ -5146,7 +5146,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           m.createElement('path', {
             d: 'M9.87245893,293.324145 L0.0114611411,30.5732167 C-0.314208957,21.8955842 6.33948896,14.5413918 15.0063196,13.9997149 L238.494389,0.0317105427 C247.316188,-0.519651867 254.914637,6.18486163 255.466,15.0066607 C255.486773,15.339032 255.497167,15.6719708 255.497167,16.0049907 L255.497167,302.318596 C255.497167,311.157608 248.331732,318.323043 239.492719,318.323043 C239.253266,318.323043 239.013844,318.317669 238.774632,318.306926 L25.1475605,308.712253 C16.8276309,308.338578 10.1847994,301.646603 9.87245893,293.324145 L9.87245893,293.324145 Z',
             id: 'path-1',
-          })
+          }),
         ),
         m.createElement(
           'g',
@@ -5154,7 +5154,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           m.createElement(
             'mask',
             { id: 'mask-2', fill: 'white' },
-            m.createElement('use', { xlinkHref: '#path-1' })
+            m.createElement('use', { xlinkHref: '#path-1' }),
           ),
           m.createElement('use', {
             fill: '#FF4785',
@@ -5166,8 +5166,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             fill: '#FFFFFF',
             fillRule: 'nonzero',
             mask: 'url(#mask-2)',
-          })
-        )
+          }),
+        ),
       );
     }
     function ch(e) {
@@ -5180,7 +5180,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         o = n || (typeof window > 'u' ? class {} : window.ResizeObserver);
       if (!o)
         throw new Error(
-          'This browser does not support ResizeObserver out of the box. See: https://github.com/react-spring/react-use-measure/#resize-observer-polyfills'
+          'This browser does not support ResizeObserver out of the box. See: https://github.com/react-spring/react-use-measure/#resize-observer-polyfills',
         );
       let [a, s] = Pe({
           left: 0,
@@ -5243,7 +5243,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       function v() {
         u.current.scrollContainers &&
           (u.current.scrollContainers.forEach((b) =>
-            b.removeEventListener('scroll', f, !0)
+            b.removeEventListener('scroll', f, !0),
           ),
           (u.current.scrollContainers = null)),
           u.current.resizeObserver &&
@@ -5257,7 +5257,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           r &&
             u.current.scrollContainers &&
             u.current.scrollContainers.forEach((b) =>
-              b.addEventListener('scroll', f, { capture: !0, passive: !0 })
+              b.addEventListener('scroll', f, { capture: !0, passive: !0 }),
             ));
       }
       let x = (b) => {
@@ -5430,7 +5430,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             t && (n ? t.mount(n) : t.unmount()),
             r && (typeof r == 'function' ? r(n) : Mt(r) && (r.current = n));
         },
-        [t]
+        [t],
       );
     }
     function fr(e) {
@@ -5491,7 +5491,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           l && d.visualElement
             ? J(l, { visualElement: d.visualElement, ...c })
             : null,
-          r(i, s, xh(h, d.visualElement, u), h, p, d.visualElement)
+          r(i, s, xh(h, d.visualElement, u), h, p, d.visualElement),
         );
       }
       let a = Qt(o);
@@ -5530,7 +5530,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       e,
       { enableHardwareAcceleration: t = !0, allowTransformNone: r = !0 },
       n,
-      i
+      i,
     ) {
       let o = '';
       for (let a = 0; a < kh; a++) {
@@ -5669,7 +5669,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       },
       c,
       p,
-      d
+      d,
     ) {
       if ((Lo(e, l, c, d), p)) {
         e.style.viewBox && (e.attrs.viewBox = e.style.viewBox);
@@ -5683,7 +5683,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           (f.transformOrigin = Yh(
             v,
             i !== void 0 ? i : 0.5,
-            o !== void 0 ? o : 0.5
+            o !== void 0 ? o : 0.5,
           )),
         t !== void 0 && (h.x = t),
         r !== void 0 && (h.y = r),
@@ -5699,7 +5699,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             t,
             { enableHardwareAcceleration: !1 },
             Vo(n),
-            e.transformTemplate
+            e.transformTemplate,
           ),
           { ...o.attrs, style: { ...o.style } }
         );
@@ -5767,7 +5767,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       { scrapeMotionValuesFromProps: e, createRenderState: t, onMount: r },
       n,
       i,
-      o
+      o,
     ) {
       let a = { latestValues: rf(n, i, o, e), renderState: t() };
       return r && (a.mount = (s) => r(n, s, a)), a;
@@ -5935,7 +5935,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         repeatType: a = 'loop',
         ease: s,
         times: u,
-      } = {}
+      } = {},
     ) {
       let l = { [t]: r };
       u && (l.offset = u);
@@ -6032,7 +6032,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       let t = Ff(e);
       Fe(
         !!t,
-        `'${e}' is not an animatable color. Use the equivalent color code instead.`
+        `'${e}' is not an animatable color. Use the equivalent color code instead.`,
       );
       let r = t.parse(e);
       return t === Dt && (r = Lf(r)), r;
@@ -6170,7 +6170,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       if (
         (Fe(
           o === t.length,
-          'Both input and output ranges must be the same length'
+          'Both input and output ranges must be the same length',
         ),
         o === 1)
       )
@@ -6458,7 +6458,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         typeof n[0] != 'number' &&
         (Fe(
           n.length === 2,
-          `Only two keyframes currently supported with spring and inertia animations. Trying to animate ${n}`
+          `Only two keyframes currently supported with spring and inertia animations. Trying to animate ${n}`,
         ),
         (P = $e(hm, Bl(n[0], n[1]))),
         (n = [0, 100]));
@@ -6860,7 +6860,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         )
           continue;
         d.start(
-          Yo(p, d, h, e.shouldReduceMotion && Ct.has(p) ? { type: !1 } : f)
+          Yo(p, d, h, e.shouldReduceMotion && Ct.has(p) ? { type: !1 } : f),
         );
         let S = d.animation;
         an(u) && (u.add(p), S.then(() => u.remove(p))), l.push(S);
@@ -6906,8 +6906,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             l.notify('AnimationStart', t),
               a.push(
                 uo(l, t, { ...o, delay: r + u(c) }).then(() =>
-                  l.notify('AnimationComplete', t)
-                )
+                  l.notify('AnimationComplete', t),
+                ),
               );
           }),
         Promise.all(a)
@@ -7011,7 +7011,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 ...te.map((re) => ({
                   animation: re,
                   options: { type: b, ...u },
-                }))
+                })),
               );
         }
         if (h.size) {
@@ -7327,7 +7327,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           (e.opacity = se(
             t.opacity !== void 0 ? t.opacity : 1,
             r.opacity !== void 0 ? r.opacity : 1,
-            n
+            n,
           ));
       for (let a = 0; a < Rg; a++) {
         let s = `border${nu[a]}Radius`,
@@ -7581,7 +7581,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         this.options.onExitComplete &&
                         this.options.onExitComplete();
                   this.targetLayout = h;
-                }
+                },
               );
         }
         unmount() {
@@ -7711,7 +7711,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             a.notify(
               'LayoutMeasure',
               this.layout.layoutBox,
-              o ? o.layoutBox : void 0
+              o ? o.layoutBox : void 0,
             );
         }
         updateScroll(o = 'measure') {
@@ -7808,7 +7808,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a,
                 u.latestValues,
                 u.snapshot ? u.snapshot.layoutBox : void 0,
-                l
+                l,
               );
           }
           return wt(this.latestValues) && Ha(a, this.latestValues), a;
@@ -7875,7 +7875,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   dr(
                     this.relativeTargetOrigin,
                     this.layout.layoutBox,
-                    p.layout.layoutBox
+                    p.layout.layoutBox,
                   ),
                   Me(this.relativeTarget, this.relativeTargetOrigin))
                 : (this.relativeParent = this.relativeTarget = void 0);
@@ -7892,12 +7892,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     sg(
                       this.target,
                       this.relativeTarget,
-                      this.relativeParent.target
+                      this.relativeParent.target,
                     ))
                   : this.targetDelta
                     ? (this.resumingFrom
                         ? (this.target = this.applyTransform(
-                            this.layout.layoutBox
+                            this.layout.layoutBox,
                           ))
                         : Me(this.target, this.layout.layoutBox),
                       $l(this.target, this.targetDelta))
@@ -7996,7 +7996,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           pr(this.projectionDelta, this.layoutCorrected, h, this.latestValues),
             (this.projectionTransform = qa(
               this.projectionDelta,
-              this.treeScale
+              this.treeScale,
             )),
             (this.projectionTransform !== f ||
               this.treeScale.x !== p ||
@@ -8058,7 +8058,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (dr(
                   p,
                   this.layout.layoutBox,
-                  this.relativeParent.layout.layoutBox
+                  this.relativeParent.layout.layoutBox,
                 ),
                 ny(this.relativeTarget, this.relativeTargetOrigin, p, P),
                 b &&
@@ -8249,7 +8249,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (u.transform = qa(
               this.projectionDeltaWithTransform,
               this.treeScale,
-              p
+              p,
             )),
             l && (u.transform = l(p, u.transform));
           let { x: d, y: h } = this.projectionDelta;
@@ -8457,7 +8457,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function mo(e, t, r = 1) {
       Fe(
         r <= py,
-        `Max CSS variable fallback depth detected in property "${e}". This may indicate a circular fallback dependency.`
+        `Max CSS variable fallback depth detected in property "${e}". This may indicate a circular fallback dependency.`,
       );
       let [n, i] = cy(e);
       if (!n) return;
@@ -8518,7 +8518,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             an(n) && n.add(i),
             Qo(
               o.version === '11.0.6',
-              `Attempting to mix Framer Motion versions ${o.version} with 11.0.6 may not work as expected.`
+              `Attempting to mix Framer Motion versions ${o.version} with 11.0.6 may not work as expected.`,
             );
         else if (Ae(a))
           e.addValue(i, Bt(o, { owner: e })), an(n) && n.remove(i);
@@ -8679,7 +8679,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       a('4:VisitNewStory');
                   },
                   skipOnboarding: u,
-                })
+                }),
             )
           : null
       );
@@ -9185,7 +9185,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               t || !e || !e.__esModule
                 ? ln(r, 'default', { value: e, enumerable: !0 })
                 : r,
-              e
+              e,
             )
           )),
           (Gu = (e) => ss(ln({}, '__esModule', { value: !0 }), e)),
@@ -9241,7 +9241,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               })(e, function () {
                 function r(i) {
                   var o = getComputedStyle(i, null).getPropertyValue(
-                    'overflow'
+                    'overflow',
                   );
                   return o.indexOf('scroll') > -1 || o.indexOf('auto') > -1;
                 }
@@ -9454,7 +9454,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     Ee ||
                       ((Ee = !0),
                       console.warn(
-                        'The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.'
+                        'The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.',
                       )),
                     Z(C) || O(C) === l
                   );
@@ -9539,7 +9539,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               function o(s) {
                 if (s == null)
                   throw new TypeError(
-                    'Object.assign cannot be called with null or undefined'
+                    'Object.assign cannot be called with null or undefined',
                   );
                 return Object(s);
               }
@@ -9622,7 +9622,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             d +
                             '` is invalid; it must be a function, usually from the `prop-types` package, but received `' +
                             typeof s[d] +
-                            '`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.'
+                            '`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.',
                         );
                         throw ((f.name = 'Invariant Violation'), f);
                       }
@@ -9641,7 +9641,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             d +
                             '` is invalid; the type checker function must return `null` or an `Error` but returned a ' +
                             typeof h +
-                            '. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).'
+                            '. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).',
                         ),
                       h instanceof Error && !(h.message in i))
                     ) {
@@ -9722,7 +9722,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     if (((M = M || f), (R = R || T), C !== i)) {
                       if (c) {
                         var G = new Error(
-                          'Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types'
+                          'Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types',
                         );
                         throw ((G.name = 'Invariant Violation'), G);
                       } else if (typeof console < 'u') {
@@ -9734,7 +9734,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               R +
                               '` prop on `' +
                               M +
-                              '`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details.'
+                              '`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details.',
                           ),
                           (D[K] = !0),
                           q++);
@@ -9749,7 +9749,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                                 ' `' +
                                 R +
                                 '` is marked as required ' +
-                                ('in `' + M + '`, but its value is `null`.')
+                                ('in `' + M + '`, but its value is `null`.'),
                             )
                           : new x(
                               'The ' +
@@ -9757,7 +9757,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                                 ' `' +
                                 R +
                                 '` is marked as required in ' +
-                                ('`' + M + '`, but its value is `undefined`.')
+                                ('`' + M + '`, but its value is `undefined`.'),
                             )
                         : null
                       : A(E, T, M, k, R);
@@ -9779,7 +9779,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           '` of type ' +
                           ('`' + R + '` supplied to `' + g + '`, expected ') +
                           ('`' + A + '`.'),
-                        { expectedType: A }
+                        { expectedType: A },
                       );
                     }
                     return null;
@@ -9797,7 +9797,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           E +
                           '` of component `' +
                           g +
-                          '` has invalid PropType notation inside arrayOf.'
+                          '` has invalid PropType notation inside arrayOf.',
                       );
                     var T = q[Y];
                     if (!Array.isArray(T)) {
@@ -9812,7 +9812,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             M +
                             '` supplied to `' +
                             g +
-                            '`, expected an array.')
+                            '`, expected an array.'),
                       );
                     }
                     for (var k = 0; k < T.length; k++) {
@@ -9838,7 +9838,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             T +
                             '` supplied to `' +
                             Y +
-                            '`, expected a single ReactElement.')
+                            '`, expected a single ReactElement.'),
                       );
                     }
                     return null;
@@ -9860,7 +9860,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             T +
                             '` supplied to `' +
                             Y +
-                            '`, expected a single ReactElement type.')
+                            '`, expected a single ReactElement type.'),
                       );
                     }
                     return null;
@@ -9879,7 +9879,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           E +
                           '` of type ' +
                           ('`' + M + '` supplied to `' + g + '`, expected ') +
-                          ('instance of `' + T + '`.')
+                          ('instance of `' + T + '`.'),
                       );
                     }
                     return null;
@@ -9893,10 +9893,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         ? s(
                             'Invalid arguments supplied to oneOf, expected an array, got ' +
                               arguments.length +
-                              ' arguments. A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).'
+                              ' arguments. A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).',
                           )
                         : s(
-                            'Invalid argument supplied to oneOf, expected an array.'
+                            'Invalid argument supplied to oneOf, expected an array.',
                           ),
                       u
                     );
@@ -9915,7 +9915,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         '` of value `' +
                         String(T) +
                         '` ' +
-                        ('supplied to `' + g + '`, expected one of ' + k + '.')
+                        ('supplied to `' + g + '`, expected one of ' + k + '.'),
                     );
                   }
                   return b(D);
@@ -9928,7 +9928,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           E +
                           '` of component `' +
                           g +
-                          '` has invalid PropType notation inside objectOf.'
+                          '` has invalid PropType notation inside objectOf.',
                       );
                     var T = q[Y],
                       M = ge(T);
@@ -9943,7 +9943,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             M +
                             '` supplied to `' +
                             g +
-                            '`, expected an object.')
+                            '`, expected an object.'),
                       );
                     for (var k in T)
                       if (o(T, k)) {
@@ -9958,7 +9958,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   if (!Array.isArray(A))
                     return (
                       s(
-                        'Invalid argument supplied to oneOfType, expected an instance of array.'
+                        'Invalid argument supplied to oneOfType, expected an instance of array.',
                       ),
                       u
                     );
@@ -9971,7 +9971,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             _e(q) +
                             ' at index ' +
                             D +
-                            '.'
+                            '.',
                         ),
                         u
                       );
@@ -9995,7 +9995,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         ' `' +
                         M +
                         '` supplied to ' +
-                        ('`' + E + '`' + K + '.')
+                        ('`' + E + '`' + K + '.'),
                     );
                   }
                   return b(Y);
@@ -10010,7 +10010,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             ' `' +
                             w +
                             '` supplied to ' +
-                            ('`' + Y + '`, expected a ReactNode.')
+                            ('`' + Y + '`, expected a ReactNode.'),
                         );
                   }
                   return b(A);
@@ -10026,7 +10026,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       Y +
                       '` is invalid; it must be a function, usually from the `prop-types` package, but received `' +
                       g +
-                      '`.'
+                      '`.',
                   );
                 }
                 function ue(A) {
@@ -10042,7 +10042,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           '` of type `' +
                           M +
                           '` ' +
-                          ('supplied to `' + g + '`, expected `object`.')
+                          ('supplied to `' + g + '`, expected `object`.'),
                       );
                     for (var k in A) {
                       var R = A[k];
@@ -10067,7 +10067,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           '` of type `' +
                           M +
                           '` ' +
-                          ('supplied to `' + g + '`, expected `object`.')
+                          ('supplied to `' + g + '`, expected `object`.'),
                       );
                     var k = n({}, q[Y], A);
                     for (var R in k) {
@@ -10088,7 +10088,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             JSON.stringify(q[Y], null, '  ') +
                             `
 Valid keys: ` +
-                            JSON.stringify(Object.keys(A), null, '  ')
+                            JSON.stringify(Object.keys(A), null, '  '),
                         );
                       var G = C(T, R, g, w, E + '.' + R, i);
                       if (G) return G;
@@ -10207,7 +10207,7 @@ Valid keys: ` +
                           : r(o) &&
                               Object.prototype.hasOwnProperty.call(
                                 o.props,
-                                'children'
+                                'children',
                               )
                             ? i(o.props.children)
                             : '';
@@ -10536,9 +10536,9 @@ Valid keys: ` +
                     n.options.modifiers[a] = je(
                       {},
                       e.Defaults.modifiers[a] || {},
-                      i.modifiers ? i.modifiers[a] : {}
+                      i.modifiers ? i.modifiers[a] : {},
                     );
-                  }
+                  },
                 ),
                 (this.modifiers = Object.keys(this.options.modifiers)
                   .map(function (a) {
@@ -10755,7 +10755,7 @@ Valid keys: ` +
                 },
               };
             throw new TypeError(
-              t ? 'Object is not iterable.' : 'Symbol.iterator is not defined.'
+              t ? 'Object is not iterable.' : 'Symbol.iterator is not defined.',
             );
           });
         (Cp = { flip: { padding: 20 }, preventOverflow: { padding: 10 } }),
@@ -10830,7 +10830,7 @@ Valid keys: ` +
                   var a = yt.unstable_renderSubtreeIntoContainer(
                     this,
                     i.length > 1 ? m.createElement('div', null, i) : i[0],
-                    this.node
+                    this.node,
                   );
                   return o(a), null;
                 },
@@ -10981,9 +10981,9 @@ Valid keys: ` +
                             version: '1.1',
                             xmlns: 'http://www.w3.org/2000/svg',
                           },
-                          m.createElement('polygon', { points: v, fill: u })
-                        )
-                      )
+                          m.createElement('polygon', { points: v, fill: u }),
+                        ),
+                      ),
                     )
                   );
                 },
@@ -11084,8 +11084,8 @@ Valid keys: ` +
                         'div',
                         { className: '__floater__body' },
                         l.content,
-                        l.arrow
-                      )
+                        l.arrow,
+                      ),
                     )
                   );
                 },
@@ -11151,7 +11151,7 @@ Valid keys: ` +
                           onMouseEnter: a,
                           onMouseLeave: s,
                         },
-                        d
+                        d,
                       )
                     : null;
                 },
@@ -11202,7 +11202,7 @@ Valid keys: ` +
                       function () {
                         var s = i.state.status;
                         a(s === $.OPEN ? 'open' : 'close', i.props);
-                      }
+                      },
                     );
                 }),
                 we(Qe(i), 'handleClick', function () {
@@ -11349,7 +11349,7 @@ Valid keys: ` +
                           Np(
                             this.floaterRef,
                             'transitionend',
-                            this.handleTransitionEnd
+                            this.handleTransitionEnd,
                           ),
                         d('needsUpdate', !0) && this.rebuildPopper();
                     }
@@ -11405,12 +11405,12 @@ Valid keys: ` +
                           {
                             arrow: ne(
                               { enabled: !l, element: this.arrowRef },
-                              v
+                              v,
                             ),
                             flip: ne({ enabled: !s, behavior: h }, S),
                             offset: ne({ offset: '0, '.concat(c, 'px') }, x),
                           },
-                          b
+                          b,
                         ),
                         onCreate: function (P) {
                           var O;
@@ -11549,7 +11549,7 @@ Valid keys: ` +
                       this.wrapperStyles
                         ? (l.wrapper = ne(
                             ne({}, l.wrapper),
-                            this.wrapperStyles
+                            this.wrapperStyles,
                           ))
                         : ['relative', 'static'].indexOf(p.position) === -1 &&
                           ((this.wrapperStyles = {}),
@@ -11559,7 +11559,7 @@ Valid keys: ` +
                             }),
                             (l.wrapper = ne(
                               ne({}, l.wrapper),
-                              this.wrapperStyles
+                              this.wrapperStyles,
                             )),
                             (this.target.style.position = 'relative'),
                             (this.target.style.top = 'auto'),
@@ -11613,7 +11613,7 @@ Valid keys: ` +
                           style: x,
                           styles: this.styles.wrapper,
                         },
-                        u
+                        u,
                       ),
                       O = {};
                     return (
@@ -11648,9 +11648,9 @@ Valid keys: ` +
                             styles: this.styles,
                             title: y,
                           }),
-                          O.wrapperInPortal
+                          O.wrapperInPortal,
                         ),
-                        O.wrapperAsChildren
+                        O.wrapperAsChildren,
                       )
                     );
                   },
@@ -11667,7 +11667,7 @@ Valid keys: ` +
             I.default.oneOfType([I.default.func, I.default.element]),
             function (e) {
               return !e.content;
-            }
+            },
           ),
           content: Wi(I.default.node, function (e) {
             return !e.component;
@@ -11901,7 +11901,7 @@ Valid keys: ` +
                     this.setState(s);
                 }),
                 V(this, 'getPopper', (i) =>
-                  i === 'beacon' ? this.beaconPopper : this.tooltipPopper
+                  i === 'beacon' ? this.beaconPopper : this.tooltipPopper,
                 ),
                 V(this, 'setPopper', (i, o) => {
                   i === 'beacon'
@@ -11936,7 +11936,7 @@ Valid keys: ` +
                   let { index: i, status: o } = this.getState();
                   o === Q.RUNNING &&
                     this.setState(
-                      this.getNextState({ action: ee.NEXT, index: i + 1 })
+                      this.getNextState({ action: ee.NEXT, index: i + 1 }),
                     );
                 }),
                 V(this, 'open', () => {
@@ -11978,7 +11978,7 @@ Valid keys: ` +
                   this.setState({
                     ...this.getNextState(
                       { action: ee.START, index: N.number(i) ? i : o },
-                      !0
+                      !0,
                     ),
                     status: a ? Q.RUNNING : Q.WAITING,
                   });
@@ -11998,7 +11998,7 @@ Valid keys: ` +
                   var o, a;
                   if (!Zp(i, Qi))
                     throw new Error(
-                      `State is not valid. Valid keys: ${Qi.join(', ')}`
+                      `State is not valid. Valid keys: ${Qi.join(', ')}`,
                     );
                   this.setState({
                     ...this.getNextState(
@@ -12008,7 +12008,7 @@ Valid keys: ` +
                         action: (o = i.action) != null ? o : ee.UPDATE,
                         origin: (a = i.origin) != null ? a : null,
                       },
-                      !0
+                      !0,
                     ),
                   });
                 });
@@ -12023,7 +12023,7 @@ Valid keys: ` +
                   origin: null,
                   status: n.length ? Q.READY : Q.IDLE,
                 },
-                !0
+                !0,
               ),
                 (this.beaconPopper = null),
                 (this.tooltipPopper = null),
@@ -12130,7 +12130,7 @@ Valid keys: ` +
               V(this, 'findValidTabElements', () =>
                 [].slice
                   .call(this.element.querySelectorAll('*'), 0)
-                  .filter(this.canBeTabbed)
+                  .filter(this.canBeTabbed),
               ),
               V(this, 'handleKeyDown', (r) => {
                 let { code: n = 'Tab' } = this.options;
@@ -12186,7 +12186,7 @@ Valid keys: ` +
               !(e instanceof HTMLElement))
             )
               throw new TypeError(
-                'Invalid parameter: element must be an HTMLElement'
+                'Invalid parameter: element must be an HTMLElement',
               );
             (this.element = e),
               (this.options = t),
@@ -12236,7 +12236,7 @@ Valid keys: ` +
             transform: scale(1);
           }
         }
-      `)
+      `),
                 ),
                 t.appendChild(r);
             }
@@ -12294,7 +12294,7 @@ Valid keys: ` +
                         ...c,
                       },
                       J('span', { style: u.beaconInner }),
-                      J('span', { style: u.beaconOuter })
+                      J('span', { style: u.beaconOuter }),
                     )),
                 p
               );
@@ -12391,12 +12391,12 @@ Valid keys: ` +
                     ? window.addEventListener(
                         'mousemove',
                         this.handleMouseMove,
-                        !1
+                        !1,
                       )
                     : r !== X.TOOLTIP &&
                       window.removeEventListener(
                         'mousemove',
-                        this.handleMouseMove
+                        this.handleMouseMove,
                       ));
             }
             componentWillUnmount() {
@@ -12476,7 +12476,7 @@ Valid keys: ` +
                   role: 'presentation',
                   style: l,
                 },
-                c
+                c,
               );
             }
           }),
@@ -12744,7 +12744,7 @@ Valid keys: ` +
                     n({ ...v, step: p, type: Ve.STEP_BEFORE })
                   : (console.warn(
                       W ? 'Target not visible' : 'Target not mounted',
-                      p
+                      p,
                     ),
                     n({ ...v, type: Ve.TARGET_NOT_FOUND, step: p }),
                     o || d.update({ index: u + (r === ee.PREV ? -1 : 1) }));
@@ -12806,7 +12806,7 @@ Valid keys: ` +
                         debug: t,
                         lifecycle: n,
                         onClickOverlay: this.handleClickOverlay,
-                      })
+                      }),
                     ),
                     J(
                       Oo,
@@ -12832,8 +12832,8 @@ Valid keys: ` +
                         size: a,
                         step: s,
                         styles: s.styles,
-                      })
-                    )
+                      }),
+                    ),
                   );
             }
           }),
@@ -12889,7 +12889,7 @@ Valid keys: ` +
                   document.body.addEventListener(
                     'keydown',
                     this.handleKeyboard,
-                    { passive: !0 }
+                    { passive: !0 },
                   );
             }
             componentDidUpdate(e, t) {
@@ -12988,7 +12988,7 @@ Valid keys: ` +
               e ||
                 document.body.removeEventListener(
                   'keydown',
-                  this.handleKeyboard
+                  this.handleKeyboard,
                 );
             }
             scrollToStep(e) {
@@ -13118,12 +13118,12 @@ Valid keys: ` +
 `),
           (De = Qt(function (
             { children: e, onClick: t, variant: r = 'primary', ...n },
-            i
+            i,
           ) {
             return m.createElement(
               Od,
               { ref: i, onClick: t, variant: r, ...n },
-              e
+              e,
             );
           })),
           (Cd = U.div`
@@ -13164,7 +13164,7 @@ Valid keys: ` +
                 Ad,
                 null,
                 e.title && m.createElement(Rd, null, e.title),
-                m.createElement(Id, null, e.content)
+                m.createElement(Id, null, e.content),
               ),
               !e.hideNextButton &&
                 m.createElement(
@@ -13178,9 +13178,9 @@ Valid keys: ` +
                         ? { onClick: e.onNextButtonClick }
                         : {}),
                     },
-                    'Next'
-                  )
-                )
+                    'Next',
+                  ),
+                ),
             )),
           (Dd = U(kt)``),
           (Ld = U.div`
@@ -13492,29 +13492,29 @@ Valid keys: ` +
                   m.createElement(
                     $d,
                     null,
-                    'Storybook helps you develop UI components faster. Learn the basics in a few simple steps.'
+                    'Storybook helps you develop UI components faster. Learn the basics in a few simple steps.',
                   ),
                   m.createElement(
                     De,
                     { style: { marginTop: 4 }, onClick: e },
-                    'Start your 3 minute tour'
-                  )
+                    'Start your 3 minute tour',
+                  ),
                 ),
                 m.createElement(
                   eh,
                   { onClick: t },
                   'Skip tour',
-                  m.createElement(th, null)
+                  m.createElement(th, null),
                 ),
                 m.createElement(
                   rh,
                   null,
                   m.createElement(oh, null),
                   m.createElement(ah, null),
-                  m.createElement(lh, null)
-                )
-              )
-            )
+                  m.createElement(lh, null),
+                ),
+              ),
+            ),
           )),
           (Ji = mt(rc()));
         (hh = ['x', 'y', 'top', 'bottom', 'left', 'right', 'width', 'height']),
@@ -13836,7 +13836,7 @@ Valid keys: ` +
             steps: Bn,
           } = tl(
             typeof requestAnimationFrame < 'u' ? requestAnimationFrame : fe,
-            !0
+            !0,
           )),
           (nf = {
             useVisualState: gl({
@@ -13859,7 +13859,7 @@ Valid keys: ` +
                       n,
                       { enableHardwareAcceleration: !1 },
                       Vo(t.tagName),
-                      e.transformTemplate
+                      e.transformTemplate,
                     ),
                       fl(t, r);
                   });
@@ -13916,7 +13916,7 @@ Valid keys: ` +
             mount() {
               this.unmount = $e(
                 Je(this.node.current, 'focus', () => this.onFocus()),
-                Je(this.node.current, 'blur', () => this.onBlur())
+                Je(this.node.current, 'blur', () => this.onBlur()),
               );
             }
             unmount() {}
@@ -13948,13 +13948,13 @@ Valid keys: ` +
                           : s && s(o, a);
                       });
                     },
-                    { passive: !(r.onTap || r.onPointerUp) }
+                    { passive: !(r.onTap || r.onPointerUp) },
                   ),
                   i = Ze(
                     window,
                     'pointercancel',
                     (o, a) => this.cancelPress(o, a),
-                    { passive: !(r.onTapCancel || r.onPointerCancel) }
+                    { passive: !(r.onTapCancel || r.onPointerCancel) },
                   );
                 (this.removeEndListeners = $e(n, i)), this.startPress(e, t);
               }),
@@ -13973,7 +13973,7 @@ Valid keys: ` +
                       (this.removeEndListeners = Je(
                         this.node.current,
                         'keyup',
-                        o
+                        o,
                       )),
                       zn('down', (a, s) => {
                         this.startPress(a, s);
@@ -14017,7 +14017,7 @@ Valid keys: ` +
                 e.globalTapTarget ? window : this.node.current,
                 'pointerdown',
                 this.startPointerPress,
-                { passive: !(e.onTapStart || e.onPointerStart) }
+                { passive: !(e.onTapStart || e.onPointerStart) },
               ),
               r = Je(this.node.current, 'focus', this.startAccessiblePress);
             this.removeStartListeners = $e(t, r);
@@ -14148,7 +14148,7 @@ Valid keys: ` +
             if (Array.isArray(e)) {
               Fe(
                 e.length === 4,
-                'Cubic bezier arrays must contain four numerical values.'
+                'Cubic bezier arrays must contain four numerical values.',
               );
               let [t, r, n, i] = e;
               return Rr(t, r, n, i);
@@ -14266,7 +14266,7 @@ Valid keys: ` +
             ? $e(Fl(Yf(n, i), i.values), r)
             : (Ar(
                 !0,
-                `Complex values '${e}' and '${t}' too different to mix. Ensure all colors are of the same type, and that each contains the same quantity of number and color values. Falling back to instant transition.`
+                `Complex values '${e}' and '${t}' too different to mix. Ensure all colors are of the same type, and that each contains the same quantity of number and color values. Falling back to instant transition.`,
               ),
               io(e, t));
         };
@@ -14280,7 +14280,7 @@ Valid keys: ` +
               Pt.set(
                 ve.isProcessing || el.useManualTiming
                   ? ve.timestamp
-                  : performance.now()
+                  : performance.now(),
               ),
             Yr
           ),
@@ -14299,7 +14299,7 @@ Valid keys: ` +
         (dm = { decay: ma, inertia: ma, tween: nn, keyframes: nn, spring: Hl }),
           (hm = (e) => e / 100);
         (mm = fm(() =>
-          Object.hasOwnProperty.call(Element.prototype, 'animate')
+          Object.hasOwnProperty.call(Element.prototype, 'animate'),
         )),
           (gm = new Set(['opacity', 'clipPath', 'filter', 'transform'])),
           (_r = 10),
@@ -14377,7 +14377,7 @@ Valid keys: ` +
               d = so(e, c);
             Ar(
               p === d,
-              `You are trying to animate ${e} from "${l}" to "${c}". ${l} is not an animatable value - to enable this animation set ${l} to a value animatable to ${c} via the \`style\` property.`
+              `You are trying to animate ${e} from "${l}" to "${c}". ${l} is not an animatable value - to enable this animation set ${l} to a value animatable to ${c} via the \`style\` property.`,
             );
             let h = {
               keyframes: u,
@@ -14470,7 +14470,7 @@ Valid keys: ` +
               return (
                 Qo(
                   !1,
-                  'value.onChange(callback) is deprecated. Switch to value.on("change", callback).'
+                  'value.onChange(callback) is deprecated. Switch to value.on("change", callback).',
                 ),
                 this.on('change', e)
               );
@@ -14528,7 +14528,7 @@ Valid keys: ` +
               let t = Math.min(this.updatedAt - this.prevUpdatedAt, va);
               return zl(
                 parseFloat(this.current) - parseFloat(this.prevFrameValue),
-                t
+                t,
               );
             }
             start(e) {
@@ -14625,7 +14625,7 @@ Valid keys: ` +
               transformPagePoint: r,
               contextWindow: n,
               dragSnapToOrigin: i = !1,
-            } = {}
+            } = {},
           ) {
             if (
               ((this.startEvent = null),
@@ -14669,7 +14669,7 @@ Valid keys: ` +
                   c.type === 'pointercancel'
                     ? this.lastMoveEventInfo
                     : Yn(p, this.transformPagePoint),
-                  this.history
+                  this.history,
                 );
                 this.startEvent && d && d(c, v), h && h(c, v);
               }),
@@ -14690,7 +14690,7 @@ Valid keys: ` +
               (this.removeListeners = $e(
                 Ze(this.contextWindow, 'pointermove', this.handlePointerMove),
                 Ze(this.contextWindow, 'pointerup', this.handlePointerUp),
-                Ze(this.contextWindow, 'pointercancel', this.handlePointerUp)
+                Ze(this.contextWindow, 'pointercancel', this.handlePointerUp),
               ));
           }
           updateHandlers(e) {
@@ -14811,7 +14811,7 @@ Valid keys: ` +
                     this.visualElement.getTransformPagePoint(),
                   dragSnapToOrigin: u,
                   contextWindow: tu(this.visualElement),
-                }
+                },
               );
             }
             stop(e, t) {
@@ -14871,7 +14871,7 @@ Valid keys: ` +
                     this.getAxisMotionValue(o) &&
                       (this.constraints[o] = dg(
                         n.layoutBox[o],
-                        this.constraints[o]
+                        this.constraints[o],
                       ));
                   });
             }
@@ -14882,7 +14882,7 @@ Valid keys: ` +
               let r = e.current;
               Fe(
                 r !== null,
-                "If `dragConstraints` is set as a React ref, that ref must be passed to another component's `ref` prop."
+                "If `dragConstraints` is set as a React ref, that ref must be passed to another component's `ref` prop.",
               );
               let { projection: n } = this.visualElement;
               if (!n || !n.layout) return !1;
@@ -14955,7 +14955,7 @@ Valid keys: ` +
                 r[t] ||
                 this.visualElement.getValue(
                   e,
-                  (r.initial ? r.initial[e] : void 0) || 0
+                  (r.initial ? r.initial[e] : void 0) || 0,
                 )
               );
             }
@@ -15018,7 +15018,7 @@ Valid keys: ` +
                 (n.root && n.root.updateScroll(), n.updateLayout()),
                 r();
               let o = Je(window, 'resize', () =>
-                  this.scalePositionWithinConstraints()
+                  this.scalePositionWithinConstraints(),
                 ),
                 a = n.addEventListener(
                   'didUpdate',
@@ -15032,7 +15032,7 @@ Valid keys: ` +
                           c.set(c.get() + s[l].translate));
                       }),
                       this.visualElement.render());
-                  }
+                  },
                 );
               return () => {
                 o(), t(), i(), a && a();
@@ -15108,7 +15108,7 @@ Valid keys: ` +
               this.removePointerDownListener = Ze(
                 this.node.current,
                 'pointerdown',
-                (e) => this.onPointerDown(e)
+                (e) => this.onPointerDown(e),
               );
             }
             update() {
@@ -15463,12 +15463,12 @@ Valid keys: ` +
                     h
                       ? Fe(
                           ir(d[S]) === h,
-                          'All keyframes must be of the same type'
+                          'All keyframes must be of the same type',
                         )
                       : ((h = ir(d[S])),
                         Fe(
                           h === p || (Ur(p) && Ur(h)),
-                          'Keyframes must be of the same dimension as the current value'
+                          'Keyframes must be of the same dimension as the current value',
                         ));
                 } else h = ir(d);
                 if (p !== h)
@@ -15533,7 +15533,7 @@ Valid keys: ` +
                 reducedMotionConfig: n,
                 visualState: i,
               },
-              o = {}
+              o = {},
             ) {
               (this.current = null),
                 (this.children = new Set()),
@@ -15555,7 +15555,7 @@ Valid keys: ` +
                       this.current,
                       this.renderState,
                       this.props.style,
-                      this.projection
+                      this.projection,
                     ));
                 }),
                 (this.scheduleRender = () => le.render(this.render, !1, !0));
@@ -15576,7 +15576,7 @@ Valid keys: ` +
                 (this.manuallyAnimateOnMount = !!(e && e.current));
               let { willChange: u, ...l } = this.scrapeMotionValuesFromProps(
                 t,
-                {}
+                {},
               );
               for (let c in l) {
                 let p = l[c];
@@ -15609,7 +15609,7 @@ Valid keys: ` +
                       : go.current),
                 Qo(
                   this.shouldReduceMotion !== !0,
-                  'You have Reduced Motion enabled on your device. Animations may not appear as expected.'
+                  'You have Reduced Motion enabled on your device. Animations may not appear as expected.',
                 ),
                 this.parent && this.parent.children.add(this),
                 this.update(this.props, this.presenceContext);
@@ -15674,7 +15674,7 @@ Valid keys: ` +
               ) {
                 this.projection = new o(
                   this.latestValues,
-                  this.parent && this.parent.projection
+                  this.parent && this.parent.projection,
                 );
                 let {
                   layoutId: s,
@@ -15709,7 +15709,7 @@ Valid keys: ` +
                 this.renderState,
                 this.latestValues,
                 this.options,
-                this.props
+                this.props,
               );
             }
             measureViewportBox() {
@@ -15744,7 +15744,7 @@ Valid keys: ` +
               (this.prevMotionValues = Ey(
                 this,
                 this.scrapeMotionValuesFromProps(e, this.prevProps),
-                this.prevMotionValues
+                this.prevMotionValues,
               )),
                 this.handleChildMotionValue && this.handleChildMotionValue();
             }
@@ -15874,7 +15874,7 @@ Valid keys: ` +
             }
             makeTargetAnimatableFromInstance(
               { transition: e, transitionEnd: t, ...r },
-              n
+              n,
             ) {
               let i = Hm(r, e || {}, this);
               if (n) {
@@ -16035,14 +16035,14 @@ Valid keys: ` +
                     m.createElement(
                       Zt,
                       { language: 'typescript', customStyle: i },
-                      a
+                      a,
                     ),
                   o &&
                     !r &&
                     m.createElement(
                       Zt,
                       { language: 'typescript', customStyle: i },
-                      '  // ...'
+                      '  // ...',
                     ),
                   o &&
                     r &&
@@ -16060,11 +16060,11 @@ Valid keys: ` +
                           customStyle: i,
                           codeTagProps: { style: { paddingLeft: '15px' } },
                         },
-                        a
-                      )
-                    )
-                )
-              )
+                        a,
+                      ),
+                    ),
+                ),
+              ),
             );
           })),
           (zy = ({ activeStep: e, data: t, width: r, filename: n }) => {
@@ -16125,8 +16125,8 @@ Valid keys: ` +
                     m.createElement(
                       Zt,
                       { language: 'typescript', customStyle: l },
-                      '// ' + n
-                    )
+                      '// ' + n,
+                    ),
                   ),
                   t.map((c, p) =>
                     m.createElement(By, {
@@ -16135,16 +16135,16 @@ Valid keys: ` +
                       active: i[e]?.index === p,
                       open: i[e]?.index > p ? !0 : i[e]?.open ?? !1,
                       content: c,
-                    })
-                  )
-                )
+                    }),
+                  ),
+                ),
               ),
               m.createElement(Ny, {
                 initial: { height: 81 },
                 animate: { height: i[e]?.backdropHeight ?? 81 },
                 transition: { ease: 'easeInOut', duration: 0.4 },
                 className: 'syntax-highlighter-backdrop',
-              })
+              }),
             );
           }),
           (_y = U.ul(() => ({
@@ -16198,9 +16198,9 @@ Valid keys: ` +
                       height: 10,
                       color: 'white',
                     })
-                  : t
+                  : t,
               ),
-              m.createElement(Wy, null, e)
+              m.createElement(Wy, null, e),
             ));
         (Gy = (e, t, r) => {
           let [n, i] = Pe(null);
@@ -16213,7 +16213,7 @@ Valid keys: ` +
                       i(
                         s
                           ? { data: !0, error: null }
-                          : { data: !1, error: null }
+                          : { data: !1, error: null },
                       );
                     });
                   },
@@ -16284,7 +16284,7 @@ Valid keys: ` +
               b = () => {
                 let P = i.code[3][0].snippet;
                 navigator.clipboard.writeText(
-                  P.replace('// Copy the code below', '')
+                  P.replace('// Copy the code below', ''),
                 ),
                   p(!0);
               },
@@ -16325,7 +16325,7 @@ Valid keys: ` +
                         zIndex: 1e3,
                       },
                     },
-                    c ? 'Copied to clipboard' : 'Copy code'
+                    c ? 'Copied to clipboard' : 'Copy code',
                   ),
                 m.createElement(
                   jd,
@@ -16335,7 +16335,7 @@ Valid keys: ` +
                     null,
                     m.createElement(_d, null),
                     m.createElement(Ud, null),
-                    m.createElement(qd, null)
+                    m.createElement(qd, null),
                   ),
                   m.createElement(
                     Nd,
@@ -16347,8 +16347,8 @@ Valid keys: ` +
                         Vd,
                         null,
                         m.createElement(gi, { width: 13 }),
-                        m.createElement('span', null, 'How to write a story')
-                      )
+                        m.createElement('span', null, 'How to write a story'),
+                      ),
                     ),
                     m.createElement(
                       kt.Dialog.Close,
@@ -16358,8 +16358,8 @@ Valid keys: ` +
                         width: 13,
                         onClick: n,
                         color: u.color.darkest,
-                      })
-                    )
+                      }),
+                    ),
                   ),
                   m.createElement(
                     kt.Description,
@@ -16379,7 +16379,7 @@ Valid keys: ` +
                               ? m.createElement(
                                   'p',
                                   null,
-                                  'Import a component. In this case, the Button component.'
+                                  'Import a component. In this case, the Button component.',
                                 )
                               : m.createElement(
                                   m.Fragment,
@@ -16392,14 +16392,14 @@ Valid keys: ` +
                                     ' and',
                                     ' ',
                                     m.createElement(Wr, null, 'StoryObj'),
-                                    ' for type safety and autocompletion in TypeScript stories.'
+                                    ' for type safety and autocompletion in TypeScript stories.',
                                   ),
                                   m.createElement(
                                     'p',
                                     null,
-                                    'Next, import a component. In this case, the Button component.'
-                                  )
-                                )
+                                    'Next, import a component. In this case, the Button component.',
+                                  ),
+                                ),
                           ),
                           m.createElement(
                             De,
@@ -16409,8 +16409,8 @@ Valid keys: ` +
                                 s('meta');
                               },
                             },
-                            'Next'
-                          )
+                            'Next',
+                          ),
                         ),
                       a === 'meta' &&
                         m.createElement(
@@ -16423,13 +16423,13 @@ Valid keys: ` +
                             m.createElement(
                               'p',
                               null,
-                              "The default export, Meta, contains metadata about this component's stories. The title field (optional) controls where stories appear in the sidebar."
+                              "The default export, Meta, contains metadata about this component's stories. The title field (optional) controls where stories appear in the sidebar.",
                             ),
                             m.createElement(Fn, {
                               width: '204',
                               alt: "Title property pointing to Storybook's sidebar",
                               src: Ky,
-                            })
+                            }),
                           ),
                           m.createElement(
                             Fr,
@@ -16440,14 +16440,14 @@ Valid keys: ` +
                                 variant: 'secondary',
                                 onClick: () => s('imports'),
                               },
-                              'Previous'
+                              'Previous',
                             ),
                             m.createElement(
                               De,
                               { onClick: () => s('story') },
-                              'Next'
-                            )
-                          )
+                              'Next',
+                            ),
+                          ),
                         ),
                       a === 'story' &&
                         m.createElement(
@@ -16460,13 +16460,13 @@ Valid keys: ` +
                             m.createElement(
                               'p',
                               null,
-                              'Each named export is a story. Its contents specify how the story is rendered in addition to other configuration options.'
+                              'Each named export is a story. Its contents specify how the story is rendered in addition to other configuration options.',
                             ),
                             m.createElement(Fn, {
                               width: '190',
                               alt: 'Story export pointing to the sidebar entry of the story',
                               src: Qy,
-                            })
+                            }),
                           ),
                           m.createElement(
                             Fr,
@@ -16477,14 +16477,14 @@ Valid keys: ` +
                                 variant: 'secondary',
                                 onClick: () => s('meta'),
                               },
-                              'Previous'
+                              'Previous',
                             ),
                             m.createElement(
                               De,
                               { onClick: () => s('args') },
-                              'Next'
-                            )
-                          )
+                              'Next',
+                            ),
+                          ),
                         ),
                       a === 'args' &&
                         m.createElement(
@@ -16497,13 +16497,13 @@ Valid keys: ` +
                             m.createElement(
                               'p',
                               null,
-                              'Args are inputs that are passed to the component, which Storybook uses to render the component in different states. In React, args = props. They also specify the initial control values for the story.'
+                              'Args are inputs that are passed to the component, which Storybook uses to render the component in different states. In React, args = props. They also specify the initial control values for the story.',
                             ),
                             m.createElement(Fn, {
                               alt: 'Args mapped to their controls in Storybook',
                               width: '253',
                               src: Jy,
-                            })
+                            }),
                           ),
                           m.createElement(
                             Fr,
@@ -16514,14 +16514,14 @@ Valid keys: ` +
                                 variant: 'secondary',
                                 onClick: () => s('story'),
                               },
-                              'Previous'
+                              'Previous',
                             ),
                             m.createElement(
                               De,
                               { onClick: () => s('customStory') },
-                              'Next'
-                            )
-                          )
+                              'Next',
+                            ),
+                          ),
                         ),
                       a === 'customStory' &&
                         (v?.error
@@ -16535,12 +16535,12 @@ Valid keys: ` +
                                 m.createElement(
                                   'h3',
                                   null,
-                                  'Create your first story'
+                                  'Create your first story',
                                 ),
                                 m.createElement(
                                   'p',
                                   null,
-                                  "Now it's your turn. See how easy it is to create your first story by following these steps below."
+                                  "Now it's your turn. See how easy it is to create your first story by following these steps below.",
                                 ),
                                 m.createElement(
                                   Hy,
@@ -16548,7 +16548,7 @@ Valid keys: ` +
                                   m.createElement(
                                     Qn,
                                     { isCompleted: c || !!v?.data, index: 1 },
-                                    'Copy the Warning story.'
+                                    'Copy the Warning story.',
                                   ),
                                   m.createElement(
                                     Qn,
@@ -16556,7 +16556,7 @@ Valid keys: ` +
                                     m.createElement(
                                       Yd,
                                       null,
-                                      'Open the Button story in your current working directory.'
+                                      'Open the Button story in your current working directory.',
                                     ),
                                     f?.data &&
                                       m.createElement(
@@ -16564,15 +16564,15 @@ Valid keys: ` +
                                         null,
                                         f.data
                                           .replaceAll('/', '/\u200B')
-                                          .replaceAll('\\', '\\\u200B')
-                                      )
+                                          .replaceAll('\\', '\\\u200B'),
+                                      ),
                                   ),
                                   m.createElement(
                                     Qn,
                                     { isCompleted: !!v?.data, index: 3 },
-                                    'Paste it at the bottom of the file and save.'
-                                  )
-                                )
+                                    'Paste it at the bottom of the file and save.',
+                                  ),
+                                ),
                               ),
                               m.createElement(
                                 Fr,
@@ -16583,21 +16583,21 @@ Valid keys: ` +
                                     variant: 'secondary',
                                     onClick: () => s('args'),
                                   },
-                                  'Previous'
+                                  'Previous',
                                 ),
                                 v?.data
                                   ? m.createElement(
                                       De,
                                       { onClick: () => e() },
-                                      'Go to story'
+                                      'Go to story',
                                     )
-                                  : null
-                              )
-                            ))
-                    )
-                  )
-                )
-              )
+                                  : null,
+                              ),
+                            )),
+                    ),
+                  ),
+                ),
+              ),
             );
           }),
           ($y = {
@@ -16718,7 +16718,7 @@ export const Warning = {
           )
         ) {
           console.warn(
-            '[@storybook/addon-onboarding] It seems like you have finished the onboarding experience in Storybook! Therefore this addon is not necessary anymore and will not be loaded. You are free to remove it from your project. More info: https://github.com/storybookjs/storybook/tree/next/code/addons/onboarding#uninstalling'
+            '[@storybook/addon-onboarding] It seems like you have finished the onboarding experience in Storybook! Therefore this addon is not necessary anymore and will not be loaded. You are free to remove it from your project. More info: https://github.com/storybookjs/storybook/tree/next/code/addons/onboarding#uninstalling',
           );
           return;
         }
@@ -16733,9 +16733,9 @@ export const Warning = {
             m.createElement(
               Tn,
               { fallback: m.createElement('div', null, 'Loading...') },
-              m.createElement(av, { api: e })
+              m.createElement(av, { api: e }),
             ),
-            n
+            n,
           );
       });
     });
@@ -16743,6 +16743,6 @@ export const Warning = {
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

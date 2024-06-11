@@ -12,7 +12,7 @@ describe('Img Component', () => {
 
   test('it should have lower opacity when disabled', () => {
     render(
-      <Img src="https://via.placeholder.com/150" alt="Placeholder" disabled />
+      <Img src="https://via.placeholder.com/150" alt="Placeholder" disabled />,
     );
     const image = screen.getByAltText('Placeholder');
     expect(image).toHaveStyle('opacity: 0.5');

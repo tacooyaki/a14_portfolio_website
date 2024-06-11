@@ -6,7 +6,7 @@
     './node_modules/@mdx-js/react/lib/index.js': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       __webpack_require__.d(__webpack_exports__, {
@@ -14,7 +14,7 @@
         x: () => MDXProvider,
       });
       var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(
-        './node_modules/react/index.js'
+        './node_modules/react/index.js',
       );
       const emptyComponents = {},
         MDXContext =
@@ -28,7 +28,7 @@
               ? components(contextComponents)
               : { ...contextComponents, ...components };
           },
-          [contextComponents, components]
+          [contextComponents, components],
         );
       }
       function MDXProvider(properties) {
@@ -42,7 +42,7 @@
           react__WEBPACK_IMPORTED_MODULE_0__.createElement(
             MDXContext.Provider,
             { value: allComponents },
-            properties.children
+            properties.children,
           )
         );
       }
@@ -50,7 +50,7 @@
     './src/stories/Configure.mdx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       __webpack_require__.r(__webpack_exports__),
@@ -60,11 +60,11 @@
         });
       __webpack_require__('./node_modules/react/index.js');
       var jsx_runtime = __webpack_require__(
-          './node_modules/react/jsx-runtime.js'
+          './node_modules/react/jsx-runtime.js',
         ),
         lib = __webpack_require__('./node_modules/@mdx-js/react/lib/index.js'),
         dist = __webpack_require__(
-          './node_modules/@storybook/blocks/dist/index.mjs'
+          './node_modules/@storybook/blocks/dist/index.mjs',
         );
       const github =
         __webpack_require__.p +
@@ -587,7 +587,7 @@
     './node_modules/react/cjs/react-jsx-runtime.production.min.js': (
       __unused_webpack_module,
       exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       var f = __webpack_require__('./node_modules/react/index.js'),
@@ -624,11 +624,11 @@
     './node_modules/react/jsx-runtime.js': (
       module,
       __unused_webpack_exports,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       module.exports = __webpack_require__(
-        './node_modules/react/cjs/react-jsx-runtime.production.min.js'
+        './node_modules/react/cjs/react-jsx-runtime.production.min.js',
       );
     },
   },

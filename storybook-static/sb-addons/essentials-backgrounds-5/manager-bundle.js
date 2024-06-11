@@ -38,7 +38,7 @@ try {
         o || !e || !e.__esModule
           ? F(a, 'default', { value: e, enumerable: !0 })
           : a,
-        e
+        e,
       )
     );
     var I = x(() => {});
@@ -84,7 +84,7 @@ try {
                 r,
                 c,
                 h,
-                s
+                s,
               );
             }
             return h[i].exports;
@@ -161,7 +161,7 @@ try {
                         n || this,
                         this.list[l].val,
                         this.list[l].key,
-                        this
+                        this,
                       );
                   }),
                   (s.prototype.indexOf = function (t) {
@@ -194,7 +194,7 @@ try {
                         O;
                       if ((p.numArgs || p.numArgs === 0) && p.numArgs !== T + 1)
                         throw new Error(
-                          'Memoizerific functions should always be called with the same number of arguments'
+                          'Memoizerific functions should always be called with the same number of arguments',
                         );
                       for (O = 0; O < T; O++) {
                         if (
@@ -272,7 +272,7 @@ try {
             ],
           },
           {},
-          [3]
+          [3],
         )(3);
       });
     });
@@ -751,7 +751,7 @@ try {
                     : f.length) !== null && u !== void 0
                   ? u
                   : 0;
-              })
+              }),
             )
           : t;
       }, []);
@@ -761,13 +761,13 @@ try {
 [	 ]{` +
             Math.min.apply(Math, c) +
             '}',
-          'g'
+          'g',
         );
         r = r.map(function (t) {
           return t.replace(
             h,
             `
-`
+`,
           );
         });
       }
@@ -784,7 +784,7 @@ try {
             (f = String(t)
               .split(
                 `
-`
+`,
               )
               .map(function (u, b) {
                 return b === 0 ? u : '' + i + u;
@@ -805,7 +805,9 @@ try {
           width: '1rem',
           background: e,
         }),
-        ({ theme: e }) => ({ boxShadow: `${e.appBorderColor} 0 0 0 1px inset` })
+        ({ theme: e }) => ({
+          boxShadow: `${e.appBorderColor} 0 0 0 1px inset`,
+        }),
       ),
       Ie = (e, o = [], a) => {
         if (e === 'transparent') return 'transparent';
@@ -834,7 +836,7 @@ try {
       })),
       de = (0, U.default)(10)((e, o, a) => {
         let r = e.map(({ name: c, value: h }) =>
-          oe(null, c, h, !0, a, h === o)
+          oe(null, c, h, !0, a, h === o),
         );
         return o !== 'transparent'
           ? [oe('reset', 'Clear background', 'transparent', null, a, !1), ...r]
@@ -849,13 +851,13 @@ try {
           s = z(() => Ie(h, e.values, e.default), [e, h]);
         Array.isArray(e) &&
           H.warn(
-            'Addon Backgrounds api has changed in Storybook 6.0. Please refer to the migration guide: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md'
+            'Addon Backgrounds api has changed in Storybook 6.0. Please refer to the migration guide: https://github.com/storybookjs/storybook/blob/next/MIGRATION.md',
           );
         let t = q(
           (n) => {
             c({ [v]: { ...r[v], value: n } });
           },
-          [e, r, c]
+          [e, r, c],
         );
         return e.disable
           ? null
@@ -882,9 +884,9 @@ try {
                     title: 'Change the background of the preview',
                     active: s !== 'transparent' || o,
                   },
-                  C.createElement(J, null)
-                )
-              )
+                  C.createElement(J, null),
+                ),
+              ),
             );
       }),
       fe = L(function () {
@@ -900,7 +902,7 @@ try {
             title: 'Apply a grid to the preview',
             onClick: () => o({ [v]: { ...e[v], grid: !r } }),
           },
-          C.createElement(Z, null)
+          C.createElement(Z, null),
         );
       });
     P.register(ee, () => {
@@ -914,7 +916,7 @@ try {
             R,
             null,
             C.createElement(pe, null),
-            C.createElement(fe, null)
+            C.createElement(fe, null),
           ),
       });
     });
@@ -922,6 +924,6 @@ try {
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

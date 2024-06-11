@@ -6,7 +6,7 @@
     './src/components/Table/Table.stories.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
@@ -17,13 +17,13 @@
       __webpack_require__('./node_modules/react/index.js');
       var _templateObject,
         taggedTemplateLiteral = __webpack_require__(
-          './node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+          './node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
         ),
         styled_components_browser_esm = __webpack_require__(
-          './node_modules/styled-components/dist/styled-components.browser.esm.js'
+          './node_modules/styled-components/dist/styled-components.browser.esm.js',
         ),
         jsx_runtime = __webpack_require__(
-          './node_modules/react/jsx-runtime.js'
+          './node_modules/react/jsx-runtime.js',
         );
       const StyledTable = styled_components_browser_esm.Ay.table(
           _templateObject ||
@@ -33,7 +33,7 @@
               ';\n',
             ])),
           (props) => (props.disabled ? 0.5 : 1),
-          (props) => (props.disabled ? 'not-allowed' : 'default')
+          (props) => (props.disabled ? 'not-allowed' : 'default'),
         ),
         Table = (_ref) => {
           let { children, disabled } = _ref;
@@ -66,7 +66,7 @@
               ';\n',
             ])),
           (props) => (props.disabled ? 0.5 : 1),
-          (props) => (props.disabled ? 'not-allowed' : 'default')
+          (props) => (props.disabled ? 'not-allowed' : 'default'),
         ),
         TableHeader = (_ref) => {
           let { children, disabled } = _ref;
@@ -99,7 +99,7 @@
               ';\n',
             ])),
           (props) => (props.disabled ? 0.5 : 1),
-          (props) => (props.disabled ? 'not-allowed' : 'default')
+          (props) => (props.disabled ? 'not-allowed' : 'default'),
         ),
         TableRow = (_ref) => {
           let { children, disabled } = _ref;
@@ -134,7 +134,7 @@
             ])),
           (props) => props.align || 'left',
           (props) => (props.disabled ? 0.5 : 1),
-          (props) => (props.disabled ? 'not-allowed' : 'default')
+          (props) => (props.disabled ? 'not-allowed' : 'default'),
         ),
         TableCell = (_ref) => {
           let { children, align, disabled } = _ref;
@@ -184,7 +184,7 @@
               ';\n',
             ])),
           (props) => (props.disabled ? 0.5 : 1),
-          (props) => (props.disabled ? 'not-allowed' : 'default')
+          (props) => (props.disabled ? 'not-allowed' : 'default'),
         ),
         TableFooter = (_ref) => {
           let { children, disabled } = _ref;
@@ -304,7 +304,7 @@
                 }),
               ],
             })).bind({}),
-          { args: { disabled: !1 } }
+          { args: { disabled: !1 } },
         );
       Default.parameters = {
         ...Default.parameters,

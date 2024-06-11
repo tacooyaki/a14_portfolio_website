@@ -5,7 +5,7 @@
     './node_modules/@storybook/addon-docs/dist/DocsRenderer-K4EAMTCU.mjs': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       'use strict';
       __webpack_require__.d(__webpack_exports__, {
@@ -13,10 +13,10 @@
       });
       var react = __webpack_require__('./node_modules/react/index.js'),
         react_18 = __webpack_require__(
-          './node_modules/@storybook/react-dom-shim/dist/react-18.mjs'
+          './node_modules/@storybook/react-dom-shim/dist/react-18.mjs',
         ),
         dist = __webpack_require__(
-          './node_modules/@storybook/blocks/dist/index.mjs'
+          './node_modules/@storybook/blocks/dist/index.mjs',
         ),
         defaultComponents = { code: dist.XA, a: dist.zE, ...dist.Sw },
         ErrorBoundary = class extends react.Component {
@@ -52,8 +52,8 @@
                   .then(
                     __webpack_require__.bind(
                       __webpack_require__,
-                      './node_modules/@mdx-js/react/index.js'
-                    )
+                      './node_modules/@mdx-js/react/index.js',
+                    ),
                   )
                   .then(({ MDXProvider }) =>
                     (0, react_18.d)(
@@ -63,11 +63,14 @@
                         react.createElement(
                           MDXProvider,
                           { components },
-                          react.createElement(TDocs, { context, docsParameter })
-                        )
+                          react.createElement(TDocs, {
+                            context,
+                            docsParameter,
+                          }),
+                        ),
                       ),
-                      element
-                    )
+                      element,
+                    ),
                   )
                   .then(() => resolve());
               });
@@ -78,7 +81,7 @@
           }
         };
       __webpack_require__(
-        './node_modules/@storybook/addon-docs/dist/chunk-GN5PWX3D.mjs'
+        './node_modules/@storybook/addon-docs/dist/chunk-GN5PWX3D.mjs',
       );
     },
     './node_modules/memoizerific sync recursive': (module) => {

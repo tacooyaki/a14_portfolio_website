@@ -41,7 +41,7 @@ try {
           t || !e || !e.__esModule
             ? Ha(n, 'default', { value: e, enumerable: !0 })
             : n,
-          e
+          e,
         )
       ),
       Jo = (e) => Ko(Ha({}, '__esModule', { value: !0 }), e);
@@ -230,7 +230,7 @@ try {
                     s,
                     function (c) {
                       return i[c];
-                    }.bind(null, s)
+                    }.bind(null, s),
                   );
               return l;
             }),
@@ -620,7 +620,7 @@ try {
                                 0,
                                 this.radius,
                                 0,
-                                2 * Math.PI
+                                2 * Math.PI,
                               ),
                               this.context.fill();
                             break;
@@ -629,7 +629,7 @@ try {
                               -this.w / 2,
                               -this.h / 2,
                               this.w,
-                              this.h
+                              this.h,
                             );
                             break;
                           case i.Strip:
@@ -637,7 +637,7 @@ try {
                               -this.w / 6,
                               -this.h / 2,
                               this.w / 3,
-                              this.h
+                              this.h,
                             );
                         }
                       this.context.closePath(), this.context.restore();
@@ -711,7 +711,7 @@ try {
                           oi - Go > Dn ? Dn : Math.max(0, oi - Go),
                           zn,
                           je,
-                          Dn
+                          Dn,
                         ),
                         qo = Math.round(ac - zn),
                         Yo = 0;
@@ -729,7 +729,7 @@ try {
                       P.fillText(
                         'Particles: '.concat(ii),
                         ne.width - 10,
-                        ne.height - 20
+                        ne.height - 20,
                       )),
                     N.particles.forEach(function (Un, Qo) {
                       Un.update(),
@@ -771,13 +771,13 @@ try {
                   : Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(
                         C,
-                        Object.getOwnPropertyDescriptors(A)
+                        Object.getOwnPropertyDescriptors(A),
                       )
                     : k(Object(A)).forEach(function (N) {
                         Object.defineProperty(
                           C,
                           N,
-                          Object.getOwnPropertyDescriptor(A, N)
+                          Object.getOwnPropertyDescriptor(A, N),
                         );
                       });
               }
@@ -914,7 +914,7 @@ try {
                           this.generator &&
                             (Object.assign(
                               this.generator,
-                              this.options.confettiSource
+                              this.options.confettiSource,
                             ),
                             typeof ie.recycle == 'boolean' &&
                               ie.recycle &&
@@ -999,13 +999,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   : Object.getOwnPropertyDescriptors
                     ? Object.defineProperties(
                         C,
-                        Object.getOwnPropertyDescriptors(A)
+                        Object.getOwnPropertyDescriptors(A),
                       )
                     : re(Object(A)).forEach(function (N) {
                         Object.defineProperty(
                           C,
                           N,
-                          Object.getOwnPropertyDescriptor(A, N)
+                          Object.getOwnPropertyDescriptor(A, N),
                         );
                       });
               }
@@ -1102,7 +1102,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 try {
                   return (
                     Date.prototype.toString.call(
-                      Reflect.construct(Date, [], function () {})
+                      Reflect.construct(Date, [], function () {}),
                     ),
                     !0
                   );
@@ -1128,7 +1128,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             function Pn(C) {
               if (C === void 0)
                 throw new ReferenceError(
-                  "this hasn't been initialised - super() hasn't been called"
+                  "this hasn't been initialised - super() hasn't been called",
                 );
               return C;
             }
@@ -1157,7 +1157,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (function (P, fe) {
                   if (typeof fe != 'function' && fe !== null)
                     throw new TypeError(
-                      'Super expression must either be null or a function'
+                      'Super expression must either be null or a function',
                     );
                   (P.prototype = Object.create(fe && fe.prototype, {
                     constructor: { value: P, writable: !0, configurable: !0 },
@@ -1183,7 +1183,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     Wt(
                       Pn((fe = ie.call.apply(ie, [this, P].concat(he)))),
                       'canvas',
-                      s.a.createRef()
+                      s.a.createRef(),
                     ),
                     Wt(Pn(fe), 'confetti', void 0),
                     (fe.canvas = P.canvasRef || ai),
@@ -1232,7 +1232,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               bottom: 0,
                               right: 0,
                             },
-                            ye.style
+                            ye.style,
                           );
                         return s.a.createElement(
                           'canvas',
@@ -1243,8 +1243,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               ref: this.canvas,
                             },
                             ye,
-                            { style: he }
-                          )
+                            { style: he },
+                          ),
                         );
                       },
                     },
@@ -1585,7 +1585,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         exponent: f = -1,
         roundingMethod: y = Wc,
         precision: k = 0,
-      } = {}
+      } = {},
     ) {
       let b = f,
         h = Number(e),
@@ -1688,7 +1688,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           t || !e || !e.__esModule
             ? Q1(n, 'default', { value: e, enumerable: !0 })
             : n,
-          e
+          e,
         )
       ),
       Br = $t((e, t) => {
@@ -2204,7 +2204,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             function o(c, d, u, m, p, v) {
               if (v !== n) {
                 var f = new Error(
-                  'Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types'
+                  'Calling PropTypes validators directly is not supported by the `prop-types` package. Use PropTypes.checkPropTypes() to call them. Read more at http://fb.me/use-check-prop-types',
                 );
                 throw ((f.name = 'Invariant Violation'), f);
               }
@@ -2261,7 +2261,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     : n(o) &&
                         Object.prototype.hasOwnProperty.call(
                           o.props,
-                          'children'
+                          'children',
                         )
                       ? i(o.props.children)
                       : '';
@@ -2320,21 +2320,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           null,
           a.createElement('path', {
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0ZM2.67 11.15c.7-1 2.6-1.81 3.2-1.9.22-.04.23-.66.23-.66s-.67-.66-.81-1.55c-.4 0-.63-.94-.24-1.27l-.02-.13c-.06-.6-.28-2.6 1.97-2.6s2.03 2 1.97 2.6l-.02.13c.4.33.15 1.27-.24 1.27-.14.89-.8 1.55-.8 1.55s0 .62.22.66c.6.09 2.5.9 3.2 1.9a6 6 0 1 0-8.66 0Z',
-          })
+          }),
         ),
         useralt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7.27 13.16a11.39 11.39 0 0 0 5.18-1.23v-.25c0-1.57-3.24-3-4.1-3.13-.27-.05-.28-.79-.28-.79s.8-.78.96-1.83c.47 0 .75-1.12.29-1.52.02-.41.6-3.25-2.32-3.25S4.65 4 4.67 4.41c-.46.4-.17 1.52.29 1.52.17 1.05.96 1.83.96 1.83s0 .74-.27.79c-.86.13-4.04 1.53-4.1 3.08a11.44 11.44 0 0 0 5.72 1.53Z',
-          })
+          }),
         ),
         useradd: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1.18 11.9c-.4-.17-.8-.36-1.18-.58.06-1.44 3.02-2.74 3.82-2.87.25-.04.26-.73.26-.73s-.74-.73-.9-1.7c-.43 0-.7-1.05-.27-1.42l-.01-.14c-.07-.67-.31-2.88 2.18-2.88 2.48 0 2.24 2.2 2.17 2.88l-.01.14c.43.37.16 1.41-.27 1.41-.16.98-.9 1.71-.9 1.71s.01.69.26.73c.8.13 3.82 1.46 3.82 2.91v.24a10.63 10.63 0 0 1-8.97.3ZM11.5 2.16c.28 0 .5.22.5.5v1.5h1.5a.5.5 0 0 1 0 1H12v1.5a.5.5 0 0 1-1 0v-1.5H9.5a.5.5 0 1 1 0-1H11v-1.5c0-.28.22-.5.5-.5Z',
-          })
+          }),
         ),
         users: a.createElement(
           a.Fragment,
@@ -2344,7 +2344,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M8.81 8.42a9.64 9.64 0 0 0-.74-.4 5.2 5.2 0 0 1 1.7-.76c.17-.02.17-.47.17-.47s-.49-.47-.6-1.1c-.28 0-.46-.68-.17-.91l-.01-.1c-.05-.43-.2-1.86 1.45-1.86 1.66 0 1.5 1.43 1.45 1.86v.1c.28.23.1.9-.18.9-.11.64-.6 1.11-.6 1.11s0 .45.17.47c.54.08 2.55.94 2.55 1.89v.62a10.6 10.6 0 0 1-3.3.56 2.97 2.97 0 0 0-.58-.88c-.37-.41-.85-.76-1.31-1.03Z',
-          })
+          }),
         ),
         profile: a.createElement(
           a.Fragment,
@@ -2355,7 +2355,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1 .5c0-.28.22-.5.5-.5h11c.28 0 .5.22.5.5v13a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5V.5ZM2 13V1h10v12H2Z',
-          })
+          }),
         ),
         facehappy: a.createElement(
           a.Fragment,
@@ -2366,7 +2366,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0A6 6 0 1 1 1 7a6 6 0 0 1 12 0Z',
-          })
+          }),
         ),
         faceneutral: a.createElement(
           a.Fragment,
@@ -2377,7 +2377,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0A6 6 0 1 1 1 7a6 6 0 0 1 12 0Z',
-          })
+          }),
         ),
         facesad: a.createElement(
           a.Fragment,
@@ -2388,7 +2388,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0A6 6 0 1 1 1 7a6 6 0 0 1 12 0Z',
-          })
+          }),
         ),
         accessibility: a.createElement(
           a.Fragment,
@@ -2400,91 +2400,91 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14Zm0-1A6 6 0 1 0 7 1a6 6 0 0 0 0 12Z',
-          })
+          }),
         ),
         accessibilityalt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14ZM8 3.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM3.53 4.84a.5.5 0 0 1 .63-.31l2.05.68a2.5 2.5 0 0 0 1.58 0l2.05-.68a.5.5 0 0 1 .32.94L7.7 6.3a.3.3 0 0 0-.21.29v.24c0 .7.16 1.39.48 2.01l.97 1.95a.5.5 0 1 1-.9.44L7 9.12l-1.05 2.1a.5.5 0 1 1-.9-.44l.97-1.95a4.5 4.5 0 0 0 .48-2.01v-.24a.3.3 0 0 0-.2-.29l-2.46-.82a.5.5 0 0 1-.31-.63Z',
-          })
+          }),
         ),
         arrowup: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm7.35 2.9 5.5 5.5a.5.5 0 0 1-.7.7L7 3.96 1.85 9.1a.5.5 0 1 1-.7-.7l5.5-5.5c.2-.2.5-.2.7 0Z',
-          })
+          }),
         ),
         arrowdown: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm1.15 5.6 5.5 5.5c.2.2.5.2.7 0l5.5-5.5a.5.5 0 0 0-.7-.7L7 10.04 1.85 4.9a.5.5 0 1 0-.7.7Z',
-          })
+          }),
         ),
         arrowleft: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M2.76 7.1c.02.09.06.18.14.25l5.5 5.5a.5.5 0 0 0 .7-.7L3.96 7 9.1 1.85a.5.5 0 1 0-.7-.7l-5.5 5.5a.5.5 0 0 0-.14.45Z',
-          })
+          }),
         ),
         arrowright: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm11.1 7.35-5.5 5.5a.5.5 0 0 1-.7-.7L10.04 7 4.9 1.85a.5.5 0 1 1 .7-.7l5.5 5.5c.2.2.2.5 0 .7Z',
-          })
+          }),
         ),
         arrowupalt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M11.85 4.65 7.35.15a.5.5 0 0 0-.7 0l-4.5 4.5a.5.5 0 1 0 .7.7L6.5 1.71V13.5a.5.5 0 0 0 1 0V1.7l3.65 3.65a.5.5 0 0 0 .7-.7Z',
-          })
+          }),
         ),
         arrowdownalt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7.5.5a.5.5 0 0 0-1 0v11.8L2.85 8.64a.5.5 0 1 0-.7.7l4.5 4.5A.5.5 0 0 0 7 14a.5.5 0 0 0 .35-.15l4.5-4.5a.5.5 0 0 0-.7-.7L7.5 12.29V.5Z',
-          })
+          }),
         ),
         arrowleftalt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M5.35 2.15c.2.2.2.5 0 .7L1.71 6.5H13.5a.5.5 0 0 1 0 1H1.7l3.65 3.65a.5.5 0 0 1-.7.7l-4.5-4.5a.5.5 0 0 1 0-.7l4.5-4.5c.2-.2.5-.2.7 0Z',
-          })
+          }),
         ),
         arrowrightalt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M8.65 2.15c.2-.2.5-.2.7 0l4.5 4.5c.2.2.2.5 0 .7l-4.5 4.5a.5.5 0 0 1-.7-.7l3.64-3.65H.5a.5.5 0 0 1 0-1h11.8L8.64 2.85a.5.5 0 0 1 0-.7Z',
-          })
+          }),
         ),
         expandalt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm7.35.15 4 4a.5.5 0 0 1-.7.7L7 1.21 3.35 4.85a.5.5 0 1 1-.7-.7l4-4c.2-.2.5-.2.7 0ZM11.35 9.15c.2.2.2.5 0 .7l-4 4a.5.5 0 0 1-.7 0l-4-4a.5.5 0 1 1 .7-.7L7 12.79l3.65-3.64c.2-.2.5-.2.7 0Z',
-          })
+          }),
         ),
         collapse: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M3.354.146a.5.5 0 1 0-.708.708l4 4a.5.5 0 0 0 .708 0l4-4a.5.5 0 0 0-.708-.708L7 3.793 3.354.146Zm3.292 9a.5.5 0 0 1 .708 0l4 4a.5.5 0 0 1-.708.708L7 10.207l-3.646 3.647a.5.5 0 0 1-.708-.708l4-4Z',
-          })
+          }),
         ),
         expand: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1.5 1h2a.5.5 0 0 1 0 1h-.8l3.15 3.15a.5.5 0 1 1-.7.7L2 2.71v.79a.5.5 0 0 1-1 0v-2c0-.28.22-.5.5-.5ZM10 1.5c0-.28.22-.5.5-.5h2c.28 0 .5.22.5.5v2a.5.5 0 0 1-1 0v-.8L8.85 5.86a.5.5 0 1 1-.7-.7L11.29 2h-.79a.5.5 0 0 1-.5-.5ZM12.5 10c.28 0 .5.22.5.5v2a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h.8L8.14 8.85a.5.5 0 1 1 .7-.7L12 11.29v-.79c0-.28.22-.5.5-.5ZM2 11.3v-.8a.5.5 0 0 0-1 0v2c0 .28.22.5.5.5h2a.5.5 0 0 0 0-1h-.8l3.15-3.15a.5.5 0 1 0-.7-.7L2 11.29Z',
-          })
+          }),
         ),
         unfold: a.createElement(
           a.Fragment,
@@ -2497,42 +2497,42 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M7 8.5c.28 0 .5.22.5.5v3.3l.65-.65a.5.5 0 0 1 .7.7l-1.5 1.5a.5.5 0 0 1-.7 0l-1.5-1.5a.5.5 0 0 1 .7-.7l.65.64V9c0-.28.22-.5.5-.5ZM9 9.5c0-.28.22-.5.5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5Z',
-          })
+          }),
         ),
         transfer: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M10.65 2.65c.2-.2.5-.2.7 0l1.5 1.5c.2.2.2.5 0 .7l-1.5 1.5a.5.5 0 0 1-.7-.7l.64-.65H1.5a.5.5 0 0 1 0-1h9.8l-.65-.65a.5.5 0 0 1 0-.7ZM3.35 8.35 2.71 9h9.79a.5.5 0 0 1 0 1H2.7l.65.65a.5.5 0 0 1-.7.7l-1.5-1.5a.5.5 0 0 1 0-.7l1.5-1.5a.5.5 0 1 1 .7.7Z',
-          })
+          }),
         ),
         redirect: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1.5 1c.28 0 .5.22.5.5V10a2 2 0 0 0 4 0V4a3 3 0 0 1 6 0v7.8l1.15-1.15a.5.5 0 0 1 .7.7l-2 2a.5.5 0 0 1-.7 0l-2-2a.5.5 0 0 1 .7-.7L11 11.79V4a2 2 0 1 0-4 0v6a3 3 0 0 1-6 0V1.5c0-.28.22-.5.5-.5Z',
-          })
+          }),
         ),
         undo: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1.15 3.85a.5.5 0 0 1 0-.7l2-2a.5.5 0 1 1 .7.7L2.71 3H9a4 4 0 0 1 0 8H3a.5.5 0 0 1 0-1h6a3 3 0 1 0 0-6H2.7l1.15 1.15a.5.5 0 1 1-.7.7l-2-2Z',
-          })
+          }),
         ),
         reply: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M4.35 2.15c.2.2.2.5 0 .7L1.71 5.5H9.5A4.5 4.5 0 0 1 14 10v1.5a.5.5 0 0 1-1 0V10a3.5 3.5 0 0 0-3.5-3.5H1.7l2.65 2.65a.5.5 0 1 1-.7.7l-3.5-3.5a.5.5 0 0 1 0-.7l3.5-3.5c.2-.2.5-.2.7 0Z',
-          })
+          }),
         ),
         sync: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M5.5 1A.5.5 0 0 0 5 .5H2a.5.5 0 0 0 0 1h1.53a6.5 6.5 0 0 0 2.39 11.91.5.5 0 1 0 .16-.99A5.5 5.5 0 0 1 4.5 2.1V4a.5.5 0 0 0 1 0V1ZM7.5 1a.5.5 0 0 1 .58-.41 6.5 6.5 0 0 1 2.39 11.91H12a.5.5 0 0 1 0 1H9a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 1 0v1.9A5.5 5.5 0 0 0 7.92 1.58.5.5 0 0 1 7.5 1Z',
-          })
+          }),
         ),
         upload: a.createElement(
           a.Fragment,
@@ -2543,7 +2543,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0A6 6 0 1 1 1 7a6 6 0 0 1 12 0Z',
-          })
+          }),
         ),
         download: a.createElement(
           a.Fragment,
@@ -2554,7 +2554,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M0 7a7 7 0 1 1 14 0A7 7 0 0 1 0 7Zm1 0a6 6 0 1 1 12 0A6 6 0 0 1 1 7Z',
-          })
+          }),
         ),
         back: a.createElement(
           a.Fragment,
@@ -2565,7 +2565,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 0a7 7 0 1 1 0 14A7 7 0 0 1 7 0Zm0 1a6 6 0 1 1 0 12A6 6 0 0 1 7 1Z',
-          })
+          }),
         ),
         proceed: a.createElement(
           a.Fragment,
@@ -2576,14 +2576,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 14A7 7 0 1 1 7 0a7 7 0 0 1 0 14Zm0-1A6 6 0 1 1 7 1a6 6 0 0 1 0 12Z',
-          })
+          }),
         ),
         refresh: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7.1.5H7a6.5 6.5 0 1 0 6.41 7.58.5.5 0 1 0-.99-.16A5.47 5.47 0 0 1 7 12.5a5.5 5.5 0 0 1 0-11 5.5 5.5 0 0 1 4.9 3H10a.5.5 0 0 0 0 1h3a.5.5 0 0 0 .5-.5V2a.5.5 0 0 0-1 0v1.53A6.5 6.5 0 0 0 7.1.5Z',
-          })
+          }),
         ),
         globe: a.createElement(
           a.Fragment,
@@ -2591,7 +2591,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 0 0 7a7 7 0 0 0 14 0Zm-6.53 5.74c-.24.23-.4.26-.47.26-.08 0-.23-.03-.47-.26-.23-.24-.5-.62-.73-1.18A11.57 11.57 0 0 1 5 7.5h4a11.57 11.57 0 0 1-.8 4.06c-.24.56-.5.94-.73 1.18ZM8.99 6.5H5.01c.05-1.62.35-3.04.79-4.06.24-.56.5-.94.73-1.18.24-.23.4-.26.47-.26.08 0 .23.03.47.26.23.24.5.62.73 1.18.44 1.02.74 2.44.8 4.06Zm1 1c-.06 2.18-.56 4.08-1.28 5.25a6 6 0 0 0 4.27-5.25H9.99Zm2.99-1H9.99c-.06-2.18-.56-4.08-1.28-5.25a6 6 0 0 1 4.27 5.25ZM4 6.5c.06-2.18.56-4.08 1.28-5.25A6 6 0 0 0 1.02 6.5h2.99Zm-2.99 1a6 6 0 0 0 4.27 5.25c-.72-1.17-1.22-3.07-1.28-5.25H1.02Z',
-          })
+          }),
         ),
         compass: a.createElement(
           a.Fragment,
@@ -2603,7 +2603,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0A6 6 0 1 1 1 7a6 6 0 0 1 12 0Z',
-          })
+          }),
         ),
         location: a.createElement(
           a.Fragment,
@@ -2611,7 +2611,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M0 7a7 7 0 1 1 14 0A7 7 0 0 1 0 7Zm6.5 3.5v2.48A6 6 0 0 1 1.02 7.5H3.5a.5.5 0 0 0 0-1H1.02A6 6 0 0 1 6.5 1.02V3.5a.5.5 0 0 0 1 0V1.02a6 6 0 0 1 5.48 5.48H10.5a.5.5 0 0 0 0 1h2.48a6 6 0 0 1-5.48 5.48V10.5a.5.5 0 0 0-1 0Z',
-          })
+          }),
         ),
         pin: a.createElement(
           a.Fragment,
@@ -2623,7 +2623,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M12 5A5 5 0 0 0 2 5c0 2.63 2.27 6.15 4.65 8.64.2.2.5.2.7 0C9.73 11.15 12 7.64 12 5ZM7 1a4 4 0 0 1 4 4c0 1.06-.47 2.42-1.3 3.88A21.23 21.23 0 0 1 7 12.55c-1-1.1-1.97-2.39-2.7-3.67A8.46 8.46 0 0 1 3 5a4 4 0 0 1 4-4Z',
-          })
+          }),
         ),
         time: a.createElement(
           a.Fragment,
@@ -2634,7 +2634,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14Zm0-1A6 6 0 1 0 7 1a6 6 0 0 0 0 12Z',
-          })
+          }),
         ),
         dashboard: a.createElement(
           a.Fragment,
@@ -2645,7 +2645,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M2.07 12.97a7 7 0 1 1 9.86 0 12.96 12.96 0 0 0-9.86 0Zm9.58-1.18a6 6 0 1 0-9.3 0 13.98 13.98 0 0 1 9.3 0Z',
-          })
+          }),
         ),
         timer: a.createElement(
           a.Fragment,
@@ -2656,14 +2656,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M5.5.5c0-.28.22-.5.5-.5h2a.5.5 0 0 1 0 1h-.5v1.02c1.28.1 2.45.61 3.37 1.4l.78-.77a.5.5 0 0 1 .7.7l-.77.78a6 6 0 1 1-5.08-2.1V1H6a.5.5 0 0 1-.5-.5ZM7 3a5 5 0 1 0 0 10A5 5 0 0 0 7 3Z',
-          })
+          }),
         ),
         home: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm7.35 1.15 5.5 5.5a.5.5 0 0 1-.7.7L12 7.21v5.29a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V9H6v3.5a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5V7.2l-.15.15a.5.5 0 1 1-.7-.7l1-1 4.5-4.5c.2-.2.5-.2.7 0ZM3 6.2V12h2V8.5c0-.28.22-.5.5-.5h3c.28 0 .5.22.5.5V12h2V6.2l-4-4-4 4Z',
-          })
+          }),
         ),
         admin: a.createElement(
           a.Fragment,
@@ -2674,7 +2674,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M4 6a.5.5 0 1 0-1 0v5a.5.5 0 0 0 1 0V6ZM11 6a.5.5 0 0 0-1 0v5a.5.5 0 0 0 1 0V6ZM5.75 5.5c.28 0 .5.22.5.5v5a.5.5 0 0 1-1 0V6c0-.28.22-.5.5-.5ZM8.75 6a.5.5 0 1 0-1 0v5a.5.5 0 0 0 1 0V6ZM1.5 12.5c0-.27.22-.5.5-.5h10a.5.5 0 0 1 0 1H2a.5.5 0 0 1-.5-.5Z',
-          })
+          }),
         ),
         info: a.createElement(
           a.Fragment,
@@ -2685,7 +2685,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14Zm0-1A6 6 0 1 0 7 1a6 6 0 0 0 0 12Z',
-          })
+          }),
         ),
         question: a.createElement(
           a.Fragment,
@@ -2696,7 +2696,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0A6 6 0 1 1 1 7a6 6 0 0 1 12 0Z',
-          })
+          }),
         ),
         support: a.createElement(
           a.Fragment,
@@ -2704,7 +2704,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-3.52 4.9a5.97 5.97 0 0 1-6.96 0l1.45-1.45a3.98 3.98 0 0 0 4.06 0l1.45 1.44Zm-.03-2.87 1.44 1.45a5.97 5.97 0 0 0 0-6.96l-1.44 1.45a3.98 3.98 0 0 1 0 4.06ZM9.03 3.55l1.45-1.44a5.97 5.97 0 0 0-6.96 0l1.45 1.44a3.98 3.98 0 0 1 4.06 0ZM3.55 4.97 2.11 3.52a5.97 5.97 0 0 0 0 6.96l1.44-1.45a3.98 3.98 0 0 1 0-4.06ZM10 7a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z',
-          })
+          }),
         ),
         alert: a.createElement(
           a.Fragment,
@@ -2715,14 +2715,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7.2 1.04a.5.5 0 0 1 .24.21l6.49 11a.5.5 0 0 1-.44.75H.51a.5.5 0 0 1-.5-.45.5.5 0 0 1 .06-.31l6.5-10.99a.5.5 0 0 1 .64-.2ZM7 2.48 1.38 12h11.24L7 2.48Z',
-          })
+          }),
         ),
         email: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M0 2.5c0-.27.22-.5.5-.5h13c.28 0 .5.23.5.5v9a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-9Zm1 1.02V11h12V3.52L7.31 7.89a.5.5 0 0 1-.52.07.5.5 0 0 1-.1-.07L1 3.52ZM12.03 3H1.97L7 6.87 12.03 3Z',
-          })
+          }),
         ),
         phone: a.createElement(
           a.Fragment,
@@ -2730,7 +2730,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'm7.76 8.13-.05.05a.2.2 0 0 1-.28.03A6.76 6.76 0 0 1 5.8 6.56a.21.21 0 0 1 .04-.27l.05-.05c.23-.2.54-.47.71-.96.17-.47-.02-1.04-.66-1.94-.26-.38-.72-.96-1.22-1.46-.68-.69-1.2-1-1.65-1a.98.98 0 0 0-.51.13A3.23 3.23 0 0 0 .9 3.42c-.13 1.1.26 2.37 1.17 3.78a16.68 16.68 0 0 0 4.55 4.6 6.57 6.57 0 0 0 3.53 1.32A3.2 3.2 0 0 0 13 11.46c.14-.24.24-.64-.07-1.18a7.8 7.8 0 0 0-1.73-1.8c-.64-.5-1.52-1.12-2.13-1.12a.97.97 0 0 0-.34.06c-.47.17-.74.46-.95.69l-.02.02Zm4.32 2.68a6.8 6.8 0 0 0-1.48-1.54h-.02c-.3-.25-.64-.49-.95-.67a2.7 2.7 0 0 0-.56-.24h-.01c-.23.09-.34.21-.56.45l-.02.02-.04.04a1.2 1.2 0 0 1-1.6.15 7.76 7.76 0 0 1-1.86-1.89l-.01-.01-.02-.02a1.21 1.21 0 0 1 .2-1.53l.06-.06.02-.02c.22-.2.35-.31.43-.53v-.02c0-.02 0-.06-.03-.14a3.7 3.7 0 0 0-.5-.88h-.01V3.9c-.23-.33-.65-.87-1.1-1.32H4c-.31-.32-.55-.5-.72-.6a.6.6 0 0 0-.22-.1h-.03a2.23 2.23 0 0 0-1.15 1.66c-.09.78.18 1.8 1.02 3.1a15.68 15.68 0 0 0 4.27 4.33l.02.01.02.02a5.57 5.57 0 0 0 2.97 1.11 2.2 2.2 0 0 0 1.93-1.14h.01v-.05a.57.57 0 0 0-.05-.12Z',
-          })
+          }),
         ),
         link: a.createElement(
           a.Fragment,
@@ -2740,14 +2740,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M3.6 7.2c-.1-.42-.12-.87-.08-1.31L1.45 7.95a3.25 3.25 0 1 0 4.6 4.6l2.5-2.5a3.25 3.25 0 0 0 0-4.6.5.5 0 0 0-.7.7c.87.89.87 2.31 0 3.2l-2.5 2.5a2.25 2.25 0 1 1-3.2-3.2l1.46-1.44Z',
-          })
+          }),
         ),
         unlink: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm1.45 7.95 1.3-1.3.71.7-1.3 1.3a2.25 2.25 0 1 0 3.18 3.2l1.3-1.31.71.7-1.3 1.3a3.25 3.25 0 0 1-4.6-4.59ZM12.55 6.05l-1.3 1.3-.71-.7 1.3-1.3a2.25 2.25 0 1 0-3.18-3.2l-1.3 1.31-.71-.7 1.3-1.3a3.25 3.25 0 0 1 4.6 4.59ZM1.85 1.15a.5.5 0 1 0-.7.7l11 11a.5.5 0 0 0 .7-.7l-11-11Z',
-          })
+          }),
         ),
         bell: a.createElement(
           a.Fragment,
@@ -2755,7 +2755,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M8 1.11a1 1 0 1 0-1.99 0A4.5 4.5 0 0 0 2.5 5.5v3.88l-.94 1.89a.5.5 0 0 0-.06.3.5.5 0 0 0 .51.43h3.58a1.5 1.5 0 1 0 2.82 0H12a.5.5 0 0 0 .45-.73l-.94-1.89V5.5A4.5 4.5 0 0 0 8 1.11ZM2.8 11h8.4l-.5-1H3.3l-.5 1Zm7.7-2V5.5a3.5 3.5 0 1 0-7 0V9h7Zm-4 3.5a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Z',
-          })
+          }),
         ),
         rss: a.createElement(
           a.Fragment,
@@ -2769,7 +2769,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M5 11a2 2 0 1 1-4 0 2 2 0 0 1 4 0Zm-1 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z',
-          })
+          }),
         ),
         sharealt: a.createElement(
           a.Fragment,
@@ -2779,7 +2779,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M7.35 7.36 12 2.7v1.8a.5.5 0 0 0 1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 1 0 0 1h1.8L6.64 6.64a.5.5 0 1 0 .7.7Z',
-          })
+          }),
         ),
         share: a.createElement(
           a.Fragment,
@@ -2789,7 +2789,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M2 4a1 1 0 0 0-1 1v7a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V5a1 1 0 0 0-1-1H9.5a.5.5 0 1 0 0 1H12v7H2V5h2.5a.5.5 0 0 0 0-1H2Z',
-          })
+          }),
         ),
         circlehollow: a.createElement(
           a.Fragment,
@@ -2797,7 +2797,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 13A6 6 0 1 0 7 1a6 6 0 0 0 0 12Zm0 1A7 7 0 1 0 7 0a7 7 0 0 0 0 14Z',
-          })
+          }),
         ),
         circle: a.createElement('path', {
           d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Z',
@@ -2808,7 +2808,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.5 0h7c.28 0 .5.22.5.5v13a.5.5 0 0 1-.45.5.46.46 0 0 1-.38-.12L7 11.16l-3.17 2.72a.46.46 0 0 1-.38.12.5.5 0 0 1-.45-.5V.5c0-.28.22-.5.5-.5ZM4 12.41l2.66-2.28a.45.45 0 0 1 .38-.13c.1.01.2.05.29.12l2.67 2.3V1H4v11.41Z',
-          })
+          }),
         ),
         bookmark: a.createElement(
           a.Fragment,
@@ -2816,7 +2816,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.5 0h7c.28 0 .5.22.5.5v13a.5.5 0 0 1-.45.5.46.46 0 0 1-.38-.12L7 11.16l-3.17 2.72a.46.46 0 0 1-.38.12.5.5 0 0 1-.45-.5V.5c0-.28.22-.5.5-.5Z',
-          })
+          }),
         ),
         diamond: a.createElement(
           a.Fragment,
@@ -2824,7 +2824,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M8.41 1.59a2 2 0 0 0-2.82 0l-4 4a2 2 0 0 0 0 2.82l4 4a2 2 0 0 0 2.82 0l4-4a2 2 0 0 0 0-2.82l-4-4Zm.71-.71a3 3 0 0 0-4.24 0l-4 4a3 3 0 0 0 0 4.24l4 4a3 3 0 0 0 4.24 0l4-4a3 3 0 0 0 0-4.24l-4-4Z',
-          })
+          }),
         ),
         hearthollow: a.createElement(
           a.Fragment,
@@ -2832,28 +2832,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M12.81 1.85 13 2a2.97 2.97 0 0 1 .75 1.17 4.39 4.39 0 0 1 .12 2.51 6.26 6.26 0 0 1-1.65 2.55l-4.78 4.6A.59.59 0 0 1 7 13a.67.67 0 0 1-.44-.17L1.78 8.22a7.84 7.84 0 0 1-1.25-1.6C.37 6.31.24 6 .14 5.67a4.32 4.32 0 0 1 .12-2.51 3.2 3.2 0 0 1 1.95-1.9c.47-.18 1-.27 1.57-.27.3 0 .61.04.91.14.3.09.59.21.86.36s.52.33.77.52c.24.19.47.38.68.58a7.56 7.56 0 0 1 1.46-1.1c.27-.15.55-.27.84-.36.3-.1.6-.14.9-.14.59 0 1.12.09 1.59.26.39.15.73.34 1.02.59ZM1.2 3.53A2.2 2.2 0 0 1 2.57 2.2M1.2 3.53c-.13.33-.2.72-.2 1.18 0 .22.03.45.1.68a3.97 3.97 0 0 0 .79 1.46c.19.23.38.45.59.65l4.51 4.36 4.52-4.35c.2-.2.4-.4.59-.65.18-.23.34-.47.49-.73.13-.23.23-.48.3-.73.08-.23.11-.46.11-.7 0-.45-.07-.84-.2-1.18-.12-.33-.3-.6-.51-.8v-.01c-.22-.2-.5-.38-.85-.51-.34-.13-.75-.2-1.24-.2-.2 0-.4.03-.6.09a4.95 4.95 0 0 0-1.9 1.22l-.68.67-.7-.65a9.97 9.97 0 0 0-.62-.53c-.2-.16-.42-.3-.63-.42h-.01c-.21-.12-.43-.22-.66-.29C4.2 2.03 4 2 3.77 2c-.48 0-.88.07-1.21.2',
-          })
+          }),
         ),
         heart: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M12.81 1.85 13 2a2.97 2.97 0 0 1 .75 1.17 4.39 4.39 0 0 1 .12 2.51 6.26 6.26 0 0 1-1.65 2.55l-4.78 4.6A.59.59 0 0 1 7 13a.67.67 0 0 1-.44-.17L1.78 8.22a7.84 7.84 0 0 1-1.25-1.6C.37 6.31.24 6 .14 5.67a4.32 4.32 0 0 1 .12-2.51 3.2 3.2 0 0 1 1.95-1.9c.47-.18 1-.27 1.57-.27.3 0 .61.04.91.14.3.09.59.21.86.36s.52.33.77.52c.24.19.47.38.68.58a7.56 7.56 0 0 1 1.46-1.1c.27-.15.55-.27.84-.36.3-.1.6-.14.9-.14.59 0 1.12.09 1.59.26.39.15.73.34 1.02.59Z',
-          })
+          }),
         ),
         starhollow: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M6.32.78a.75.75 0 0 1 1.36 0l1.63 3.54 3.87.46c.63.07.89.86.42 1.3l-2.86 2.64.76 3.81a.75.75 0 0 1-1.1.8L7 11.43l-3.4 1.9a.75.75 0 0 1-1.1-.8l.76-3.81L.4 6.07a.75.75 0 0 1 .42-1.3l3.87-.45L6.32.78ZM7 1.7 5.54 4.86c-.11.24-.34.4-.6.43l-3.46.42 2.56 2.37c.2.17.28.44.23.7l-.68 3.42 3.04-1.7c.23-.14.5-.14.74 0l3.04 1.7-.68-3.43a.75.75 0 0 1 .23-.7l2.56-2.36-3.47-.42a.75.75 0 0 1-.59-.43L7 1.7Z',
-          })
+          }),
         ),
         star: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7.68.78a.75.75 0 0 0-1.36 0L4.69 4.32l-3.87.46a.75.75 0 0 0-.42 1.3l2.86 2.64-.76 3.81a.75.75 0 0 0 1.1.8l3.4-1.9 3.4 1.9a.75.75 0 0 0 1.1-.8l-.76-3.81 2.86-2.65a.75.75 0 0 0-.42-1.3L9.3 4.33 7.68.78Z',
-          })
+          }),
         ),
         certificate: a.createElement(
           a.Fragment,
@@ -2861,21 +2861,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M10 7.85A4.49 4.49 0 0 0 7 0a4.5 4.5 0 0 0-3 7.85V13a.5.5 0 0 0 .5.5.5.5 0 0 0 .35-.15L7 11.21l2.15 2.14A.5.5 0 0 0 10 13V7.85ZM7 8a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Zm-.35 2.15c.2-.2.5-.2.7 0L9 11.79V8.53a4.48 4.48 0 0 1-4 0v3.26l1.65-1.64Z',
-          })
+          }),
         ),
         verified: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M6.56 13.12a1 1 0 0 1 .88 0l.98.49a1 1 0 0 0 1.31-.43l.52-.97a1 1 0 0 1 .7-.51l1.08-.2a1 1 0 0 0 .81-1.1l-.15-1.1a1 1 0 0 1 .27-.82l.76-.8a1 1 0 0 0 0-1.37l-.76-.79a1 1 0 0 1-.27-.83l.15-1.08a1 1 0 0 0-.8-1.12l-1.09-.19a1 1 0 0 1-.7-.5L9.73.81A1 1 0 0 0 8.43.4l-1 .49a1 1 0 0 1-.87 0L5.58.39a1 1 0 0 0-1.31.43l-.52.97a1 1 0 0 1-.7.51l-1.08.2a1 1 0 0 0-.81 1.1l.15 1.1a1 1 0 0 1-.27.82l-.76.8a1 1 0 0 0 0 1.37l.76.79a1 1 0 0 1 .27.83l-.15 1.08a1 1 0 0 0 .8 1.12l1.09.19a1 1 0 0 1 .7.5l.52.98a1 1 0 0 0 1.3.43l1-.49Zm4.3-8.47c.19.2.19.5 0 .7l-4.5 4.5a.5.5 0 0 1-.71 0l-2.5-2.5a.5.5 0 1 1 .7-.7L6 8.79l4.15-4.14c.2-.2.5-.2.7 0Z',
-          })
+          }),
         ),
         thumbsup: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M11 12.02c-.4.37-.91.56-1.56.56h-.88a5.5 5.5 0 0 1-1.3-.16c-.42-.1-.91-.25-1.47-.45-.3-.12-.63-.21-.95-.27H2.88a.84.84 0 0 1-.62-.26.84.84 0 0 1-.26-.61V6.45c0-.24.09-.45.26-.62a.84.84 0 0 1 .62-.25h1.87c.16-.11.47-.47.93-1.06.27-.35.51-.64.74-.88.1-.11.19-.3.24-.58.05-.28.12-.57.2-.87.1-.3.24-.55.43-.74a.87.87 0 0 1 .62-.25c.38 0 .72.07 1.03.22.3.15.54.38.7.7a2.94 2.94 0 0 1 .21 1.58 3 3 0 0 1-.3 1h1.2c.47 0 .88.17 1.23.52s.52.8.52 1.22c0 .29-.04.66-.34 1.12.05.15.07.3.07.47 0 .35-.09.68-.26.98.07.54-.07 1.08-.4 1.51a1.9 1.9 0 0 1-.57 1.5Zm.47-5.33a.96.96 0 0 0 .03-.25.74.74 0 0 0-.23-.51.68.68 0 0 0-.52-.23H7.93l.73-1.45a2 2 0 0 0 .21-.87c0-.44-.07-.7-.13-.82a.53.53 0 0 0-.24-.24 1.3 1.3 0 0 0-.54-.12.99.99 0 0 0-.14.28c-.08.27-.13.52-.18.76-.06.38-.2.77-.48 1.07v.01l-.02.01c-.2.2-.4.46-.67.8l-.61.76c-.15.17-.35.38-.54.51l-.26.18H5v4.13h.02c.38.08.76.18 1.12.32.53.2.98.33 1.35.42.36.09.71.13 1.07.13h.88c.43 0 .68-.11.87-.29a.9.9 0 0 0 .26-.7l-.02-.37.22-.3c.17-.23.25-.5.2-.78l-.04-.33.17-.3a.97.97 0 0 0 .13-.48c0-.09 0-.13-.02-.15l-.15-.46.26-.4c.1-.15.13-.25.15-.33ZM3.5 10.8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z',
-          })
+          }),
         ),
         shield: a.createElement(
           a.Fragment,
@@ -2883,7 +2883,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M11.76 2.08a.5.5 0 0 1 .24.42v6a.5.5 0 0 1-.17.38l-4.5 3.99a.5.5 0 0 1-.67 0l-4.49-4A.5.5 0 0 1 2 8.5V2.5c0-.18.1-.34.24-.42l.01-.02a2.5 2.5 0 0 1 .3-.16c.22-.1.52-.24.92-.37C4.27 1.26 5.44 1 7 1c1.56 0 2.73.26 3.53.53a6.97 6.97 0 0 1 1.22.53l.01.02ZM3 2.79v5.49l1.07.94 6.59-6.58-.44-.17C9.52 2.24 8.44 2 7 2c-1.44 0-2.52.24-3.22.47-.35.12-.6.24-.78.32Zm4 9.04L4.82 9.9 11 3.71v4.57l-4 3.55Z',
-          })
+          }),
         ),
         basket: a.createElement(
           a.Fragment,
@@ -2896,7 +2896,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M4.5 7c.28 0 .5.22.5.5v2a.5.5 0 0 1-1 0v-2c0-.28.22-.5.5-.5ZM10 7.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 1 0v-2ZM6.5 9.5v-2a.5.5 0 0 1 1 0v2a.5.5 0 0 1-1 0Z',
-          })
+          }),
         ),
         beaker: a.createElement(
           a.Fragment,
@@ -2904,7 +2904,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M4.5 2h.75v3.87l-3.03 5.26c-.48.83.12 1.87 1.08 1.87h7.4c.96 0 1.57-1.04 1.08-1.87L8.75 5.87V2h.75a.5.5 0 0 0 0-1h-5a.5.5 0 0 0 0 1Zm1.75 4V2h1.5v4.13l.07.12 1 1.75H5.18l1.01-1.75.07-.12V6ZM4.6 9l-1.52 2.63c-.1.16.03.37.22.37h7.4c.2 0 .31-.2.22-.37L9.4 9H4.6Z',
-          })
+          }),
         ),
         hourglass: a.createElement(
           a.Fragment,
@@ -2915,7 +2915,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.5 1a.5.5 0 0 0-.5.5c0 1.06.14 1.9.68 2.97.34.7.86 1.5 1.6 2.53a16.53 16.53 0 0 0-1.8 2.96A6 6 0 0 0 3 12.49v.01a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 .5-.5 6 6 0 0 0-.48-2.54c-.34-.8-.9-1.71-1.8-2.96a19.78 19.78 0 0 0 1.6-2.53c.54-1.08.68-1.9.68-2.97a.5.5 0 0 0-.5-.5h-7Zm6.49 11a4.68 4.68 0 0 0-.39-1.65c-.27-.65-.73-1.4-1.5-2.5a133 133 0 0 1-.75 1 .5.5 0 0 1-.56.1.5.5 0 0 1-.2-.16l-.7-.94a14.36 14.36 0 0 0-1.5 2.5A4.68 4.68 0 0 0 4.02 12H10ZM6.3 6.72l.7.94a90.06 90.06 0 0 0 .7-.96c.49-.67.87-1.22 1.17-1.7H5.13A32.67 32.67 0 0 0 6.3 6.72ZM4.56 4h4.88c.36-.73.5-1.31.55-2H4c.04.69.19 1.27.55 2Z',
-          })
+          }),
         ),
         flag: a.createElement(
           a.Fragment,
@@ -2923,7 +2923,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M11.5 1h-9a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 1 0V8h8.5a.5.5 0 0 0 .35-.85L9.21 4.5l2.64-2.65A.5.5 0 0 0 11.5 1ZM8.15 4.15 10.29 2H3v5h7.3L8.14 4.85a.5.5 0 0 1 0-.7Z',
-          })
+          }),
         ),
         cloudhollow: a.createElement(
           a.Fragment,
@@ -2931,7 +2931,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M10 7V6a3 3 0 0 0-5.9-.74l-.18.68-.7.07A2.5 2.5 0 0 0 3.5 11h3.19l.07-.01h.08L7 11h4a2 2 0 1 0 0-4h-1ZM3.12 5.02A3.5 3.5 0 0 0 3.5 12H11a3 3 0 1 0 0-6 4 4 0 0 0-7.88-.98Z',
-          })
+          }),
         ),
         cloud: a.createElement('path', {
           d: 'M7 2a4 4 0 0 1 4 4 3 3 0 1 1 0 6H3.5a3.5 3.5 0 0 1-.38-6.98A4 4 0 0 1 7 2Z',
@@ -2942,7 +2942,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'm13.85 2.15-2-2a.5.5 0 0 0-.7 0l-1.5 1.5-9 9a.5.5 0 0 0-.14.26L0 13.39a.5.5 0 0 0 .14.46.5.5 0 0 0 .46.14l2.48-.5a.5.5 0 0 0 .27-.14l9-9 1.5-1.5a.5.5 0 0 0 0-.7ZM12 3.29l.8-.79-1.3-1.3-.8.8L12 3.3Zm-2-.58L1.7 11 3 12.3 11.3 4 10 2.7ZM1.14 12.86l.17-.85.68.68-.85.17Z',
-          })
+          }),
         ),
         cog: a.createElement(
           a.Fragment,
@@ -2954,7 +2954,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M.94 6.53c.13.12.19.3.18.46 0 .17-.05.34-.18.47L0 8.39c.19.94.55 1.81 1.07 2.58h1.32c.18 0 .34.07.46.2.12.11.2.27.2.45v1.32c.76.51 1.62.88 2.55 1.06l.94-.94a.63.63 0 0 1 .45-.19h.03c.16 0 .33.07.45.19l.94.94a7.1 7.1 0 0 0 2.55-1.06v-1.33c0-.18.07-.35.2-.46.11-.12.27-.2.45-.2h1.33A7.1 7.1 0 0 0 14 8.4l-.95-.94a.64.64 0 0 1-.18-.47c0-.17.06-.34.18-.46l.95-.95a7.1 7.1 0 0 0-1.05-2.52h-1.34a.63.63 0 0 1-.46-.2.64.64 0 0 1-.2-.46V1.06A7.1 7.1 0 0 0 8.42 0l-.94.94a.63.63 0 0 1-.45.19H7a.63.63 0 0 1-.45-.19L5.6 0a7.1 7.1 0 0 0-2.56 1.06v1.33c0 .18-.07.34-.2.46a.63.63 0 0 1-.45.2H1.06A7.1 7.1 0 0 0 0 5.59l.94.94Zm.7 1.63c.33-.32.49-.75.48-1.17 0-.42-.15-.85-.47-1.17l-.54-.54c.12-.43.3-.85.51-1.23h.77c.46 0 .87-.2 1.17-.5.3-.29.48-.7.48-1.16v-.77c.4-.22.81-.39 1.25-.52l.54.55c.33.32.75.48 1.16.48h.03c.42 0 .84-.16 1.16-.48l.54-.54c.44.12.85.3 1.24.5v.8c0 .45.19.87.49 1.16.3.3.7.5 1.16.5h.78c.2.37.38.78.5 1.2l-.54.55c-.33.32-.49.75-.48 1.17 0 .42.15.85.48 1.17l.55.55c-.13.44-.3.85-.52 1.24h-.77c-.45 0-.87.2-1.16.5-.3.29-.5.7-.5 1.16v.77c-.38.21-.8.39-1.23.51l-.54-.54a1.64 1.64 0 0 0-1.16-.48H7c-.41 0-.83.16-1.16.48l-.54.55a6.1 6.1 0 0 1-1.25-.52v-.76c0-.45-.19-.87-.48-1.16-.3-.3-.71-.5-1.17-.5h-.76a6.1 6.1 0 0 1-.53-1.25l.55-.55Z',
-          })
+          }),
         ),
         nut: a.createElement(
           a.Fragment,
@@ -2965,28 +2965,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M6.5.29a1 1 0 0 1 1 0l5.06 2.92c.31.18.5.51.5.87v5.84a1 1 0 0 1-.5.87L7.5 13.7a1 1 0 0 1-1 0L1.44 10.8a1 1 0 0 1-.5-.87V4.08a1 1 0 0 1 .5-.87L6.5.3Zm.5.86 5.06 2.93v5.84L7 12.85 1.94 9.92V4.08L7 1.15Z',
-          })
+          }),
         ),
         wrench: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M10.5 1c.44 0 .56.52.25.83l-.8.81c-.2.2-.2.52 0 .72l.69.7c.2.2.52.2.72 0l.8-.81c.32-.31.84-.2.84.25a2.5 2.5 0 0 1-3.41 2.33L2.7 12.7a1 1 0 0 1-1.42-1.42l6.88-6.88A2.5 2.5 0 0 1 10.5 1ZM2 12.5a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z',
-          })
+          }),
         ),
         ellipsis: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M4 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM13 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0ZM7 8.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z',
-          })
+          }),
         ),
         check: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M13.85 3.35a.5.5 0 0 0-.7-.7L5 10.79.85 6.65a.5.5 0 1 0-.7.7l4.5 4.5c.2.2.5.2.7 0l8.5-8.5Z',
-          })
+          }),
         ),
         form: a.createElement(
           a.Fragment,
@@ -2996,49 +2996,49 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'm6.35 9.86 7.5-7.5a.5.5 0 0 0-.7-.71L6 8.8 3.85 6.65a.5.5 0 1 0-.7.7l2.5 2.5c.2.2.5.2.7 0Z',
-          })
+          }),
         ),
         batchdeny: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M11.5 2a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2Zm-2.646.646a.5.5 0 0 1 0 .708L5.207 7l3.647 3.646a.5.5 0 0 1-.708.708L4.5 7.707.854 11.354a.5.5 0 0 1-.708-.708L3.793 7 .146 3.354a.5.5 0 1 1 .708-.708L4.5 6.293l3.646-3.647a.5.5 0 0 1 .708 0ZM11 7a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 11 7Zm.5 4a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2Z',
-          })
+          }),
         ),
         batchaccept: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M11.5 2a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2Zm-2.2.6a.5.5 0 0 1 .1.7l-5.995 7.993a.505.505 0 0 1-.37.206.5.5 0 0 1-.395-.152L.146 8.854a.5.5 0 1 1 .708-.708l2.092 2.093L8.6 2.7a.5.5 0 0 1 .7-.1ZM11 7a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 0 1h-2A.5.5 0 0 1 11 7Zm.5 4a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1h-2Z',
-          })
+          }),
         ),
         controls: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M10.5 1c.28 0 .5.22.5.5V2h1.5a.5.5 0 0 1 0 1H11v.5a.5.5 0 0 1-1 0V3H1.5a.5.5 0 0 1 0-1H10v-.5c0-.28.22-.5.5-.5ZM1.5 11a.5.5 0 0 0 0 1H10v.5a.5.5 0 0 0 1 0V12h1.5a.5.5 0 0 0 0-1H11v-.5a.5.5 0 0 0-1 0v.5H1.5ZM1 7c0-.28.22-.5.5-.5H3V6a.5.5 0 0 1 1 0v.5h8.5a.5.5 0 0 1 0 1H4V8a.5.5 0 0 1-1 0v-.5H1.5A.5.5 0 0 1 1 7Z',
-          })
+          }),
         ),
         plus: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7.5.5a.5.5 0 0 0-1 0v6h-6a.5.5 0 0 0 0 1h6v6a.5.5 0 0 0 1 0v-6h6a.5.5 0 0 0 0-1h-6v-6Z',
-          })
+          }),
         ),
         closeAlt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M2.03.97A.75.75 0 0 0 .97 2.03L5.94 7 .97 11.97a.75.75 0 1 0 1.06 1.06L7 8.06l4.97 4.97a.75.75 0 1 0 1.06-1.06L8.06 7l4.97-4.97A.75.75 0 0 0 11.97.97L7 5.94 2.03.97Z',
-          })
+          }),
         ),
         cross: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1.85 1.15a.5.5 0 1 0-.7.7L6.29 7l-5.14 5.15a.5.5 0 0 0 .7.7L7 7.71l5.15 5.14a.5.5 0 0 0 .7-.7L7.71 7l5.14-5.15a.5.5 0 0 0-.7-.7L7 6.29 1.85 1.15Z',
-          })
+          }),
         ),
         trash: a.createElement(
           a.Fragment,
@@ -3049,21 +3049,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M4.5.5c0-.28.22-.5.5-.5h4c.28 0 .5.22.5.5V2h3a.5.5 0 0 1 0 1H12v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V3h-.5a.5.5 0 0 1 0-1h3V.5ZM3 3v8a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V3H3Zm2.5-2h3v1h-3V1Z',
-          })
+          }),
         ),
         pinalt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M13.44 4.44 9.56.56a1.5 1.5 0 0 0-2.12 0L7 1a1.41 1.41 0 0 0 0 2L5 5H3.66A4 4 0 0 0 .83 6.17l-.48.48a.5.5 0 0 0 0 .7l2.8 2.8-3 3a.5.5 0 0 0 .7.7l3-3 2.8 2.8c.2.2.5.2.7 0l.48-.48A4 4 0 0 0 9 10.34V9l2-2c.55.55 1.45.55 2 0l.44-.44a1.5 1.5 0 0 0 0-2.12ZM11 5.59l-3 3v1.75a3 3 0 0 1-.88 2.12L7 12.6 1.41 7l.13-.12A3 3 0 0 1 3.66 6H5.4l3-3-.7-.7a.41.41 0 0 1 0-.6l.44-.43c.2-.2.5-.2.7 0l3.88 3.88c.2.2.2.5 0 .7l-.44.44a.41.41 0 0 1-.58 0L11 5.6Z',
-          })
+          }),
         ),
         unpin: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M13.44 4.44 9.56.56a1.5 1.5 0 0 0-2.12 0L7 1a1.41 1.41 0 0 0 0 2L5.7 4.3l.71.7 2-2-.7-.7a.41.41 0 0 1 0-.6l.44-.43c.2-.2.5-.2.7 0l3.88 3.88c.2.2.2.5 0 .7l-.44.44a.41.41 0 0 1-.58 0L11 5.6l-2 2 .7.7L11 7c.55.55 1.45.55 2 0l.44-.44a1.5 1.5 0 0 0 0-2.12ZM.83 6.17A4 4 0 0 1 3.59 5l1 1h-.93a3 3 0 0 0-2.12.88L1.4 7 7 12.59l.12-.13A3 3 0 0 0 8 10.34v-.93l1 1a4 4 0 0 1-1.17 2.76l-.48.48a.5.5 0 0 1-.7 0l-2.8-2.8-3 3a.5.5 0 0 1-.7-.7l3-3-2.8-2.8a.5.5 0 0 1 0-.7l.48-.48Zm1.02-5.02a.5.5 0 1 0-.7.7l11 11a.5.5 0 0 0 .7-.7l-11-11Z',
-          })
+          }),
         ),
         add: a.createElement(
           a.Fragment,
@@ -3074,7 +3074,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14Zm0-1A6 6 0 1 0 7 1a6 6 0 0 0 0 12Z',
-          })
+          }),
         ),
         subtract: a.createElement(
           a.Fragment,
@@ -3085,7 +3085,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0A6 6 0 1 1 1 7a6 6 0 0 1 12 0Z',
-          })
+          }),
         ),
         close: a.createElement(
           a.Fragment,
@@ -3096,7 +3096,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14Zm0-1A6 6 0 1 0 7 1a6 6 0 0 0 0 12Z',
-          })
+          }),
         ),
         delete: a.createElement(
           a.Fragment,
@@ -3104,14 +3104,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0a6 6 0 0 1-9.87 4.58l8.45-8.45A5.98 5.98 0 0 1 13 7ZM2.42 10.87l8.45-8.45a6 6 0 0 0-8.46 8.46Z',
-          })
+          }),
         ),
         passed: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14Zm3.85-9.35c.2.2.2.5 0 .7l-4.5 4.5a.5.5 0 0 1-.7 0l-2.5-2.5a.5.5 0 1 1 .7-.7L6 8.79l4.15-4.14c.2-.2.5-.2.7 0Z',
-          })
+          }),
         ),
         changed: a.createElement(
           a.Fragment,
@@ -3119,14 +3119,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14ZM3.5 6.5a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7Z',
-          })
+          }),
         ),
         failed: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7 14A7 7 0 1 0 7 0a7 7 0 0 0 0 14Zm2.85-9.85c.2.2.2.5 0 .7L7.71 7l2.14 2.15a.5.5 0 0 1-.7.7L7 7.71 4.85 9.85a.5.5 0 0 1-.7-.7L6.29 7 4.15 4.85a.5.5 0 1 1 .7-.7L7 6.29l2.15-2.14c.2-.2.5-.2.7 0Z',
-          })
+          }),
         ),
         clear: a.createElement(
           a.Fragment,
@@ -3134,7 +3134,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M5 2h7a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H5a2 2 0 0 1-1.41-.59l-3-3a2 2 0 0 1 0-2.82l3-3A2 2 0 0 1 5 2Zm1.15 3.15c.2-.2.5-.2.7 0L8 6.29l1.15-1.14a.5.5 0 1 1 .7.7L8.71 7l1.14 1.15a.5.5 0 0 1-.7.7L8 7.71 6.85 8.85a.5.5 0 1 1-.7-.7L7.29 7 6.15 5.85a.5.5 0 0 1 0-.7Z',
-          })
+          }),
         ),
         comment: a.createElement(
           a.Fragment,
@@ -3145,7 +3145,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M12.5 12H5.7l-1.85 1.86a.5.5 0 0 1-.35.14.5.5 0 0 1-.5-.5V12H1.5a.5.5 0 0 1-.5-.5v-9c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v9a.5.5 0 0 1-.5.5ZM2 11V3h10v8H2Z',
-          })
+          }),
         ),
         commentadd: a.createElement(
           a.Fragment,
@@ -3156,7 +3156,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.7 13.97a.5.5 0 0 1-.7-.46V12H1.5a.5.5 0 0 1-.5-.5v-9c0-.28.22-.5.5-.5h11c.28 0 .5.22.5.5v9a.5.5 0 0 1-.5.5H5.7l-1.85 1.85a.5.5 0 0 1-.16.1ZM2 3v8h10V3H2Z',
-          })
+          }),
         ),
         requestchange: a.createElement(
           a.Fragment,
@@ -3167,7 +3167,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.7 13.97a.5.5 0 0 1-.7-.46V12H1.5a.5.5 0 0 1-.5-.5v-9c0-.28.22-.5.5-.5h11c.28 0 .5.22.5.5v9a.5.5 0 0 1-.5.5H5.7l-1.85 1.85a.5.5 0 0 1-.16.1ZM2 3v8h10V3H2Z',
-          })
+          }),
         ),
         comments: a.createElement(
           a.Fragment,
@@ -3178,7 +3178,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M12 11.5V10h1.5a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5V3H.5a.5.5 0 0 0-.5.5v8c0 .28.22.5.5.5H2v1.5a.5.5 0 0 0 .5.5.5.5 0 0 0 .35-.14L4.71 12h6.79a.5.5 0 0 0 .5-.5ZM3 3V2h10v7h-1V3.5a.5.5 0 0 0-.5-.5H3Zm-2 8V4h10v7H1Z',
-          })
+          }),
         ),
         lock: a.createElement(
           a.Fragment,
@@ -3189,7 +3189,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3 4a4 4 0 1 1 8 0v1h1.5c.28 0 .5.23.5.5v8a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-8c0-.27.22-.5.5-.5H3V4Zm7 1V4a3 3 0 1 0-6 0v1h6Zm2 1H2v7h10V6Z',
-          })
+          }),
         ),
         unlock: a.createElement(
           a.Fragment,
@@ -3201,7 +3201,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             fillRule: 'evenodd',
             clipRule: 'evenodd',
             d: 'M7 1a3 3 0 0 0-3 3v1h8.5c.28 0 .5.23.5.5v8a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-8c0-.27.22-.5.5-.5H3V4a4 4 0 0 1 7.76-1.38.5.5 0 0 1-.94.34A3 3 0 0 0 7 1ZM2 6h10v7H2V6Z',
-          })
+          }),
         ),
         key: a.createElement(
           a.Fragment,
@@ -3210,7 +3210,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7.5 8.53v.97a.5.5 0 0 1-.5.5H5.5v1.5a.5.5 0 0 1-.5.5H3.5v1.5a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 1 .15-.36l5.12-5.11a4.5 4.5 0 1 1 2.23 2.5ZM6 4.5a3.5 3.5 0 1 1 1.5 2.87c-.29-.2-1-.37-1 .48V9H5a.5.5 0 0 0-.5.5V11H3a.5.5 0 0 0-.5.5V13H1v-1.3l5.2-5.19c.15-.16.18-.4.1-.6A3.47 3.47 0 0 1 6 4.5Z',
-          })
+          }),
         ),
         outbox: a.createElement(
           a.Fragment,
@@ -3220,7 +3220,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M2 7.5a.5.5 0 1 0-1 0v5c0 .28.22.5.5.5h11a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-1 0V12H2V7.5Z',
-          })
+          }),
         ),
         credit: a.createElement(
           a.Fragment,
@@ -3231,7 +3231,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M0 11.5c0 .28.22.5.5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H.5a.5.5 0 0 0-.5.5v9ZM1 3v1h12V3H1Zm0 8h12V6H1v5Z',
-          })
+          }),
         ),
         button: a.createElement(
           a.Fragment,
@@ -3241,7 +3241,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M6.45 7a.5.5 0 0 1 .3.08l3.48 2.02a.5.5 0 0 1 0 .87l-1.08.62.75 1.3a.75.75 0 0 1-1.3.75l-.75-1.3-1.07.62a.5.5 0 0 1-.67-.13.5.5 0 0 1-.1-.3L6 7.5a.5.5 0 0 1 .45-.5Z',
-          })
+          }),
         ),
         type: a.createElement(
           a.Fragment,
@@ -3251,21 +3251,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M0 4.5c0-.27.22-.5.5-.5h4a.5.5 0 1 1 0 1H1v4h3.5a.5.5 0 1 1 0 1h-4a.5.5 0 0 1-.5-.5v-5ZM9.5 4a.5.5 0 1 0 0 1H13v4H9.5a.5.5 0 1 0 0 1h4a.5.5 0 0 0 .5-.5v-5a.5.5 0 0 0-.5-.5h-4Z',
-          })
+          }),
         ),
         pointerdefault: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M5.94 12.46c.11 0 .2-.06.25-.15l1.58-3.16 2.54 2.54c.04.05.1.07.19.07a.3.3 0 0 0 .2-.07l.8-.8a.27.27 0 0 0 0-.38L8.9 7.9l3.4-1.7c.06-.03.1-.07.12-.11a.22.22 0 0 0 .04-.14.33.33 0 0 0-.06-.16.17.17 0 0 0-.09-.07h-.02L1.91 1.55a.27.27 0 0 0-.35.36l4.15 10.37c.04.09.12.16.23.17Zm-.03 1h-.02a1.28 1.28 0 0 1-1.1-.8L.62 2.29A1.27 1.27 0 0 1 2.3.63l10.35 4.15c.52.18.79.65.81 1.11.04.53-.27.98-.7 1.2l-2.17 1.08L12.2 9.8c.5.5.5 1.3 0 1.8l-.8.8v.01c-.5.46-1.3.48-1.8-.01l-1.56-1.56-.95 1.92c-.23.45-.68.7-1.15.7h-.03Z',
-          })
+          }),
         ),
         pointerhand: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M11.87 6v-.02c-.03-.27-.23-.48-.47-.5a.5.5 0 0 0-.53.5v1.41c0 .25-.22.47-.47.47a.48.48 0 0 1-.47-.47V5.17a.6.6 0 0 0 0-.05c-.02-.27-.23-.5-.47-.5a.5.5 0 0 0-.52.5v1.65l-.01.1a.49.49 0 0 1-.46.37.48.48 0 0 1-.47-.47V4.62a.6.6 0 0 0 0-.05c-.03-.27-.23-.48-.47-.5a.5.5 0 0 0-.53.5v2.2c0 .25-.22.47-.47.47a.49.49 0 0 1-.47-.47V1.75c-.02-.27-.22-.5-.47-.5a.5.5 0 0 0-.52.5v6.78c0 .25-.22.47-.47.47a.48.48 0 0 1-.47-.47v-.26a.78.78 0 0 0-.06-.31.65.65 0 0 0-.16-.22l-.2-.19A6.37 6.37 0 0 0 3.06 7h-.02c-.43-.34-.62-.25-.69-.2-.26.14-.29.5-.13.74l1.73 2.6v.01h-.01l-.04.02.05-.02s1.21 2.6 3.57 2.6c3.54 0 4.2-1.9 4.31-4.42.04-.6.04-1.19.03-1.78V6Zm.97 2.38c-.06 1.29-.26 2.67-1.08 3.72-.88 1.12-2.29 1.65-4.23 1.65a4.64 4.64 0 0 1-3.4-1.62 6.96 6.96 0 0 1-1.05-1.5v-.02L1.4 8.1A1.6 1.6 0 0 1 1.15 7c.05-.38.26-.8.69-1.04.2-.13.48-.23.85-.19.36.05.68.22.98.45.14.1.27.22.4.33v-4.8A1.5 1.5 0 0 1 5.63.25c.93.04 1.43.86 1.43 1.55v1.33c.17-.05.35-.07.53-.06h.02c.5.04.91.33 1.15.71a1.5 1.5 0 0 1 .74-.16c.66.03 1.12.46 1.32.97a1.5 1.5 0 0 1 .64-.1h.02c.85.06 1.39.8 1.39 1.55v.48c0 .6 0 1.24-.03 1.86Z',
-          })
+          }),
         ),
         browser: a.createElement(
           a.Fragment,
@@ -3273,7 +3273,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M.5 13a.5.5 0 0 1-.5-.5v-11c0-.27.22-.5.5-.5h13c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5H.5Zm.5-1V4h12v8H1Zm1-9.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm2 0a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z',
-          })
+          }),
         ),
         tablet: a.createElement(
           a.Fragment,
@@ -3281,7 +3281,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.5 0C2.67 0 2 .68 2 1.5v11c0 .83.67 1.5 1.5 1.5h7c.83 0 1.5-.67 1.5-1.5v-11c0-.82-.67-1.5-1.5-1.5h-7Zm0 1h7c.28 0 .5.23.5.5V11H3V1.5c0-.27.22-.5.5-.5ZM6 12a.5.5 0 0 0 0 1h2a.5.5 0 0 0 0-1H6Z',
-          })
+          }),
         ),
         mobile: a.createElement(
           a.Fragment,
@@ -3289,7 +3289,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3 1.5C3 .68 3.67 0 4.5 0h5c.83 0 1.5.68 1.5 1.5v11c0 .83-.67 1.5-1.5 1.5h-5A1.5 1.5 0 0 1 3 12.5v-11ZM4 12V2h6v10H4Z',
-          })
+          }),
         ),
         watch: a.createElement(
           a.Fragment,
@@ -3298,7 +3298,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             key: 'watch',
             fillRule: 'evenodd',
             d: 'M4 .5c0-.27.22-.5.5-.5h5a.5.5 0 0 1 0 1h-5A.5.5 0 0 1 4 .5ZM9.5 3h-5a.5.5 0 0 0-.5.5v7c0 .28.22.5.5.5h5a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5Zm-5-1C3.67 2 3 2.68 3 3.5v7c0 .83.67 1.5 1.5 1.5h5c.83 0 1.5-.67 1.5-1.5v-7c0-.82-.67-1.5-1.5-1.5h-5ZM7 4c.28 0 .5.23.5.5v2h1a.5.5 0 1 1 0 1H7a.5.5 0 0 1-.5-.5V4.5c0-.27.22-.5.5-.5Zm-2.5 9a.5.5 0 0 0 0 1h5a.5.5 0 0 0 0-1h-5Z',
-          })
+          }),
         ),
         sidebar: a.createElement(
           a.Fragment,
@@ -3309,7 +3309,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1.5 13a.5.5 0 0 1-.5-.5v-11c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11Zm.5-1V2h3v10H2ZM6 2h6v10H6V2Z',
-          })
+          }),
         ),
         sidebaralt: a.createElement(
           a.Fragment,
@@ -3320,7 +3320,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1.5 13a.5.5 0 0 1-.5-.5v-11c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11Zm.5-1V2h6v10H2ZM9 2h3v10H9V2Z',
-          })
+          }),
         ),
         sidebaralttoggle: a.createElement(
           a.Fragment,
@@ -3331,7 +3331,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1.5 13a.5.5 0 0 1-.5-.5v-11c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11ZM9 12h3V2H9v10Zm-1 0H2V2h6v4.5H5.2l.66-.65a.5.5 0 1 0-.71-.7l-1.5 1.5a.5.5 0 0 0 0 .7l1.5 1.5a.5.5 0 1 0 .7-.7l-.64-.65H8V12Z',
-          })
+          }),
         ),
         sidebartoggle: a.createElement(
           a.Fragment,
@@ -3342,7 +3342,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1.5 13a.5.5 0 0 1-.5-.5v-11c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11Zm.5-1V2h3v10H2Zm4 0V7.5h2.8l-.65.65a.5.5 0 1 0 .7.7l1.5-1.5a.5.5 0 0 0 0-.7l-1.5-1.5a.5.5 0 1 0-.7.7l.64.65H6V2h6v10H6Z',
-          })
+          }),
         ),
         bottombar: a.createElement(
           a.Fragment,
@@ -3353,7 +3353,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1 1.5c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11ZM2 8V2h10v6H2Zm10 1v3H2V9h10Z',
-          })
+          }),
         ),
         bottombartoggle: a.createElement(
           a.Fragment,
@@ -3364,7 +3364,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1 12.5v-11c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5Zm1-.5V9h10v3H2Zm4.5-4H2V2h10v6H7.5V5.21l.65.65a.5.5 0 1 0 .7-.71l-1.5-1.5a.5.5 0 0 0-.7 0l-1.5 1.5a.5.5 0 1 0 .7.7l.65-.64v2.8Z',
-          })
+          }),
         ),
         cpu: a.createElement(
           a.Fragment,
@@ -3376,7 +3376,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M5.5 0c.28 0 .5.23.5.5V2h2V.5a.5.5 0 0 1 1 0V2h2.5c.28 0 .5.23.5.5V5h1.5a.5.5 0 0 1 0 1H12v2h1.5a.5.5 0 0 1 0 1H12v2.5a.5.5 0 0 1-.5.5H9v1.5a.5.5 0 0 1-1 0V12H6v1.5a.5.5 0 0 1-1 0V12H2.5a.5.5 0 0 1-.5-.5V9H.5a.5.5 0 0 1 0-1H2V6H.5a.5.5 0 0 1 0-1H2V2.5c0-.27.22-.5.5-.5H5V.5c0-.27.22-.5.5-.5ZM11 3H3v8h8V3Z',
-          })
+          }),
         ),
         database: a.createElement(
           a.Fragment,
@@ -3384,7 +3384,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M12 3c0-1.1-2.24-2-5-2s-5 .9-5 2v8c0 .43.26.75.54.98.3.23.68.41 1.12.55.88.3 2.06.47 3.34.47 1.28 0 2.46-.17 3.34-.46.44-.15.83-.33 1.12-.56.28-.23.54-.55.54-.98V3Zm-1.03 0a2.45 2.45 0 0 0-.8-.49A8.88 8.88 0 0 0 7 2c-1.29 0-2.4.21-3.16.51a2.45 2.45 0 0 0-.81.49l.05.05c.13.13.37.28.76.44C4.6 3.79 5.7 4 7 4s2.4-.21 3.16-.51a2.45 2.45 0 0 0 .81-.49ZM11 5.75V4.2A8.9 8.9 0 0 1 7 5a8.98 8.98 0 0 1-4-.8v1.55l.02.04c.02.04.06.09.14.15.17.13.44.27.82.4A10 10 0 0 0 7 6.75a10 10 0 0 0 3.02-.41c.38-.13.65-.27.82-.4a.62.62 0 0 0 .14-.15.15.15 0 0 0 .02-.03v-.01ZM3 7.01c.2.1.42.2.66.28.88.29 2.06.46 3.34.46 1.28 0 2.46-.17 3.34-.46.24-.08.46-.17.66-.28V8.5l-.02.04a.62.62 0 0 1-.14.15c-.17.13-.44.27-.82.4A10 10 0 0 1 7 9.5a10 10 0 0 1-3.02-.41 2.76 2.76 0 0 1-.82-.4.62.62 0 0 1-.14-.15.15.15 0 0 1-.02-.03V7Zm0 2.75V11l.02.04c.02.04.06.09.14.15.17.13.44.27.82.4A10 10 0 0 0 7 12a10 10 0 0 0 3.02-.41c.38-.13.65-.27.82-.4a.62.62 0 0 0 .14-.15.15.15 0 0 0 .02-.03V9.76c-.2.1-.42.2-.66.28-.88.29-2.06.46-3.34.46-1.28 0-2.46-.17-3.34-.46A4.77 4.77 0 0 1 3 9.76Z',
-          })
+          }),
         ),
         memory: a.createElement(
           a.Fragment,
@@ -3395,14 +3395,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M12 3.54a.5.5 0 0 0-.15-.39l-3-3a.5.5 0 0 0-.38-.14H2.5a.5.5 0 0 0-.5.5v13c0 .27.22.5.5.5h9a.5.5 0 0 0 .5-.5V3.53ZM3 1h5.3L11 3.71v5.3H3V1Zm0 9v3h8v-3H3Z',
-          })
+          }),
         ),
         structure: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M8.16 3.45a1.5 1.5 0 1 0-2.33 0l-4.02 6.58A1.5 1.5 0 1 0 2.91 12h8.18a1.5 1.5 0 1 0 1.1-1.97L8.16 3.45Zm-1.47.52a1.5 1.5 0 0 0 .62 0l4.03 6.58c-.11.14-.2.29-.25.45H2.9a1.5 1.5 0 0 0-.25-.45L6.7 3.97Z',
-          })
+          }),
         ),
         box: a.createElement(
           a.Fragment,
@@ -3410,7 +3410,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'm7.21.05 6.49 2.99a.5.5 0 0 1 .3.47v6.98a.5.5 0 0 1-.3.47l-6.47 2.98a.5.5 0 0 1-.46 0L.3 10.96a.5.5 0 0 1-.3-.47V3.5a.5.5 0 0 1 .3-.47L6.79.05a.5.5 0 0 1 .43 0ZM1 4.28v5.9l5.5 2.54v-5.9L1 4.28Zm6.5 8.44 5.5-2.54v-5.9L7.5 6.82v5.9Zm4.8-9.22L7 5.95 1.7 3.5 7 1.05l5.3 2.45Z',
-          })
+          }),
         ),
         power: a.createElement(
           a.Fragment,
@@ -3420,7 +3420,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M4.27 2.8a.5.5 0 0 0-.54-.83 6 6 0 1 0 6.54 0 .5.5 0 0 0-.54.84 5 5 0 1 1-5.46 0Z',
-          })
+          }),
         ),
         photo: a.createElement(
           a.Fragment,
@@ -3432,7 +3432,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M13 1.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5ZM2 9.3V2h10v5.3L9.85 5.15a.5.5 0 0 0-.7 0L6.5 7.8 5.35 6.65a.5.5 0 0 0-.7 0L2 9.3Zm7.5-3.1L12 8.7V12H2v-1.3l3-3 3.15 3.15a.5.5 0 0 0 .7-.71L7.21 8.5 9.5 6.21Z',
-          })
+          }),
         ),
         component: a.createElement(
           a.Fragment,
@@ -3440,7 +3440,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.5 1A2.5 2.5 0 0 0 1 3.5v7A2.5 2.5 0 0 0 3.5 13h7a2.5 2.5 0 0 0 2.5-2.5v-7A2.5 2.5 0 0 0 10.5 1h-7ZM12 6.5H7.5V2h3c.83 0 1.5.68 1.5 1.5v3Zm0 1v3c0 .83-.67 1.5-1.5 1.5h-3V7.5H12ZM6.5 12V7.5H2v3c0 .83.67 1.5 1.5 1.5h3ZM2 6.5h4.5V2h-3C2.67 2 2 2.68 2 3.5v3Z',
-          })
+          }),
         ),
         grid: a.createElement(
           a.Fragment,
@@ -3448,14 +3448,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1 1.5c0-.27.22-.5.5-.5H6c.28 0 .5.23.5.5V6a.5.5 0 0 1-.5.5H1.5A.5.5 0 0 1 1 6V1.5Zm1 4V2h3.5v3.5H2Zm5.5-4c0-.27.22-.5.5-.5h4.5c.28 0 .5.23.5.5V6a.5.5 0 0 1-.5.5H8a.5.5 0 0 1-.5-.5V1.5Zm1 4V2H12v3.5H8.5Zm-7 2A.5.5 0 0 0 1 8v4.5c0 .28.22.5.5.5H6a.5.5 0 0 0 .5-.5V8a.5.5 0 0 0-.5-.5H1.5Zm.5 1V12h3.5V8.5H2ZM7.5 8c0-.27.22-.5.5-.5h4.5c.28 0 .5.23.5.5v4.5a.5.5 0 0 1-.5.5H8a.5.5 0 0 1-.5-.5V8Zm1 4V8.5H12V12H8.5Z',
-          })
+          }),
         ),
         outline: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M2 2v2H1V1.5c0-.27.22-.5.5-.5H4v1H2ZM1 9V5h1v4H1Zm0 1v2.5c0 .28.22.5.5.5H4v-1H2v-2H1Zm9 3h2.5a.5.5 0 0 0 .5-.5V10h-1v2h-2v1Zm2-9h1V1.5a.5.5 0 0 0-.5-.5H10v1h2v2Zm-3 8v1H5v-1h4ZM9 1v1H5V1h4Zm4 8h-1V5h1v4ZM7 8a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z',
-          })
+          }),
         ),
         photodrag: a.createElement(
           a.Fragment,
@@ -3470,7 +3470,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M0 10V7h1v3H0Zm0 3.5V11h1v2h2v1H.5a.5.5 0 0 1-.5-.5Zm7 .5H4v-1h3v1Z',
-          })
+          }),
         ),
         search: a.createElement(
           a.Fragment,
@@ -3478,7 +3478,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M9.54 10.2a5.5 5.5 0 1 1 .66-.66c.06.03.11.06.15.1l3 3a.5.5 0 0 1-.7.71l-3-3a.5.5 0 0 1-.1-.14ZM10.5 6a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z',
-          })
+          }),
         ),
         zoom: a.createElement(
           a.Fragment,
@@ -3489,7 +3489,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M9.54 10.2a5.5 5.5 0 1 1 .66-.66c.06.03.11.06.15.1l3 3a.5.5 0 0 1-.7.71l-3-3a.5.5 0 0 1-.1-.14ZM10.5 6a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0Z',
-          })
+          }),
         ),
         zoomout: a.createElement(
           a.Fragment,
@@ -3500,14 +3500,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M6 11.5c1.35 0 2.59-.49 3.54-1.3.03.06.06.11.1.15l3 3a.5.5 0 0 0 .71-.7l-3-3a.5.5 0 0 0-.14-.1A5.5 5.5 0 1 0 6 11.5Zm0-1a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z',
-          })
+          }),
         ),
         zoomreset: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1.5 2.84V1.5a.5.5 0 0 0-1 0V4c0 .28.22.5.5.5h2.5a.5.5 0 0 0 0-1H2.26a4.5 4.5 0 1 1-.5 4.02.5.5 0 1 0-.94.33 5.5 5.5 0 0 0 8.72 2.36l.1.14 3 3a.5.5 0 0 0 .71-.7l-3-3a.5.5 0 0 0-.14-.1 5.5 5.5 0 1 0-8.7-6.7Z',
-          })
+          }),
         ),
         eye: a.createElement(
           a.Fragment,
@@ -3518,7 +3518,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'm14 7-.2.3c-.13.16-3.06 4.2-6.8 4.2C3.26 11.5.33 7.46.2 7.3L0 7l.2-.3C.34 6.55 3.27 2.5 7 2.5c3.74 0 6.67 4.04 6.8 4.2l.2.3ZM2.9 5.3A13 13 0 0 0 1.24 7 13 13 0 0 0 2.9 8.7c1.14.97 2.58 1.8 4.1 1.8 1.52 0 2.96-.83 4.1-1.8A13 13 0 0 0 12.76 7a13 13 0 0 0-1.66-1.7C9.96 4.33 8.52 3.5 7 3.5c-1.52 0-2.96.83-4.1 1.8Z',
-          })
+          }),
         ),
         eyeclose: a.createElement(
           a.Fragment,
@@ -3528,7 +3528,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M4.5 7c0-.32.06-.63.17-.91l3.24 3.24A2.5 2.5 0 0 1 4.5 7Zm4.83.91L6.09 4.67a2.5 2.5 0 0 1 3.24 3.24Z',
-          })
+          }),
         ),
         lightning: a.createElement(
           a.Fragment,
@@ -3536,14 +3536,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M2.52 6.6a.57.57 0 0 0-.17.54c.04.2.19.37.38.41l2.78.73-1.5 5c-.06.24.02.5.22.63a.5.5 0 0 0 .28.09.5.5 0 0 0 .35-.14L11.5 7.4c.14-.13.2-.34.15-.54a.53.53 0 0 0-.38-.4l-2.7-.7L10.79.78c.1-.23.04-.5-.15-.66a.5.5 0 0 0-.65 0L2.52 6.6Zm7.72.63-3.07-.8 1.85-4.14-5.2 4.51 2.94.77-1.27 4.28 4.75-4.62Zm-5.73 6.2.04.02Z',
-          })
+          }),
         ),
         lightningoff: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M10.14 8.72 11.5 7.4c.14-.13.2-.34.15-.54a.53.53 0 0 0-.38-.4l-2.7-.7L10.79.78c.1-.23.04-.5-.15-.66a.5.5 0 0 0-.65 0L5.46 4.05l.71.7L9.02 2.3 7.38 5.97l.7.7 2.16.56-.8.79.7.7ZM2.52 6.6a.57.57 0 0 0-.17.54c.04.2.19.37.38.41l2.78.73-1.5 5c-.06.24.02.5.22.63a.5.5 0 0 0 .63-.05l3.84-3.74-.7-.7-2.51 2.43 1.13-3.81-.68-.69L3.8 6.8l.85-.73-.71-.7L2.52 6.6Zm-.67-5.45a.5.5 0 1 0-.7.7l11 11a.5.5 0 0 0 .7-.7l-11-11Z',
-          })
+          }),
         ),
         contrast: a.createElement(
           a.Fragment,
@@ -3551,7 +3551,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3 3H.5a.5.5 0 0 0-.5.5v10c0 .28.22.5.5.5h10a.5.5 0 0 0 .5-.5V11h2.5a.5.5 0 0 0 .5-.5V.5a.5.5 0 0 0-.5-.5h-10a.5.5 0 0 0-.5.5V3Zm1 1v2.3L6.3 4H4ZM3 4v6.5a.5.5 0 0 0 .5.5H10v2H1V4h2Zm1-1h6.5a.5.5 0 0 1 .5.5V10h2V1H4v2Zm6 7V7.71l-2.3 2.3H10Zm0-3.7V4.7L4.7 10h1.6L10 6.3ZM9.3 4H7.7L4 7.71V9.3L9.3 4Z',
-          })
+          }),
         ),
         switchalt: a.createElement(
           a.Fragment,
@@ -3559,14 +3559,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3 3V.5c0-.27.22-.5.5-.5h10c.28 0 .5.23.5.5v10a.5.5 0 0 1-.5.5H11v2.5a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-10c0-.27.22-.5.5-.5H3Zm1 0V1h9v9h-2V3.5a.5.5 0 0 0-.5-.5H4Zm6 8v2H1V4h2v6.5c0 .28.22.5.5.5H10Zm0-1H4V4h6v6Z',
-          })
+          }),
         ),
         mirror: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1 1.5c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11ZM2 12h10V2L2 12Z',
-          })
+          }),
         ),
         grow: a.createElement(
           a.Fragment,
@@ -3580,7 +3580,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1.5 5a.5.5 0 0 0-.5.5v7c0 .28.22.5.5.5h7a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.5-.5h-7ZM2 6v6h6V6H2Z',
-          })
+          }),
         ),
         paintbrush: a.createElement(
           a.Fragment,
@@ -3588,7 +3588,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M11.8535.1464a.5.5 0 0 0-.7071 0L2.9827 8.3102a2.2396 2.2396 0 0 0-1.0737.599C.6772 10.141.2402 11.903.0852 12.9978 0 13.5998 0 14.0002 0 14.0002s.4004 0 1.0023-.0853c1.095-.155 2.8569-.5919 4.0887-1.8237.307-.307.5067-.6806.5992-1.0743l8.1633-8.1633a.5.5 0 0 0 0-.7071l-2-2Zm-6.253 9.546L6.543 8.75l-1.293-1.2929-.9424.9424a2.242 2.242 0 0 1 .7835.5097c.23.2302.4.4977.5095.7831ZM7.25 8.0428 12.7929 2.5 11.5 1.2071 5.957 6.75 7.25 8.0429ZM4.3839 9.6163c.4881.4882.4881 1.2796 0 1.7678-.7665.7664-1.832 1.1845-2.7791 1.403a8.6972 8.6972 0 0 1-.49.0982 8.7151 8.7151 0 0 1 .0982-.4899c.2186-.9471.6367-2.0126 1.403-2.779.4882-.4882 1.2797-.4882 1.7679 0Z',
-          })
+          }),
         ),
         ruler: a.createElement(
           a.Fragment,
@@ -3599,7 +3599,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1.5 6a.5.5 0 0 0-.5.5v6c0 .28.22.5.5.5h11a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5h-11ZM2 7v5h10V7h-1v2.5a.5.5 0 0 1-1 0V7h-.75v1a.5.5 0 0 1-1 0V7H7.5v2.5a.5.5 0 0 1-1 0V7h-.75v1a.5.5 0 0 1-1 0V7H4v2.5a.5.5 0 0 1-1 0V7H2Z',
-          })
+          }),
         ),
         stop: a.createElement(
           a.Fragment,
@@ -3610,7 +3610,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M14 7A7 7 0 1 1 0 7a7 7 0 0 1 14 0Zm-1 0A6 6 0 1 1 1 7a6 6 0 0 1 12 0Z',
-          })
+          }),
         ),
         camera: a.createElement(
           a.Fragment,
@@ -3622,7 +3622,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M2.5 1a.5.5 0 0 0-.5.5V2H.5a.5.5 0 0 0-.5.5v9c0 .28.22.5.5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H6v-.5a.5.5 0 0 0-.5-.5h-3ZM1 3v8h12V3H1Z',
-          })
+          }),
         ),
         video: a.createElement(
           a.Fragment,
@@ -3633,7 +3633,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M0 4c0-1.1.9-2 2-2h6a2 2 0 0 1 2 2v.5l3.19-2.4a.5.5 0 0 1 .81.4v9a.5.5 0 0 1-.8.4L10 9.5v.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm9 0v1.5a.5.5 0 0 0 .8.4L13 3.5v7L9.8 8.1a.5.5 0 0 0-.8.4V10a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1Z',
-          })
+          }),
         ),
         speaker: a.createElement(
           a.Fragment,
@@ -3647,49 +3647,49 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M10.2504 3.96861C10.0113 3.83033 9.70547 3.91201 9.5672 4.15105C9.42893 4.39008 9.51061 4.69594 9.74964 4.83421C10.4982 5.26723 11 6.07534 11 7.00006C11 7.92479 10.4982 8.7329 9.74964 9.16591C9.51061 9.30418 9.42893 9.61005 9.5672 9.84908C9.70547 10.0881 10.0113 10.1698 10.2504 10.0315C11.2952 9.42711 12 8.29619 12 7.00006C12 5.70394 11.2952 4.57302 10.2504 3.96861Z',
-          })
+          }),
         ),
         play: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm12.81 7.43-9.05 5.6A.5.5 0 0 1 3 12.6V1.4c0-.4.43-.63.76-.43l9.05 5.6a.5.5 0 0 1 0 .86Z',
-          })
+          }),
         ),
         playback: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M11.24 12.04 3.7 7.42a.5.5 0 0 1-.2-.23v4.05a.75.75 0 0 1-1.5 0v-8.5a.75.75 0 0 1 1.5 0V6.8a.5.5 0 0 1 .2-.23l7.54-4.6a.5.5 0 0 1 .76.42v9.22a.5.5 0 0 1-.76.43Z',
-          })
+          }),
         ),
         playnext: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm2.76 12.04 7.54-4.61a.5.5 0 0 0 .2-.23v4.05a.75.75 0 0 0 1.5 0v-8.5a.75.75 0 0 0-1.5 0V6.8a.5.5 0 0 0-.2-.23l-7.54-4.6a.5.5 0 0 0-.76.42v9.22c0 .39.43.63.76.43Z',
-          })
+          }),
         ),
         rewind: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M9 2.42v2.32L13.23 2a.5.5 0 0 1 .77.42v9.16a.5.5 0 0 1-.77.42L9 9.26v2.32a.5.5 0 0 1-.77.42L1.5 7.65v3.6a.75.75 0 0 1-1.5 0v-8.5a.75.75 0 0 1 1.5 0v3.6L8.23 2a.5.5 0 0 1 .77.42Z',
-          })
+          }),
         ),
         fastforward: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M5 2.42v2.32L.77 2a.5.5 0 0 0-.77.42v9.16c0 .4.44.64.77.42L5 9.26v2.32c0 .4.44.64.77.42l6.73-4.35v3.6a.75.75 0 0 0 1.5 0v-8.5a.75.75 0 0 0-1.5 0v3.6L5.77 2a.5.5 0 0 0-.77.42Z',
-          })
+          }),
         ),
         stopalt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1 1.5c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11Z',
-          })
+          }),
         ),
         sidebyside: a.createElement(
           a.Fragment,
@@ -3697,7 +3697,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1 1.5c0-.27.22-.5.5-.5h11c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11ZM2 12V2h5v10H2Z',
-          })
+          }),
         ),
         stacked: a.createElement(
           a.Fragment,
@@ -3705,7 +3705,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M12.5 1c.28 0 .5.23.5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11c0-.27.22-.5.5-.5h11ZM2 2h10v5H2V2Z',
-          })
+          }),
         ),
         sun: a.createElement(
           a.Fragment,
@@ -3719,7 +3719,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           }),
           a.createElement('path', {
             d: 'M7 11.5c.28 0 .5.22.5.5v1.5a.5.5 0 0 1-1 0V12c0-.28.22-.5.5-.5ZM11.5 7c0-.28.22-.5.5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5ZM.5 6.5a.5.5 0 0 0 0 1H2a.5.5 0 0 0 0-1H.5ZM3.82 10.18c.2.2.2.51 0 .7l-1.06 1.07a.5.5 0 1 1-.71-.7l1.06-1.07c.2-.2.51-.2.7 0ZM11.95 2.76a.5.5 0 1 0-.7-.71l-1.07 1.06a.5.5 0 1 0 .7.7l1.07-1.05ZM10.18 10.18c.2-.2.51-.2.7 0l1.07 1.06a.5.5 0 1 1-.7.71l-1.07-1.06a.5.5 0 0 1 0-.7ZM2.76 2.05a.5.5 0 1 0-.71.7l1.06 1.07a.5.5 0 0 0 .7-.7L2.77 2.04Z',
-          })
+          }),
         ),
         moon: a.createElement(
           a.Fragment,
@@ -3727,7 +3727,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7.78.04a7.03 7.03 0 0 0-4.28.9 7 7 0 1 0 9.87 8.96c.1-.21-.14-.41-.36-.32a4.98 4.98 0 0 1-2 .42A5 5 0 0 1 8.53.65c.2-.12.19-.44-.04-.49a7.04 7.04 0 0 0-.72-.12Zm-1.27.98a6 6 0 0 0 4.98 9.96 6 6 0 1 1-4.98-9.96Z',
-          })
+          }),
         ),
         book: a.createElement(
           a.Fragment,
@@ -3735,7 +3735,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M13 2a2 2 0 0 0-2-2H1.5a.5.5 0 0 0-.5.5v13c0 .28.22.5.5.5H11a2 2 0 0 0 2-2V2ZM3 13h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H7v6a.5.5 0 0 1-.86.36L5.5 6.7l-.65.65A.5.5 0 0 1 4 7V1H3v12ZM5 1v4.8l.15-.15a.5.5 0 0 1 .74.04l.11.1V1H5Z',
-          })
+          }),
         ),
         document: a.createElement(
           a.Fragment,
@@ -3746,7 +3746,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1.5 0a.5.5 0 0 0-.5.5v13c0 .28.22.5.5.5h11a.5.5 0 0 0 .5-.5V3.2a.5.5 0 0 0-.15-.35l-2.7-2.7A.5.5 0 0 0 9.79 0H1.5ZM2 1h7.5v2c0 .28.22.5.5.5h2V13H2V1Z',
-          })
+          }),
         ),
         copy: a.createElement(
           a.Fragment,
@@ -3754,7 +3754,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M11.75.07A.5.5 0 0 0 11.5 0h-6a.5.5 0 0 0-.5.5V3H.5a.5.5 0 0 0-.5.5v10c0 .28.22.5.5.5h8a.5.5 0 0 0 .5-.5V11h4.5a.5.5 0 0 0 .5-.5V2.51a.5.5 0 0 0-.15-.36l-2-2a.5.5 0 0 0-.1-.08ZM9 10h4V3h-1.5a.5.5 0 0 1-.5-.5V1H6v2h.5a.5.5 0 0 1 .36.15l1.99 2c.1.09.15.21.15.35v4.51ZM1 4v9h7V6H6.5a.5.5 0 0 1-.5-.5V4H1Z',
-          })
+          }),
         ),
         category: a.createElement(
           a.Fragment,
@@ -3765,7 +3765,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1 5.5c0-.28.22-.5.5-.5h11c.28 0 .5.22.5.5v7a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-7ZM2 12V6h10v6H2Z',
-          })
+          }),
         ),
         folder: a.createElement(
           a.Fragment,
@@ -3773,7 +3773,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M6.59 3.5 5.09 2H1v9h12V3.5H6.59Zm.41-1L5.8 1.3a1 1 0 0 0-.71-.3H.5a.5.5 0 0 0-.5.5v10c0 .28.22.5.5.5h13a.5.5 0 0 0 .5-.5V3a.5.5 0 0 0-.5-.5H7Z',
-          })
+          }),
         ),
         print: a.createElement(
           a.Fragment,
@@ -3784,7 +3784,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M2 1.5c0-.27.22-.5.5-.5h8a.5.5 0 0 1 .36.15l.99 1c.1.09.15.21.15.35v1.51h1.5c.28 0 .5.22.5.5v5a.5.5 0 0 1-.5.5H12v2.5a.5.5 0 0 1-.5.5h-9a.5.5 0 0 1-.5-.5V10H.5a.5.5 0 0 1-.5-.5v-5c0-.28.22-.5.5-.5H2V1.5ZM13 9h-1V6.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5V9H1V5h12v4Zm-2-6v1H3V2h7v.5c0 .28.22.5.5.5h.5Zm-8 9h8V7H3v5Z',
-          })
+          }),
         ),
         graphline: a.createElement(
           a.Fragment,
@@ -3795,7 +3795,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1.5 1a.5.5 0 0 0-.5.5v11c0 .28.22.5.5.5h11a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5h-11ZM2 2v10h10V2H2Z',
-          })
+          }),
         ),
         calendar: a.createElement(
           a.Fragment,
@@ -3803,35 +3803,35 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.5 0c.28 0 .5.22.5.5V1h6V.5a.5.5 0 0 1 1 0V1h1.5c.28 0 .5.22.5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11c0-.28.22-.5.5-.5H3V.5c0-.28.22-.5.5-.5ZM2 4v2.3h3V4H2Zm0 5.2V6.8h3v2.4H2Zm0 .5V12h3V9.7H2Zm3.5 0V12h3V9.7h-3Zm3.5 0V12h3V9.7H9Zm3-.5H9V6.8h3v2.4Zm-3.5 0h-3V6.8h3v2.4ZM9 4v2.3h3V4H9ZM5.5 6.3h3V4h-3v2.3Z',
-          })
+          }),
         ),
         graphbar: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M12 2.5a.5.5 0 0 0-1 0v10a.5.5 0 0 0 1 0v-10Zm-3 2a.5.5 0 0 0-1 0v8a.5.5 0 0 0 1 0v-8ZM5.5 7c.28 0 .5.22.5.5v5a.5.5 0 0 1-1 0v-5c0-.28.22-.5.5-.5ZM3 10.5a.5.5 0 0 0-1 0v2a.5.5 0 0 0 1 0v-2Z',
-          })
+          }),
         ),
         menu: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M13 2a.5.5 0 0 1 0 1H1a.5.5 0 0 1 0-1h12Zm-3 3a.5.5 0 0 1 0 1H1a.5.5 0 0 1 0-1h9Zm1.5 3.5A.5.5 0 0 0 11 8H1a.5.5 0 0 0 0 1h10a.5.5 0 0 0 .5-.5Zm-4 2.5a.5.5 0 0 1 0 1H1a.5.5 0 0 1 0-1h6.5Z',
-          })
+          }),
         ),
         menualt: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1 2a.5.5 0 0 0 0 1h12a.5.5 0 0 0 0-1H1Zm3 3a.5.5 0 0 0 0 1h9a.5.5 0 0 0 0-1H4ZM2.5 8.5c0-.28.22-.5.5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5Zm4 2.5a.5.5 0 0 0 0 1H13a.5.5 0 0 0 0-1H6.5Z',
-          })
+          }),
         ),
         filter: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1 2a.5.5 0 0 0 0 1h12a.5.5 0 0 0 0-1H1Zm2 3a.5.5 0 0 0 0 1h8a.5.5 0 0 0 0-1H3Zm1.5 3.5c0-.28.22-.5.5-.5h4a.5.5 0 0 1 0 1H5a.5.5 0 0 1-.5-.5Zm2 2.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1h-1Z',
-          })
+          }),
         ),
         docchart: a.createElement(
           a.Fragment,
@@ -3839,7 +3839,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1 1.5C1 1.22386 1.22386 1 1.5 1H12.5C12.7761 1 13 1.22386 13 1.5V12.5C13 12.7761 12.7761 13 12.5 13H1.5C1.22386 13 1 12.7761 1 12.5V1.5ZM2 4V6.2998H5V4H2ZM2 9.2002V6.7998H5V9.2002H2ZM2 9.7002V12H5V9.7002H2ZM5.5 9.7002V12H8.5V9.7002H5.5ZM9 9.7002V12H12V9.7002H9ZM12 9.2002H9V6.7998H12V9.2002ZM8.5 9.2002H5.5V6.7998H8.5V9.2002ZM9 6.2998H12V4H9V6.2998ZM5.5 6.2998H8.5V4H5.5V6.2998Z',
-          })
+          }),
         ),
         doclist: a.createElement(
           a.Fragment,
@@ -3850,14 +3850,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M1 1.5c0-.28.22-.5.5-.5h11c.28 0 .5.22.5.5v11a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11ZM2 4v8h10V4H2Z',
-          })
+          }),
         ),
         markup: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M8.98 1.63a.5.5 0 0 0-.96-.26l-3 11a.5.5 0 1 0 .96.26l3-11ZM3.32 3.62a.5.5 0 0 1 .06.7L1.15 7l2.23 2.68a.5.5 0 1 1-.76.64l-2.5-3a.5.5 0 0 1 0-.64l2.5-3a.5.5 0 0 1 .7-.06Zm7.36 0a.5.5 0 0 0-.06.7L12.85 7l-2.23 2.68a.5.5 0 0 0 .76.64l2.5-3a.5.5 0 0 0 0-.64l-2.5-3a.5.5 0 0 0-.7-.06Z',
-          })
+          }),
         ),
         bold: a.createElement(
           a.Fragment,
@@ -3865,7 +3865,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3 2v1.5h1v7H3V12h5a3 3 0 0 0 1.8-5.4A2.74 2.74 0 0 0 8 2H3Zm5 5.5H5.5v3H8a1.5 1.5 0 1 0 0-3Zm-.25-4H5.5V6h2.25a1.25 1.25 0 1 0 0-2.5Z',
-          })
+          }),
         ),
         italic: a.createElement('path', {
           d: 'M5 2h6v1H8.5l-2 8H9v1H3v-1h2.5l2-8H5V2Z',
@@ -3875,28 +3875,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           null,
           a.createElement('path', {
             d: 'M10.55 2.27a1.5 1.5 0 0 0-2.12 0L2.78 7.92a2.5 2.5 0 0 0 3.53 3.54l3.54-3.54a.5.5 0 1 1 .7.71l-3.53 3.54a3.5 3.5 0 0 1-4.96-4.94v-.01l5.66-5.66h.01a2.5 2.5 0 0 1 3.53 3.53L5.6 10.76a1.5 1.5 0 0 1-2.12-2.12L7.02 5.1a.5.5 0 1 1 .7.7L4.2 9.34a.5.5 0 0 0 .7.7l5.66-5.65a1.5 1.5 0 0 0 0-2.12Z',
-          })
+          }),
         ),
         listordered: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M5 2.5c0-.28.22-.5.5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5ZM5 7c0-.28.22-.5.5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 7Zm.5 4a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7Zm-3-9H1v1h1v3h1V2.5a.5.5 0 0 0-.5-.5ZM3 8.5v1a.5.5 0 0 1-1 0V9h-.5a.5.5 0 0 1 0-1h1c.28 0 .5.22.5.5Zm-1 2a.5.5 0 0 0-1 0V12h2v-1H2v-.5Z',
-          })
+          }),
         ),
         listunordered: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M2.75 2.5a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0ZM5.5 2a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7Zm0 9a.5.5 0 0 0 0 1h7a.5.5 0 0 0 0-1h-7ZM2 12.25a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5ZM5 7c0-.28.22-.5.5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 5 7Zm-3 .75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Z',
-          })
+          }),
         ),
         paragraph: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M6 7a3 3 0 1 1 0-6h5.5a.5.5 0 0 1 0 1H10v10.5a.5.5 0 0 1-1 0V2H7v10.5a.5.5 0 0 1-1 0V7Z',
-          })
+          }),
         ),
         markdown: a.createElement(
           a.Fragment,
@@ -3907,7 +3907,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M.5 2a.5.5 0 0 0-.5.5v9c0 .28.22.5.5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H.5ZM1 3v8h12V3H1Z',
-          })
+          }),
         ),
         repository: a.createElement(
           a.Fragment,
@@ -3924,7 +3924,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M11 0C12.1046 0 13 0.895431 13 2V12C13 13.1046 12.1046 14 11 14H1.5C1.22386 14 1 13.7761 1 13.5V0.5C1 0.223857 1.22386 0 1.5 0H11ZM11 1H3V13H11C11.5523 13 12 12.5523 12 12V2C12 1.44772 11.5523 1 11 1Z',
-          })
+          }),
         ),
         commit: a.createElement(
           a.Fragment,
@@ -3932,7 +3932,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M3.03 7.5a4 4 0 0 0 7.94 0h2.53a.5.5 0 0 0 0-1h-2.53a4 4 0 0 0-7.94 0H.5a.5.5 0 0 0 0 1h2.53ZM7 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z',
-          })
+          }),
         ),
         branch: a.createElement(
           a.Fragment,
@@ -3940,7 +3940,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M6 2.5c0 .65-.42 1.2-1 1.41v4.06A3.36 3.36 0 0 1 7.5 7a2.7 2.7 0 0 0 1.81-.56c.22-.18.38-.4.48-.62a1.5 1.5 0 1 1 1.03.15c-.16.42-.43.87-.86 1.24-.57.47-1.37.79-2.46.79-1.04 0-1.64.42-2 .92-.26.37-.4.8-.47 1.18A1.5 1.5 0 1 1 4 10.09V3.9a1.5 1.5 0 1 1 2-1.4Zm-2 9a.5.5 0 1 1 1 0 .5.5 0 0 1-1 0Zm1-9a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm6 2a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z',
-          })
+          }),
         ),
         pullrequest: a.createElement(
           a.Fragment,
@@ -3948,7 +3948,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M8.35 1.35 7.71 2h.79A2.5 2.5 0 0 1 11 4.5v5.59a1.5 1.5 0 1 1-1 0V4.5C10 3.67 9.33 3 8.5 3h-.8l.65.65a.5.5 0 1 1-.7.7l-1.5-1.5a.5.5 0 0 1 0-.7l1.5-1.5a.5.5 0 1 1 .7.7ZM11 11.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0ZM4 3.91a1.5 1.5 0 1 0-1 0v6.18a1.5 1.5 0 1 0 1 0V3.9ZM3.5 11a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1Zm0-8a.5.5 0 1 0 0-1 .5.5 0 0 0 0 1Z',
-          })
+          }),
         ),
         merge: a.createElement(
           a.Fragment,
@@ -3956,14 +3956,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M4.1 3.87a1.5 1.5 0 1 0-1.1.04v6.18a1.5 1.5 0 1 0 1 0V6.4c.26.4.57.77.93 1.08A6.57 6.57 0 0 0 9.08 9a1.5 1.5 0 1 0 0-1 5.57 5.57 0 0 1-3.5-1.25 4.74 4.74 0 0 1-1.47-2.87ZM3.5 11a.5.5 0 1 0 0 1 .5.5 0 0 0 0-1ZM4 2.5a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Zm7 6a.5.5 0 1 1-1 0 .5.5 0 0 1 1 0Z',
-          })
+          }),
         ),
         apple: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M11.03 8.1a3.05 3.05 0 0 1-.2-1.74 2.7 2.7 0 0 1 1.4-1.94 3.13 3.13 0 0 0-2.35-1.4c-.84-.08-2.01.56-2.65.57h-.02c-.63 0-1.81-.65-2.64-.57-.42.04-1.75.32-2.55 1.6-.28.44-.5 1.01-.58 1.74a6.36 6.36 0 0 0 .02 1.74 7.5 7.5 0 0 0 1.35 3.33c.7 1.01 1.51 1.6 1.97 1.6.93.02 1.74-.6 2.41-.6l.02.01h.04c.67-.02 1.48.61 2.42.6.45-.02 1.26-.6 1.97-1.6a7.95 7.95 0 0 0 .97-1.86 2.6 2.6 0 0 1-1.58-1.48ZM8.86 2.13c.72-.85.7-2.07.63-2.12-.07-.06-1.25.16-1.99.98a2.78 2.78 0 0 0-.62 2.13c.06.05 1.27-.14 1.98-.99Z',
-          })
+          }),
         ),
         linux: a.createElement(
           a.Fragment,
@@ -3971,42 +3971,42 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M7 0a3 3 0 0 1 3 3v1.24c.13.13.25.27.36.42l.52.43.2.15c.32.26.7.59 1.09.97A6.28 6.28 0 0 1 14 9.54a.5.5 0 0 1-.35.44c-.31.1-.8.18-1.34.13-.33-.03-.7-.12-1.05-.3-.04.17-.1.34-.17.51a2 2 0 1 1-2.89 2.56 5.5 5.5 0 0 1-2.4 0 2 2 0 1 1-2.9-2.56 5.56 5.56 0 0 1-.16-.51c-.35.18-.72.27-1.05.3a3.4 3.4 0 0 1-1.34-.13.5.5 0 0 1-.35-.44l.01-.14a6.28 6.28 0 0 1 1.82-3.2 13.42 13.42 0 0 1 1.3-1.11c.22-.19.4-.32.5-.43.12-.15.24-.29.37-.42V3a3 3 0 0 1 3-3Zm1 11.9a2 2 0 0 1 2.14-1.9 5.5 5.5 0 0 0 .36-2c0-.51-.1-1.07-.3-1.6l-.03-.02a4.4 4.4 0 0 0-.86-.42 6.71 6.71 0 0 0-1-.31l-.86.64c-.27.2-.63.2-.9 0l-.85-.64a6.72 6.72 0 0 0-1.87.73l-.03.02A4.6 4.6 0 0 0 3.5 8c0 .68.11 1.39.36 2H4a2 2 0 0 1 2 1.9 4.49 4.49 0 0 0 2 0ZM5 12a1 1 0 1 1-2 0 1 1 0 0 1 2 0Zm6 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0ZM6.1 4.3a1.5 1.5 0 0 1 1.8 0l.27.2L7 5.38 5.83 4.5l.27-.2ZM8.5 2c.28 0 .5.22.5.5V3a.5.5 0 0 1-1 0v-.5c0-.28.22-.5.5-.5ZM6 2.5a.5.5 0 0 0-1 0V3a.5.5 0 0 0 1 0v-.5Z',
-          })
+          }),
         ),
         ubuntu: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M12.26 2.07c0 1.14-.89 2.06-1.99 2.06s-1.99-.92-1.99-2.06c0-1.14.9-2.07 2-2.07s1.98.93 1.98 2.07ZM3.98 6.6c0 1.14-.9 2.07-2 2.07C.9 8.67 0 7.74 0 6.6c0-1.14.9-2.07 1.99-2.07 1.1 0 1.99.93 1.99 2.07ZM6.47 11.92a4.76 4.76 0 0 1-3.3-2.62c-.53.25-1.12.33-1.7.22a6.72 6.72 0 0 0 1.84 2.63 6.38 6.38 0 0 0 4.24 1.58c-.37-.5-.57-1.1-.59-1.73a4.77 4.77 0 0 1-.49-.08ZM11.81 11.93c0 1.14-.89 2.07-1.99 2.07s-1.98-.93-1.98-2.07c0-1.14.89-2.06 1.98-2.06 1.1 0 2 .92 2 2.06ZM12.6 11.17a6.93 6.93 0 0 0 .32-7.93A2.95 2.95 0 0 1 11.8 4.6a5.23 5.23 0 0 1-.16 5.03c.47.4.8.94.95 1.54ZM1.99 3.63h-.15A6.48 6.48 0 0 1 8 .24a3.07 3.07 0 0 0-.6 1.68 4.7 4.7 0 0 0-3.9 2.17c-.46-.3-.98-.45-1.51-.45Z',
-          })
+          }),
         ),
         windows: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M6.5 1H1v5.5h5.5V1ZM13 1H7.5v5.5H13V1ZM7.5 7.5H13V13H7.5V7.5ZM6.5 7.5H1V13h5.5V7.5Z',
-          })
+          }),
         ),
         storybook: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M2.04.62a.7.7 0 0 0-.66.72l.44 11.56c.01.37.3.66.67.68l9.4.42h.02a.7.7 0 0 0 .7-.7V.66a.7.7 0 0 0-.74-.66l-.77.05.05 1.62a.1.1 0 0 1-.17.08l-.52-.4-.61.46a.1.1 0 0 1-.17-.09L9.75.13l-7.7.49Zm8 4.74c-.24.2-2.09.33-2.09.05.04-1.04-.43-1.09-.69-1.09-.24 0-.66.08-.66.64 0 .57.6.89 1.32 1.27 1.02.53 2.24 1.18 2.24 2.82 0 1.57-1.27 2.43-2.9 2.43-1.67 0-3.14-.68-2.97-3.03.06-.27 2.2-.2 2.2 0-.03.97.19 1.26.75 1.26.43 0 .62-.24.62-.64 0-.6-.63-.95-1.36-1.36-.99-.56-2.15-1.2-2.15-2.7 0-1.5 1.03-2.5 2.86-2.5 1.83 0 2.84.99 2.84 2.85Z',
-          })
+          }),
         ),
         azuredevops: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'm0 5.18 1.31-1.73 4.9-2V.01l4.3 3.15-8.78 1.7v4.8L0 9.16V5.18Zm14-2.6v8.55l-3.36 2.86-5.42-1.79V14L1.73 9.66l8.78 1.05V3.16L14 2.58Z',
-          })
+          }),
         ),
         bitbucket: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M1 1.52A.41.41 0 0 0 .59 2l1.74 10.6c.05.26.28.46.55.46h8.37c.2 0 .38-.14.42-.34l1.01-6.25H8.81l-.46 2.71H5.68L4.95 5.4h7.91L13.4 2a.41.41 0 0 0-.41-.48H1Z',
-          })
+          }),
         ),
         chrome: a.createElement(
           a.Fragment,
@@ -4014,7 +4014,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M13.02 3.43a.11.11 0 0 1-.1.17H7a3.4 3.4 0 0 0-3.3 2.55.11.11 0 0 1-.21.03L1.52 2.76a.11.11 0 0 1 0-.12 6.97 6.97 0 0 1 9-1.7c1.03.6 1.9 1.47 2.5 2.5ZM7 9.62a2.62 2.62 0 1 1 0-5.24 2.62 2.62 0 0 1 0 5.24Zm1.03.7a.11.11 0 0 0-.12-.04 3.4 3.4 0 0 1-4-1.84L1.1 3.57a.11.11 0 0 0-.2 0 7 7 0 0 0 5.07 10.35c.04 0 .08-.02.1-.05l1.97-3.42a.11.11 0 0 0 0-.13Zm1.43-5.95h3.95c.05 0 .1.03.1.07a6.97 6.97 0 0 1-1.53 7.48A6.96 6.96 0 0 1 7.08 14a.11.11 0 0 1-.1-.17l2.81-4.88h.01a3.38 3.38 0 0 0-.42-4.38.11.11 0 0 1 .08-.2Z',
-          })
+          }),
         ),
         chromatic: a.createElement(
           a.Fragment,
@@ -4022,28 +4022,28 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M0 7a7 7 0 1 0 14 0A7 7 0 0 0 0 7Zm5.22-3.87a1.97 1.97 0 0 1 3.75.83v1.29L5.61 3.32a2.49 2.49 0 0 0-.4-.19ZM8.7 5.71 5.35 3.78a1.97 1.97 0 0 0-2.6 2.83c.12-.1.24-.18.37-.26l1.51-.87a.27.27 0 0 1 .27 0L7 6.69l1.7-.98Zm-.32 4.97-1.52-.87a.27.27 0 0 1-.13-.23V7.15l-1.7-.97v3.86a1.97 1.97 0 0 0 3.75.83 2.5 2.5 0 0 1-.4-.19Zm.26-.46a1.97 1.97 0 0 0 2.6-2.83c-.11.1-.23.18-.36.26L7.53 9.58l1.11.64Zm-4.1.26h-.17a1.97 1.97 0 0 1-1.9-2.47 2 2 0 0 1 .92-1.2l1.11-.63v3.86c0 .14.01.29.04.44Zm6.79-5.98a1.97 1.97 0 0 0-1.87-.97c.03.14.04.29.04.43v1.75c0 .1-.05.19-.14.23l-2.1 1.22V9.1l3.35-1.93a1.97 1.97 0 0 0 .72-2.68Z',
-          })
+          }),
         ),
         componentdriven: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M10.85 2.18 8.87.2a.69.69 0 0 0-.97 0L3.09 5.01a.69.69 0 0 0 0 .97l2.46 2.46-2.4 2.4a.69.69 0 0 0 0 .98l1.98 1.98c.27.27.7.27.97 0l4.8-4.81a.69.69 0 0 0 0-.97L8.45 5.56l2.4-2.4a.69.69 0 0 0 0-.98Z',
-          })
+          }),
         ),
         discord: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M11.85 2.88C10.95 2.48 10 2.18 9 2a7.05 7.05 0 0 0-.4.75 10.66 10.66 0 0 0-3.2 0c-.1-.23-.24-.5-.36-.73A.04.04 0 0 0 4.99 2a11.51 11.51 0 0 0-2.86.9 11.82 11.82 0 0 0-2.05 8 11.6 11.6 0 0 0 3.5 1.77c.01 0 .03 0 .04-.02.27-.36.51-.75.72-1.16a.04.04 0 0 0-.03-.06 7.66 7.66 0 0 1-1.09-.52.04.04 0 0 1 0-.08 5.96 5.96 0 0 0 .26-.17 8.28 8.28 0 0 0 7.08 0l.22.17c.02.02.02.06 0 .08-.36.2-.72.37-1.1.52a.04.04 0 0 0-.02.06c.2.4.45.8.71 1.16.01.02.03.02.05.02a11.57 11.57 0 0 0 3.52-1.8 11.74 11.74 0 0 0-2.09-7.99Zm-7.17 6.4c-.7 0-1.26-.63-1.26-1.41 0-.78.56-1.41 1.26-1.41s1.27.64 1.26 1.4c0 .79-.56 1.42-1.26 1.42Zm4.65 0c-.69 0-1.26-.63-1.26-1.41 0-.78.56-1.41 1.26-1.41s1.27.64 1.26 1.4c0 .79-.55 1.42-1.26 1.42Z',
-          })
+          }),
         ),
         facebook: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7.4 14H5.06V7H3.5V4.59h1.56V3.17C5.06 1.2 5.53 0 7.6 0h1.72v2.41H8.25c-.8 0-.85.34-.85.97v1.2h1.93L9.11 7H7.4l-.01 7Z',
-          })
+          }),
         ),
         figma: a.createElement(
           a.Fragment,
@@ -4051,70 +4051,70 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement('path', {
             fillRule: 'evenodd',
             d: 'M9.2 0H4.8a2.6 2.6 0 0 0-1.4 4.8 2.6 2.6 0 0 0 0 4.4 2.6 2.6 0 1 0 4 2.2V8.89a2.6 2.6 0 1 0 3.2-4.09A2.6 2.6 0 0 0 9.2 0ZM7.4 7A1.8 1.8 0 1 0 11 7a1.8 1.8 0 0 0-3.6 0Zm-.8 2.6H4.8a1.8 1.8 0 1 0 1.8 1.8V9.6ZM4.8 4.4h1.8V.8H4.8a1.8 1.8 0 0 0 0 3.59Zm0 .8a1.8 1.8 0 0 0 0 3.6h1.8V5.2H4.8Zm4.4-.8H7.4V.8h1.8a1.8 1.8 0 1 1 0 3.59Z',
-          })
+          }),
         ),
         gdrive: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M6.37 8.77 4.33 12.3h6.75l2.04-3.54H6.38Zm6.18-1-3.5-6.08h-4.1l3.51 6.08h4.09ZM4.38 2.7.88 8.77l2.04 3.54 3.5-6.07L4.38 2.7Z',
-          })
+          }),
         ),
         github: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7 0a7 7 0 0 0-2.21 13.64c.35.06.48-.15.48-.33L5.26 12c-1.76.32-2.21-.43-2.35-.83-.08-.2-.43-.82-.72-.99-.25-.13-.6-.45-.01-.46.55 0 .94.5 1.07.72.63 1.06 1.64.76 2.04.58.07-.46.25-.77.45-.94-1.56-.18-3.19-.78-3.19-3.46 0-.76.28-1.39.72-1.88-.07-.17-.31-.9.07-1.85 0 0 .59-.19 1.93.71a6.5 6.5 0 0 1 3.5 0c1.34-.9 1.92-.71 1.92-.71.39.96.14 1.68.07 1.85.45.5.72 1.11.72 1.88 0 2.69-1.64 3.28-3.2 3.46.26.22.48.64.48 1.3l-.01 1.92c0 .18.13.4.48.33A7.01 7.01 0 0 0 7 0Z',
-          })
+          }),
         ),
         gitlab: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M4.53 5.58H1.07l1.49-4.55a.26.26 0 0 1 .48 0l1.49 4.55ZM7 13.15 1.07 5.58l-.75 2.3a.5.5 0 0 0 .18.57l6.5 4.7Zm0 0 6.5-4.7a.5.5 0 0 0 .18-.57l-.75-2.3L7 13.15l2.47-7.57H4.53L7 13.15Zm2.47-7.57h3.46l-1.49-4.55a.26.26 0 0 0-.48 0L9.47 5.58Z',
-          })
+          }),
         ),
         google: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M10.92 1.1H7.26c-1.64 0-3.19 1.24-3.19 2.68 0 1.47 1.12 2.66 2.8 2.66l.33-.01c-.1.2-.18.44-.18.68 0 .41.22.75.5 1.02h-.64c-2.03 0-3.6 1.3-3.6 2.64 0 1.32 1.72 2.15 3.75 2.15 2.32 0 3.6-1.31 3.6-2.64 0-1.06-.31-1.7-1.28-2.38-.33-.23-.96-.8-.96-1.14 0-.39.1-.58.7-1.04a2.46 2.46 0 0 0 1.03-1.92c0-.92-.4-1.82-1.18-2.11h1.17l.81-.6ZM9.6 10.04c.03.13.05.25.05.38 0 1.07-.7 1.9-2.67 1.9-1.4 0-2.42-.88-2.42-1.95 0-1.05 1.26-1.92 2.66-1.9a3 3 0 0 1 .92.14c.76.53 1.3.83 1.46 1.43ZM7.34 6.07c-.94-.03-1.84-1.06-2-2.3-.17-1.24.47-2.19 1.41-2.16.94.03 1.84 1.03 2 2.26.17 1.24-.47 2.23-1.41 2.2Z',
-          })
+          }),
         ),
         graphql: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M7.87 11.6a1.17 1.17 0 0 0-1.7-.02l-2.71-1.56.01-.04h7.07l.02.07-2.69 1.56Zm-1.7-9.18.03.03-3.54 6.12h-.04V5.43a1.17 1.17 0 0 0 .84-1.46l2.7-1.56Zm4.38 1.56a1.17 1.17 0 0 0 .84 1.46v3.12l-.04.01-3.54-6.12c.02 0 .03-.02.04-.03l2.7 1.56ZM3.47 9.42a1.17 1.17 0 0 0-.32-.57l3.53-6.12a1.17 1.17 0 0 0 .65 0l3.54 6.12a1.17 1.17 0 0 0-.33.57H3.47Zm8.8-.74c-.1-.05-.21-.1-.32-.12V5.44a1.17 1.17 0 1 0-1.12-1.94l-2.7-1.56a1.17 1.17 0 1 0-2.24 0L3.19 3.5a1.17 1.17 0 1 0-1.13 1.94v3.12a1.17 1.17 0 1 0 1.12 1.94l2.7 1.56a1.17 1.17 0 1 0 2.24-.03l2.69-1.55a1.17 1.17 0 1 0 1.45-1.8Z',
-          })
+          }),
         ),
         medium: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M0 0v14h14V0H0Zm11.63 3.32-.75.72a.22.22 0 0 0-.08.2v5.33c0 .07.03.14.08.18l.73.72v.16H7.92v-.16l.76-.74c.08-.07.08-.1.08-.21V5.24l-2.11 5.37h-.29L3.9 5.24v3.67c0 .13.05.25.14.34l.99 1.2v.16h-2.8v-.16l.98-1.2a.48.48 0 0 0 .13-.41V4.65c0-.11-.04-.2-.12-.27l-.88-1.06v-.16h2.73l2.1 4.62 1.86-4.62h2.6v.16Z',
-          })
+          }),
         ),
         redux: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M4.06 9.69c.02.49.42.88.91.88H5a.91.91 0 0 0-.03-1.83h-.03c-.03 0-.08 0-.11.02a5.97 5.97 0 0 1-.85-3.62c.06-.98.39-1.82.96-2.52.47-.6 1.39-.9 2-.92 1.73-.03 2.47 2.12 2.51 2.99.22.04.57.16.82.24-.2-2.64-1.83-4-3.4-4-1.46 0-2.81 1.05-3.35 2.61a6.67 6.67 0 0 0 .65 5.68.74.74 0 0 0-.11.47Zm8.28-2.3a6.62 6.62 0 0 0-5.15-2.25h-.26a.9.9 0 0 0-.8-.49H6.1a.91.91 0 0 0 .03 1.83h.03a.92.92 0 0 0 .8-.56h.3c1.23 0 2.4.36 3.47 1.06.81.54 1.4 1.24 1.72 2.09.28.68.26 1.35-.03 1.92a2.4 2.4 0 0 1-2.23 1.34c-.65 0-1.27-.2-1.6-.34-.18.16-.5.42-.73.58.7.33 1.41.5 2.1.5 1.56 0 2.72-.85 3.16-1.72.47-.94.44-2.57-.78-3.96ZM4.9 12.9a4 4 0 0 1-.98.11c-1.2 0-2.3-.5-2.84-1.32C.38 10.6.13 8.3 2.5 6.58c.05.26.15.62.22.83-.31.23-.8.68-1.11 1.3a2.4 2.4 0 0 0 .13 2.53c.36.54.93.86 1.66.96.9.11 1.8-.05 2.66-.5a5.83 5.83 0 0 0 2.67-2.56.91.91 0 0 1 .62-1.55h.03a.92.92 0 0 1 .1 1.82 6.26 6.26 0 0 1-4.56 3.49Z',
-          })
+          }),
         ),
         twitter: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M14 2.55c-.51.23-1.07.39-1.65.46.6-.36 1.05-.94 1.26-1.63-.55.34-1.17.58-1.82.72a2.84 2.84 0 0 0-2.1-.93 2.9 2.9 0 0 0-2.8 3.61 8.09 8.09 0 0 1-5.9-3.07 2.99 2.99 0 0 0 .88 3.93 2.8 2.8 0 0 1-1.3-.37v.04c0 1.42 1 2.61 2.3 2.89a2.82 2.82 0 0 1-1.3.05 2.89 2.89 0 0 0 2.7 2.04A5.67 5.67 0 0 1 0 11.51a7.98 7.98 0 0 0 4.4 1.32c5.29 0 8.17-4.48 8.17-8.38v-.38A5.93 5.93 0 0 0 14 2.55Z',
-          })
+          }),
         ),
         youtube: a.createElement(
           a.Fragment,
           null,
           a.createElement('path', {
             d: 'M13.99 8.17V5.83a14.95 14.95 0 0 0-.23-2.22c-.09-.38-.27-.7-.55-.96s-.6-.41-.97-.45A51.3 51.3 0 0 0 7 2c-2.34 0-4.09.07-5.24.2A1.78 1.78 0 0 0 .25 3.61 15.26 15.26 0 0 0 0 7v1.16a15.24 15.24 0 0 0 .24 2.22c.09.38.27.7.55.96.27.26.6.41.97.45 1.15.13 2.9.2 5.24.2 2.34 0 4.08-.06 5.24-.2.37-.04.7-.19.97-.45s.45-.58.54-.96a15.26 15.26 0 0 0 .24-2.22Zm-4.23-1.6c.16.1.24.24.24.43 0 .2-.08.33-.24.42l-4 2.5a.44.44 0 0 1-.26.08.54.54 0 0 1-.24-.06A.46.46 0 0 1 5 9.5v-5c0-.2.08-.34.26-.44.17-.1.34-.09.5.02l4 2.5Z',
-          })
+          }),
         ),
         linkedin: a.createElement('path', {
           fillRule: 'evenodd',
@@ -4127,7 +4127,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           null,
           a.createElement('path', {
             d: 'M10.24.04c.13 0 .26.03.38.09L13.5 1.5a.87.87 0 0 1 .5.8v.03-.01 9.39c0 .33-.2.63-.5.78l-2.88 1.38a.87.87 0 0 1-1-.17l-5.5-5.03-2.4 1.83a.58.58 0 0 1-.75-.04l-.77-.7a.58.58 0 0 1 0-.86L2.27 7 .2 5.1a.58.58 0 0 1 0-.86l.77-.7c.21-.2.52-.2.75-.04l2.4 1.83L9.63.3a.87.87 0 0 1 .61-.26Zm.26 3.78L6.32 7l4.18 3.18V3.82Z',
-          })
+          }),
         ),
       },
       Nd = w.svg({
@@ -4141,7 +4141,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         a.createElement(
           Nd,
           { viewBox: '0 0 14 14', width: '14px', height: '14px', ...t },
-          a.createElement(a.Fragment, null, Md[e])
+          a.createElement(a.Fragment, null, Md[e]),
         );
     function lr() {
       return (
@@ -4161,7 +4161,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function Ad(e) {
       if (e === void 0)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return e;
     }
@@ -4200,7 +4200,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function is() {
       try {
         var e = !Boolean.prototype.valueOf.call(
-          Reflect.construct(Boolean, [], function () {})
+          Reflect.construct(Boolean, [], function () {}),
         );
       } catch {}
       return (is = function () {
@@ -4221,7 +4221,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           if (n === null || !Od(n)) return n;
           if (typeof n != 'function')
             throw new TypeError(
-              'Super expression must either be null or a function'
+              'Super expression must either be null or a function',
             );
           if (typeof t < 'u') {
             if (t.has(n)) return t.get(n);
@@ -4255,7 +4255,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               this,
               'An error occurred. See https://github.com/styled-components/polished/blob/main/src/internalHelpers/errors.md#' +
                 n +
-                ' for more information.'
+                ' for more information.',
             ) || this),
           Ad(r)
         );
@@ -4721,7 +4721,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       if (t === 'transparent') return t;
       var n = ls(t);
       return ss(
-        lr({}, n, { lightness: us(0, 1, n.lightness - parseFloat(e)) })
+        lr({}, n, { lightness: us(0, 1, n.lightness - parseFloat(e)) }),
       );
     }
     var Kd = ds(Qd),
@@ -4730,7 +4730,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       if (t === 'transparent') return t;
       var n = ls(t);
       return ss(
-        lr({}, n, { lightness: us(0, 1, n.lightness + parseFloat(e)) })
+        lr({}, n, { lightness: us(0, 1, n.lightness + parseFloat(e)) }),
       );
     }
     var Xd = ds(Jd),
@@ -4934,7 +4934,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           lineHeight: `${Kt[e.size || 'medium']}px`,
           ...(e.isLoading && { background: z.light, filter: 'grayscale(1)' }),
           ...(!e.src && !e.isLoading && { background: '#37D5D3' }),
-        })
+        }),
       ),
       a5 = w(vo)(
         {
@@ -4951,7 +4951,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           bottom: `${e.type === 'user' ? -2 : -4}px`,
           height: `${e.type === 'user' ? 100 : 70}%`,
           width: `${e.type === 'user' ? 100 : 70}%`,
-        })
+        }),
       ),
       r5 = w.div(
         { color: z.lightest, textAlign: 'center' },
@@ -4967,7 +4967,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               lineHeight: `${Kt.medium}px`,
             },
             large: { fontSize: `${D.size.s3}px`, lineHeight: `${Kt.large}px` },
-          })[e.size || 'medium']
+          })[e.size || 'medium'],
       ),
       i5 = ({
         isLoading: e = !1,
@@ -4991,12 +4991,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (l = a.createElement(
                   r5,
                   { size: r, 'aria-hidden': 'true' },
-                  t.substring(0, 1)
+                  t.substring(0, 1),
                 ))),
           a.createElement(
             n5,
             { size: r, isLoading: e, src: n, type: i, ...s, ...o },
-            l
+            l,
           )
         );
       },
@@ -5011,7 +5011,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               bottom: 'auto',
               verticalAlign: 'inherit',
             },
-          }
+          },
       ),
       l5 = w.a(
         {
@@ -5073,7 +5073,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             '&:hover': { color: z.lighter },
             '&:active': { color: z.light },
           }),
-        })
+        }),
       ),
       s5 = w.a({}),
       c5 = w.button({
@@ -5095,13 +5095,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             tertiary: l,
             ...s
           },
-          c
+          c,
         ) =>
           n
             ? a.createElement(c5, { ...s, ref: c })
             : r
               ? a.createElement(r, { ...s, ref: c })
-              : a.createElement(s5, { ...s, ref: c })
+              : a.createElement(s5, { ...s, ref: c }),
       );
     ps.displayName = 'LinkComponentPicker';
     var De = q(({ children: e, withArrow: t, ...n }, r) => {
@@ -5112,8 +5112,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           o5,
           { withArrow: !!t },
           e,
-          t && a.createElement(vo, { icon: 'arrowright' })
-        )
+          t && a.createElement(vo, { icon: 'arrowright' }),
+        ),
       );
       return a.createElement(l5, { as: ps, ref: r, ...n }, i);
     });
@@ -5283,7 +5283,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               verticalAlign: 'middle',
             },
             '.sbds-input-input-wrapper': { width: 'auto' },
-          }
+          },
       ),
       g5 = w(Ne)({ width: '100%' }),
       v5 = w(ol)({ width: 170 }),
@@ -5322,7 +5322,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             value: y = '',
             ...k
           },
-          b
+          b,
         ) => {
           let [h, g] = Te(vl({ error: r, value: y, lastErrorValue: c })),
             E = `${e}-error`;
@@ -5345,7 +5345,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             a.createElement(
               u5,
               { className: 'sbds-input-label-wrapper', hideLabel: o },
-              a.createElement(d5, { htmlFor: e, appearance: t }, s)
+              a.createElement(d5, { htmlFor: e, appearance: t }, s),
             ),
             a.createElement(
               h5,
@@ -5369,7 +5369,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   tooltip: h && !v && a.createElement(v5, { desc: h }),
                   role: 'none',
                 },
-                x
+                x,
               ),
               p === 'password' &&
                 a.createElement(
@@ -5378,12 +5378,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   a.createElement(
                     De,
                     { isButton: !0, tertiary: !0, onClick: d, type: 'button' },
-                    f === 'password' ? 'Show' : 'Hide'
-                  )
-                )
-            )
+                    f === 'password' ? 'Show' : 'Hide',
+                  ),
+                ),
+            ),
           );
-        }
+        },
       );
     hs.displayName = 'PureInput';
     var fs = q(({ type: e, startFocused: t, ...n }, r) => {
@@ -5396,7 +5396,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
             o('password');
           },
-          [i, o]
+          [i, o],
         ),
         s = Ie(),
         c = r || s,
@@ -5484,7 +5484,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               borderRightColor: z.lightest,
             }),
           }),
-        })
+        }),
       ),
       E5 = (e) =>
         a.createElement(b5, {
@@ -5589,13 +5589,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }),
       }),
       N5 = w(({ active: e, activeColor: t, isLoading: n, ...r }) =>
-        a.createElement('a', { ...r })
+        a.createElement('a', { ...r }),
       )(Eo),
       A5 = w.span(Eo),
       F5 = k5((e) =>
         w(({ active: t, isLoading: n, activeColor: r, ...i }) =>
-          a.createElement(e, { ...i })
-        )(Eo)
+          a.createElement(e, { ...i }),
+        )(Eo),
       ),
       st = ({
         appearance: e = 'primary',
@@ -5615,20 +5615,20 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             t && a.createElement(w5, { className: 'sbds-list-item-left' }, t),
             n && a.createElement(C5, { className: 'sbds-list-item-title' }, n),
             r && a.createElement(S5, { className: 'sbds-list-item-center' }, r),
-            i && a.createElement(x5, { className: 'sbds-list-item-right' }, i)
+            i && a.createElement(x5, { className: 'sbds-list-item-right' }, i),
           );
         if (l) {
           let m = F5(l);
           return a.createElement(
             yl,
             null,
-            a.createElement(m, { activeColor: d, ...c }, u)
+            a.createElement(m, { activeColor: d, ...c }, u),
           );
         }
         return a.createElement(
           yl,
           null,
-          a.createElement(s ? N5 : A5, { activeColor: d, ...c }, u)
+          a.createElement(s ? N5 : A5, { activeColor: d, ...c }, u),
         );
       };
     function la(e) {
@@ -5766,7 +5766,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           ).json();
           if (Z5(r))
             throw new Error(
-              'You have not authorized the Visual Tests addon for Chromatic, please try again'
+              'You have not authorized the Visual Tests addon for Chromatic, please try again',
             );
           if (r.access_token) return r.access_token;
           if (I5(r))
@@ -5793,7 +5793,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           ({ onDismiss: o }) => {
             o(), n({ selectedPanel: tn }), r(!0);
           },
-          [n, r]
+          [n, r],
         );
       return Y(
         (o, l) => {
@@ -5804,7 +5804,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             onClick: i,
           });
         },
-        [t, i]
+        [t, i],
       );
     }
     var Qn = new Map(),
@@ -5816,7 +5816,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             Qn.has(e) ? r() : t(...o),
               Qn.set(
                 e,
-                window.setTimeout(() => Qn.delete(e) && t(...o), n)
+                window.setTimeout(() => Qn.delete(e) && t(...o), n),
               );
           };
         return (i.cancel = r), i;
@@ -5836,23 +5836,23 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               e,
               (s) => {
                 let c = new Set(
-                  sessionStorage.getItem(`${U}/state`)?.split(';')
+                  sessionStorage.getItem(`${U}/state`)?.split(';'),
                 );
                 s == null
                   ? (sessionStorage.removeItem(`${U}/state/${e}`), c.delete(e))
                   : (sessionStorage.setItem(
                       `${U}/state/${e}`,
-                      JSON.stringify(s)
+                      JSON.stringify(s),
                     ),
                     c.add(e)),
                   sessionStorage.setItem(`${U}/state`, Array.from(c).join(';')),
                   window.dispatchEvent(
-                    new StorageEvent('session-storage', { key: e })
+                    new StorageEvent('session-storage', { key: e }),
                   );
               },
-              1e3
+              1e3,
             ),
-          [e]
+          [e],
         );
       le(() => o.cancel, [o]);
       let l = Y(
@@ -5860,7 +5860,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           let c = s;
           (!c.key || c.key === e) && i(n());
         },
-        [e, n]
+        [e, n],
       );
       return (
         le(
@@ -5872,7 +5872,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 window.removeEventListener('session-storage', l);
             }
           ),
-          [l]
+          [l],
         ),
         [
           r,
@@ -5882,7 +5882,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 let d = typeof s == 'function' ? s(c) : s;
                 return o(d), d;
               }),
-            [o]
+            [o],
           ),
         ]
       );
@@ -5893,7 +5893,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         ? (e.forEach((n) => sessionStorage.removeItem(`${U}/state/${n}`)),
           sessionStorage.setItem(
             `${U}/state`,
-            t.filter((n) => !e.includes(n)).join(';')
+            t.filter((n) => !e.includes(n)).join(';'),
           ))
         : (t.forEach((n) => sessionStorage.removeItem(`${U}/state/${n}`)),
           sessionStorage.removeItem(`${U}/state`));
@@ -5908,7 +5908,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return a.createElement(
           ys.Provider,
           { value: { addonUninstalled: t, uninstallAddon: i } },
-          e
+          e,
         );
       },
       wo = () => Nt(ys, 'Uninstall Addon'),
@@ -5955,7 +5955,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               clipRule: 'evenodd',
               d: 'M17.5005 11.0555C16.8471 11.0963 16.3455 11.6508 16.37 12.3051L17.1135 32.1151C17.137 32.7426 17.6379 33.2471 18.2651 33.2753L34.3716 33.9987C34.3896 33.9995 34.4077 33.9999 34.4257 33.9999C35.0921 33.9999 35.6324 33.4597 35.6324 32.7932V11.2067C35.6324 11.1816 35.6316 11.1565 35.63 11.1314C35.5885 10.4663 35.0156 9.96082 34.3505 10.0024L33.0259 10.0853L33.1227 12.8548C33.1261 12.9541 33.0484 13.0375 32.949 13.041C32.9065 13.0424 32.8648 13.0288 32.8314 13.0025L31.939 12.2995L30.8825 13.1009C30.8033 13.161 30.6904 13.1455 30.6303 13.0663C30.605 13.033 30.5921 12.9919 30.5939 12.9501L30.707 10.2302L17.5005 11.0555ZM31.221 19.1936C30.7965 19.5234 27.6343 19.7484 27.6343 19.2789C27.7011 17.4876 26.8991 17.409 26.4536 17.409C26.0303 17.409 25.3174 17.537 25.3174 18.4966C25.3174 19.4746 26.3592 20.0267 27.582 20.6747C29.3191 21.5952 31.4215 22.7093 31.4215 25.5128C31.4215 28.1998 29.2383 29.6842 26.4536 29.6842C23.5797 29.6842 21.0683 28.5215 21.352 24.4904C21.4633 24.0171 25.1169 24.1296 25.1169 24.4904C25.0723 26.1538 25.4511 26.6431 26.409 26.6431C27.1442 26.6431 27.4783 26.2379 27.4783 25.5554C27.4783 24.5227 26.3929 23.9133 25.1442 23.2122C23.4534 22.2629 21.4633 21.1456 21.4633 18.5819C21.4633 16.0229 23.2233 14.3168 26.3645 14.3168C29.5056 14.3168 31.221 15.9967 31.221 19.1936Z',
               fill: 'white',
-            })
+            }),
           ),
           a.createElement('circle', {
             cx: '46',
@@ -6029,9 +6029,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 in: 'SourceGraphic',
                 in2: 'effect2_dropShadow_304_317890',
                 result: 'shape',
-              })
-            )
-          )
+              }),
+            ),
+          ),
         ),
       sn = (e) =>
         a.createElement(
@@ -6090,7 +6090,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   cy: '16.2246',
                   r: '2.45455',
                   fill: '#93D4A5',
-                })
+                }),
               ),
               a.createElement('rect', {
                 x: '7.05469',
@@ -6135,10 +6135,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     cy: '17.9746',
                     r: '2.45455',
                     fill: '#A9E0B8',
-                  })
-                )
-              )
-            )
+                  }),
+                ),
+              ),
+            ),
           ),
           a.createElement(
             'defs',
@@ -6205,7 +6205,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 in: 'SourceGraphic',
                 in2: 'effect2_dropShadow_304_317945',
                 result: 'shape',
-              })
+              }),
             ),
             a.createElement(
               'clipPath',
@@ -6217,7 +6217,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 height: '40',
                 rx: '8',
                 fill: 'white',
-              })
+              }),
             ),
             a.createElement(
               'clipPath',
@@ -6229,7 +6229,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 height: '22.5',
                 rx: '2',
                 fill: 'white',
-              })
+              }),
             ),
             a.createElement(
               'clipPath',
@@ -6239,7 +6239,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 height: '29.9046',
                 fill: 'white',
                 transform: 'translate(7.20801 3.17212) rotate(45)',
-              })
+              }),
             ),
             a.createElement(
               'clipPath',
@@ -6251,9 +6251,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 height: '22.5',
                 rx: '2',
                 fill: 'white',
-              })
-            )
-          )
+              }),
+            ),
+          ),
         ),
       D5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6278,8 +6278,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M13 1.504v11a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11a.5.5 0 01.5-.5h11a.5.5 0 01.5.5zM2 9.297V2.004h10v5.293L9.854 5.15a.5.5 0 00-.708 0L6.5 7.797 5.354 6.65a.5.5 0 00-.708 0L2 9.297zM9.5 6.21l2.5 2.5v3.293H2V10.71l3-3 3.146 3.146a.5.5 0 00.708-.707L7.207 8.504 9.5 6.21z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       Es = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6298,8 +6298,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M3 3.004H.5a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h10a.5.5 0 00.5-.5v-2.5h2.5a.5.5 0 00.5-.5v-10a.5.5 0 00-.5-.5h-10a.5.5 0 00-.5.5v2.5zm1 1v2.293l2.293-2.293H4zm-1 0v6.5a.499.499 0 00.497.5H10v2H1v-9h2zm1-1h6.5a.499.499 0 01.5.5v6.5h2v-9H4v2zm6 7V7.71l-2.293 2.293H10zm0-3.707V4.71l-5.293 5.293h1.586L10 6.297zm-.707-2.293H7.707L4 7.71v1.586l5.293-5.293z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       z5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6322,8 +6322,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M14 7A7 7 0 110 7a7 7 0 0114 0zm-1 0A6 6 0 111 7a6 6 0 0112 0z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       Dt = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6340,8 +6340,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M12.813 7.425l-9.05 5.603A.5.5 0 013 12.603V1.398a.5.5 0 01.763-.425l9.05 5.602a.5.5 0 010 .85z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       U5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6358,8 +6358,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M1 1.504a.5.5 0 01.5-.5h11a.5.5 0 01.5.5v11a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-11z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       ks = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6382,8 +6382,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M1.5 0a.5.5 0 00-.5.5v13a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V3.207a.5.5 0 00-.146-.353L10.146.146A.5.5 0 009.793 0H1.5zM2 1h7.5v2a.5.5 0 00.5.5h2V13H2V1z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       $5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6400,8 +6400,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M6 7a3 3 0 110-6h5.5a.5.5 0 010 1H10v10.5a.5.5 0 01-1 0V2H7v10.5a.5.5 0 01-1 0V7z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       W5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6424,8 +6424,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M.939 6.527c.127.128.19.297.185.464a.635.635 0 01-.185.465L0 8.395a7.099 7.099 0 001.067 2.572h1.32c.182 0 .345.076.46.197a.635.635 0 01.198.46v1.317A7.097 7.097 0 005.602 14l.94-.94a.634.634 0 01.45-.186H7.021c.163 0 .326.061.45.186l.939.938a7.098 7.098 0 002.547-1.057V11.61c0-.181.075-.344.197-.46a.634.634 0 01.46-.197h1.33c.507-.76.871-1.622 1.056-2.55l-.946-.946a.635.635 0 01-.186-.465.635.635 0 01.186-.464l.943-.944a7.099 7.099 0 00-1.044-2.522h-1.34a.635.635 0 01-.46-.197.635.635 0 01-.196-.46V1.057A7.096 7.096 0 008.413.002l-.942.942a.634.634 0 01-.45.186H6.992a.634.634 0 01-.45-.186L5.598 0a7.097 7.097 0 00-2.553 1.058v1.33c0 .182-.076.345-.197.46a.635.635 0 01-.46.198h-1.33A7.098 7.098 0 00.003 5.591l.936.936zm.707 1.636c.324-.324.482-.752.479-1.172a1.634 1.634 0 00-.48-1.171l-.538-.539c.126-.433.299-.847.513-1.235h.768c.459 0 .873-.19 1.167-.49.3-.295.49-.708.49-1.167v-.77c.39-.215.807-.388 1.243-.515l.547.547c.32.32.742.48 1.157.48l.015-.001h.014c.415 0 .836-.158 1.157-.479l.545-.544c.433.126.846.299 1.234.512v.784c0 .46.19.874.49 1.168.294.3.708.49 1.167.49h.776c.209.382.378.788.502 1.213l-.545.546a1.635 1.635 0 00-.48 1.17c-.003.421.155.849.48 1.173l.549.55c-.126.434-.3.85-.513 1.239h-.77c-.458 0-.872.19-1.166.49-.3.294-.49.708-.49 1.167v.77a6.09 6.09 0 01-1.238.514l-.54-.54a1.636 1.636 0 00-1.158-.48H6.992c-.415 0-.837.159-1.157.48l-.543.543a6.091 6.091 0 01-1.247-.516v-.756c0-.459-.19-.873-.49-1.167-.294-.3-.708-.49-1.167-.49h-.761a6.094 6.094 0 01-.523-1.262l.542-.542z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       G5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6442,8 +6442,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M4 7a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM13 7a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0zM7 8.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       q5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6466,8 +6466,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M2.5 12.797l-1.293-1.293 6.758-6.758L9.258 6.04 2.5 12.797zm7.465-7.465l2.828-2.828L11.5 1.211 8.672 4.04l1.293 1.293zM.147 11.857a.5.5 0 010-.707l11-11a.5.5 0 01.706 0l2 2a.5.5 0 010 .708l-11 11a.5.5 0 01-.706 0l-2-2z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       Co = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6484,8 +6484,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M13.854 3.354a.5.5 0 00-.708-.708L5 10.793.854 6.646a.5.5 0 10-.708.708l4.5 4.5a.5.5 0 00.708 0l8.5-8.5z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       El = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6502,8 +6502,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M11.5 2a.5.5 0 000 1h2a.5.5 0 000-1h-2zM9.3 2.6a.5.5 0 01.1.7l-5.995 7.993a.505.505 0 01-.37.206.5.5 0 01-.395-.152L.146 8.854a.5.5 0 11.708-.708l2.092 2.093L8.6 2.7a.5.5 0 01.7-.1zM11 7a.5.5 0 01.5-.5h2a.5.5 0 010 1h-2A.5.5 0 0111 7zM11.5 11a.5.5 0 000 1h2a.5.5 0 000-1h-2z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       Y5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6526,8 +6526,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M7 14A7 7 0 107 0a7 7 0 000 14zm0-1A6 6 0 107 1a6 6 0 000 12z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       So = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6550,8 +6550,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M7 14A7 7 0 107 0a7 7 0 000 14zm0-1A6 6 0 107 1a6 6 0 000 12z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       Q5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6570,8 +6570,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M7 14A7 7 0 107 0a7 7 0 000 14zm3.854-9.354a.5.5 0 010 .708l-4.5 4.5a.5.5 0 01-.708 0l-2.5-2.5a.5.5 0 11.708-.708L6 8.793l4.146-4.147a.5.5 0 01.708 0z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       K5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6590,8 +6590,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M7 14A7 7 0 107 0a7 7 0 000 14zM3.5 6.5a.5.5 0 000 1h7a.5.5 0 000-1h-7z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       ws = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6610,8 +6610,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M7 14A7 7 0 107 0a7 7 0 000 14zm2.854-9.854a.5.5 0 010 .708L7.707 7l2.147 2.146a.5.5 0 01-.708.708L7 7.707 4.854 9.854a.5.5 0 01-.708-.708L6.293 7 4.146 4.854a.5.5 0 11.708-.708L7 6.293l2.146-2.147a.5.5 0 01.708 0z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       Cs = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6634,8 +6634,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M3 4.004a4 4 0 118 0v1h1.5a.5.5 0 01.5.5v8a.5.5 0 01-.5.5h-11a.5.5 0 01-.5-.5v-8a.5.5 0 01.5-.5H3v-1zm7 1v-1a3 3 0 10-6 0v1h6zm2 1H2v7h10v-7z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       J5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6658,8 +6658,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M7 14A7 7 0 107 0a7 7 0 000 14zm0-1A6 6 0 107 1a6 6 0 000 12z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       Ss = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6682,8 +6682,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M14 7A7 7 0 110 7a7 7 0 0114 0zm-1 0A6 6 0 111 7a6 6 0 0112 0z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       X5 = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6702,8 +6702,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M14 7A7 7 0 110 7a7 7 0 0114 0zm-3.524 4.89A5.972 5.972 0 017 13a5.972 5.972 0 01-3.477-1.11l1.445-1.444C5.564 10.798 6.258 11 7 11s1.436-.202 2.032-.554l1.444 1.445zm-.03-2.858l1.445 1.444A5.972 5.972 0 0013 7c0-1.296-.41-2.496-1.11-3.477l-1.444 1.445C10.798 5.564 11 6.258 11 7s-.202 1.436-.554 2.032zM9.032 3.554l1.444-1.445A5.972 5.972 0 007 1c-1.296 0-2.496.41-3.477 1.11l1.445 1.444A3.981 3.981 0 017 3c.742 0 1.436.202 2.032.554zM3.554 4.968L2.109 3.523A5.973 5.973 0 001 7c0 1.296.41 2.496 1.11 3.476l1.444-1.444A3.981 3.981 0 013 7c0-.742.202-1.436.554-2.032zM10 7a3 3 0 11-6 0 3 3 0 016 0z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       eu = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6726,8 +6726,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M7.206 1.045a.498.498 0 01.23.209l6.494 10.992a.5.5 0 01-.438.754H.508a.497.497 0 01-.506-.452.498.498 0 01.072-.31l6.49-10.984a.497.497 0 01.642-.21zM7 2.483L1.376 12h11.248L7 2.483z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       xs = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6748,8 +6748,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M7.354 7.357L12 2.711v1.793a.5.5 0 001 0v-3a.5.5 0 00-.5-.5h-3a.5.5 0 100 1h1.793L6.646 6.65a.5.5 0 10.708.707z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       tu = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6771,7 +6771,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               clipRule: 'evenodd',
               d: 'M8.414 1.586a2 2 0 00-2.828 0l-4 4a2 2 0 000 2.828l4 4a2 2 0 002.828 0l4-4a2 2 0 000-2.828l-4-4zm.707-.707a3 3 0 00-4.242 0l-4 4a3 3 0 000 4.242l4 4a3 3 0 004.242 0l4-4a3 3 0 000-4.242l-4-4z',
               fill: e,
-            })
+            }),
           ),
           S(
             'defs',
@@ -6779,10 +6779,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             S(
               'clipPath',
               { id: 'prefix__clip0_1449_588' },
-              S('path', { fill: '#fff', d: 'M0 0h14v14H0z' })
-            )
-          )
-        )
+              S('path', { fill: '#fff', d: 'M0 0h14v14H0z' }),
+            ),
+          ),
+        ),
       ),
       Ms = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6799,8 +6799,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M1.146 4.604l5.5 5.5a.5.5 0 00.708 0l5.5-5.5a.5.5 0 00-.708-.708L7 9.043 1.854 3.896a.5.5 0 10-.708.708z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       nu = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6817,8 +6817,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M2.76 7.096a.498.498 0 00.136.258l5.5 5.5a.5.5 0 00.707-.708L3.958 7l5.147-5.146a.5.5 0 10-.708-.708l-5.5 5.5a.5.5 0 00-.137.45z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       au = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6835,8 +6835,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M11.104 7.354l-5.5 5.5a.5.5 0 01-.708-.708L10.043 7 4.896 1.854a.5.5 0 11.708-.708l5.5 5.5a.5.5 0 010 .708z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       ru = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6853,8 +6853,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M7.354.146l4 4a.5.5 0 01-.708.708L7 1.207 3.354 4.854a.5.5 0 11-.708-.708l4-4a.5.5 0 01.708 0zM11.354 9.146a.5.5 0 010 .708l-4 4a.5.5 0 01-.708 0l-4-4a.5.5 0 11.708-.708L7 12.793l3.646-3.647a.5.5 0 01.708 0z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       iu = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6871,8 +6871,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M3.354.146a.5.5 0 10-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 00-.708-.708L7 3.793 3.354.146zM6.646 9.146a.5.5 0 01.708 0l4 4a.5.5 0 01-.708.708L7 10.207l-3.646 3.647a.5.5 0 01-.708-.708l4-4z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       ou = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6889,8 +6889,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M10.646 2.646a.5.5 0 01.708 0l1.5 1.5a.5.5 0 010 .708l-1.5 1.5a.5.5 0 01-.708-.708L11.293 5H1.5a.5.5 0 010-1h9.793l-.647-.646a.5.5 0 010-.708zM3.354 8.354L2.707 9H12.5a.5.5 0 010 1H2.707l.647.646a.5.5 0 01-.708.708l-1.5-1.5a.5.5 0 010-.708l1.5-1.5a.5.5 0 11.708.708z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       lu = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6907,8 +6907,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M1.146 3.854a.5.5 0 010-.708l2-2a.5.5 0 11.708.708L2.707 3h6.295A4 4 0 019 11H3a.5.5 0 010-1h6a3 3 0 100-6H2.707l1.147 1.146a.5.5 0 11-.708.708l-2-2z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       Vr = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6925,8 +6925,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           S('path', {
             d: 'M5.5 1A.5.5 0 005 .5H2a.5.5 0 000 1h1.535a6.502 6.502 0 002.383 11.91.5.5 0 10.165-.986A5.502 5.502 0 014.5 2.1V4a.5.5 0 001 0V1.353a.5.5 0 000-.023V1zM7.507 1a.5.5 0 01.576-.41 6.502 6.502 0 012.383 11.91H12a.5.5 0 010 1H9a.5.5 0 01-.5-.5v-3a.5.5 0 011 0v1.9A5.5 5.5 0 007.917 1.576.5.5 0 017.507 1z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       su = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6945,8 +6945,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M0 7a7 7 0 1114 0A7 7 0 010 7zm6.5 3.5v2.48A6.001 6.001 0 011.02 7.5H3.5a.5.5 0 000-1H1.02A6.001 6.001 0 016.5 1.02V3.5a.5.5 0 001 0V1.02a6.001 6.001 0 015.48 5.48H10.5a.5.5 0 000 1h2.48a6.002 6.002 0 01-5.48 5.48V10.5a.5.5 0 00-1 0z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       cu = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6969,8 +6969,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M5.5.5A.5.5 0 016 0h2a.5.5 0 010 1h-.5v1.02a5.973 5.973 0 013.374 1.398l.772-.772a.5.5 0 01.708.708l-.772.772A6 6 0 116.5 2.02V1H6a.5.5 0 01-.5-.5zM7 3a5 5 0 100 10A5 5 0 007 3z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       du = q(({ color: e = 'currentColor', size: t = 14, ...n }, r) =>
         S(
@@ -6989,8 +6989,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M14 7A7 7 0 110 7a7 7 0 0114 0zM2.671 11.155c.696-1.006 2.602-1.816 3.194-1.91.226-.036.232-.658.232-.658s-.665-.658-.81-1.544c-.39 0-.63-.94-.241-1.272a2.578 2.578 0 00-.012-.13c-.066-.607-.28-2.606 1.965-2.606 2.246 0 2.031 2 1.966 2.606l-.012.13c.39.331.149 1.272-.24 1.272-.146.886-.81 1.544-.81 1.544s.004.622.23.658c.593.094 2.5.904 3.195 1.91a6 6 0 10-8.657 0z',
             fill: e,
-          })
-        )
+          }),
+        ),
       ),
       uu = mt(Br()),
       mu = (e, t) =>
@@ -7020,7 +7020,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             '--bg-color': e ? r : t.background.content,
             '&:hover': { '--bg-color': i, color: t.color.secondary },
           };
-        }
+        },
       ),
       Ns = w.div({ display: 'flex', flexDirection: 'column' }),
       $i = w.div(({ theme: e }) => ({
@@ -7088,7 +7088,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             },
           }),
         ({ tertiary: e }) => e && me({ '&&:hover': { boxShadow: 'none' } }),
-        ({ belowText: e }) => e && { marginTop: 7 }
+        ({ belowText: e }) => e && { marginTop: 7 },
       ),
       Ve = w(al)(({ theme: e }) => ({
         color: e.base === 'light' ? e.color.darker : e.color.lighter,
@@ -7414,7 +7414,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement(
             yu,
             { onClick: e, style: { marginRight: -8 } },
-            a.createElement(xo, { 'aria-label': 'Close' })
+            a.createElement(xo, { 'aria-label': 'Close' }),
           ),
           a.createElement(
             Eu,
@@ -7436,8 +7436,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       target: '_blank',
                       withArrow: !0,
                     },
-                    'Learn more'
-                  )
+                    'Learn more',
+                  ),
                 )
               : a.createElement(
                   Cl,
@@ -7453,8 +7453,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       target: '_blank',
                       withArrow: !0,
                     },
-                    'Learn more'
-                  )
+                    'Learn more',
+                  ),
                 ),
             c &&
               a.createElement(
@@ -7475,8 +7475,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           a.createElement(
                             Su,
                             null,
-                            '*Disabled for local builds'
-                          )
+                            '*Disabled for local builds',
+                          ),
                       ),
                       a.createElement(Al, null, vu[d]?.description),
                       a.createElement(
@@ -7485,9 +7485,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         a.createElement(
                           Cu,
                           { hideBorderRadius: !!(m || p) },
-                          u === void 0 ? 'undefined' : JSON.stringify(u)
-                        )
-                      )
+                          u === void 0 ? 'undefined' : JSON.stringify(u),
+                        ),
+                      ),
                     ),
                     m !== void 0 &&
                       a.createElement(
@@ -7499,15 +7499,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               'span',
                               null,
                               a.createElement('strong', null, 'Warning: '),
-                              'This should be removed.'
+                              'This should be removed.',
                             )
                           : a.createElement(
                               'span',
                               null,
                               a.createElement('strong', null, 'Warning: '),
                               'This should be: ',
-                              a.createElement(Ve, null, JSON.stringify(m))
-                            )
+                              a.createElement(Ve, null, JSON.stringify(m)),
+                            ),
                       ),
                     p !== void 0 &&
                       a.createElement(
@@ -7519,10 +7519,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           null,
                           a.createElement('strong', null, 'Hint: '),
                           'Try setting as ',
-                          a.createElement(Ve, null, JSON.stringify(p))
-                        )
-                      )
-                  )
+                          a.createElement(Ve, null, JSON.stringify(p)),
+                        ),
+                      ),
+                  ),
                 ),
                 a.createElement(
                   'div',
@@ -7533,22 +7533,22 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       xl,
                       null,
-                      a.createElement(Ml, null, 'Uninstall addon')
+                      a.createElement(Ml, null, 'Uninstall addon'),
                     ),
                     a.createElement(
                       Al,
                       null,
-                      'Removing the addon updates your Storybook configuration and uninstalls the dependency.'
+                      'Removing the addon updates your Storybook configuration and uninstalls the dependency.',
                     ),
                     a.createElement(
                       Nl,
                       null,
-                      a.createElement(se, { onClick: t }, 'Uninstall')
-                    )
-                  )
-                )
-              )
-          )
+                      a.createElement(se, { onClick: t }, 'Uninstall'),
+                    ),
+                  ),
+                ),
+              ),
+          ),
         );
       },
       Os = {
@@ -7584,7 +7584,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             toggleBaselineImage: (t) =>
               e({ type: 'toggleBaselineImage', payload: t }),
           }),
-          [e]
+          [e],
         );
       },
       Lu = ({ children: e, initialState: t = Os }) => {
@@ -7592,7 +7592,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return a.createElement(
           Ls.Provider,
           { value: n },
-          a.createElement(Ts.Provider, { value: r }, e)
+          a.createElement(Ts.Provider, { value: r }, e),
         );
       },
       Be = w(ll)(({ theme: e }) => ({
@@ -7618,14 +7618,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       ...c,
                       onClick: (...d) => (s(), c.onClick?.(...d)),
                     })),
-                  })
+                  }),
                 ),
               trigger: 'click',
               ...r,
             },
             typeof e == 'function'
               ? e(i)
-              : a.createElement(rt, { active: i }, e)
+              : a.createElement(rt, { active: i }, e),
           );
         return n
           ? a.createElement(
@@ -7635,7 +7635,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 trigger: 'hover',
                 hasChrome: !1,
               },
-              l
+              l,
             )
           : l;
       },
@@ -7685,7 +7685,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return a.createElement(
           fa,
           { placement: 'top', links: o },
-          a.createElement(G5, null)
+          a.createElement(G5, null),
         );
       };
     w.div(({ hidden: e, theme: t }) => ({
@@ -7697,7 +7697,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     }));
     var _u = w.div(
         { display: 'flex', flexDirection: 'column', flexGrow: 1 },
-        ({ hidden: e }) => e && { display: 'none' }
+        ({ hidden: e }) => e && { display: 'none' },
       ),
       ca = w.div(({ grow: e }) => e && { flexGrow: e ? 1 : 'auto' }),
       sa = w.div(
@@ -7713,12 +7713,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               justifyContent: 'space-between',
               padding: '5px 15px',
             },
-          }
+          },
       ),
       Zu = w(sa)({ alignItems: 'center', height: 40, margin: '0 10px' }),
       it = w.div(
         { display: 'flex', flexDirection: 'column', alignItems: 'center' },
-        ({ push: e }) => e && { marginLeft: 'auto' }
+        ({ push: e }) => e && { marginLeft: 'auto' },
       ),
       Ol = w.div(({ theme: e }) => ({
         borderBottom: `1px solid ${e.appBorderColor}`,
@@ -7752,7 +7752,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           u = a.createElement(
             De,
             { isButton: !0, onClick: () => r(o[0] || l[0]), withArrow: !0 },
-            'Show details'
+            'Show details',
           );
         return o.length > 0 && !t
           ? a.createElement(
@@ -7771,10 +7771,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     (0, uu.default)('problem', o.length),
                     '.',
                     ' ',
-                    u
-                  )
-                )
-              )
+                    u,
+                  ),
+                ),
+              ),
             )
           : l.length > 0 && !s && !t && !n
             ? a.createElement(
@@ -7790,8 +7790,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       'span',
                       null,
                       'Configuration could be improved. ',
-                      u
-                    )
+                      u,
+                    ),
                   ),
                   a.createElement(
                     it,
@@ -7799,10 +7799,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       rt,
                       { onClick: d },
-                      a.createElement(So, null)
-                    )
-                  )
-                )
+                      a.createElement(So, null),
+                    ),
+                  ),
+                ),
               )
             : null;
       },
@@ -7831,7 +7831,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           zr,
           null,
           a.createElement(it, { push: !0 }),
-          a.createElement(it, null, a.createElement(Dr, null))
+          a.createElement(it, null, a.createElement(Dr, null)),
         ),
         ignoreConfig: n = !1,
         ignoreSuggestions: r = !t,
@@ -7849,7 +7849,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     });
                   }, 200);
             },
-            [o]
+            [o],
           );
         return a.createElement(
           Pu,
@@ -7864,9 +7864,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement(
             Ll,
             { hidden: !i },
-            a.createElement(Au, { onClose: () => o(!1) })
+            a.createElement(Au, { onClose: () => o(!1) }),
           ),
-          t
+          t,
         );
       },
       Vu = w.div(({ theme: e }) => ({
@@ -7900,7 +7900,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           ju,
           null,
           a.createElement('span', null, e || t),
-          a.createElement('b', null, n)
+          a.createElement('b', null, n),
         ),
       Du = ({ id: e, value: t, placeholder: n, suffix: r, ...i }) =>
         a.createElement(
@@ -7916,7 +7916,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             enterKeyHint: void 0,
             ...i,
           }),
-          a.createElement(Hu, { value: t, placeholder: n, suffix: r })
+          a.createElement(Hu, { value: t, placeholder: n, suffix: r }),
         ),
       W = w.div(
         ({ center: e, small: t, block: n, theme: r }) => ({
@@ -7940,7 +7940,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           small: { fontSize: e.typography.size.s1 },
           span: { whiteSpace: 'nowrap' },
           svg: { verticalAlign: 'top' },
-        })
+        }),
       ),
       Tl = w(rt)(({ theme: e }) => ({
         color: e.base === 'light' ? 'currentColor' : e.color.medium,
@@ -7959,8 +7959,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 Tl,
                 { onClick: e },
                 a.createElement(nu, null),
-                'Back'
-              )
+                'Back',
+              ),
             ),
           a.createElement(
             it,
@@ -7982,10 +7982,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   href: 'https://www.chromatic.com/features/visual-test',
                   target: '_blank',
                 },
-                a.createElement(Ss, null)
-              )
-            )
-          )
+                a.createElement(Ss, null),
+              ),
+            ),
+          ),
         ),
       zu = w.form({
         position: 'relative',
@@ -8015,7 +8015,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (c) => {
               c.preventDefault(), n ? t(n) : o('Please enter a subdomain');
             },
-            [n, t]
+            [n, t],
           );
         return a.createElement(
           Se,
@@ -8028,13 +8028,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               'div',
               null,
               a.createElement(bs, null),
-              a.createElement(sn, null)
+              a.createElement(sn, null),
             ),
             a.createElement(pe, null, 'Sign in with SSO'),
             a.createElement(
               W,
               { muted: !0 },
-              "Enter your team's Chromatic URL."
+              "Enter your team's Chromatic URL.",
             ),
             a.createElement(
               zu,
@@ -8054,10 +8054,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement(
                 Uu,
                 { type: 'submit', variant: 'solid', size: 'medium' },
-                'Continue'
-              )
-            )
-          )
+                'Continue',
+              ),
+            ),
+          ),
         );
       },
       St = w.div(() => ({
@@ -8094,8 +8094,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { center: !0, muted: !0 },
-                  'Pinpoint bugs instantly by connecting with cloud browsers that run visual tests in parallel.'
-                )
+                  'Pinpoint bugs instantly by connecting with cloud browsers that run visual tests in parallel.',
+                ),
               ),
               a.createElement(
                 St,
@@ -8103,16 +8103,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   se,
                   { variant: 'solid', size: 'medium', onClick: () => t() },
-                  'Sign in with Chromatic'
+                  'Sign in with Chromatic',
                 ),
                 a.createElement(
                   se,
                   { link: !0, onClick: () => n() },
-                  'Sign in with SSO'
-                )
-              )
-            )
-          )
+                  'Sign in with SSO',
+                ),
+              ),
+            ),
+          ),
         ),
       Gu = {
         NAME: 'Name',
@@ -8520,12 +8520,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   n
                     .join(
                       `
-`
+`,
                     )
                     .replace(
                       /\n/g,
                       `
-  `
+  `,
                     ) +
                   `
 )`
@@ -8561,12 +8561,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             .map(tt)
             .join(
               `
-`
+`,
             )
             .replace(
               /\n/g,
               `
-  `
+  `,
             ) +
           `
 }`,
@@ -8684,7 +8684,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 !l && !o ? ((o = !0), i(0)) : (o = !1);
                 for (var m = 0, p = r, v = r.length; m < v; m++) p[m](0);
               }
-            })
+            }),
           );
       };
     }
@@ -8705,7 +8705,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               n(
                 pt((l) => {
                   l === 1 ? ((r = !0), o(1), e()) : o(l);
-                })
+                }),
               );
             } else n(i);
         });
@@ -8722,7 +8722,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               n(
                 pt((l) => {
                   l === 1 && (r = !0), o(l);
-                })
+                }),
               );
             } else e(i[0]), n(i);
         });
@@ -8757,7 +8757,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 var l = t.indexOf(i);
                 l > -1 && (t = t.slice()).splice(l, 1), t.length || n(1);
               } else r || ((r = !0), n(0));
-            })
+            }),
           );
       };
     }
@@ -8794,7 +8794,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               d === 1
                 ? (c || ((c = !0), r(1)), s && ((s = !1), i(1)))
                 : (!c && !o && ((o = !0), r(0)), s && !l && ((l = !0), i(0)));
-            })
+            }),
           );
       };
     }
@@ -8818,7 +8818,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           n(
             pt((l) => {
               l === 1 && !i ? ((i = !0), r(1)) : l === 0 && !i && o < e && r(0);
-            })
+            }),
           );
       };
     }
@@ -8844,7 +8844,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           n(
             pt((l) => {
               l === 1 && !o ? ((o = !0), r(1), i(1)) : o || r(0);
-            })
+            }),
           );
       };
     }
@@ -8891,7 +8891,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   }
               i = !1;
             }
-          })
+          }),
         );
       };
     }
@@ -8921,7 +8921,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       }
                   i = !1;
                 }
-              })
+              }),
             );
           };
     }
@@ -8932,7 +8932,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         t(
           pt((r) => {
             r === 1 ? (n = !0) : n || ((n = !0), t(Oa(e)), t(0));
-          })
+          }),
         );
       };
     }
@@ -8950,7 +8950,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         t(
           pt((i) => {
             i === 1 && !n && ((n = !0), r());
-          })
+          }),
         );
       };
     }
@@ -8975,7 +8975,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             });
           }),
           No
-        )
+        ),
       );
     }
     function xn(e) {
@@ -9025,7 +9025,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 e.positions,
                 e.path,
                 e,
-                e.extensions || {}
+                e.extensions || {},
               )
             : new Wi(e),
       Oo = class extends Error {
@@ -9111,7 +9111,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           ? e.replace(
               E2,
               `
-`
+`,
             )
           : e,
       Bl = (e) => e.split(b2).map(k2).join('').trim(),
@@ -9147,7 +9147,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (t = Qi(
               `
 # ${n}`,
-              t
+              t,
             ));
         }
         return t;
@@ -9355,7 +9355,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         yield await Promise.resolve();
         var l =
             (o = await (e.context.fetch || fetch)(t, n)).headers.get(
-              'Content-Type'
+              'Content-Type',
             ) || '',
           s;
         /multipart\/mixed/i.test(l)
@@ -9367,7 +9367,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               for await (var k of zl(
                 Dl(m),
                 `\r
-` + v
+` + v,
               )) {
                 if (f) {
                   f = !1;
@@ -9380,8 +9380,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     k.slice(
                       k.indexOf(`\r
 \r
-`) + 4
-                    )
+`) + 4,
+                    ),
                   ));
                 } catch (h) {
                   if (!y) throw h;
@@ -9397,7 +9397,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   Dl(u),
                   `
 
-`
+`,
                 )) {
                   var v = p.match(O2);
                   if (v) {
@@ -9442,7 +9442,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           o && (o.status < 200 || o.status >= 300) && o.statusText
             ? new Error(o.statusText)
             : u,
-          o
+          o,
         );
       }
     }
@@ -9496,22 +9496,22 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 s = x2(o, l),
                 c = N2(o, l),
                 d = Ps(Ge((u) => u.kind === 'teardown' && u.key === o.key)(n))(
-                  T2(o, s, c)
+                  T2(o, s, c),
                 );
               return d;
             })(
               Ge(
                 (o) =>
                   o.kind !== 'teardown' &&
-                  (o.kind !== 'subscription' || !!o.context.fetchSubscriptions)
-              )(n)
+                  (o.kind !== 'subscription' || !!o.context.fetchSubscriptions),
+              )(n),
             ),
             i = e(
               Ge(
                 (o) =>
                   o.kind === 'teardown' ||
-                  (o.kind === 'subscription' && !o.context.fetchSubscriptions)
-              )(n)
+                  (o.kind === 'subscription' && !o.context.fetchSubscriptions),
+              )(n),
             );
           return ga([r, i]);
         },
@@ -9527,7 +9527,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 },
                 dispatchDebug(l) {},
               }),
-            n
+            n,
           ),
       R2 =
         ({ onOperation: e, onResult: t, onError: n }) =>
@@ -9542,8 +9542,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               ur((o) => {
                 var l = (e && e(o)) || o;
                 return 'then' in l ? Il(l) : da(l);
-              })(i)
-            )
+              })(i),
+            ),
           ),
       B2 =
         ({ dispatchDebug: e }) =>
@@ -9580,15 +9580,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
         var p = (h) => {
             var g = Ps(
-              Ge((E) => E.kind === 'teardown' && E.key === h.key)(c.source)
+              Ge((E) => E.kind === 'teardown' && E.key === h.key)(c.source),
             )(
               Ge(
                 (E) =>
                   E.operation.kind === h.kind &&
                   E.operation.key === h.key &&
                   (!E.operation.context._instance ||
-                    E.operation.context._instance === h.context._instance)
-              )(b)
+                    E.operation.context._instance === h.context._instance),
+              )(b),
             );
             return (
               t.maskTypename &&
@@ -9602,7 +9602,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       : ga([
                           x,
                           Gi(() => ((E.stale = !0), E))(
-                            Wr(1)(Ge((B) => B.key === h.key)(c.source))
+                            Wr(1)(Ge((B) => B.key === h.key)(c.source)),
                           ),
                         ]);
                   })(g)),
@@ -9622,7 +9622,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           }
                       } else E.hasNext || o.delete(h.key);
                       r.set(h.key, E);
-                    })(g)
+                    })(g),
                   ))
                 : (g = qi(() => {
                     d(h);
@@ -9668,7 +9668,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       return h.kind === 'query' && E && (E.stale || E.hasNext)
                         ? Zl(da)(ga([g, Ge((x) => x === r.get(h.key))(da(E))]))
                         : g;
-                    })
+                    }),
                   );
             },
             executeQuery(h, g) {
@@ -9703,7 +9703,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               client: f,
               dispatchDebug: y,
               forward: B2({ dispatchDebug: y }),
-            })(c.source)
+            })(c.source),
           );
         return v2(b), f;
       },
@@ -9769,12 +9769,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         extensions: c.extensions,
                         operation: c.operation,
                       });
-                  })(n.executeMutation(wn(e, l), s || {}))
-                )
-              )
+                  })(n.executeMutation(wn(e, l), s || {})),
+                ),
+              ),
             )
           ),
-          [n, e, i]
+          [n, e, i],
         );
       return (
         le(
@@ -9784,7 +9784,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               t.current = !1;
             }
           ),
-          []
+          [],
         ),
         [r, o]
       );
@@ -9858,7 +9858,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }
             return f || { fetching: !0 };
           },
-          [n, i]
+          [n, i],
         ),
         s = [t, i, e.requestPolicy, e.context, e.pause],
         [c, d] = Te(() => [o, wi(eo, l(o, r)), s]),
@@ -9879,7 +9879,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             var k = xn(y)(
               Ao(() => {
                 y({ fetching: !1 });
-              })(p)
+              })(p),
             );
             return (
               f || y({ fetching: !0 }),
@@ -9902,7 +9902,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             s,
           ]);
         },
-        [t, n, i, r, e.requestPolicy, e.context, e.pause]
+        [t, n, i, r, e.requestPolicy, e.context, e.pause],
       );
       return [u, m];
     }
@@ -12544,14 +12544,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           (x) =>
                             x.operation.key === E.key &&
                             E.context._instance ===
-                              x.operation.context._instance
+                              x.operation.context._instance,
                         )(
                           qi(() => {
                             var x = f(E);
                             r.add(x.context._instance), i.next(x);
-                          })(k)
-                        )
-                      )
+                          })(k),
+                        ),
+                      ),
                     );
                   },
                   appendHeaders(b, h) {
@@ -12564,7 +12564,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       fetchOptions: { ...g, headers: { ...g.headers, ...h } },
                     });
                   },
-                })
+                }),
               )
               .then((b) => {
                 b && (u = b), s();
@@ -12602,8 +12602,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               );
                             })(b)
                           ? (v(b), null)
-                          : f(Ci(b, !1))
-              )(ga([i.source, m]))
+                          : f(Ci(b, !1)),
+              )(ga([i.source, m])),
             ),
             k = n(y);
           return ga([
@@ -12620,7 +12620,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 ? (v(b.operation), !1)
                 : (r.has(b.operation.context._instance) &&
                     r.delete(b.operation.context._instance),
-                  !0)
+                  !0),
             )(k),
           ]);
         };
@@ -12638,7 +12638,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         !Qa)
       )
         throw new Error(
-          'crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported'
+          'crypto.getRandomValues() not supported. See https://github.com/uuidjs/uuid#getrandomvalues-not-supported',
         );
       return Qa(im);
     }
@@ -12705,7 +12705,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (r) => {
               yr(r), t({ token: bt });
             },
-            [t]
+            [t],
           );
         return [e, n];
       },
@@ -13168,7 +13168,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       } = e;
       if (t && (n || r))
         throw new Error(
-          `Can't use "invalid_type_error" or "required_error" in conjunction with custom error map.`
+          `Can't use "invalid_type_error" or "required_error" in conjunction with custom error map.`,
         );
       return t
         ? { errorMap: t, description: i }
@@ -13314,7 +13314,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }
         refinement(e, t) {
           return this._refinement((n, r) =>
-            e(n) ? !0 : (r.addIssue(typeof t == 'function' ? t(n, r) : t), !1)
+            e(n) ? !0 : (r.addIssue(typeof t == 'function' ? t(n, r) : t), !1),
           );
         }
         _refinement(e) {
@@ -13415,23 +13415,23 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         e.precision
           ? e.offset
             ? new RegExp(
-                `^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{${e.precision}}(([+-]\\d{2}(:?\\d{2})?)|Z)$`
+                `^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{${e.precision}}(([+-]\\d{2}(:?\\d{2})?)|Z)$`,
               )
             : new RegExp(
-                `^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{${e.precision}}Z$`
+                `^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{${e.precision}}Z$`,
               )
           : e.precision === 0
             ? e.offset
               ? new RegExp(
-                  '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(([+-]\\d{2}(:?\\d{2})?)|Z)$'
+                  '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(([+-]\\d{2}(:?\\d{2})?)|Z)$',
                 )
               : new RegExp('^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}Z$')
             : e.offset
               ? new RegExp(
-                  '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(([+-]\\d{2}(:?\\d{2})?)|Z)$'
+                  '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?(([+-]\\d{2}(:?\\d{2})?)|Z)$',
                 )
               : new RegExp(
-                  '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z$'
+                  '^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}(\\.\\d+)?Z$',
                 );
     function xm(e, t) {
       return !!(
@@ -13970,7 +13970,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return !!this._def.checks.find(
           (e) =>
             e.kind === 'int' ||
-            (e.kind === 'multipleOf' && ce.isInteger(e.value))
+            (e.kind === 'multipleOf' && ce.isInteger(e.value)),
         );
       }
       get isFinite() {
@@ -14401,11 +14401,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         )
           return Promise.all(
             [...t.data].map((o, l) =>
-              r.type._parseAsync(new Mt(t, o, t.path, l))
-            )
+              r.type._parseAsync(new Mt(t, o, t.path, l)),
+            ),
           ).then((o) => ze.mergeArray(n, o));
         let i = [...t.data].map((o, l) =>
-          r.type._parseSync(new Mt(t, o, t.path, l))
+          r.type._parseSync(new Mt(t, o, t.path, l)),
         );
         return ze.mergeArray(n, i);
       }
@@ -14520,7 +14520,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               (Z(n, { code: F.unrecognized_keys, keys: o }), t.dirty());
           else if (s !== 'strip')
             throw new Error(
-              'Internal ZodObject error: invalid unknownKeys value.'
+              'Internal ZodObject error: invalid unknownKeys value.',
             );
         } else {
           let s = this._def.catchall;
@@ -14711,7 +14711,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 }),
                 ctx: o,
               };
-            })
+            }),
           ).then(r);
         {
           let i,
@@ -14792,12 +14792,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             let o = or(i.shape[e]);
             if (!o)
               throw new Error(
-                `A discriminator value for key \`${e}\` could not be extracted from all schema options`
+                `A discriminator value for key \`${e}\` could not be extracted from all schema options`,
               );
             for (let l of o) {
               if (r.has(l))
                 throw new Error(
-                  `Discriminator property ${String(e)} has duplicate value ${String(l)}`
+                  `Discriminator property ${String(e)} has duplicate value ${String(l)}`,
                 );
               r.set(l, i);
             }
@@ -14875,7 +14875,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 data: n.data,
                 path: n.path,
                 parent: n,
-              })
+              }),
             );
       }
     };
@@ -14934,7 +14934,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     Tt.create = (e, t) => {
       if (!Array.isArray(e))
         throw new Error(
-          'You must pass an array of schemas to z.tuple([ ... ])'
+          'You must pass an array of schemas to z.tuple([ ... ])',
         );
       return new Tt({ items: e, typeName: $.ZodTuple, rest: null, ...Q(t) });
     };
@@ -15083,7 +15083,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           return { status: t.value, value: c };
         }
         let l = [...n.data.values()].map((s, c) =>
-          i._parse(new Mt(n, s, n.path, c))
+          i._parse(new Mt(n, s, n.path, c)),
         );
         return n.common.async ? Promise.all(l).then((s) => o(s)) : o(l);
       }
@@ -15346,8 +15346,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             this._def.type.parseAsync(r, {
               path: t.path,
               errorMap: t.common.contextualErrorMap,
-            })
-          )
+            }),
+          ),
         );
       }
     };
@@ -15382,7 +15382,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     data: l,
                     path: n.path,
                     parent: n,
-                  })
+                  }),
                 )
               : this._def.schema._parseSync({
                   data: o,
@@ -15396,7 +15396,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             if (n.common.async) return Promise.resolve(s);
             if (s instanceof Promise)
               throw new Error(
-                'Async refinement encountered during synchronous parse operation. Use .parseAsync instead.'
+                'Async refinement encountered during synchronous parse operation. Use .parseAsync instead.',
               );
             return l;
           };
@@ -15421,7 +15421,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     o(l.value).then(() => ({
                       status: t.value,
                       value: l.value,
-                    })))
+                    }))),
               );
         }
         if (r.type === 'transform')
@@ -15435,7 +15435,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             let l = r.transform(o.value, i);
             if (l instanceof Promise)
               throw new Error(
-                'Asynchronous transform encountered during synchronous parse operation. Use .parseAsync instead.'
+                'Asynchronous transform encountered during synchronous parse operation. Use .parseAsync instead.',
               );
             return { status: t.value, value: l };
           } else
@@ -15447,7 +15447,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       status: t.value,
                       value: l,
                     }))
-                  : o
+                  : o,
               );
         ce.assertNever(r);
       }
@@ -15966,7 +15966,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   ? (n(d.current), r(`Project:${y.projectId}`), m.current?.())
                   : l('Unexpected missing access token', new Error()));
             },
-            [c, i, o, t, n, l, r]
+            [c, i, o, t, n, l, r],
           ),
           [v, f] = t0(p);
         return (
@@ -15992,8 +15992,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       W,
                       { center: !0, muted: !0 },
-                      'Check this verification code on Chromatic to grant access to your published Storybooks.'
-                    )
+                      'Check this verification code on Chromatic to grant access to your published Storybooks.',
+                    ),
                   ),
                   a.createElement(
                     m4,
@@ -16004,18 +16004,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         a.createElement(
                           'li',
                           { key: `${k}-${y}` },
-                          y.replace(/[^A-Z0-9]/, '')
-                        )
-                      )
-                  )
+                          y.replace(/[^A-Z0-9]/, ''),
+                        ),
+                      ),
+                  ),
                 ),
                 a.createElement(
                   se,
                   { variant: 'solid', size: 'medium', onClick: () => v(c) },
-                  'Go to Chromatic'
-                )
-              )
-            )
+                  'Go to Chromatic',
+                ),
+              ),
+            ),
           )
         );
       },
@@ -16038,8 +16038,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { center: !0, muted: !0 },
-                  'Catch bugs in UI appearance automatically. Compare image snapshots to detect visual changes.'
-                )
+                  'Catch bugs in UI appearance automatically. Compare image snapshots to detect visual changes.',
+                ),
               ),
               a.createElement(
                 St,
@@ -16047,16 +16047,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   se,
                   { variant: 'solid', size: 'medium', onClick: e },
-                  'Enable'
+                  'Enable',
                 ),
                 a.createElement(
                   se,
                   { link: !0, onClick: () => t() },
-                  'Uninstall'
-                )
-              )
-            )
-          )
+                  'Uninstall',
+                ),
+              ),
+            ),
+          ),
         ),
       g4 = ({ setAccessToken: e, setCreatedProjectId: t, hasProjectId: n }) => {
         let [r, i] = nt('authenticationScreen', n ? 'signin' : 'welcome'),
@@ -16072,7 +16072,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               s('Sign in Error', m);
             }
           },
-          [s, l, i]
+          [s, l, i],
         );
         if (r === 'welcome' && !n)
           return a.createElement(f4, {
@@ -16093,7 +16093,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         if (r === 'verify') {
           if (!o)
             throw new Error(
-              'Expected to have a `exchangeParameters` if at `verify` step'
+              'Expected to have a `exchangeParameters` if at `verify` step',
             );
           return a.createElement(h4, {
             onBack: () => i('signin'),
@@ -16122,7 +16122,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         ({ theme: e, warning: t }) =>
           t && {
             background: e.base === 'dark' ? '#342e1a' : e.background.warning,
-          }
+          },
       ),
       v4 = w.b(() => ({ display: 'block', marginBottom: 2 })),
       y4 = () => {
@@ -16145,8 +16145,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { center: !0, muted: !0 },
-                  'Catch bugs in UI appearance automatically. Compare image snapshots to detect visual changes.'
-                )
+                  'Catch bugs in UI appearance automatically. Compare image snapshots to detect visual changes.',
+                ),
               ),
               a.createElement(
                 n0,
@@ -16161,8 +16161,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   a.createElement(Ve, null, 'git init'),
                   ' and make your first commit',
                   a.createElement(Ve, null, 'git commit -m'),
-                  ' to get started!'
-                )
+                  ' to get started!',
+                ),
               ),
               a.createElement(
                 De,
@@ -16172,15 +16172,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   withArrow: !0,
                   secondary: !0,
                 },
-                'Visual tests requirements'
+                'Visual tests requirements',
               ),
               a.createElement(
                 De,
                 { withArrow: !0, onClick: () => e() },
-                'Uninstall'
-              )
-            )
-          )
+                'Uninstall',
+              ),
+            ),
+          ),
         );
       },
       b4 = w(Co)(({ theme: e }) => ({
@@ -16228,10 +16228,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     r.project.lastBuild.number,
                     ' on branch',
                     ' ',
-                    r.project.lastBuild.branch
-                  )
+                    r.project.lastBuild.branch,
+                  ),
               ),
-              a.createElement(it, { push: !0 }, a.createElement(Dr, null))
+              a.createElement(it, { push: !0 }, a.createElement(Dr, null)),
             ),
           },
           a.createElement(
@@ -16261,8 +16261,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       ' was added in',
                       ' ',
                       a.createElement(Ve, null, t),
-                      ' to sync tests with Chromatic. Please commit this change to continue using this addon.'
-                    )
+                      ' to sync tests with Chromatic. Please commit this change to continue using this addon.',
+                    ),
                   ),
                   a.createElement(
                     St,
@@ -16270,7 +16270,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       se,
                       { variant: 'solid', size: 'medium', onClick: () => n() },
-                      'Catch a UI change'
+                      'Catch a UI change',
                     ),
                     a.createElement(
                       E4,
@@ -16280,12 +16280,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         withArrow: !0,
                         secondary: !0,
                       },
-                      "What's a project ID?"
-                    )
-                  )
-                )
-            )
-          )
+                      "What's a project ID?",
+                    ),
+                  ),
+                ),
+            ),
+          ),
         );
       };
     function C4(e) {
@@ -16305,7 +16305,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     : m.length) !== null && p !== void 0
                   ? p
                   : 0;
-              })
+              }),
             )
           : s;
       }, []);
@@ -16315,13 +16315,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 [	 ]{` +
             Math.min.apply(Math, i) +
             '}',
-          'g'
+          'g',
         );
         r = r.map(function (s) {
           return s.replace(
             o,
             `
-`
+`,
           );
         });
       }
@@ -16338,7 +16338,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (m = String(s)
               .split(
                 `
-`
+`,
               )
               .map(function (p, v) {
                 return v === 0 ? p : '' + u + p;
@@ -16379,7 +16379,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   pe,
                   null,
-                  'Add the project ID to your Chromatic config'
+                  'Add the project ID to your Chromatic config',
                 ),
                 a.createElement(
                   W,
@@ -16389,8 +16389,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   ' will be used to sync tests with Chromatic. Please commit this change to continue using the addon. The file should be saved at',
                   ' ',
                   a.createElement(Ve, null, t),
-                  '.'
-                )
+                  '.',
+                ),
               ),
               a.createElement(
                 S4,
@@ -16402,16 +16402,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 {
                   "projectId": "${e}",
                 }
-              `
-                )
+              `,
+                ),
               ),
               a.createElement(
                 De,
                 { secondary: !0, withArrow: !0, target: '_blank', href: x4 },
-                "What's this for?"
-              )
-            )
-          )
+                "What's this for?",
+              ),
+            ),
+          ),
         )
       );
     }
@@ -16445,7 +16445,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           async (i) => {
             await n(i);
           },
-          [n]
+          [n],
         );
         return a.createElement(L4, {
           createdProjectId: e,
@@ -16515,13 +16515,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             }, 1e3);
             return () => clearTimeout(g);
           },
-          [n, p]
+          [n, p],
         ),
         f = Y(
           async (h) => {
             h.message === 'createdProject' && (l(), t(h.projectId));
           },
-          [l, t]
+          [l, t],
         ),
         [y, k] = t0(f),
         b = e && d?.projects?.find((h) => h?.id.endsWith(e));
@@ -16546,8 +16546,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { muted: !0 },
-                  'Your tests will sync with this project.'
-                )
+                  'Your tests will sync with this project.',
+                ),
               ),
               o && a.createElement('p', null, o.message),
               !r &&
@@ -16581,8 +16581,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       a.createElement(st, {
                         appearance: 'secondary',
                         isLoading: !0,
-                      })
-                    )
+                      }),
+                    ),
                   ),
                   a.createElement(
                     Yl,
@@ -16602,9 +16602,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       a.createElement(st, {
                         appearance: 'secondary',
                         isLoading: !0,
-                      })
-                    )
-                  )
+                      }),
+                    ),
+                  ),
                 ),
               r?.viewer?.accounts &&
                 a.createElement(
@@ -16628,9 +16628,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           }),
                           onClick: () => u(h),
                           active: s === h.id,
-                        })
-                      )
-                    )
+                        }),
+                      ),
+                    ),
                   ),
                   a.createElement(
                     Yl,
@@ -16645,14 +16645,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           onClick: () => {
                             if (!d?.newProjectUrl)
                               throw new Error(
-                                'Unexpected missing `newProjectUrl` on account'
+                                'Unexpected missing `newProjectUrl` on account',
                               );
                             y(d.newProjectUrl);
                           },
                           title: a.createElement(
                             De,
                             { isButton: !0, withArrow: !0 },
-                            'Create new project'
+                            'Create new project',
                           ),
                         }),
                       d?.projects?.map(
@@ -16667,13 +16667,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             }),
                             onClick: () => v(h),
                             disabled: m,
-                          })
-                      )
-                    )
-                  )
-                )
-            )
-          )
+                          }),
+                      ),
+                    ),
+                  ),
+                ),
+            ),
+          ),
         )
       );
     }
@@ -16697,11 +16697,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   { center: !0, muted: !0 },
                   'Visual tests only runs locally. To test this Storybook, clone it to your machine and run ',
                   a.createElement(Ve, null, 'npx storybook dev'),
-                  '.'
-                )
-              )
-            )
-          )
+                  '.',
+                ),
+              ),
+            ),
+          ),
         ),
       _4 = w(Vr)({ animation: `${bo} 1s linear infinite` }),
       Z4 = ({ aborted: e }) => {
@@ -16730,8 +16730,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   a.createElement(
                     W,
                     { center: !0, muted: !0 },
-                    'Double check your internet connection and firewall settings.'
-                  )
+                    'Double check your internet connection and firewall settings.',
+                  ),
                 ),
                 e
                   ? a.createElement(
@@ -16743,7 +16743,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         disabled: t,
                       },
                       a.createElement(Vr, null),
-                      'Retry'
+                      'Retry',
                     )
                   : a.createElement(
                       se,
@@ -16754,7 +16754,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         disabled: t,
                       },
                       a.createElement(_4, null),
-                      'Connecting...'
+                      'Connecting...',
                     ),
                 a.createElement(
                   De,
@@ -16764,10 +16764,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     rel: 'noreferrer',
                     withArrow: !0,
                   },
-                  'Chromatic API status'
-                )
-              )
-            )
+                  'Chromatic API status',
+                ),
+              ),
+            ),
           )
         );
       },
@@ -16790,11 +16790,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { center: !0, muted: !0 },
-                  'Visual Tests will vanish the next time you restart your Storybook.'
-                )
-              )
-            )
-          )
+                  'Visual Tests will vanish the next time you restart your Storybook.',
+                ),
+              ),
+            ),
+          ),
         )
       ),
       a0 = { isRunning: !1, startBuild: () => {}, stopBuild: () => {} },
@@ -16828,13 +16828,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               title: 'Visual Tests',
               description: 'Chromatic Visual Tests',
             },
-          ])
+          ]),
         )
       );
     }
     function V4(
       e,
-      { shouldSwitchToLastBuildOnBranch: t, lastBuildOnBranchId: n, storyId: r }
+      {
+        shouldSwitchToLastBuildOnBranch: t,
+        lastBuildOnBranchId: n,
+        storyId: r,
+      },
     ) {
       if (!t) return e ? { ...e, storyId: r } : void 0;
       if (!n) throw new Error('Impossible state');
@@ -16876,17 +16880,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 'div',
                 null,
                 a.createElement(pe, null, r),
-                a.createElement(W, { center: !0, muted: !0 }, i)
+                a.createElement(W, { center: !0, muted: !0 }, i),
               ),
               t &&
                 a.createElement(
                   se,
                   { asChild: !0, size: 'medium', variant: 'solid' },
-                  a.createElement('a', { href: t, target: '_new' }, o)
+                  a.createElement('a', { href: t, target: '_new' }, o),
                 ),
-              e
-            )
-          )
+              e,
+            ),
+          ),
         );
       },
       j4 = ({ children: e, manageUrl: t }) => (
@@ -16906,13 +16910,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   pe,
                   null,
-                  'Visual Tests disabled for your project'
+                  'Visual Tests disabled for your project',
                 ),
                 a.createElement(
                   W,
                   { center: !0, muted: !0 },
-                  'Update your project settings to enable visual testing.'
-                )
+                  'Update your project settings to enable visual testing.',
+                ),
               ),
               a.createElement(
                 se,
@@ -16920,12 +16924,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   'a',
                   { href: t, target: '_new' },
-                  'Manage project settings'
-                )
+                  'Manage project settings',
+                ),
               ),
-              e
-            )
-          )
+              e,
+            ),
+          ),
         )
       );
     function l0(e) {
@@ -17478,7 +17482,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           ? parseInt(n['offset' + e]) +
               parseInt(r['margin' + (e === 'Height' ? 'Top' : 'Left')]) +
               parseInt(r['margin' + (e === 'Height' ? 'Bottom' : 'Right')])
-          : 0
+          : 0,
       );
     }
     function m0(e) {
@@ -17743,7 +17747,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         r.forEach(function (i) {
           i.function &&
             console.warn(
-              '`modifier.function` is deprecated, use `modifier.fn`!'
+              '`modifier.function` is deprecated, use `modifier.fn`!',
             );
           var o = i.function || i.fn;
           i.enabled &&
@@ -17769,7 +17773,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.state,
           this.popper,
           this.reference,
-          this.options.positionFixed
+          this.options.positionFixed,
         )),
           (e.placement = f0(
             this.options.placement,
@@ -17777,14 +17781,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             this.popper,
             this.reference,
             this.options.modifiers.flip.boundariesElement,
-            this.options.modifiers.flip.padding
+            this.options.modifiers.flip.padding,
           )),
           (e.originalPlacement = e.placement),
           (e.positionFixed = this.options.positionFixed),
           (e.offsets.popper = y0(
             this.popper,
             e.offsets.reference,
-            e.placement
+            e.placement,
           )),
           (e.offsets.popper.position = this.options.positionFixed
             ? 'fixed'
@@ -17862,7 +17866,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           this.reference,
           this.options,
           this.state,
-          this.scheduleUpdate
+          this.scheduleUpdate,
         ));
     }
     function kp(e, t) {
@@ -17920,7 +17924,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           t,
           e,
           n.modifiers.flip.boundariesElement,
-          n.modifiers.flip.padding
+          n.modifiers.flip.padding,
         );
       return (
         t.setAttribute('x-placement', l),
@@ -17962,7 +17966,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         }).gpuAcceleration;
       o !== void 0 &&
         console.warn(
-          'WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!'
+          'WARNING: `gpuAcceleration` option moved to `computeStyle` modifier and will not be supported in future versions of Popper.js!',
         );
       var l = o !== void 0 ? o : t.gpuAcceleration,
         s = Ln(e.instance.popper),
@@ -18023,7 +18027,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             o +
             ' modifier in order to work, be sure to include it before ' +
             o +
-            '!'
+            '!',
         );
       }
       return i;
@@ -18037,7 +18041,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       } else if (!e.instance.popper.contains(r))
         return (
           console.warn(
-            'WARNING: `arrow.element` must be child of its popper element!'
+            'WARNING: `arrow.element` must be child of its popper element!',
           ),
           e
         );
@@ -18112,7 +18116,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           e.instance.reference,
           t.padding,
           t.boundariesElement,
-          e.positionFixed
+          e.positionFixed,
         ),
         r = e.placement.split('-')[0],
         i = Lr(r),
@@ -18174,7 +18178,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (e.offsets.popper = at(
               {},
               e.offsets.popper,
-              y0(e.instance.popper, e.offsets.reference, e.placement)
+              y0(e.instance.popper, e.offsets.reference, e.placement),
             )),
             (e = b0(e.instance.modifiers, e, 'flip')));
         }),
@@ -18221,11 +18225,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           l === 'vh'
             ? (d = Math.max(
                 document.documentElement.clientHeight,
-                window.innerHeight || 0
+                window.innerHeight || 0,
               ))
             : (d = Math.max(
                 document.documentElement.clientWidth,
-                window.innerWidth || 0
+                window.innerWidth || 0,
               )),
           (d / 100) * o
         );
@@ -18240,12 +18244,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         s = l.indexOf(
           Za(l, function (u) {
             return u.search(/,|\s/) !== -1;
-          })
+          }),
         );
       l[s] &&
         l[s].indexOf(',') === -1 &&
         console.warn(
-          'Offsets separated by white space(s) are deprecated, use a comma (,) instead.'
+          'Offsets separated by white space(s) are deprecated, use a comma (,) instead.',
         );
       var c = /\s*,\s*|\s+/,
         d =
@@ -18314,7 +18318,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         e.instance.reference,
         t.padding,
         n,
-        e.positionFixed
+        e.positionFixed,
       );
       (i.top = o), (i.left = l), (i[r] = s), (t.boundaries = c);
       var d = t.priority,
@@ -18337,7 +18341,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 !t.escapeWithReference &&
                 (f = Math.min(
                   u[v],
-                  c[p] - (p === 'right' ? u.width : u.height)
+                  c[p] - (p === 'right' ? u.width : u.height),
                 )),
               _n({}, v, f)
             );
@@ -18479,9 +18483,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 r.options.modifiers[l] = at(
                   {},
                   e.Defaults.modifiers[l] || {},
-                  i.modifiers ? i.modifiers[l] : {}
+                  i.modifiers ? i.modifiers[l] : {},
                 );
-              }
+              },
             ),
             (this.modifiers = Object.keys(this.options.modifiers)
               .map(function (l) {
@@ -18737,7 +18741,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             },
           };
         throw new TypeError(
-          t ? 'Object is not iterable.' : 'Symbol.iterator is not defined.'
+          t ? 'Object is not iterable.' : 'Symbol.iterator is not defined.',
         );
       };
     function Qp(e, t) {
@@ -19104,7 +19108,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 Object.defineProperty(
                   e,
                   r,
-                  Object.getOwnPropertyDescriptor(n, r)
+                  Object.getOwnPropertyDescriptor(n, r),
                 );
               });
       }
@@ -19148,7 +19152,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function Ba(e, t) {
       if (typeof t != 'function' && t !== null)
         throw new TypeError(
-          'Super expression must either be null or a function'
+          'Super expression must either be null or a function',
         );
       (e.prototype = Object.create(t && t.prototype, {
         constructor: { value: e, writable: !0, configurable: !0 },
@@ -19183,7 +19187,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       try {
         return (
           Boolean.prototype.valueOf.call(
-            Reflect.construct(Boolean, [], function () {})
+            Reflect.construct(Boolean, [], function () {}),
           ),
           !0
         );
@@ -19219,7 +19223,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function Ft(e) {
       if (e === void 0)
         throw new ReferenceError(
-          "this hasn't been initialised - super() hasn't been called"
+          "this hasn't been initialised - super() hasn't been called",
         );
       return e;
     }
@@ -19227,7 +19231,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       if (t && (typeof t == 'object' || typeof t == 'function')) return t;
       if (t !== void 0)
         throw new TypeError(
-          'Derived constructors may only return object or undefined'
+          'Derived constructors may only return object or undefined',
         );
       return Ft(e);
     }
@@ -19280,7 +19284,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             'Required '
               .concat(e[t], ' `')
               .concat(t, '` was not specified in `')
-              .concat(n, '`.')
+              .concat(n, '`.'),
           );
     }
     function h3(e, t) {
@@ -19337,7 +19341,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         n &&
         (console.groupCollapsed(
           '%creact-floater: '.concat(t),
-          'color: #9b00ff; font-weight: bold; font-size: 12px;'
+          'color: #9b00ff; font-weight: bold; font-size: 12px;',
         ),
         Array.isArray(n)
           ? n.forEach(function (c) {
@@ -19425,7 +19429,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               var l = Gn.unstable_renderSubtreeIntoContainer(
                 this,
                 i.length > 1 ? a.createElement('div', null, i) : i[0],
-                this.node
+                this.node,
               );
               return o(l), null;
             },
@@ -19569,9 +19573,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         version: '1.1',
                         xmlns: 'http://www.w3.org/2000/svg',
                       },
-                      a.createElement('polygon', { points: y, fill: c })
-                    )
-                  )
+                      a.createElement('polygon', { points: y, fill: c }),
+                    ),
+                  ),
                 )
               );
             },
@@ -19612,9 +19616,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             a.createElement('path', {
               d: 'M8.13911129,9.00268191 L0.171521827,17.0258467 C-0.0498027049,17.248715 -0.0498027049,17.6098394 0.171521827,17.8327545 C0.28204354,17.9443526 0.427188206,17.9998706 0.572051765,17.9998706 C0.71714958,17.9998706 0.862013139,17.9443526 0.972581703,17.8327545 L9.0000937,9.74924618 L17.0276057,17.8327545 C17.1384085,17.9443526 17.2832721,17.9998706 17.4281356,17.9998706 C17.5729992,17.9998706 17.718097,17.9443526 17.8286656,17.8327545 C18.0499901,17.6098862 18.0499901,17.2487618 17.8286656,17.0258467 L9.86135722,9.00268191 L17.8340066,0.973848225 C18.0553311,0.750979934 18.0553311,0.389855532 17.8340066,0.16694039 C17.6126821,-0.0556467968 17.254037,-0.0556467968 17.0329467,0.16694039 L9.00042166,8.25611765 L0.967006424,0.167268345 C0.745681892,-0.0553188426 0.387317931,-0.0553188426 0.165993399,0.167268345 C-0.0553311331,0.390136635 -0.0553311331,0.751261038 0.165993399,0.974176179 L8.13920499,9.00268191 L8.13911129,9.00268191 Z',
               fill: r,
-            })
-          )
-        )
+            }),
+          ),
+        ),
       );
     }
     L0.propTypes = {
@@ -19636,7 +19640,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             : a.createElement(
                 'div',
                 { className: '__floater__content', style: c.content },
-                t
+                t,
               ),
         };
       return (
@@ -19646,7 +19650,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             : a.createElement(
                 'div',
                 { className: '__floater__title', style: c.title },
-                s
+                s,
               )),
         n &&
           (d.footer = a.isValidElement(n)
@@ -19654,7 +19658,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             : a.createElement(
                 'div',
                 { className: '__floater__footer', style: c.footer },
-                n
+                n,
               )),
         (l || o) &&
           !V.boolean(i) &&
@@ -19665,7 +19669,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           d.close,
           d.title,
           d.content,
-          d.footer
+          d.footer,
         )
       );
     }
@@ -19751,8 +19755,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     'div',
                     { className: '__floater__body' },
                     d.content,
-                    d.arrow
-                  )
+                    d.arrow,
+                  ),
                 )
               );
             },
@@ -19818,7 +19822,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       onMouseEnter: l,
                       onMouseLeave: s,
                     },
-                    p
+                    p,
                   )
                 : null;
             },
@@ -19958,7 +19962,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   function () {
                     var s = i.state.status;
                     l(s === oe.OPEN ? 'open' : 'close', i.props);
-                  }
+                  },
                 );
             }),
             Pe(Ft(i), 'handleClick', function () {
@@ -20105,7 +20109,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       v3(
                         this.floaterRef,
                         'transitionend',
-                        this.handleTransitionEnd
+                        this.handleTransitionEnd,
                       ),
                     p('needsUpdate', !0) && this.rebuildPopper();
                 }
@@ -20162,7 +20166,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         flip: Ce({ enabled: !s, behavior: v }, k),
                         offset: Ce({ offset: '0, '.concat(u, 'px') }, b),
                       },
-                      h
+                      h,
                     ),
                     onCreate: function (E) {
                       var x;
@@ -20358,7 +20362,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       style: b,
                       styles: this.styles.wrapper,
                     },
-                    c
+                    c,
                   ),
                   x = {};
                 return (
@@ -20393,9 +20397,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         styles: this.styles,
                         title: g,
                       }),
-                      x.wrapperInPortal
+                      x.wrapperInPortal,
                     ),
-                    x.wrapperAsChildren
+                    x.wrapperAsChildren,
                   )
                 );
               },
@@ -20412,7 +20416,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         O.default.oneOfType([O.default.func, O.default.element]),
         function (e) {
           return !e.content;
-        }
+        },
       ),
       content: E1(O.default.node, function (e) {
         return !e.component;
@@ -20561,7 +20565,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             e.offsetHeight,
             t.clientHeight,
             t.scrollHeight,
-            t.offsetHeight
+            t.offsetHeight,
           );
     }
     function zt(e) {
@@ -20652,7 +20656,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         np.default.top(r, e, { duration: s < 100 ? 50 : n }, (c) =>
           c && c.message !== 'Element already at target scroll position'
             ? o(c)
-            : i()
+            : i(),
         );
       });
     }
@@ -20673,7 +20677,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   : window.chrome
                     ? (t = 'chrome')
                     : /(Version\/([\d._]+).*Safari|CriOS|FxiOS| Mobile\/)/.test(
-                        e
+                        e,
                       ) && (t = 'safari'),
         t
       );
@@ -20715,7 +20719,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         (n && e
           ? (console.groupCollapsed(
               `%creact-joyride: ${n}`,
-              'color: #ff0044; font-weight: bold; font-size: 12px;'
+              'color: #ff0044; font-weight: bold; font-size: 12px;',
             ),
             Array.isArray(e)
               ? e.forEach((o) => {
@@ -20958,7 +20962,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         'spotlightClicks',
         'spotlightPadding',
         'styles',
-        'tooltipComponent'
+        'tooltipComponent',
       );
     }
     function na(e, t) {
@@ -20978,7 +20982,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         (p.offset = d.offset),
         (p.styles = (0, Xa.default)(
           (i = p.styles) != null ? i : {},
-          u.floaterStyles
+          u.floaterStyles,
         )),
         (p.offset +=
           (l = (o = t.spotlightPadding) != null ? o : d.spotlightPadding) !=
@@ -21060,7 +21064,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 this.setState(s);
             }),
             R(this, 'getPopper', (i) =>
-              i === 'beacon' ? this.beaconPopper : this.tooltipPopper
+              i === 'beacon' ? this.beaconPopper : this.tooltipPopper,
             ),
             R(this, 'setPopper', (i, o) => {
               i === 'beacon'
@@ -21091,7 +21095,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               let { index: i, status: o } = this.getState();
               o === ee.RUNNING &&
                 this.setState(
-                  this.getNextState({ action: ue.NEXT, index: i + 1 })
+                  this.getNextState({ action: ue.NEXT, index: i + 1 }),
                 );
             }),
             R(this, 'open', () => {
@@ -21133,7 +21137,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               this.setState({
                 ...this.getNextState(
                   { action: ue.START, index: I.number(i) ? i : o },
-                  !0
+                  !0,
                 ),
                 status: l ? ee.RUNNING : ee.WAITING,
               });
@@ -21153,7 +21157,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               var o;
               if (!_3(i, M1))
                 throw new Error(
-                  `State is not valid. Valid keys: ${M1.join(', ')}`
+                  `State is not valid. Valid keys: ${M1.join(', ')}`,
                 );
               this.setState({
                 ...this.getNextState(
@@ -21162,7 +21166,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     ...i,
                     action: (o = i.action) != null ? o : ue.UPDATE,
                   },
-                  !0
+                  !0,
                 ),
               });
             });
@@ -21176,7 +21180,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               lifecycle: K.INIT,
               status: r.length ? ee.READY : ee.IDLE,
             },
-            !0
+            !0,
           ),
             (this.beaconPopper = null),
             (this.tooltipPopper = null),
@@ -21282,7 +21286,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             R(this, 'findValidTabElements', () =>
               [].slice
                 .call(this.element.querySelectorAll('*'), 0)
-                .filter(this.canBeTabbed)
+                .filter(this.canBeTabbed),
             ),
             R(this, 'handleKeyDown', (n) => {
               let { code: r = 'Tab' } = this.options;
@@ -21338,7 +21342,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             !(e instanceof HTMLElement))
           )
             throw new TypeError(
-              'Invalid parameter: element must be an HTMLElement'
+              'Invalid parameter: element must be an HTMLElement',
             );
           (this.element = e),
             (this.options = t),
@@ -21388,7 +21392,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             transform: scale(1);
           }
         }
-      `)
+      `),
             ),
             t.appendChild(n);
         }
@@ -21444,7 +21448,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     ...u,
                   },
                   S('span', { style: c.beaconInner }),
-                  S('span', { style: c.beaconOuter })
+                  S('span', { style: c.beaconOuter }),
                 )),
             m
           );
@@ -21534,7 +21538,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 : n !== K.TOOLTIP &&
                   window.removeEventListener(
                     'mousemove',
-                    this.handleMouseMove
+                    this.handleMouseMove,
                   ));
         }
         componentWillUnmount() {
@@ -21610,7 +21614,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               role: 'presentation',
               style: d,
             },
-            u
+            u,
           );
         }
       },
@@ -21671,9 +21675,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             a.createElement('path', {
               d: 'M8.13911129,9.00268191 L0.171521827,17.0258467 C-0.0498027049,17.248715 -0.0498027049,17.6098394 0.171521827,17.8327545 C0.28204354,17.9443526 0.427188206,17.9998706 0.572051765,17.9998706 C0.71714958,17.9998706 0.862013139,17.9443526 0.972581703,17.8327545 L9.0000937,9.74924618 L17.0276057,17.8327545 C17.1384085,17.9443526 17.2832721,17.9998706 17.4281356,17.9998706 C17.5729992,17.9998706 17.718097,17.9443526 17.8286656,17.8327545 C18.0499901,17.6098862 18.0499901,17.2487618 17.8286656,17.0258467 L9.86135722,9.00268191 L17.8340066,0.973848225 C18.0553311,0.750979934 18.0553311,0.389855532 17.8340066,0.16694039 C17.6126821,-0.0556467968 17.254037,-0.0556467968 17.0329467,0.16694039 L9.00042166,8.25611765 L0.967006424,0.167268345 C0.745681892,-0.0553188426 0.387317931,-0.0553188426 0.165993399,0.167268345 C-0.0553311331,0.390136635 -0.0553311331,0.751261038 0.165993399,0.974176179 L8.13920499,9.00268191 L8.13911129,9.00268191 Z',
               fill: n,
-            })
-          )
-        )
+            }),
+          ),
+        ),
       );
     }
     var J3 = K3;
@@ -21715,7 +21719,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               i + 1,
               '/',
               s,
-              ')'
+              ')',
             ))),
         b &&
           !o &&
@@ -21728,7 +21732,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               type: 'button',
               ...c,
             },
-            ae
+            ae,
           )),
         !p &&
           i > 0 &&
@@ -21740,7 +21744,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               type: 'button',
               ...t,
             },
-            E
+            E,
           )),
         (re.close =
           !v &&
@@ -21762,7 +21766,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             'div',
             { style: h.tooltipContainer },
             g && S('h1', { 'aria-label': Ht(g), style: h.tooltipTitle }, g),
-            S('div', { style: h.tooltipContent }, m)
+            S('div', { style: h.tooltipContent }, m),
           ),
           !f &&
             S(
@@ -21778,10 +21782,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   type: 'button',
                   ...l,
                 },
-                re.primary
-              )
+                re.primary,
+              ),
             ),
-          re.close
+          re.close,
         )
       );
     }
@@ -22013,7 +22017,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 r({ ...y, step: m, type: ct.STEP_BEFORE })
               : (console.warn(
                   B ? 'Target not visible' : 'Target not mounted',
-                  m
+                  m,
                 ),
                 r({ ...y, type: ct.TARGET_NOT_FOUND, step: m }),
                 o || p.update({ index: s + (n === ue.PREV ? -1 : 1) }));
@@ -22070,7 +22074,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     debug: t,
                     lifecycle: r,
                     onClickOverlay: this.handleClickOverlay,
-                  })
+                  }),
                 ),
                 S(
                   Do,
@@ -22096,8 +22100,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     size: l,
                     step: s,
                     styles: s.styles,
-                  })
-                )
+                  }),
+                ),
               );
         }
       },
@@ -22351,7 +22355,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             '&:hover': {
               color: t.base === 'light' ? t.color.defaultText : t.color.light,
             },
-          })
+          }),
       ),
       l7 = w.span(({ theme: e }) => ({
         color: e.base === 'light' ? e.color.defaultText : e.color.light,
@@ -22367,7 +22371,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             o7,
             { id: 'changes-found-filter', active: r, onClick: o },
             a.createElement(i7, { status: 'warning', 'data-badge': r }, e),
-            a.createElement(l7, null, (0, r7.default)('Change', e))
+            a.createElement(l7, null, (0, r7.default)('Change', e)),
           )
         );
       }),
@@ -22389,7 +22393,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 count: i.length,
                 onEnable: t,
                 onDisable: n,
-              })
+              }),
             )
           : null;
       },
@@ -22462,11 +22466,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             resultsByBrowser: {},
             resultsByMode: {},
             modesByName: {},
-          }
+          },
         ),
         c = e.length
           ? Object.fromEntries(
-              e[0].comparisons.map((m) => [m.browser.id, m.browser])
+              e[0].comparisons.map((m) => [m.browser.id, m.browser]),
             )
           : {},
         d = Object.entries(o).map(([m, p]) => ({ browser: c[m], result: p })),
@@ -22766,7 +22770,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               b7,
               d && 'testsForStory' in d && d.testsForStory
                 ? d.testsForStory.nodes
-                : []
+                : [],
             ),
           ],
           m = d?.committedAt > n.committedAt,
@@ -22774,7 +22778,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           v = !!d && u.every((y) => y.status !== 'IN_PROGRESS'),
           f = Cn(
             y7,
-            i?.selectedBuild ?? (v ? i?.project?.lastBuildOnBranch : void 0)
+            i?.selectedBuild ?? (v ? i?.project?.lastBuildOnBranch : void 0),
           );
         return {
           account: i?.project?.account,
@@ -22824,8 +22828,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             a.createElement(
               z0.Provider,
               { value: { hasTests: n, tests: i, summary: o, ...f7(i) } },
-              e
-            )
+              e,
+            ),
           )
         );
       },
@@ -22858,7 +22862,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           s.setAttribute('id', 'confetti-container'),
           s.setAttribute(
             'style',
-            'position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;'
+            'position: fixed; top: 0; left: 0; width: 100%; height: 100%; pointer-events: none; z-index: 9999;',
           ),
           s
         );
@@ -22871,15 +22875,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               document.body.removeChild(l);
             }
           ),
-          [l]
+          [l],
         ),
         qn(
           a.createElement(
             S7,
             { top: e, left: t, width: n, height: r },
-            a.createElement(Y1.default, { colors: i, drawShape: N7, ...o })
+            a.createElement(Y1.default, { colors: i, drawShape: N7, ...o }),
           ),
-          l
+          l,
         )
       );
     }
@@ -22965,7 +22969,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             F7,
             null,
             t.title && a.createElement(O7, null, t.title),
-            a.createElement(L7, null, t.content)
+            a.createElement(L7, null, t.content),
           ),
           (t.hideNextButton || t.hideBackButton) &&
             a.createElement(
@@ -22985,7 +22989,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       marginRight: 8,
                     },
                   },
-                  'Skip'
+                  'Skip',
                 ),
               !t.hideNextButton &&
                 a.createElement(
@@ -22998,9 +23002,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       ? { onClick: t.onNextButtonClick }
                       : {}),
                   },
-                  t.nextButtonText || 'Next'
-                )
-            )
+                  t.nextButtonText || 'Next',
+                ),
+            ),
         ),
       Z7 = ({
         managerApi: e,
@@ -23073,7 +23077,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     'The visual tests addon will detect changes in all of your stories and allow you to review them before opening a pull request.',
                     a.createElement('br', null),
                     a.createElement('br', null),
-                    'Click this button to see the changes in the sidebar.'
+                    'Click this button to see the changes in the sidebar.',
                   ),
                   floaterProps: {
                     target: '#changes-found-filter',
@@ -23094,7 +23098,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       content: a.createElement(
                         a.Fragment,
                         null,
-                        'Here you have a filtered list of only stories with changes.'
+                        'Here you have a filtered list of only stories with changes.',
                       ),
                       placement: 'right',
                       disableBeacon: !0,
@@ -23111,7 +23115,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         'Here you have a list of all stories in your Storybook.',
                         a.createElement('br', null),
                         a.createElement('br', null),
-                        'Select a story with changes to see the exact pixels that changed.'
+                        'Select a story with changes to see the exact pixels that changed.',
                       ),
                       placement: 'right',
                       disableBeacon: !0,
@@ -23125,7 +23129,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   content: a.createElement(
                     a.Fragment,
                     null,
-                    'The results of the changes are shown here. The pixels that changed are highlighted in green.'
+                    'The results of the changes are shown here. The pixels that changed are highlighted in green.',
                   ),
                   disableBeacon: !0,
                   placement: 'left',
@@ -23138,7 +23142,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   content: a.createElement(
                     a.Fragment,
                     null,
-                    'This button shows or hides the visual diff. Use it to make the visual changes in your stories obvious. Try it out.'
+                    'This button shows or hides the visual diff. Use it to make the visual changes in your stories obvious. Try it out.',
                   ),
                   onNextButtonClick: f,
                   onSkipWalkthroughButtonClick: t,
@@ -23153,7 +23157,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   content: a.createElement(
                     a.Fragment,
                     null,
-                    "Switch between the baseline snapshot (old) and the latest snapshot. The info bar will let you know which version you're looking at."
+                    "Switch between the baseline snapshot (old) and the latest snapshot. The info bar will let you know which version you're looking at.",
                   ),
                   onNextButtonClick: f,
                   onSkipWalkthroughButtonClick: t,
@@ -23168,7 +23172,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   content: a.createElement(
                     a.Fragment,
                     null,
-                    'If the visual changes are intentional, accept them to update the test baselines. The next time you run visual tests, future changes will be compared to these new baselines. This can be undone.'
+                    'If the visual changes are intentional, accept them to update the test baselines. The next time you run visual tests, future changes will be compared to these new baselines. This can be undone.',
                   ),
                   disableBeacon: !0,
                   spotlightClicks: !0,
@@ -23186,7 +23190,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   content: a.createElement(
                     a.Fragment,
                     null,
-                    "You've got the basics down! You can always unaccept if you're not happy with the changes."
+                    "You've got the basics down! You can always unaccept if you're not happy with the changes.",
                   ),
                   onNextButtonClick: f,
                   onSkipWalkthroughButtonClick: t,
@@ -23199,7 +23203,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   content: a.createElement(
                     a.Fragment,
                     null,
-                    'Any time you want to run tests, tap this button in the sidebar to see exactly what changed across your Storybook.'
+                    'Any time you want to run tests, tap this button in the sidebar to see exactly what changed across your Storybook.',
                   ),
                   disableBeacon: !0,
                   nextButtonText: 'Done',
@@ -23243,7 +23247,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   arrowColor: i.base === 'light' ? i.color.lightest : '#292A2C',
                 },
               },
-            })
+            }),
           )
         );
       },
@@ -23255,8 +23259,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           t.reduce(
             (n, r, i) =>
               n.concat([i && a.createElement('br', null), r].filter(Boolean)),
-            []
-          )
+            [],
+          ),
         );
       },
       $0 = ({ localBuildProgress: e, title: t }) =>
@@ -23274,9 +23278,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 content: hi(
                   Array.isArray(e.originalError)
                     ? e.originalError[0]?.message
-                    : e.originalError?.message || 'Unknown error'
+                    : e.originalError?.message || 'Unknown error',
                 ),
-              })
+              }),
             ),
             ' ',
             a.createElement(
@@ -23286,9 +23290,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 href: e.errorDetailsUrl || `${ns}#troubleshooting`,
                 withArrow: !0,
               },
-              e.errorDetailsUrl ? 'Details' : 'Troubleshoot'
-            )
-          )
+              e.errorDetailsUrl ? 'Details' : 'Troubleshoot',
+            ),
+          ),
         ),
       R7 = ({ children: e, localBuildProgress: t }) => (
         Xe('Errors', 'BuildError'),
@@ -23308,13 +23312,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { center: !0, muted: !0 },
-                  'Check the Storybook process on the command line for more details.'
-                )
+                  'Check the Storybook process on the command line for more details.',
+                ),
               ),
               a.createElement($0, { localBuildProgress: t }),
-              e
-            )
-          )
+              e,
+            ),
+          ),
         )
       ),
       mo = ['initialize', 'build', 'upload', 'verify', 'snapshot'],
@@ -23461,7 +23465,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             border: '1px solid rgba(0, 0, 0, 0.1)',
             boxShadow: `0 0 0 2px var(--bg-color, ${t.background.bar})`,
             boxSizing: 'border-box',
-          })
+          }),
       ),
       q0 = ({ status: e }) => a.createElement(G0, { status: e }),
       P7 = w.div({
@@ -23475,7 +23479,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           P7,
           null,
           t,
-          a.createElement(G0, { overlay: !0, status: e })
+          a.createElement(G0, { overlay: !0, status: e }),
         ),
       V7 = w.div(({ theme: e }) => ({
         width: 220,
@@ -23519,7 +23523,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           e && {
             animation: `${j7} 1s linear infinite`,
             circle: { stroke: `${t.color.secondary}33` },
-          }
+          },
       ),
       aa = w(rt)(({ theme: e }) => ({
         position: 'relative',
@@ -23559,9 +23563,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   a.createElement(
                     Zr,
                     { status: 'warning' },
-                    a.createElement(Dt, null)
-                  )
-                )
+                    a.createElement(Dt, null),
+                  ),
+                ),
               )
             : a.createElement(
                 aa,
@@ -23570,7 +23574,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   'aria-label': 'Visual Tests locked',
                   disabled: !0,
                 },
-                a.createElement(Dt, null)
+                a.createElement(Dt, null),
               );
         if (n && r) {
           let { buildProgressPercentage: c } = r;
@@ -23584,14 +23588,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   'div',
                   null,
-                  a.createElement($o, { localBuildProgress: r, withEmoji: !0 })
+                  a.createElement($o, { localBuildProgress: r, withEmoji: !0 }),
                 ),
                 a.createElement(
                   Wo,
                   null,
                   typeof c == 'number' &&
-                    a.createElement(Y0, { style: { width: `${c}%` } })
-                )
+                    a.createElement(Y0, { style: { width: `${c}%` } }),
+                ),
               ),
             },
             a.createElement(
@@ -23601,14 +23605,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement(
                 Li,
                 { xmlns: 'http://www.w3.org/2000/svg' },
-                a.createElement('circle', null)
+                a.createElement('circle', null),
               ),
               a.createElement(
                 Li,
                 { xmlns: 'http://www.w3.org/2000/svg', spinner: !0 },
                 a.createElement('circle', {
                   strokeDashoffset: Math.PI * 20 * (1 - c / 100),
-                })
+                }),
               ),
               typeof c == 'number' &&
                 a.createElement(
@@ -23616,9 +23620,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   { xmlns: 'http://www.w3.org/2000/svg', progress: !0 },
                   a.createElement('circle', {
                     strokeDashoffset: Math.PI * 20 * (1 - c / 100),
-                  })
-                )
-            )
+                  }),
+                ),
+            ),
           );
         }
         return t
@@ -23641,9 +23645,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   Zr,
                   { status: 'notification' },
-                  a.createElement(Dt, null)
-                )
-              )
+                  a.createElement(Dt, null),
+                ),
+              ),
             )
           : a.createElement(
               Ne,
@@ -23661,8 +23665,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   'aria-label': 'Run tests',
                   onClick: () => l(),
                 },
-                a.createElement(Dt, null)
-              )
+                a.createElement(Dt, null),
+              ),
             );
       },
       D7 = w(W)({
@@ -23682,14 +23686,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           typeof e.buildProgressPercentage == 'number' &&
             a.createElement(Y0, {
               style: { width: `${e.buildProgressPercentage}%` },
-            })
+            }),
         ),
         a.createElement($o, {
           center: !0,
           muted: !0,
           small: !0,
           localBuildProgress: e,
-        })
+        }),
       );
     }
     var z7 =
@@ -23737,8 +23741,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { center: !0, muted: !0, block: !0 },
-                  "In your code, adjust the markup, styling, or assets to see how visual testing works. Don't worry, you can undo it later. Here are a few ideas to get you started."
-                )
+                  "In your code, adjust the markup, styling, or assets to see how visual testing works. Don't worry, you can undo it later. Here are a few ideas to get you started.",
+                ),
               ),
               a.createElement(
                 de,
@@ -23758,7 +23762,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     alt: 'Color Palette',
                     style: { width: 32, height: 32 },
                   }),
-                  'Shift the color palette'
+                  'Shift the color palette',
                 ),
                 a.createElement(
                   sa,
@@ -23769,7 +23773,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     style: { width: 32, height: 32 },
                   }),
                   ' ',
-                  'Embiggen the type'
+                  'Embiggen the type',
                 ),
                 a.createElement(
                   sa,
@@ -23779,7 +23783,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     alt: 'Layout',
                     style: { width: 32, height: 32 },
                   }),
-                  'Change the layout'
+                  'Change the layout',
                 ),
                 a.createElement(
                   sa,
@@ -23789,8 +23793,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     alt: 'Adjust',
                     style: { width: 32, height: 32 },
                   }),
-                  'Adjust the size or scale'
-                )
+                  'Adjust the size or scale',
+                ),
               ),
               a.createElement(
                 St,
@@ -23802,18 +23806,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       a.createElement(
                         Y7,
                         null,
-                        'No changes found in the Storybook you published. Make a UI tweak and try again to continue.'
-                      )
+                        'No changes found in the Storybook you published. Make a UI tweak and try again to continue.',
+                      ),
                     )
                   : a.createElement(G7, null, 'Awaiting changes...'),
                 a.createElement(
                   se,
                   { link: !0, onClick: e },
-                  'Skip walkthrough'
-                )
-              )
-            )
-          )
+                  'Skip walkthrough',
+                ),
+              ),
+            ),
+          ),
         ),
       K7 = ({
         isRunning: e,
@@ -23838,8 +23842,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { center: !0, muted: !0 },
-                  'Time to run your first visual tests to pinpoint the exact changes made to this story.'
-                )
+                  'Time to run your first visual tests to pinpoint the exact changes made to this story.',
+                ),
               ),
               a.createElement(
                 se,
@@ -23856,10 +23860,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   },
                 },
                 a.createElement(Dt, null),
-                'Run visual tests'
-              )
-            )
-          )
+                'Run visual tests',
+              ),
+            ),
+          ),
         ),
       J7 = ({ localBuildProgress: e }) =>
         a.createElement(
@@ -23878,12 +23882,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   W,
                   { center: !0, muted: !0 },
-                  "A new snapshot is being created in a standardized cloud browser. Once complete, you'll be able to pinpoint exactly what changed."
-                )
+                  "A new snapshot is being created in a standardized cloud browser. Once complete, you'll be able to pinpoint exactly what changed.",
+                ),
               ),
-              a.createElement(ei, { localBuildProgress: e })
-            )
-          )
+              a.createElement(ei, { localBuildProgress: e }),
+            ),
+          ),
         ),
       X7 = ({ isUnchanged: e, localBuildProgress: t, ...n }) => (
         Xe('Onboarding', 'CatchAChange'),
@@ -23939,10 +23943,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             a.createElement(
               'div',
               { style: e ? { backgroundColor: e } : {} },
-              a.createElement('img', { alt: 'Snapshot thumbnail', src: n })
-            )
+              a.createElement('img', { alt: 'Snapshot thumbnail', src: n }),
+            ),
           ),
-          t === 'positive' && a.createElement(Co, null)
+          t === 'positive' && a.createElement(Co, null),
         ),
       F1 = w(W)({ marginBottom: 5 }),
       O1 = ({ onComplete: e, onSkip: t, ranSecondBuild: n = !1 }) => {
@@ -23964,18 +23968,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       pe,
                       null,
-                      'Nice. Your stories were saved as test baselines.'
+                      'Nice. Your stories were saved as test baselines.',
                     ),
                     a.createElement(
                       W,
                       { center: !0, muted: !0, block: !0 },
-                      'This story was indexed and snapshotted in a standardized cloud browser.'
+                      'This story was indexed and snapshotted in a standardized cloud browser.',
                     ),
                     r.selectedComparison?.headCapture?.captureImage &&
                       a.createElement(po, {
                         ...r.selectedComparison?.headCapture?.captureImage,
                         status: 'positive',
-                      })
+                      }),
                   ),
                   a.createElement(
                     St,
@@ -23984,14 +23988,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       se,
                       { variant: 'solid', size: 'medium', onClick: e },
-                      'Done'
+                      'Done',
                     ),
                     a.createElement(
                       se,
                       { link: !0, onClick: t },
-                      'Skip walkthrough'
-                    )
-                  )
+                      'Skip walkthrough',
+                    ),
+                  ),
                 )
               : a.createElement(
                   de,
@@ -24002,18 +24006,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       pe,
                       null,
-                      'Nice. You ran your first tests!'
+                      'Nice. You ran your first tests!',
                     ),
                     a.createElement(
                       W,
                       { center: !0, muted: !0, block: !0 },
-                      'This story was indexed and snapshotted in a standardized cloud browser and changes were found.'
+                      'This story was indexed and snapshotted in a standardized cloud browser and changes were found.',
                     ),
                     r.selectedComparison?.headCapture?.captureImage &&
                       a.createElement(po, {
                         ...r.selectedComparison?.headCapture?.captureImage,
                         status: 'positive',
-                      })
+                      }),
                   ),
                   a.createElement(
                     St,
@@ -24022,16 +24026,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       se,
                       { variant: 'solid', size: 'medium', onClick: e },
-                      'Take a tour'
+                      'Take a tour',
                     ),
                     a.createElement(
                       se,
                       { link: !0, onClick: t },
-                      'Skip walkthrough'
-                    )
-                  )
-                )
-          )
+                      'Skip walkthrough',
+                    ),
+                  ),
+                ),
+          ),
         );
       },
       L1 = () =>
@@ -24043,8 +24047,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           a.createElement(
             W,
             { center: !0, muted: !0 },
-            'Take an image snapshot of your stories to save their "last known good state" as test baselines.'
-          )
+            'Take an image snapshot of your stories to save their "last known good state" as test baselines.',
+          ),
         ),
       nh = ({
         isRunning: e,
@@ -24064,7 +24068,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   de,
                   null,
                   a.createElement(L1, null),
-                  a.createElement(ei, { localBuildProgress: t })
+                  a.createElement(ei, { localBuildProgress: t }),
                 )
               : a.createElement(
                   de,
@@ -24081,16 +24085,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         variant: 'solid',
                         onClick: n,
                       },
-                      'Take snapshots'
+                      'Take snapshots',
                     ),
                     a.createElement(
                       se,
                       { onClick: r, link: !0 },
-                      'Skip walkthrough'
-                    )
-                  )
-                )
-          )
+                      'Skip walkthrough',
+                    ),
+                  ),
+                ),
+          ),
         )
       ),
       ah = w(W)({ marginBottom: 5 }),
@@ -24112,18 +24116,18 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   pe,
                   null,
-                  'Nice. Your stories were saved as test baselines.'
+                  'Nice. Your stories were saved as test baselines.',
                 ),
                 a.createElement(
                   W,
                   { center: !0, muted: !0, block: !0 },
-                  'This story was indexed and snapshotted in a standardized cloud browser.'
+                  'This story was indexed and snapshotted in a standardized cloud browser.',
                 ),
                 n?.selectedComparison?.headCapture?.captureImage &&
                   a.createElement(po, {
                     ...n?.selectedComparison?.headCapture.captureImage,
                     status: 'positive',
-                  })
+                  }),
               ),
               a.createElement(
                 St,
@@ -24131,21 +24135,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   ah,
                   { muted: !0 },
-                  "Let's see the superpower of catching visual changes."
+                  "Let's see the superpower of catching visual changes.",
                 ),
                 a.createElement(
                   se,
                   { variant: 'solid', size: 'medium', onClick: e },
-                  'Catch a UI change'
+                  'Catch a UI change',
                 ),
                 a.createElement(
                   se,
                   { link: !0, onClick: t },
-                  'Skip walkthrough'
-                )
-              )
-            )
-          )
+                  'Skip walkthrough',
+                ),
+              ),
+            ),
+          ),
         );
       },
       ih = ({
@@ -24178,14 +24182,14 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   se,
                   { variant: 'solid', size: 'medium', onClick: c },
-                  'Try again'
+                  'Try again',
                 ),
                 a.createElement(
                   se,
                   { link: !0, onClick: l },
-                  'Skip walkthrough'
-                )
-              )
+                  'Skip walkthrough',
+                ),
+              ),
             )
           : t?.currentStep === 'limited'
             ? a.createElement(
@@ -24194,7 +24198,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   billingUrl: t.errorDetailsUrl,
                   suspensionReason: 'EXCEEDED_THRESHOLD',
                 },
-                a.createElement(se, { link: !0, onClick: e }, 'Continue')
+                a.createElement(se, { link: !0, onClick: e }, 'Continue'),
               )
             : d && (!t || (t && s))
               ? a.createElement(nh, {
@@ -24357,10 +24361,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   uh,
                   { isCurrent: l, isFailed: s, isPending: c, key: d },
-                  a.createElement('div', null, o, u(n.current[d] || e))
-                )
-            )
-          )
+                  a.createElement('div', null, o, u(n.current[d] || e)),
+                ),
+            ),
+          ),
         );
       },
       ph = ({
@@ -24393,21 +24397,21 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement(
                 nr,
                 null,
-                a.createElement($o, { localBuildProgress: n, withEmoji: !0 })
+                a.createElement($o, { localBuildProgress: n, withEmoji: !0 }),
               ),
               d
                 ? a.createElement(
                     rt,
                     { onClick: t },
-                    a.createElement(So, { 'aria-label': 'Dismiss' })
+                    a.createElement(So, { 'aria-label': 'Dismiss' }),
                   )
                 : a.createElement(
                     rt,
                     { as: 'div' },
-                    o ? a.createElement(iu, null) : a.createElement(ru, null)
-                  )
+                    o ? a.createElement(iu, null) : a.createElement(ru, null),
+                  ),
             ),
-            a.createElement(mh, { localBuildProgress: n, expanded: o || d })
+            a.createElement(mh, { localBuildProgress: n, expanded: o || d }),
           );
         }
         function c() {
@@ -24419,7 +24423,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   "Reviewing is disabled because there's a newer build in progress on",
                   ' ',
                   a.createElement(Ve, null, e),
-                  '. This can happen when a build runs in CI.'
+                  '. This can happen when a build runs in CI.',
                 )
               : a.createElement(
                   nr,
@@ -24429,22 +24433,22 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   a.createElement(
                     fn,
                     { withArrow: !0, onClick: i },
-                    'Switch to newer snapshot'
-                  )
+                    'Switch to newer snapshot',
+                  ),
                 )
             : a.createElement(
                 nr,
                 null,
                 "Reviewing is disabled because there's a newer build on ",
                 a.createElement(Ve, null, e),
-                '.'
+                '.',
               );
         }
         return a.createElement(
           T1,
           { onClick: i },
           a.createElement(_1, { percentage: 100 }),
-          c()
+          c(),
         );
       },
       hh = ({ onClose: e }) =>
@@ -24462,33 +24466,33 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement(
                 Mo,
                 { onClick: e },
-                a.createElement(xo, { 'aria-label': 'Close' })
-              )
+                a.createElement(xo, { 'aria-label': 'Close' }),
+              ),
             ),
             a.createElement(
               'p',
               null,
               a.createElement(pu, null),
-              'Delay: 300ms'
+              'Delay: 300ms',
             ),
             a.createElement(
               'p',
               null,
               a.createElement(hu, null),
-              'Animation pause: Ends'
+              'Animation pause: Ends',
             ),
             a.createElement(
               'p',
               null,
               a.createElement(fu, null),
-              'Threshold: 0.2'
+              'Threshold: 0.2',
             ),
             a.createElement(
               'p',
               null,
               a.createElement(gu, null),
-              'Anti-alias: Included'
-            )
+              'Anti-alias: Included',
+            ),
           ),
           a.createElement(
             $i,
@@ -24497,7 +24501,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               cr,
               null,
               'Bounding box',
-              a.createElement(kl, null)
+              a.createElement(kl, null),
             ),
             a.createElement(
               'dl',
@@ -24505,9 +24509,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement('dt', null, 'Width:'),
               a.createElement('dd', null, 'Fill viewport'),
               a.createElement('dt', null, 'Height:'),
-              a.createElement('dd', null, 'Hug contents')
-            )
-          )
+              a.createElement('dd', null, 'Hug contents'),
+            ),
+          ),
         ),
       Q0 = {
         isReviewing: !1,
@@ -24561,7 +24565,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               '& > svg': { opacity: 1 },
               img: { filter: 'brightness(85%)' },
             },
-          }
+          },
       ),
       vh = w(de)(({ theme: e }) => ({ margin: '30px 15px' })),
       yh = ({
@@ -24640,9 +24644,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement(
                 W,
                 { center: !0, muted: !0 },
-                "A snapshot couldn't be captured. This often occurs when a story has a code error. Confirm that this story successfully renders in your local Storybook and run the build again."
-              )
-            )
+                "A snapshot couldn't be captured. This often occurs when a story has a code error. Confirm that this story successfully renders in your local Storybook and run the build again.",
+              ),
+            ),
         );
       },
       bh = (e) =>
@@ -24716,7 +24720,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 offset: '1',
                 stopColor: '#3E2723',
                 stopOpacity: '0.01',
-              })
+              }),
             ),
             a.createElement(
               'radialGradient',
@@ -24737,7 +24741,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 offset: '1',
                 stopColor: '#3E2723',
                 stopOpacity: '0.01',
-              })
+              }),
             ),
             a.createElement(
               'radialGradient',
@@ -24758,9 +24762,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 offset: '1',
                 stopColor: '#263238',
                 stopOpacity: '0.01',
-              })
-            )
-          )
+              }),
+            ),
+          ),
         ),
       Eh = (e) =>
         a.createElement(
@@ -24822,7 +24826,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 gradientUnits: 'userSpaceOnUse',
               },
               a.createElement('stop', { stopColor: '#F8F8F8' }),
-              a.createElement('stop', { offset: '1', stopColor: '#CCCCCC' })
+              a.createElement('stop', { offset: '1', stopColor: '#CCCCCC' }),
             ),
             a.createElement(
               'radialGradient',
@@ -24835,9 +24839,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 gradientTransform: 'translate(8.00216 8.0046) scale(7.06173)',
               },
               a.createElement('stop', { stopColor: '#00F0FF' }),
-              a.createElement('stop', { offset: '1', stopColor: '#0070E0' })
-            )
-          )
+              a.createElement('stop', { offset: '1', stopColor: '#0070E0' }),
+            ),
+          ),
         ),
       kh = (e) =>
         a.createElement(
@@ -24914,7 +24918,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement('stop', { offset: '0.05', stopColor: '#FFF44F' }),
               a.createElement('stop', { offset: '0.37', stopColor: '#FF980E' }),
               a.createElement('stop', { offset: '0.53', stopColor: '#FF3647' }),
-              a.createElement('stop', { offset: '0.7', stopColor: '#E31587' })
+              a.createElement('stop', { offset: '0.7', stopColor: '#E31587' }),
             ),
             a.createElement(
               'radialGradient',
@@ -24931,7 +24935,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement('stop', { offset: '0.28', stopColor: '#FF980E' }),
               a.createElement('stop', { offset: '0.47', stopColor: '#FF3750' }),
               a.createElement('stop', { offset: '0.78', stopColor: '#EB0878' }),
-              a.createElement('stop', { offset: '0.86', stopColor: '#E50080' })
+              a.createElement('stop', { offset: '0.86', stopColor: '#E50080' }),
             ),
             a.createElement(
               'radialGradient',
@@ -24964,7 +24968,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 offset: '0.53',
                 stopColor: '#FF3750',
                 stopOpacity: '0',
-              })
+              }),
             ),
             a.createElement(
               'radialGradient',
@@ -24978,7 +24982,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   'translate(9.48415 -0.731827) scale(5.04157 8.55934)',
               },
               a.createElement('stop', { offset: '0.13', stopColor: '#FFF44F' }),
-              a.createElement('stop', { offset: '0.53', stopColor: '#FF980E' })
+              a.createElement('stop', { offset: '0.53', stopColor: '#FF980E' }),
             ),
             a.createElement(
               'radialGradient',
@@ -24993,7 +24997,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               },
               a.createElement('stop', { offset: '0.35', stopColor: '#3A8EE6' }),
               a.createElement('stop', { offset: '0.67', stopColor: '#9059FF' }),
-              a.createElement('stop', { offset: '1', stopColor: '#C139E6' })
+              a.createElement('stop', { offset: '1', stopColor: '#C139E6' }),
             ),
             a.createElement(
               'radialGradient',
@@ -25015,7 +25019,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 offset: '0.97',
                 stopColor: '#6E008B',
                 stopOpacity: '0.6',
-              })
+              }),
             ),
             a.createElement(
               'radialGradient',
@@ -25029,7 +25033,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   'translate(7.50592 1.1523) scale(5.30374 5.32259)',
               },
               a.createElement('stop', { offset: '0.1', stopColor: '#FFE226' }),
-              a.createElement('stop', { offset: '0.79', stopColor: '#FF7139' })
+              a.createElement('stop', { offset: '0.79', stopColor: '#FF7139' }),
             ),
             a.createElement(
               'radialGradient',
@@ -25045,7 +25049,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement('stop', { offset: '0.11', stopColor: '#FFF44F' }),
               a.createElement('stop', { offset: '0.46', stopColor: '#FF980E' }),
               a.createElement('stop', { offset: '0.72', stopColor: '#FF3647' }),
-              a.createElement('stop', { offset: '0.9', stopColor: '#E31587' })
+              a.createElement('stop', { offset: '0.9', stopColor: '#E31587' }),
             ),
             a.createElement(
               'radialGradient',
@@ -25061,7 +25065,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement('stop', { stopColor: '#FFF44F' }),
               a.createElement('stop', { offset: '0.3', stopColor: '#FF980E' }),
               a.createElement('stop', { offset: '0.57', stopColor: '#FF3647' }),
-              a.createElement('stop', { offset: '0.74', stopColor: '#E31587' })
+              a.createElement('stop', { offset: '0.74', stopColor: '#E31587' }),
             ),
             a.createElement(
               'radialGradient',
@@ -25077,7 +25081,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement('stop', { offset: '0.14', stopColor: '#FFF44F' }),
               a.createElement('stop', { offset: '0.48', stopColor: '#FF980E' }),
               a.createElement('stop', { offset: '0.66', stopColor: '#FF3647' }),
-              a.createElement('stop', { offset: '0.9', stopColor: '#E31587' })
+              a.createElement('stop', { offset: '0.9', stopColor: '#E31587' }),
             ),
             a.createElement(
               'radialGradient',
@@ -25091,7 +25095,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   'translate(11.3337 3.90193) scale(17.4743 15.6328)',
               },
               a.createElement('stop', { offset: '0.09', stopColor: '#FFF44F' }),
-              a.createElement('stop', { offset: '0.63', stopColor: '#FF980E' })
+              a.createElement('stop', { offset: '0.63', stopColor: '#FF980E' }),
             ),
             a.createElement(
               'linearGradient',
@@ -25112,9 +25116,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 offset: '0.6',
                 stopColor: '#FFF44F',
                 stopOpacity: '0',
-              })
-            )
-          )
+              }),
+            ),
+          ),
         ),
       wh = (e) =>
         a.createElement(
@@ -25176,7 +25180,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 gradientUnits: 'userSpaceOnUse',
               },
               a.createElement('stop', { stopColor: '#F8F8F8' }),
-              a.createElement('stop', { offset: '1', stopColor: '#CCCCCC' })
+              a.createElement('stop', { offset: '1', stopColor: '#CCCCCC' }),
             ),
             a.createElement(
               'radialGradient',
@@ -25189,9 +25193,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 gradientTransform: 'translate(8.00216 8.0046) scale(7.06173)',
               },
               a.createElement('stop', { stopColor: '#00F0FF' }),
-              a.createElement('stop', { offset: '1', stopColor: '#0070E0' })
-            )
-          )
+              a.createElement('stop', { offset: '1', stopColor: '#0070E0' }),
+            ),
+          ),
         ),
       Z1 = {
         CHROME: a.createElement(bh, { alt: 'Chrome' }),
@@ -25260,9 +25264,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 { placement: 'bottom', links: l },
                 o,
                 a.createElement(I1, null, t.name),
-                a.createElement(Ms, { size: 10 })
+                a.createElement(Ms, { size: 10 }),
               )
-            : a.createElement(Ch, null, o, a.createElement(I1, null, t.name))
+            : a.createElement(Ch, null, o, a.createElement(I1, null, t.name)),
         );
       },
       xh = w.div(({ theme: e }) => ({
@@ -25342,9 +25346,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 { placement: 'bottom', links: s },
                 l,
                 a.createElement(R1, null, i.name),
-                a.createElement(Ms, { size: 10 })
+                a.createElement(Ms, { size: 10 }),
               )
-            : a.createElement(xh, null, l, a.createElement(R1, null, i.name))
+            : a.createElement(xh, null, l, a.createElement(R1, null, i.name)),
         );
       },
       B1 = () => {
@@ -25370,7 +25374,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               browserResults: t,
               onSelectBrowser: e.onSelectBrowser,
             }),
-          a.createElement(it, { push: !0 }, a.createElement(Dr, null))
+          a.createElement(it, { push: !0 }, a.createElement(Dr, null)),
         );
       },
       Ah = ({ theme: e, secondary: t, status: n }) =>
@@ -25450,7 +25454,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             borderTopLeftRadius: 0,
             borderBottomLeftRadius: 0,
           }),
-        })
+        }),
       ),
       P1 = w.div({ display: 'flex', flexDirection: 'row' }),
       Ir = w.div(
@@ -25476,7 +25480,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             borderLeftColor: 'currentcolor',
             borderBottomColor: 'currentcolor',
             borderRightColor: 'currentcolor',
-          })
+          }),
       ),
       Ti = w.div(
         ({
@@ -25495,7 +25499,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           margin: 7,
           marginLeft: r,
           marginRight: i,
-        })
+        }),
       ),
       Fh = w.div(({ theme: e }) => ({
         gridArea: 'label',
@@ -25565,7 +25569,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             null,
             a.createElement(Ti, null),
             a.createElement(Ti, null),
-            a.createElement(Ti, null)
+            a.createElement(Ti, null),
           );
         let g = p > 0 && d?.status !== 'ACCEPTED',
           E = p > 0 && d?.status === 'ACCEPTED',
@@ -25584,9 +25588,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   'b',
                   null,
                   t ? 'Baseline' : 'Latest',
-                  a.createElement('span', null, ' snapshot')
-                )
-              )
+                  a.createElement('span', null, ' snapshot'),
+                ),
+              ),
             ),
           x &&
             a.createElement(
@@ -25610,8 +25614,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       : 'Show baseline snapshot',
                     onClick: () => i(),
                   },
-                  a.createElement(ou, null)
-                )
+                  a.createElement(ou, null),
+                ),
               ),
               a.createElement(
                 Ne,
@@ -25630,8 +25634,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     'aria-label': r ? 'Hide spotlight' : 'Show spotlight',
                     onClick: () => l(!r),
                   },
-                  a.createElement(su, null)
-                )
+                  a.createElement(su, null),
+                ),
               ),
               a.createElement(
                 Ne,
@@ -25650,9 +25654,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     'aria-label': n ? 'Hide diff' : 'Show diff',
                     onClick: () => o(!n),
                   },
-                  a.createElement(Es, null)
-                )
-              )
+                  a.createElement(Es, null),
+                ),
+              ),
             ),
           (g || E) &&
             a.createElement(
@@ -25683,8 +25687,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         onClick: () => b(d.id, 'SPEC'),
                         side: 'left',
                       },
-                      'Accept'
-                    )
+                      'Accept',
+                    ),
                   ),
                   a.createElement(
                     Ne,
@@ -25734,10 +25738,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             ? a.createElement(Ir, {
                                 parentComponent: 'IconButton',
                               })
-                            : a.createElement(El, null)
-                        )
-                    )
-                  )
+                            : a.createElement(El, null),
+                        ),
+                    ),
+                  ),
                 ),
               k &&
                 y &&
@@ -25765,8 +25769,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         status: 'positive',
                       },
                       a.createElement(lu, null),
-                      'Unaccept'
-                    )
+                      'Unaccept',
+                    ),
                   ),
                   a.createElement(
                     Ne,
@@ -25817,10 +25821,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             ? a.createElement(Ir, {
                                 parentComponent: 'IconButton',
                               })
-                            : a.createElement(El, null)
-                        )
-                    )
-                  )
+                            : a.createElement(El, null),
+                        ),
+                    ),
+                  ),
                 ),
               !(k && y) &&
                 a.createElement(
@@ -25832,7 +25836,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     trigger: 'hover',
                     hasChrome: !1,
                   },
-                  a.createElement(Oh, null, a.createElement(Cs, null))
+                  a.createElement(Oh, null, a.createElement(Cs, null)),
                 ),
               a.createElement(
                 Ne,
@@ -25852,10 +25856,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     disabled: s,
                     secondary: !0,
                   },
-                  e ? a.createElement(Dt, null) : a.createElement(Vr, null)
-                )
-              )
-            )
+                  e ? a.createElement(Dt, null) : a.createElement(Vr, null),
+                ),
+              ),
+            ),
         );
       },
       ar = mt(Br()),
@@ -25876,7 +25880,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             clipRule: 'evenodd',
             d: 'M12 6C12 9.31371 9.31371 12 6 12C2.68629 12 0 9.31371 0 6C0 2.68629 2.68629 0 6 0C9.31371 0 12 2.68629 12 6ZM5.57143 6.85714C5.57143 7.09384 5.76331 7.28571 6 7.28571C6.23669 7.28571 6.42857 7.09384 6.42857 6.85714L6.42857 3.42857C6.42857 3.19188 6.23669 3 6 3C5.76331 3 5.57143 3.19188 5.57143 3.42857V6.85714ZM5.35714 8.78572C5.35714 8.43067 5.64496 8.14286 6 8.14286C6.35504 8.14286 6.64286 8.43067 6.64286 8.78571C6.64286 9.14075 6.35504 9.42857 6 9.42857C5.64496 9.42857 5.35714 9.14075 5.35714 8.78572Z',
             fill: '#73828C',
-          })
+          }),
         ),
       _i = {
         width: 12,
@@ -25919,7 +25923,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (e > 1 ? 's' : '') +
             ' required, but only ' +
             t.length +
-            ' present'
+            ' present',
         );
     }
     function kn(e) {
@@ -25932,7 +25936,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           : ((typeof e == 'string' || t === '[object String]') &&
               typeof console < 'u' &&
               (console.warn(
-                "Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments"
+                "Starting with v2.0.0-beta.1 date-fns doesn't accept strings as date arguments. Please use `parseISO` to parse strings. See: https://github.com/date-fns/date-fns/blob/master/docs/upgradeGuide.md#string-arguments",
               ),
               console.warn(new Error().stack)),
             new Date(NaN));
@@ -25950,8 +25954,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           e.getHours(),
           e.getMinutes(),
           e.getSeconds(),
-          e.getMilliseconds()
-        )
+          e.getMilliseconds(),
+        ),
       );
       return t.setUTCFullYear(e.getFullYear()), e.getTime() - t.getTime();
     }
@@ -26396,7 +26400,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
     function ec(e, t) {
       if (e == null)
         throw new TypeError(
-          'assign requires that input parameter not be null or undefined'
+          'assign requires that input parameter not be null or undefined',
         );
       for (var n in t)
         Object.prototype.hasOwnProperty.call(t, n) && (e[n] = t[n]);
@@ -26420,7 +26424,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             : w6;
       if (!s.formatDistance)
         throw new RangeError(
-          'locale must contain localize.formatDistance property'
+          'locale must contain localize.formatDistance property',
         );
       var c = Bh(e, t);
       if (isNaN(c)) throw new RangeError('Invalid time value');
@@ -26429,7 +26433,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         m;
       c > 0 ? ((u = kn(t)), (m = kn(e))) : ((u = kn(e)), (m = kn(t)));
       var p = String(
-          (o = n?.roundingMethod) !== null && o !== void 0 ? o : 'round'
+          (o = n?.roundingMethod) !== null && o !== void 0 ? o : 'round',
         ),
         v;
       if (p === 'floor') v = Math.floor;
@@ -26437,7 +26441,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
       else if (p === 'round') v = Math.round;
       else
         throw new RangeError(
-          "roundingMethod must be 'floor', 'ceil' or 'round'"
+          "roundingMethod must be 'floor', 'ceil' or 'round'",
         );
       var f = m.getTime() - u.getTime(),
         y = f / H1,
@@ -26482,7 +26486,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
         return s.formatDistance('xYears', re, d);
       }
       throw new RangeError(
-        "unit must be 'second', 'minute', 'hour', 'day', 'month' or 'year'"
+        "unit must be 'second', 'minute', 'hour', 'day', 'month' or 'year'",
       );
     }
     function x6(e, t) {
@@ -26590,13 +26594,17 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   'span',
                   null,
-                  a.createElement('b', null, 'Code edits detected')
+                  a.createElement('b', null, 'Code edits detected'),
                 ),
                 a.createElement(
                   'small',
                   null,
-                  a.createElement('span', null, 'Run tests to see what changed')
-                )
+                  a.createElement(
+                    'span',
+                    null,
+                    'Run tests to see what changed',
+                  ),
+                ),
               ))
             : b
               ? (E = a.createElement(
@@ -26606,7 +26614,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     'span',
                     null,
                     a.createElement('b', null, 'Build failed'),
-                    a.createElement(_h, null)
+                    a.createElement(_h, null),
                   ),
                   a.createElement(
                     'small',
@@ -26614,9 +26622,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     a.createElement(
                       'span',
                       null,
-                      'An infrastructure error occured'
-                    )
-                  )
+                      'An infrastructure error occured',
+                    ),
+                  ),
                 ))
               : k
                 ? (E = a.createElement(
@@ -26626,13 +26634,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       'span',
                       null,
                       a.createElement('b', null, 'Running tests...'),
-                      a.createElement(Ir, null)
+                      a.createElement(Ir, null),
                     ),
                     a.createElement(
                       'small',
                       null,
-                      a.createElement('span', null, 'Test in progress...')
-                    )
+                      a.createElement('span', null, 'Test in progress...'),
+                    ),
                   ))
                 : o
                   ? (E = a.createElement(
@@ -26647,15 +26655,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           a.createElement(
                             fn,
                             { isButton: !0, onClick: l },
-                            'View latest snapshot'
-                          )
-                        )
+                            'View latest snapshot',
+                          ),
+                        ),
                       ),
                       a.createElement(
                         'span',
                         null,
-                        'Newer test results are available for this story'
-                      )
+                        'Newer test results are available for this story',
+                      ),
                     ))
                   : (E = a.createElement(
                       oa,
@@ -26671,7 +26679,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             : m
                               ? `${(0, ar.default)('change', m, !0)}${d === 'ACCEPTED' ? ' accepted' : ''}`
                               : 'No changes',
-                          p ? (0, ar.default)('error', p, !0) : null
+                          p ? (0, ar.default)('error', p, !0) : null,
                         ),
                         a.createElement(Zh, {
                           icon: p
@@ -26679,7 +26687,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             : d === 'PENDING'
                               ? 'changed'
                               : 'passed',
-                        })
+                        }),
                       ),
                       a.createElement(
                         'small',
@@ -26690,13 +26698,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             { 'data-hidden-large': !0 },
                             (0, ar.default)('mode', v.length, !0),
                             ', ',
-                            (0, ar.default)('browser', f.length, !0)
+                            (0, ar.default)('browser', f.length, !0),
                           ),
                         v.length > 0 &&
                           a.createElement(
                             'span',
                             { 'data-hidden-large': !0 },
-                            ' \u2022 '
+                            ' \u2022 ',
                           ),
                         u &&
                           a.createElement('span', null, 'Test in progress...'),
@@ -26706,9 +26714,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             'span',
                             { title: new Date(n).toUTCString() },
                             'Ran ',
-                            y
-                          )
-                      )
+                            y,
+                          ),
+                      ),
                     )),
           a.createElement(
             a.Fragment,
@@ -26724,9 +26732,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                   s
                     ? a.createElement(Ir, { parentComponent: 'Button' })
                     : a.createElement(Dt, null),
-                  h ? 'Rerun tests' : 'Run tests'
-                )
-              )
+                  h ? 'Rerun tests' : 'Run tests',
+                ),
+              ),
           )
         );
       },
@@ -26835,7 +26843,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           g = a.useRef(v.id),
           { selectedTest: E, selectedComparison: x } = y,
           B = k.every(
-            ({ result: $e, status: Me }) => $e === 'ADDED' && Me !== 'ACCEPTED'
+            ({ result: $e, status: Me }) => $e === 'ADDED' && Me !== 'ACCEPTED',
           ),
           H = !B && E?.result === 'ADDED' && E?.status !== 'ACCEPTED',
           ae =
@@ -26869,7 +26877,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             $1,
             { hidden: o },
             a.createElement(W1, null, a.createElement(U1, null, re)),
-            a.createElement(G1, null, a.createElement(B1, null))
+            a.createElement(G1, null, a.createElement(B1, null)),
           );
         let ve = zo(k),
           { isInProgress: Fe } = ve,
@@ -26887,8 +26895,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               U1,
               null,
               re,
-              a.createElement(Th, { isOutdated: e })
-            )
+              a.createElement(Th, { isOutdated: e }),
+            ),
           ),
           a.createElement(
             L6,
@@ -26911,9 +26919,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       href: 'https://www.chromatic.com/docs/branching-and-baselines',
                       target: '_blank',
                     },
-                    'Learn more'
-                  )
-                )
+                    'Learn more',
+                  ),
+                ),
               ),
             !Fe &&
               H &&
@@ -26932,9 +26940,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       href: 'https://www.chromatic.com/docs/branching-and-baselines',
                       target: '_blank',
                     },
-                    'Learn more'
-                  )
-                )
+                    'Learn more',
+                  ),
+                ),
               ),
             !Fe &&
               ae &&
@@ -26953,9 +26961,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       href: 'https://www.chromatic.com/docs/branching-and-baselines',
                       target: '_blank',
                     },
-                    'Learn more'
-                  )
-                )
+                    'Learn more',
+                  ),
+                ),
               ),
             !Fe &&
               x &&
@@ -26981,12 +26989,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 a.createElement(
                   T6,
                   null,
-                  a.createElement('b', null, 'Error stack trace')
+                  a.createElement('b', null, 'Error stack trace'),
                 ),
-                a.createElement(_6, null, Ze.stack || Ze.message)
-              )
+                a.createElement(_6, null, Ze.stack || Ze.message),
+              ),
           ),
-          a.createElement(G1, null, a.createElement(B1, null))
+          a.createElement(G1, null, a.createElement(B1, null)),
         );
       },
       I6 = w(ci)({ padding: '4px 8px', margin: '0 6px' }),
@@ -27005,13 +27013,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               a.createElement(
                 Mo,
                 { onClick: e },
-                a.createElement(xo, { 'aria-label': 'Close' })
-              )
+                a.createElement(xo, { 'aria-label': 'Close' }),
+              ),
             ),
             a.createElement(
               'p',
               null,
-              "It's essential that your components and stories render in a consistent fashion to prevent false positives. Two issues detected in this story may cause false positives."
+              "It's essential that your components and stories render in a consistent fashion to prevent false positives. Two issues detected in this story may cause false positives.",
             ),
             a.createElement(
               'p',
@@ -27020,16 +27028,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 se,
                 { variant: 'outline' },
                 a.createElement(ks, null),
-                'Docs'
+                'Docs',
               ),
               a.createElement(
                 se,
                 { variant: 'outline' },
                 a.createElement(X5, null),
-                'Get support'
-              )
-            )
-          )
+                'Get support',
+              ),
+            ),
+          ),
         );
     w.div(({ theme: e }) => ({
       color: e.color.warning,
@@ -27090,10 +27098,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       a.createElement(
                         W,
                         { center: !0, muted: !0 },
-                        'A new snapshot is being created in a standardized cloud browser to save its "last known good state" as a test baseline.'
-                      )
+                        'A new snapshot is being created in a standardized cloud browser to save its "last known good state" as a test baseline.',
+                      ),
                     ),
-                    a.createElement(ei, { localBuildProgress: r })
+                    a.createElement(ei, { localBuildProgress: r }),
                   )
                 : a.createElement(
                     de,
@@ -27105,8 +27113,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       a.createElement(
                         W,
                         { center: !0, muted: !0 },
-                        'Take an image snapshot of this story to save its "last known good state" as a test baseline. This unlocks visual regression testing so you can see exactly what has changed down to the pixel.'
-                      )
+                        'Take an image snapshot of this story to save its "last known good state" as a test baseline. This unlocks visual regression testing so you can see exactly what has changed down to the pixel.',
+                      ),
                     ),
                     a.createElement(
                       se,
@@ -27116,10 +27124,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         variant: 'solid',
                         onClick: u ? p : m,
                       },
-                      u ? 'Cancel build' : 'Create visual test'
-                    )
-                  )
-            )
+                      u ? 'Cancel build' : 'Create visual test',
+                    ),
+                  ),
+            ),
           );
         if (b?.tests?.find((_t) => _t.result === 'SKIPPED'))
           return a.createElement(
@@ -27141,8 +27149,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     { center: !0, muted: !0 },
                     'If you would like to resume testing it, comment out or remove',
                     a.createElement(Ve, null, 'disableSnapshot = true'),
-                    ' from the CSF file.'
-                  )
+                    ' from the CSF file.',
+                  ),
                 ),
                 a.createElement(
                   se,
@@ -27154,11 +27162,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       target: '_new',
                     },
                     a.createElement(ks, null),
-                    'View docs'
-                  )
-                )
-              )
-            )
+                    'View docs',
+                  ),
+                ),
+              ),
+            ),
           );
         let { status: Fe } = k,
           Ze = ['ANNOUNCED', 'PUBLISHED', 'PREPARED'].includes(Fe),
@@ -27182,7 +27190,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       null,
                       "Reviewing is disabled because there's a newer build on ",
                       a.createElement(Ve, null, e),
-                      '.'
+                      '.',
                     )
                   : a.createElement(
                       a.Fragment,
@@ -27196,9 +27204,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           target: '_blank',
                           withArrow: !0,
                         },
-                        'Learn about roles'
-                      )
-                    )
+                        'Learn about roles',
+                      ),
+                    ),
               ),
             a.createElement(
               ca,
@@ -27212,19 +27220,19 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 switchToLastBuildOnBranch: i,
                 selectedBuild: k,
                 storyId: o,
-              })
+              }),
             ),
             a.createElement(
               ca,
               { grow: !0, hidden: !l },
-              a.createElement(hh, { onClose: () => c(!1) })
+              a.createElement(hh, { onClose: () => c(!1) }),
             ),
             a.createElement(
               ca,
               { grow: !0, hidden: !s },
-              a.createElement(R6, { onClose: () => d(!1) })
-            )
-          )
+              a.createElement(R6, { onClose: () => d(!1) }),
+            ),
+          ),
         );
       },
       Ri = w(De)(() => ({ marginTop: 5 })),
@@ -27244,7 +27252,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               se,
               { disabled: s, size: 'medium', variant: 'solid', onClick: c },
               a.createElement(Dt, null),
-              'Take snapshots'
+              'Take snapshots',
             );
             return i
               ? i.currentStep === 'error'
@@ -27255,7 +27263,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       localBuildProgress: i,
                       title: 'Build failed',
                     }),
-                    v
+                    v,
                   )
                 : a.createElement(ei, { localBuildProgress: i })
               : v;
@@ -27276,10 +27284,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     W,
                     { muted: !0, style: { marginLeft: 5 } },
                     'Waiting for build on ',
-                    o
-                  )
+                    o,
+                  ),
               ),
-              a.createElement(it, { push: !0 }, a.createElement(Dr, null))
+              a.createElement(it, { push: !0 }, a.createElement(Dr, null)),
             ),
           },
           e?.networkError
@@ -27293,7 +27301,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                     'div',
                     null,
                     a.createElement(pe, null, 'Network error'),
-                    a.createElement(W, null, e.networkError.message)
+                    a.createElement(W, null, e.networkError.message),
                   ),
                   a.createElement(
                     se,
@@ -27302,9 +27310,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                       variant: 'solid',
                       onClick: () => l(null),
                     },
-                    'Log out'
-                  )
-                )
+                    'Log out',
+                  ),
+                ),
               )
             : e?.graphQLErrors?.length
               ? a.createElement(
@@ -27322,8 +27330,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         { center: !0, muted: !0 },
                         e.graphQLErrors[0].extensions.code === 'FORBIDDEN'
                           ? 'You may have insufficient permissions. Try logging out and back in again.'
-                          : "Try logging out or clear your browser's local storage."
-                      )
+                          : "Try logging out or clear your browser's local storage.",
+                      ),
                     ),
                     a.createElement(
                       St,
@@ -27335,7 +27343,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           variant: 'solid',
                           onClick: () => l(null),
                         },
-                        'Log out'
+                        'Log out',
                       ),
                       a.createElement(
                         Ri,
@@ -27344,10 +27352,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           href: `${ns}#troubleshooting`,
                           target: '_blank',
                         },
-                        'Troubleshoot'
-                      )
-                    )
-                  )
+                        'Troubleshoot',
+                      ),
+                    ),
+                  ),
                 )
               : t
                 ? n
@@ -27364,7 +27372,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             a.createElement(
                               pe,
                               null,
-                              'Visual Tests disabled for this story'
+                              'Visual Tests disabled for this story',
                             ),
                             a.createElement(
                               W,
@@ -27378,10 +27386,10 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                                   ? 'disable'
                                   : u
                                     ? 'disableSnapshot'
-                                    : 'docsOnly'
+                                    : 'docsOnly',
                               ),
-                              ' to enable snapshots for this story.'
-                            )
+                              ' to enable snapshots for this story.',
+                            ),
                           ),
                           a.createElement(
                             Ri,
@@ -27390,9 +27398,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               href: 'https://www.chromatic.com/docs/ignoring-elements/#ignore-stories',
                               target: '_blank',
                             },
-                            'Read more'
-                          )
-                        )
+                            'Read more',
+                          ),
+                        ),
                       )
                     : r
                       ? null
@@ -27408,16 +27416,16 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                               a.createElement(
                                 pe,
                                 null,
-                                'Create a test baseline'
+                                'Create a test baseline',
                               ),
                               a.createElement(
                                 W,
                                 { center: !0, muted: !0 },
-                                'Take an image snapshot of your stories to save their "last known good state" as test baselines.'
-                              )
+                                'Take an image snapshot of your stories to save their "last known good state" as test baselines.',
+                              ),
                             ),
-                            p()
-                          )
+                            p(),
+                          ),
                         )
                   : a.createElement(
                       ge,
@@ -27432,8 +27440,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           a.createElement(
                             W,
                             { center: !0, muted: !0 },
-                            'You may not have access to this project or it may not exist.'
-                          )
+                            'You may not have access to this project or it may not exist.',
+                          ),
                         ),
                         a.createElement(
                           Ri,
@@ -27442,11 +27450,11 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             onClick: () => l(null),
                             withArrow: !0,
                           },
-                          'Switch account'
-                        )
-                      )
+                          'Switch account',
+                        ),
+                      ),
                     )
-                : a.createElement(ui, null)
+                : a.createElement(ui, null),
         );
       },
       V6 = (e) => Object.fromEntries(Object.entries(e).map(([t]) => [t, null])),
@@ -27469,15 +27477,15 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 r?.(u, d);
               }
             },
-            [n, r, o, e, t]
+            [n, r, o, e, t],
           ),
           s = Y(
             (d, u = 'SPEC') => l({ status: 'ACCEPTED', testId: d, batch: u }),
-            [l]
+            [l],
           ),
           c = Y(
             (d, u = 'SPEC') => l({ status: 'PENDING', testId: d, batch: u }),
-            [l]
+            [l],
           );
         return {
           isReviewing: i,
@@ -27526,7 +27534,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (E.searchParams.delete('vtaOnboarding'),
                 window.history.replaceState({}, '', E.href));
             },
-            [f]
+            [f],
           ),
           k = a.useMemo(
             () =>
@@ -27540,9 +27548,9 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 (h) =>
                   h?.status === 'PENDING' &&
                   h?.result === 'CHANGED' &&
-                  h?.story?.storyId === i
+                  h?.story?.storyId === i,
               ),
-            [e, i]
+            [e, i],
           ),
           b = !o && !m && !c;
         return {
@@ -27597,7 +27605,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             ({ onDismiss: C }) => {
               C(), p({ selectedPanel: tn }), v(!0);
             },
-            [p, v]
+            [p, v],
           ),
           Me = j6({
             buildIsReviewable: !!ae && ae.id === x?.id,
@@ -27633,12 +27641,12 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                 shouldSwitchToLastBuildOnBranch: H && B,
                 lastBuildOnBranchId: x?.id,
                 storyId: d,
-              })
+              }),
             );
           }, [H, B, x?.id, n, d]);
         let Va = Y(
             () => x?.id && H && n({ buildId: x.id, storyId: d }),
-            [n, H, x?.id, d]
+            [n, H, x?.id, d],
           ),
           {
             showOnboarding: ni,
@@ -27676,8 +27684,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                           onComplete: Vn,
                           onSkip: ai,
                           lastBuildHasChangesForStory: ja,
-                        })
-                      )
+                        }),
+                      ),
                 )
               : a.createElement(
                   a.Fragment,
@@ -27709,8 +27717,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             ...(H && { switchToLastBuildOnBranch: Va }),
                             userCanReview: Ze,
                             storyId: d,
-                          })
-                        )
+                          }),
+                        ),
                       ),
                   Pn &&
                     a.createElement(
@@ -27721,8 +27729,8 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                         skipWalkthrough: jn,
                         startWalkthrough: Hn,
                         completeWalkthrough: Wt,
-                      })
-                    )
+                      }),
+                    ),
                 );
       },
       U6 = (e) => {
@@ -27753,7 +27761,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           {
             isRunning: e
               ? !['aborted', 'complete', 'error', 'limited'].includes(
-                  e.currentStep
+                  e.currentStep,
                 )
               : i,
             startBuild: l,
@@ -27770,7 +27778,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           configFile: o,
           updateProject: Y(
             (l) => t({ ...e, projectId: l, dismissed: !1 }),
-            [e, t]
+            [e, t],
           ),
           projectUpdatingFailed: !i && r === !1,
           projectIdUpdated: !i && r === !0,
@@ -27783,7 +27791,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             (We) => {
               r(We), We || j5('authenticationScreen', 'exchangeParameters');
             },
-            [r]
+            [r],
           ),
           { storyId: o } = pn(),
           [l] = Le(K1),
@@ -27842,13 +27850,13 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
                             hidden: !e,
                             style: { containerType: 'size', height: '100%' },
                           },
-                          We
-                        )
-                      )
-                    )
-                  )
-                )
-              )
+                          We,
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
+              ),
             );
         if (!e) return Me(null);
         if (window.CONFIG_TYPE !== 'DEVELOPMENT')
@@ -27863,7 +27871,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               setAccessToken: i,
               setCreatedProjectId: H,
               hasProjectId: !!k,
-            })
+            }),
           );
         if (y) return e ? a.createElement(E5, null) : null;
         if (!k)
@@ -27872,7 +27880,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
               createdProjectId: B,
               setCreatedProjectId: H,
               onUpdateProject: h,
-            })
+            }),
           );
         if (c || !s) return console.error(c), Me(a.createElement(y4, null));
         if (g) {
@@ -27884,7 +27892,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
           if (!b)
             throw new Error('Missing config file after configuration success');
           return Me(
-            a.createElement(w4, { projectId: k, configFile: b, goToNext: x })
+            a.createElement(w4, { projectId: k, configFile: b, goToNext: x }),
           );
         }
         let _t = s.branch === u?.branch;
@@ -27898,7 +27906,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             projectId: k,
             gitInfo: s,
             storyId: o,
-          })
+          }),
         );
       },
       Bi = mt(Br()),
@@ -27928,7 +27936,7 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
             ({ onDismiss: H }) => {
               H(), b();
             },
-            [b]
+            [b],
           );
         le(() => {
           d?.currentStep !== f.current &&
@@ -28065,6 +28073,6 @@ In order to be iterable, non-array objects must have a [Symbol.iterator]() metho
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

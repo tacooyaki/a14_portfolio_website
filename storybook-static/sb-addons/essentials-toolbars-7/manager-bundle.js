@@ -150,7 +150,7 @@ try {
           { active: o, title: r, onClick: a },
           e &&
             n.createElement(k, { icon: e, __suppressDeprecationWarning: !0 }),
-          t ? `\xA0${t}` : null
+          t ? `\xA0${t}` : null,
         ),
       G = ['reset'],
       K = (o) => o.filter((t) => !G.includes(t.type)).map((t) => t.value),
@@ -279,7 +279,7 @@ try {
             (y) => {
               p({ [o]: y });
             },
-            [u, p]
+            [u, p],
           );
           return n.createElement(
             D,
@@ -298,7 +298,7 @@ try {
                       onClick: () => {
                         T(E.value), y();
                       },
-                    })
+                    }),
                   );
                 return n.createElement(V, { links: F });
               },
@@ -310,9 +310,9 @@ try {
               description: e || '',
               icon: i,
               title: c || '',
-            })
+            }),
           );
-        }
+        },
       ),
       Z = { type: 'item', value: '' },
       J = (o, t) => ({
@@ -343,7 +343,7 @@ try {
               t.map((e) => {
                 let r = J(e, o[e]);
                 return n.createElement(j, { key: e, id: e, ...r });
-              })
+              }),
             )
           : null;
       };
@@ -353,12 +353,12 @@ try {
         type: B.TOOL,
         match: ({ tabId: o }) => !o,
         render: () => n.createElement(Q, null),
-      })
+      }),
     );
   })();
 } catch (e) {
   console.error(
     '[Storybook] One of your manager-entries failed: ' + import.meta.url,
-    e
+    e,
   );
 }

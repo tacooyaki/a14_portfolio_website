@@ -250,7 +250,7 @@ var require_react_is_development = __commonJS({
           hasWarnedAboutDeprecatedIsAsyncMode ||
             ((hasWarnedAboutDeprecatedIsAsyncMode = !0),
             console.warn(
-              'The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.'
+              'The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 17+. Update your code to use ReactIs.isConcurrentMode() instead. It has the exact same API.',
             )),
           isConcurrentMode(object) || typeOf(object) === REACT_ASYNC_MODE_TYPE
         );
@@ -341,7 +341,7 @@ var require_object_assign = __commonJS({
     function toObject(val) {
       if (val == null)
         throw new TypeError(
-          'Object.assign cannot be called with null or undefined'
+          'Object.assign cannot be called with null or undefined',
         );
       return Object(val);
     }
@@ -423,7 +423,7 @@ var require_checkPropTypes = __commonJS({
       values,
       location,
       componentName,
-      getStack
+      getStack,
     ) {
       for (var typeSpecName in typeSpecs)
         if (has(typeSpecs, typeSpecName)) {
@@ -438,7 +438,7 @@ var require_checkPropTypes = __commonJS({
                   typeSpecName +
                   '` is invalid; it must be a function, usually from the `prop-types` package, but received `' +
                   typeof typeSpecs[typeSpecName] +
-                  '`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.'
+                  '`.This often happens because of typos such as `PropTypes.function` instead of `PropTypes.func`.',
               );
               throw ((err.name = 'Invariant Violation'), err);
             }
@@ -448,7 +448,7 @@ var require_checkPropTypes = __commonJS({
               componentName,
               location,
               null,
-              ReactPropTypesSecret
+              ReactPropTypesSecret,
             );
           } catch (ex) {
             error = ex;
@@ -464,14 +464,14 @@ var require_checkPropTypes = __commonJS({
                   typeSpecName +
                   '` is invalid; the type checker function must return `null` or an `Error` but returned a ' +
                   typeof error +
-                  '. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).'
+                  '. You may have forgotten to pass an argument to the type checker creator (arrayOf, instanceOf, objectOf, oneOf, oneOfType, and shape all require an argument).',
               ),
             error instanceof Error && !(error.message in loggedTypeFailures))
           ) {
             loggedTypeFailures[error.message] = !0;
             var stack = getStack ? getStack() : '';
             printWarning(
-              'Failed ' + location + ' type: ' + error.message + (stack ?? '')
+              'Failed ' + location + ' type: ' + error.message + (stack ?? ''),
             );
           }
         }
@@ -554,7 +554,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           componentName,
           location,
           propFullName,
-          secret
+          secret,
         ) {
           if (
             ((componentName = componentName || ANONYMOUS),
@@ -563,7 +563,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           ) {
             if (throwOnDirectAccess) {
               var err = new Error(
-                'Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types'
+                'Calling PropTypes validators directly is not supported by the `prop-types` package. Use `PropTypes.checkPropTypes()` to call them. Read more at http://fb.me/use-check-prop-types',
               );
               throw ((err.name = 'Invariant Violation'), err);
             } else if (typeof console < 'u') {
@@ -575,7 +575,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                     propFullName +
                     '` prop on `' +
                     componentName +
-                    '`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details.'
+                    '`. This is deprecated and will throw in the standalone `prop-types` package. You may be seeing this warning due to a third-party PropTypes library. See https://fb.me/react-warning-dont-call-proptypes for details.',
                 ),
                 (manualPropTypeCallCache[cacheKey] = !0),
                 manualPropTypeWarningCount++);
@@ -590,7 +590,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                       ' `' +
                       propFullName +
                       '` is marked as required ' +
-                      ('in `' + componentName + '`, but its value is `null`.')
+                      ('in `' + componentName + '`, but its value is `null`.'),
                   )
                 : new PropTypeError(
                     'The ' +
@@ -598,7 +598,9 @@ var require_factoryWithTypeCheckers = __commonJS({
                       ' `' +
                       propFullName +
                       '` is marked as required in ' +
-                      ('`' + componentName + '`, but its value is `undefined`.')
+                      ('`' +
+                        componentName +
+                        '`, but its value is `undefined`.'),
                   )
               : null
             : validate(props, propName, componentName, location, propFullName);
@@ -616,7 +618,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           componentName,
           location,
           propFullName,
-          secret
+          secret,
         ) {
           var propValue = props[propName],
             propType = getPropType(propValue);
@@ -634,7 +636,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   componentName +
                   '`, expected ') +
                 ('`' + expectedType + '`.'),
-              { expectedType }
+              { expectedType },
             );
           }
           return null;
@@ -650,7 +652,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           if (typeof typeChecker != 'function')
             return new PropTypeError(
@@ -658,7 +660,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 propFullName +
                 '` of component `' +
                 componentName +
-                '` has invalid PropType notation inside arrayOf.'
+                '` has invalid PropType notation inside arrayOf.',
             );
           var propValue = props[propName];
           if (!Array.isArray(propValue)) {
@@ -673,7 +675,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   propType +
                   '` supplied to `' +
                   componentName +
-                  '`, expected an array.')
+                  '`, expected an array.'),
             );
           }
           for (var i2 = 0; i2 < propValue.length; i2++) {
@@ -683,7 +685,7 @@ var require_factoryWithTypeCheckers = __commonJS({
               componentName,
               location,
               propFullName + '[' + i2 + ']',
-              ReactPropTypesSecret
+              ReactPropTypesSecret,
             );
             if (error instanceof Error) return error;
           }
@@ -697,7 +699,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           var propValue = props[propName];
           if (!isValidElement(propValue)) {
@@ -712,7 +714,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   propType +
                   '` supplied to `' +
                   componentName +
-                  '`, expected a single ReactElement.')
+                  '`, expected a single ReactElement.'),
             );
           }
           return null;
@@ -725,7 +727,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           var propValue = props[propName];
           if (!ReactIs.isValidElementType(propValue)) {
@@ -740,7 +742,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   propType +
                   '` supplied to `' +
                   componentName +
-                  '`, expected a single ReactElement type.')
+                  '`, expected a single ReactElement type.'),
             );
           }
           return null;
@@ -753,7 +755,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           if (!(props[propName] instanceof expectedClass)) {
             var expectedClassName = expectedClass.name || ANONYMOUS,
@@ -769,7 +771,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   '` supplied to `' +
                   componentName +
                   '`, expected ') +
-                ('instance of `' + expectedClassName + '`.')
+                ('instance of `' + expectedClassName + '`.'),
             );
           }
           return null;
@@ -783,10 +785,10 @@ var require_factoryWithTypeCheckers = __commonJS({
               ? printWarning(
                   'Invalid arguments supplied to oneOf, expected an array, got ' +
                     arguments.length +
-                    ' arguments. A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).'
+                    ' arguments. A common mistake is to write oneOf(x, y, z) instead of oneOf([x, y, z]).',
                 )
               : printWarning(
-                  'Invalid argument supplied to oneOf, expected an array.'
+                  'Invalid argument supplied to oneOf, expected an array.',
                 ),
             emptyFunctionThatReturnsNull
           );
@@ -795,7 +797,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           for (
             var propValue = props[propName], i2 = 0;
@@ -808,7 +810,7 @@ var require_factoryWithTypeCheckers = __commonJS({
             function (key, value) {
               var type = getPreciseType(value);
               return type === 'symbol' ? String(value) : value;
-            }
+            },
           );
           return new PropTypeError(
             'Invalid ' +
@@ -822,7 +824,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 componentName +
                 '`, expected one of ' +
                 valuesString +
-                '.')
+                '.'),
           );
         }
         return createChainableTypeChecker(validate);
@@ -833,7 +835,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           if (typeof typeChecker != 'function')
             return new PropTypeError(
@@ -841,7 +843,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 propFullName +
                 '` of component `' +
                 componentName +
-                '` has invalid PropType notation inside objectOf.'
+                '` has invalid PropType notation inside objectOf.',
             );
           var propValue = props[propName],
             propType = getPropType(propValue);
@@ -856,7 +858,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   propType +
                   '` supplied to `' +
                   componentName +
-                  '`, expected an object.')
+                  '`, expected an object.'),
             );
           for (var key in propValue)
             if (has(propValue, key)) {
@@ -866,7 +868,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 componentName,
                 location,
                 propFullName + '.' + key,
-                ReactPropTypesSecret
+                ReactPropTypesSecret,
               );
               if (error instanceof Error) return error;
             }
@@ -878,7 +880,7 @@ var require_factoryWithTypeCheckers = __commonJS({
         if (!Array.isArray(arrayOfTypeCheckers))
           return (
             printWarning(
-              'Invalid argument supplied to oneOfType, expected an instance of array.'
+              'Invalid argument supplied to oneOfType, expected an instance of array.',
             ),
             emptyFunctionThatReturnsNull
           );
@@ -891,7 +893,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   getPostfixForTypeWarning(checker) +
                   ' at index ' +
                   i2 +
-                  '.'
+                  '.',
               ),
               emptyFunctionThatReturnsNull
             );
@@ -901,7 +903,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           for (
             var expectedTypes = [], i3 = 0;
@@ -915,7 +917,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 componentName,
                 location,
                 propFullName,
-                ReactPropTypesSecret
+                ReactPropTypesSecret,
               );
             if (checkerResult == null) return null;
             checkerResult.data &&
@@ -932,7 +934,7 @@ var require_factoryWithTypeCheckers = __commonJS({
               ' `' +
               propFullName +
               '` supplied to ' +
-              ('`' + componentName + '`' + expectedTypesMessage + '.')
+              ('`' + componentName + '`' + expectedTypesMessage + '.'),
           );
         }
         return createChainableTypeChecker(validate);
@@ -943,7 +945,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           return isNode(props[propName])
             ? null
@@ -953,7 +955,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   ' `' +
                   propFullName +
                   '` supplied to ' +
-                  ('`' + componentName + '`, expected a ReactNode.')
+                  ('`' + componentName + '`, expected a ReactNode.'),
               );
         }
         return createChainableTypeChecker(validate);
@@ -963,7 +965,7 @@ var require_factoryWithTypeCheckers = __commonJS({
         location,
         propFullName,
         key,
-        type
+        type,
       ) {
         return new PropTypeError(
           (componentName || 'React class') +
@@ -975,7 +977,7 @@ var require_factoryWithTypeCheckers = __commonJS({
             key +
             '` is invalid; it must be a function, usually from the `prop-types` package, but received `' +
             type +
-            '`.'
+            '`.',
         );
       }
       function createShapeTypeChecker(shapeTypes) {
@@ -984,7 +986,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           var propValue = props[propName],
             propType = getPropType(propValue);
@@ -997,7 +999,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 '` of type `' +
                 propType +
                 '` ' +
-                ('supplied to `' + componentName + '`, expected `object`.')
+                ('supplied to `' + componentName + '`, expected `object`.'),
             );
           for (var key in shapeTypes) {
             var checker = shapeTypes[key];
@@ -1007,7 +1009,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 location,
                 propFullName,
                 key,
-                getPreciseType(checker)
+                getPreciseType(checker),
               );
             var error = checker(
               propValue,
@@ -1015,7 +1017,7 @@ var require_factoryWithTypeCheckers = __commonJS({
               componentName,
               location,
               propFullName + '.' + key,
-              ReactPropTypesSecret
+              ReactPropTypesSecret,
             );
             if (error) return error;
           }
@@ -1029,7 +1031,7 @@ var require_factoryWithTypeCheckers = __commonJS({
           propName,
           componentName,
           location,
-          propFullName
+          propFullName,
         ) {
           var propValue = props[propName],
             propType = getPropType(propValue);
@@ -1042,7 +1044,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 '` of type `' +
                 propType +
                 '` ' +
-                ('supplied to `' + componentName + '`, expected `object`.')
+                ('supplied to `' + componentName + '`, expected `object`.'),
             );
           var allKeys = assign({}, props[propName], shapeTypes);
           for (var key in allKeys) {
@@ -1053,7 +1055,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                 location,
                 propFullName,
                 key,
-                getPreciseType(checker)
+                getPreciseType(checker),
               );
             if (!checker)
               return new PropTypeError(
@@ -1069,7 +1071,7 @@ var require_factoryWithTypeCheckers = __commonJS({
                   JSON.stringify(props[propName], null, '  ') +
                   `
 Valid keys: ` +
-                  JSON.stringify(Object.keys(shapeTypes), null, '  ')
+                  JSON.stringify(Object.keys(shapeTypes), null, '  '),
               );
             var error = checker(
               propValue,
@@ -1077,7 +1079,7 @@ Valid keys: ` +
               componentName,
               location,
               propFullName + '.' + key,
-              ReactPropTypesSecret
+              ReactPropTypesSecret,
             );
             if (error) return error;
           }
@@ -1175,7 +1177,7 @@ var require_prop_types = __commonJS({
       (throwOnDirectAccess = !0),
       (module.exports = require_factoryWithTypeCheckers()(
         ReactIs.isElement,
-        throwOnDirectAccess
+        throwOnDirectAccess,
       ));
     var ReactIs, throwOnDirectAccess;
   },
@@ -1281,7 +1283,7 @@ var require_browser = __commonJS({
         var error;
         if (format2 === void 0)
           error = new Error(
-            'Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.'
+            'Minified exception occurred; use the non-minified dev environment for the full error message and additional helpful warnings.',
           );
         else {
           var args = [a2, b2, c2, d2, e3, f2],
@@ -1289,7 +1291,7 @@ var require_browser = __commonJS({
           (error = new Error(
             format2.replace(/%s/g, function () {
               return args[argIndex++];
-            })
+            }),
           )),
             (error.name = 'Invariant Violation');
         }
@@ -1530,7 +1532,7 @@ var require_throttle = __commonJS({
 });
 var require_react_is_development2 = __commonJS({
   '../../node_modules/downshift/node_modules/react-is/cjs/react-is.development.js'(
-    exports
+    exports,
   ) {
     'use strict';
     (function () {
@@ -1633,7 +1635,7 @@ var require_react_is_development2 = __commonJS({
           hasWarnedAboutDeprecatedIsAsyncMode ||
             ((hasWarnedAboutDeprecatedIsAsyncMode = !0),
             console.warn(
-              'The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 18+.'
+              'The ReactIs.isAsyncMode() alias has been deprecated, and will be removed in React 18+.',
             )),
           !1
         );
@@ -1643,7 +1645,7 @@ var require_react_is_development2 = __commonJS({
           hasWarnedAboutDeprecatedIsConcurrentMode ||
             ((hasWarnedAboutDeprecatedIsConcurrentMode = !0),
             console.warn(
-              'The ReactIs.isConcurrentMode() alias has been deprecated, and will be removed in React 18+.'
+              'The ReactIs.isConcurrentMode() alias has been deprecated, and will be removed in React 18+.',
             )),
           !1
         );
@@ -1722,7 +1724,7 @@ var require_react_is_development2 = __commonJS({
 var require_react_is2 = __commonJS({
   '../../node_modules/downshift/node_modules/react-is/index.js'(
     exports,
-    module
+    module,
   ) {
     'use strict';
     module.exports = require_react_is_development2();
@@ -1785,7 +1787,7 @@ var require_fuse = __commonJS({
                   o3,
                   function (t5) {
                     return e4[t5];
-                  }.bind(null, o3)
+                  }.bind(null, o3),
                 );
             return n3;
           }),
@@ -1941,7 +1943,7 @@ var require_fuse = __commonJS({
                           var h3 = e5[s3];
                           if (!h3.hasOwnProperty('name'))
                             throw new Error(
-                              'Missing "name" property in key object'
+                              'Missing "name" property in key object',
                             );
                           var l3 = h3.name;
                           if (
@@ -1949,12 +1951,12 @@ var require_fuse = __commonJS({
                             !h3.hasOwnProperty('weight'))
                           )
                             throw new Error(
-                              'Missing "weight" property in key object'
+                              'Missing "weight" property in key object',
                             );
                           var u2 = h3.weight;
                           if (u2 < 0 || u2 > 1)
                             throw new Error(
-                              '"weight" property in key must bein the range of [0, 1)'
+                              '"weight" property in key must bein the range of [0, 1)',
                             );
                           (i3 = i3 == null ? u2 : Math.max(i3, u2)),
                             (o4 = o4 == null ? u2 : Math.min(o4, u2)),
@@ -1975,7 +1977,7 @@ var require_fuse = __commonJS({
                           : { limit: !1 };
                       this._log(
                         `---------
-Search pattern: "`.concat(e5, '"')
+Search pattern: "`.concat(e5, '"'),
                       );
                       var r5 = this._prepareSearchers(e5),
                         n4 = r5.tokenSearchers,
@@ -2034,7 +2036,7 @@ Search pattern: "`.concat(e5, '"')
                               results: o4,
                               tokenSearchers: e5,
                               fullSearcher: t5,
-                            }
+                            },
                           );
                         return o4;
                       }
@@ -2057,7 +2059,7 @@ Search pattern: "`.concat(e5, '"')
                               results: o4,
                               tokenSearchers: e5,
                               fullSearcher: t5,
-                            }
+                            },
                           );
                         }
                       return o4;
@@ -2088,14 +2090,14 @@ Search pattern: "`.concat(e5, '"')
                               l4 = 0;
                             r5._log(
                               `
-Key: `.concat(n4 === '' ? '--' : n4)
+Key: `.concat(n4 === '' ? '--' : n4),
                             );
                             var v3 = f2.search(o5);
                             if (
                               (r5._log(
                                 'Full text: "'
                                   .concat(o5, '", score: ')
-                                  .concat(v3.score)
+                                  .concat(v3.score),
                               ),
                               r5.options.tokenize)
                             ) {
@@ -2111,7 +2113,7 @@ Key: `.concat(n4 === '' ? '--' : n4)
                                 var S2 = u2[k2];
                                 r5._log(
                                   `
-Pattern: "`.concat(S2.pattern, '"')
+Pattern: "`.concat(S2.pattern, '"'),
                                 );
                                 for (var x2 = !1, M2 = 0; M2 < y2; M2 += 1) {
                                   var _2 = d3[M2],
@@ -2127,7 +2129,7 @@ Pattern: "`.concat(S2.pattern, '"')
                                     r5._log(
                                       'Token: "'
                                         .concat(_2, '", score: ')
-                                        .concat(L2[_2])
+                                        .concat(L2[_2]),
                                     );
                                 }
                                 x2 && (l4 += 1);
@@ -2147,7 +2149,7 @@ Pattern: "`.concat(S2.pattern, '"')
                             if (
                               (r5._log(
                                 `
-Check Matches: `.concat(j2)
+Check Matches: `.concat(j2),
                               ),
                               (s4 || v3.isMatch) && j2)
                             ) {
@@ -2239,8 +2241,8 @@ Output:
                               }
                               return t6;
                             },
-                            2
-                          )
+                            2,
+                          ),
                         ),
                           (r5 = null);
                       }
@@ -2274,7 +2276,7 @@ Output:
                           (this.options.id &&
                             (s3.item = this.options.getFn(
                               s3.item,
-                              this.options.id
+                              this.options.id,
                             )[0]),
                           o4.length)
                         ) {
@@ -2746,7 +2748,7 @@ var require_copy_to_clipboard = __commonJS({
           debug && console.error('unable to copy using clipboardData: ', err2),
             debug && console.error('falling back to prompt'),
             (message = format2(
-              'message' in options2 ? options2.message : defaultMessage
+              'message' in options2 ? options2.message : defaultMessage,
             )),
             window.prompt(message, text);
         }
@@ -2924,7 +2926,7 @@ var l = {
                 t3 +
                 ' should be of type "Array". Instead found type "' +
                 typeof e4[t3] +
-                '"'
+                '"',
             ),
           !1)
         );
@@ -2992,7 +2994,7 @@ var l = {
               t4
             );
           },
-          { priority: [], default: [] }
+          { priority: [], default: [] },
         )
       : { default: t3 };
   },
@@ -3154,7 +3156,7 @@ var l = {
               return [].concat(
                 j(l.META, i3.priority),
                 j(l.LINK, o4.priority),
-                j(l.SCRIPT, a3.priority)
+                j(l.SCRIPT, a3.priority),
               );
             },
             toString: function () {
@@ -3245,7 +3247,7 @@ var l = {
       return (
         ((n3 = e3.call(this, t3) || this).helmetData = new N(
           n3.props.context,
-          r3.canUseDOM
+          r3.canUseDOM,
         )),
         n3
       );
@@ -3256,7 +3258,7 @@ var l = {
         return import_react.default.createElement(
           R.Provider,
           { value: this.helmetData.value },
-          this.props.children
+          this.props.children,
         );
       }),
       r3
@@ -3415,7 +3417,7 @@ var Y = function (t3, e3) {
               metaTags: C(
                 l.META,
                 ['name', 'charset', 'http-equiv', 'property', 'itemprop'],
-                t4
+                t4,
               ),
               noscriptTags: C(l.NOSCRIPT, ['innerHTML'], t4),
               onChangeClientState: b(t4),
@@ -3463,7 +3465,7 @@ var F = ['children'],
       (o3.shouldComponentUpdate = function (t3) {
         return !(0, import_react_fast_compare.default)(
           I(this.props, 'helmetData'),
-          I(t3, 'helmetData')
+          I(t3, 'helmetData'),
         );
       }),
       (o3.mapNestedChildrenToProps = function (t3, e4) {
@@ -3478,7 +3480,7 @@ var F = ['children'],
             throw new Error(
               '<' +
                 t3.type +
-                ' /> elements are self-closing and can not contain children. Refer to our API for more information.'
+                ' /> elements are self-closing and can not contain children. Refer to our API for more information.',
             );
         }
       }),
@@ -3493,10 +3495,10 @@ var F = ['children'],
             a(
               {},
               t3.newChildProps,
-              this.mapNestedChildrenToProps(r4, t3.nestedChildren)
+              this.mapNestedChildrenToProps(r4, t3.nestedChildren),
             ),
           ])),
-          e4)
+          e4),
         );
       }),
       (o3.mapObjectTypeChildren = function (t3) {
@@ -3511,7 +3513,7 @@ var F = ['children'],
             return a(
               {},
               i2,
-              (((e4 = {})[n3.type] = s2), (e4.titleAttributes = a({}, o4)), e4)
+              (((e4 = {})[n3.type] = s2), (e4.titleAttributes = a({}, o4)), e4),
             );
           case l.BODY:
             return a({}, i2, { bodyAttributes: a({}, o4) });
@@ -3543,7 +3545,7 @@ var F = ['children'],
                   h.join(', ') +
                   ' are allowed. Helmet does not support rendering <' +
                   t3.type +
-                  '> elements. Refer to our API for more information.'
+                  '> elements. Refer to our API for more information.',
           ),
           (0, import_invariant.default)(
             !e4 ||
@@ -3558,7 +3560,7 @@ var F = ['children'],
               t3.type +
               '>{``}</' +
               t3.type +
-              '> ) Refer to our API for more information.'
+              '> ) Refer to our API for more information.',
           ),
           !0
         );
@@ -3622,7 +3624,7 @@ var F = ['children'],
           o4
             ? import_react.default.createElement(
                 z,
-                a({}, i2, { context: o4.value, helmetData: void 0 })
+                a({}, i2, { context: o4.value, helmetData: void 0 }),
               )
             : import_react.default.createElement(
                 R.Consumer,
@@ -3630,9 +3632,9 @@ var F = ['children'],
                 function (e5) {
                   return import_react.default.createElement(
                     z,
-                    a({}, i2, { context: e5 })
+                    a({}, i2, { context: e5 }),
                   );
-                }
+                },
               )
         );
       }),
@@ -3720,7 +3722,7 @@ var StorybookLogoStyled = newStyled(StorybookLogo)(({ theme }) => ({
       ? import_react2.default.createElement(
           LogoLink,
           { title, href: url, target: targetValue },
-          logo
+          logo,
         )
       : import_react2.default.createElement('div', null, logo);
   });
@@ -3728,7 +3730,7 @@ var import_react5 = __toESM(require_react());
 function _assertThisInitialized(self) {
   if (self === void 0)
     throw new ReferenceError(
-      "this hasn't been initialised - super() hasn't been called"
+      "this hasn't been initialised - super() hasn't been called",
     );
   return self;
 }
@@ -3767,7 +3769,7 @@ function _isNativeFunction(fn) {
 function _isNativeReflectConstruct() {
   try {
     var t3 = !Boolean.prototype.valueOf.call(
-      Reflect.construct(Boolean, [], function () {})
+      Reflect.construct(Boolean, [], function () {}),
     );
   } catch {}
   return (_isNativeReflectConstruct = function () {
@@ -3789,7 +3791,7 @@ function _wrapNativeSuper(Class) {
       if (Class2 === null || !_isNativeFunction(Class2)) return Class2;
       if (typeof Class2 != 'function')
         throw new TypeError(
-          'Super expression must either be null or a function'
+          'Super expression must either be null or a function',
         );
       if (typeof _cache < 'u') {
         if (_cache.has(Class2)) return _cache.get(Class2);
@@ -4296,7 +4298,7 @@ function parseToRgb(color) {
     var alpha = parseFloat(
       (
         parseInt('' + normalizedColor[7] + normalizedColor[8], 16) / 255
-      ).toFixed(2)
+      ).toFixed(2),
     );
     return {
       red: parseInt('' + normalizedColor[1] + normalizedColor[2], 16),
@@ -4315,7 +4317,7 @@ function parseToRgb(color) {
     var _alpha = parseFloat(
       (
         parseInt('' + normalizedColor[4] + normalizedColor[4], 16) / 255
-      ).toFixed(2)
+      ).toFixed(2),
     );
     return {
       red: parseInt('' + normalizedColor[1] + normalizedColor[1], 16),
@@ -4398,14 +4400,14 @@ function rgb(value, green, blue) {
     typeof blue == 'number'
   )
     return reduceHexValue$1(
-      '#' + numberToHex(value) + numberToHex(green) + numberToHex(blue)
+      '#' + numberToHex(value) + numberToHex(green) + numberToHex(blue),
     );
   if (typeof value == 'object' && green === void 0 && blue === void 0)
     return reduceHexValue$1(
       '#' +
         numberToHex(value.red) +
         numberToHex(value.green) +
-        numberToHex(value.blue)
+        numberToHex(value.blue),
     );
   throw new PolishedError(6);
 }
@@ -4483,7 +4485,7 @@ function transparentize(amount, color) {
       alpha: guard(
         0,
         1,
-        +(alpha * 100 - parseFloat(amount) * 100).toFixed(2) / 100
+        +(alpha * 100 - parseFloat(amount) * 100).toFixed(2) / 100,
       ),
     });
   return rgba(colorWithAlpha);
@@ -4550,12 +4552,12 @@ var LayoutContext = (0, import_react4.createContext)({
           setMobilePanelOpen,
           isDesktop,
           isMobile,
-        ]
+        ],
       );
     return import_react4.default.createElement(
       LayoutContext.Provider,
       { value: contextValue },
-      children
+      children,
     );
   },
   useLayout = () => (0, import_react4.useContext)(LayoutContext);
@@ -4598,13 +4600,13 @@ var SidebarIconButton = newStyled(IconButton)(({ highlighted, theme }) => ({
             onClick && onClick(event, item), onHide();
           },
         })),
-      [menu, onHide]
+      [menu, onHide],
     );
     return import_react5.default.createElement(TooltipLinkList, { links });
   },
   SidebarMenu = ({ menu, isHighlighted, onClick }) => {
     let [isTooltipVisible, setIsTooltipVisible] = (0, import_react5.useState)(
-        !1
+        !1,
       ),
       { isMobile, setMobileMenuOpen } = useLayout();
     return isMobile
@@ -4620,7 +4622,7 @@ var SidebarIconButton = newStyled(IconButton)(({ highlighted, theme }) => ({
               active: !1,
               onClick,
             },
-            import_react5.default.createElement(CogIcon, null)
+            import_react5.default.createElement(CogIcon, null),
           ),
           import_react5.default.createElement(
             IconButton,
@@ -4629,8 +4631,8 @@ var SidebarIconButton = newStyled(IconButton)(({ highlighted, theme }) => ({
               'aria-label': 'Close menu',
               onClick: () => setMobileMenuOpen(!1),
             },
-            import_react5.default.createElement(CloseIcon, null)
-          )
+            import_react5.default.createElement(CloseIcon, null),
+          ),
         )
       : import_react5.default.createElement(
           WithTooltip,
@@ -4652,8 +4654,8 @@ var SidebarIconButton = newStyled(IconButton)(({ highlighted, theme }) => ({
               highlighted: isHighlighted,
               active: isTooltipVisible,
             },
-            import_react5.default.createElement(CogIcon, null)
-          )
+            import_react5.default.createElement(CogIcon, null),
+          ),
         );
   };
 var BrandArea = newStyled.div(({ theme }) => ({
@@ -4729,24 +4731,24 @@ var BrandArea = newStyled.div(({ theme }) => ({
           import_react6.default.createElement(
             'a',
             { href: skipLinkHref, tabIndex: 0 },
-            'Skip to canvas'
-          )
+            'Skip to canvas',
+          ),
         ),
       import_react6.default.createElement(
         BrandArea,
         null,
-        import_react6.default.createElement(Brand, null)
+        import_react6.default.createElement(Brand, null),
       ),
       isLoading
         ? null
         : extra.map(({ id, render: Render }) =>
-            import_react6.default.createElement(Render, { key: id })
+            import_react6.default.createElement(Render, { key: id }),
           ),
       import_react6.default.createElement(SidebarMenu, {
         menu,
         isHighlighted: menuHighlighted,
         onClick: onMenuClick,
-      })
+      }),
     );
 var import_react19 = __toESM(require_react());
 var import_react16 = __toESM(require_react());
@@ -4765,7 +4767,7 @@ var LOADER_SEQUENCE = [0, 0, 1, 1, 2, 3, 3, 3, 1, 1, 1, 2, 2, 2, 3],
     },
     ({ depth = 0 }) => ({ marginLeft: depth * 15, maxWidth: 85 - depth * 5 }),
     ({ theme }) => theme.animation.inlineGlow,
-    ({ theme }) => ({ background: theme.appBorderColor })
+    ({ theme }) => ({ background: theme.appBorderColor }),
   ),
   Contained = newStyled.div({
     display: 'flex',
@@ -4783,8 +4785,8 @@ var LOADER_SEQUENCE = [0, 0, 1, 1, 2, 3, 3, 3, 1, 1, 1, 2, 2, 2, 3],
       import_react7.Fragment,
       null,
       sequence.map((depth, index) =>
-        import_react7.default.createElement(Loadingitem, { depth, key: index })
-      )
+        import_react7.default.createElement(Loadingitem, { depth, key: index }),
+      ),
     );
   };
 var { window: globalWindow } = scope,
@@ -4808,7 +4810,7 @@ var { window: globalWindow } = scope,
       overflow: 'auto',
       whiteSpace: 'pre',
     },
-    ({ theme }) => ({ color: theme.color.dark })
+    ({ theme }) => ({ color: theme.color.dark }),
   ),
   AuthBlock = ({ loginUrl, id }) => {
     let [isAuthAttempted, setAuthAttempted] = (0, import_react8.useState)(!1),
@@ -4820,7 +4822,7 @@ var { window: globalWindow } = scope,
         let childWindow = globalWindow.open(
             loginUrl,
             `storybook_auth_${id}`,
-            'resizable,scrollbars'
+            'resizable,scrollbars',
           ),
           timer = setInterval(() => {
             childWindow
@@ -4845,7 +4847,7 @@ var { window: globalWindow } = scope,
                 null,
                 'Authentication on ',
                 import_react8.default.createElement('strong', null, loginUrl),
-                ' concluded. Refresh the page to fetch this Storybook.'
+                ' concluded. Refresh the page to fetch this Storybook.',
               ),
               import_react8.default.createElement(
                 'div',
@@ -4854,9 +4856,9 @@ var { window: globalWindow } = scope,
                   Button,
                   { small: !0, gray: !0, onClick: refresh },
                   import_react8.default.createElement(SyncIcon, null),
-                  'Refresh now'
-                )
-              )
+                  'Refresh now',
+                ),
+              ),
             )
           : import_react8.default.createElement(
               import_react8.Fragment,
@@ -4864,7 +4866,7 @@ var { window: globalWindow } = scope,
               import_react8.default.createElement(
                 Text,
                 null,
-                'Sign in to browse this Storybook.'
+                'Sign in to browse this Storybook.',
               ),
               import_react8.default.createElement(
                 'div',
@@ -4873,11 +4875,11 @@ var { window: globalWindow } = scope,
                   Button,
                   { small: !0, gray: !0, onClick: open },
                   import_react8.default.createElement(LockIcon, null),
-                  'Sign in'
-                )
-              )
-            )
-      )
+                  'Sign in',
+                ),
+              ),
+            ),
+      ),
     );
   },
   ErrorBlock = ({ error }) =>
@@ -4898,15 +4900,15 @@ var { window: globalWindow } = scope,
               tooltip: import_react8.default.createElement(
                 ErrorDisplay,
                 null,
-                import_react8.default.createElement(ErrorFormatter, { error })
+                import_react8.default.createElement(ErrorFormatter, { error }),
               ),
             },
             import_react8.default.createElement(
               Link22,
               { isButton: !0 },
               'View error ',
-              import_react8.default.createElement(ChevronDownIcon, null)
-            )
+              import_react8.default.createElement(ChevronDownIcon, null),
+            ),
           ),
           ' ',
           import_react8.default.createElement(
@@ -4917,10 +4919,10 @@ var { window: globalWindow } = scope,
               cancel: !1,
               target: '_blank',
             },
-            'View docs'
-          )
-        )
-      )
+            'View docs',
+          ),
+        ),
+      ),
     ),
   FlexSpaced = newStyled(Spaced)({ display: 'flex' }),
   WideSpaced = newStyled(Spaced)({ flex: 1 }),
@@ -4952,37 +4954,37 @@ var { window: globalWindow } = scope,
                       import_react8.default.createElement(
                         'code',
                         null,
-                        'main.js'
+                        'main.js',
                       ),
-                      " isn't correct."
+                      " isn't correct.",
                     ),
                     import_react8.default.createElement(
                       'li',
                       null,
-                      'No stories are defined in your story files.'
+                      'No stories are defined in your story files.',
                     ),
                     import_react8.default.createElement(
                       'li',
                       null,
-                      "You're using filter-functions, and all stories are filtered away."
-                    )
+                      "You're using filter-functions, and all stories are filtered away.",
+                    ),
                   ),
-                  ' '
+                  ' ',
                 )
               : import_react8.default.createElement(
                   import_react8.default.Fragment,
                   null,
-                  "This composed storybook is empty, maybe you're using filter-functions, and all stories are filtered away."
-                )
-          )
-        )
-      )
+                  "This composed storybook is empty, maybe you're using filter-functions, and all stories are filtered away.",
+                ),
+          ),
+        ),
+      ),
     ),
   LoaderBlock = ({ isMain }) =>
     import_react8.default.createElement(
       Contained,
       null,
-      import_react8.default.createElement(Loader2, { size: isMain ? 17 : 5 })
+      import_react8.default.createElement(Loader2, { size: isMain ? 17 : 5 }),
     );
 var import_react9 = __toESM(require_react());
 var { document: document2, window: globalWindow2 } = scope,
@@ -5076,7 +5078,7 @@ var { document: document2, window: globalWindow2 } = scope,
       Version,
       null,
       import_react9.default.createElement('span', null, currentVersionId),
-      import_react9.default.createElement(ChevronDownIcon, null)
+      import_react9.default.createElement(ChevronDownIcon, null),
     );
   },
   RefIndicator = import_react9.default.memo(
@@ -5084,17 +5086,17 @@ var { document: document2, window: globalWindow2 } = scope,
       let api = useStorybookApi(),
         list = (0, import_react9.useMemo)(
           () => Object.values(ref.index || {}),
-          [ref.index]
+          [ref.index],
         ),
         componentCount = (0, import_react9.useMemo)(
           () => list.filter((v2) => v2.type === 'component').length,
-          [list]
+          [list],
         ),
         leafCount = (0, import_react9.useMemo)(
           () =>
             list.filter((v2) => v2.type === 'docs' || v2.type === 'story')
               .length,
-          [list]
+          [list],
         );
       return import_react9.default.createElement(
         IndicatorPlacement,
@@ -5133,11 +5135,11 @@ var { document: document2, window: globalWindow2 } = scope,
                   state !== 'error' &&
                   import_react9.default.createElement(
                     PerformanceDegradedMessage,
-                    null
+                    null,
                   ),
                 state !== 'loading' &&
-                  import_react9.default.createElement(ReadDocsMessage, null)
-              )
+                  import_react9.default.createElement(ReadDocsMessage, null),
+              ),
             ),
           },
           import_react9.default.createElement(
@@ -5146,8 +5148,8 @@ var { document: document2, window: globalWindow2 } = scope,
               'data-action': 'toggle-indicator',
               'aria-label': 'toggle indicator',
             },
-            import_react9.default.createElement(GlobeIcon, null)
-          )
+            import_react9.default.createElement(GlobeIcon, null),
+          ),
         ),
         ref.versions && Object.keys(ref.versions).length
           ? import_react9.default.createElement(
@@ -5174,11 +5176,11 @@ var { document: document2, window: globalWindow2 } = scope,
               import_react9.default.createElement(CurrentVersion, {
                 url: ref.url,
                 versions: ref.versions,
-              })
+              }),
             )
-          : null
+          : null,
       );
-    })
+    }),
   ),
   ReadyMessage = ({ url, componentCount, leafCount }) => {
     let theme = useTheme();
@@ -5194,7 +5196,7 @@ var { document: document2, window: globalWindow2 } = scope,
         import_react9.default.createElement(
           MessageTitle,
           null,
-          'View external Storybook'
+          'View external Storybook',
         ),
         import_react9.default.createElement(
           'div',
@@ -5203,9 +5205,9 @@ var { document: document2, window: globalWindow2 } = scope,
           componentCount,
           ' components and ',
           leafCount,
-          ' stories in a new browser tab.'
-        )
-      )
+          ' stories in a new browser tab.',
+        ),
+      ),
     );
   },
   LoginRequiredMessage = ({ loginUrl, id }) => {
@@ -5215,7 +5217,7 @@ var { document: document2, window: globalWindow2 } = scope,
         let childWindow = globalWindow2.open(
             loginUrl,
             `storybook_auth_${id}`,
-            'resizable,scrollbars'
+            'resizable,scrollbars',
           ),
           timer = setInterval(() => {
             childWindow
@@ -5236,14 +5238,14 @@ var { document: document2, window: globalWindow2 } = scope,
         import_react9.default.createElement(
           MessageTitle,
           null,
-          'Log in required'
+          'Log in required',
         ),
         import_react9.default.createElement(
           'div',
           null,
-          "You need to authenticate to view this Storybook's components."
-        )
-      )
+          "You need to authenticate to view this Storybook's components.",
+        ),
+      ),
     );
   },
   ReadDocsMessage = () => {
@@ -5263,14 +5265,14 @@ var { document: document2, window: globalWindow2 } = scope,
         import_react9.default.createElement(
           MessageTitle,
           null,
-          'Read Composition docs'
+          'Read Composition docs',
         ),
         import_react9.default.createElement(
           'div',
           null,
-          'Learn how to combine multiple Storybooks into one.'
-        )
-      )
+          'Learn how to combine multiple Storybooks into one.',
+        ),
+      ),
     );
   },
   ErrorOccurredMessage = ({ url }) => {
@@ -5287,14 +5289,14 @@ var { document: document2, window: globalWindow2 } = scope,
         import_react9.default.createElement(
           MessageTitle,
           null,
-          'Something went wrong'
+          'Something went wrong',
         ),
         import_react9.default.createElement(
           'div',
           null,
-          "This external Storybook didn't load. Debug it in a new tab now."
-        )
-      )
+          "This external Storybook didn't load. Debug it in a new tab now.",
+        ),
+      ),
     );
   },
   LoadingMessage = ({ url }) => {
@@ -5312,9 +5314,9 @@ var { document: document2, window: globalWindow2 } = scope,
         import_react9.default.createElement(
           'div',
           null,
-          'This Storybook is loading.'
-        )
-      )
+          'This Storybook is loading.',
+        ),
+      ),
     );
   },
   PerformanceDegradedMessage = () => {
@@ -5335,9 +5337,9 @@ var { document: document2, window: globalWindow2 } = scope,
         import_react9.default.createElement(
           'div',
           null,
-          'Learn how to speed up Composition performance.'
-        )
-      )
+          'Learn how to speed up Composition performance.',
+        ),
+      ),
     );
   };
 var import_react15 = __toESM(require_react());
@@ -5367,7 +5369,7 @@ var import_react10 = __toESM(require_react()),
           clipRule: 'evenodd',
           d: 'M6.586 3.504l-1.5-1.5H1v9h12v-7.5H6.586zm.414-1L5.793 1.297a1 1 0 00-.707-.293H.5a.5.5 0 00-.5.5v10a.5.5 0 00.5.5h13a.5.5 0 00.5-.5v-8.5a.5.5 0 00-.5-.5H7z',
           fill: 'currentColor',
-        })
+        }),
       ),
       import_react10.default.createElement(
         'symbol',
@@ -5377,7 +5379,7 @@ var import_react10 = __toESM(require_react()),
           clipRule: 'evenodd',
           d: 'M3.5 1.004a2.5 2.5 0 00-2.5 2.5v7a2.5 2.5 0 002.5 2.5h7a2.5 2.5 0 002.5-2.5v-7a2.5 2.5 0 00-2.5-2.5h-7zm8.5 5.5H7.5v-4.5h3a1.5 1.5 0 011.5 1.5v3zm0 1v3a1.5 1.5 0 01-1.5 1.5h-3v-4.5H12zm-5.5 4.5v-4.5H2v3a1.5 1.5 0 001.5 1.5h3zM2 6.504h4.5v-4.5h-3a1.5 1.5 0 00-1.5 1.5v3z',
           fill: 'currentColor',
-        })
+        }),
       ),
       import_react10.default.createElement(
         'symbol',
@@ -5391,7 +5393,7 @@ var import_react10 = __toESM(require_react()),
           clipRule: 'evenodd',
           d: 'M1.5 0a.5.5 0 00-.5.5v13a.5.5 0 00.5.5h11a.5.5 0 00.5-.5V3.207a.5.5 0 00-.146-.353L10.146.146A.5.5 0 009.793 0H1.5zM2 1h7.5v2a.5.5 0 00.5.5h2V13H2V1z',
           fill: 'currentColor',
-        })
+        }),
       ),
       import_react10.default.createElement(
         'symbol',
@@ -5401,8 +5403,8 @@ var import_react10 = __toESM(require_react()),
           clipRule: 'evenodd',
           d: 'M3.5 0h7a.5.5 0 01.5.5v13a.5.5 0 01-.454.498.462.462 0 01-.371-.118L7 11.159l-3.175 2.72a.46.46 0 01-.379.118A.5.5 0 013 13.5V.5a.5.5 0 01.5-.5zM4 12.413l2.664-2.284a.454.454 0 01.377-.128.498.498 0 01.284.12L10 12.412V1H4v11.413z',
           fill: 'currentColor',
-        })
-      )
+        }),
+      ),
     ),
   UseSymbol = ({ type }) =>
     type === 'group'
@@ -5450,8 +5452,8 @@ var CollapseIconWrapper = newStyled.div(({ theme, isExpanded }) => ({
           fillRule: 'evenodd',
           d: 'M1.896 7.146a.5.5 0 1 0 .708.708l3.5-3.5a.5.5 0 0 0 0-.708l-3.5-3.5a.5.5 0 1 0-.708.708L5.043 4 1.896 7.146Z',
           clipRule: 'evenodd',
-        })
-      )
+        }),
+      ),
     );
 var TypeIcon = newStyled.svg(({ theme, type }) => ({
     width: 14,
@@ -5546,10 +5548,10 @@ var TypeIcon = newStyled.svg(({ theme, type }) => ({
         import_react12.default.createElement(
           TypeIcon,
           { viewBox: '0 0 14 14', width: '14', height: '14', type: 'group' },
-          import_react12.default.createElement(UseSymbol, { type: 'group' })
-        )
+          import_react12.default.createElement(UseSymbol, { type: 'group' }),
+        ),
       ),
-      children
+      children,
     );
   }),
   ComponentNode = import_react12.default.memo(function ({
@@ -5576,10 +5578,12 @@ var TypeIcon = newStyled.svg(({ theme, type }) => ({
             height: '12',
             type: 'component',
           },
-          import_react12.default.createElement(UseSymbol, { type: 'component' })
-        )
+          import_react12.default.createElement(UseSymbol, {
+            type: 'component',
+          }),
+        ),
       ),
-      children
+      children,
     );
   }),
   DocumentNode = import_react12.default.memo(function ({
@@ -5597,10 +5601,10 @@ var TypeIcon = newStyled.svg(({ theme, type }) => ({
         import_react12.default.createElement(
           TypeIcon,
           { viewBox: '0 0 14 14', width: '12', height: '12', type: 'document' },
-          import_react12.default.createElement(UseSymbol, { type: 'document' })
-        )
+          import_react12.default.createElement(UseSymbol, { type: 'document' }),
+        ),
       ),
-      children
+      children,
     );
   }),
   StoryNode = import_react12.default.memo(function ({
@@ -5617,10 +5621,10 @@ var TypeIcon = newStyled.svg(({ theme, type }) => ({
         import_react12.default.createElement(
           TypeIcon,
           { viewBox: '0 0 14 14', width: '12', height: '12', type: 'story' },
-          import_react12.default.createElement(UseSymbol, { type: 'story' })
-        )
+          import_react12.default.createElement(UseSymbol, { type: 'story' }),
+        ),
       ),
-      children
+      children,
     );
   });
 var import_throttle = __toESM(require_throttle()),
@@ -5663,7 +5667,7 @@ var get = (0, import_memoizerific.default)(1e3)((id, dataset) => dataset[id]),
     return parent ? [parent, ...getParents(parent.id, dataset)] : [];
   }),
   getAncestorIds = (0, import_memoizerific.default)(1e3)((data, id) =>
-    getParents(id, data).map((item) => item.id)
+    getParents(id, data).map((item) => item.id),
   ),
   getDescendantIds = (0, import_memoizerific.default)(1e3)(
     (data, id, skipLeafs) => {
@@ -5679,7 +5683,7 @@ var get = (0, import_memoizerific.default)(1e3)((id, dataset) => dataset[id]),
           acc
         );
       }, []);
-    }
+    },
   );
 function getPath(item, ref) {
   let parent =
@@ -5752,7 +5756,7 @@ var { document: document4 } = scope,
         Object.assign(acc, {
           [id]: id in initialExpanded ? initialExpanded[id] : !0,
         }),
-      {}
+      {},
     );
   },
   noop = () => {},
@@ -5775,29 +5779,29 @@ var { document: document4 } = scope,
             ...state,
           }),
         { refId, data, highlightedRef, rootIds, initialExpanded },
-        initializeExpanded
+        initializeExpanded,
       ),
       getElementByDataItemId = (0, import_react13.useCallback)(
         (id) => containerRef.current?.querySelector(`[data-item-id="${id}"]`),
-        [containerRef]
+        [containerRef],
       ),
       highlightElement = (0, import_react13.useCallback)(
         (element) => {
           setHighlightedItemId(element.getAttribute('data-item-id')),
             scrollIntoView(element);
         },
-        [setHighlightedItemId]
+        [setHighlightedItemId],
       ),
       updateExpanded = (0, import_react13.useCallback)(
         ({ ids, value }) => {
           if ((setExpanded({ ids, value }), ids.length === 1)) {
             let element = containerRef.current?.querySelector(
-              `[data-item-id="${ids[0]}"][data-ref-id="${refId}"]`
+              `[data-item-id="${ids[0]}"][data-ref-id="${refId}"]`,
             );
             element && highlightElement(element);
           }
         },
-        [containerRef, highlightElement, refId]
+        [containerRef, highlightElement, refId],
       );
     (0, import_react13.useEffect)(() => {
       setExpanded({ ids: getAncestorIds(data, selectedStoryId), value: !0 });
@@ -5820,7 +5824,7 @@ var { document: document4 } = scope,
                   api.off(STORIES_EXPAND_ALL, expandAll);
               })
             : noop,
-        [api, collapseAll, expandAll]
+        [api, collapseAll, expandAll],
       ),
       (0, import_react13.useEffect)(() => {
         let menuElement = document4.getElementById('storybook-explorer-menu'),
@@ -5913,7 +5917,7 @@ var SmallIcons = newStyled(CircleIcon)({ '&&&': { width: 6, height: 6 } }),
     ({ theme: { animation, color, base } }) => ({
       animation: `${animation.glow} 1.5s ease-in-out infinite`,
       color: base === 'light' ? color.mediumdark : color.darker,
-    })
+    }),
   ),
   statusPriority = ['unknown', 'pending', 'success', 'warn', 'error'],
   statusMapping = {
@@ -5947,7 +5951,7 @@ var SmallIcons = newStyled(CircleIcon)({ '&&&': { width: 6, height: 6 } }),
   getHighestStatus = (statuses) =>
     statusPriority.reduce(
       (acc, status) => (statuses.includes(status) ? status : acc),
-      'unknown'
+      'unknown',
     );
 function getGroupStatus(collapsedData, status) {
   return Object.values(collapsedData).reduce((acc, item) => {
@@ -5958,7 +5962,7 @@ function getGroupStatus(collapsedData, status) {
         combinedStatus = getHighestStatus(
           leafs
             .flatMap((story) => Object.values(status?.[story.id] || {}))
-            .map((s2) => s2.status)
+            .map((s2) => s2.status),
         );
       combinedStatus && (acc[item.id] = combinedStatus);
     }
@@ -6078,7 +6082,7 @@ var Container = newStyled.div((props) => ({
     if (item.type === 'story' || item.type === 'docs') {
       let LeafNode2 = item.type === 'docs' ? DocumentNode : StoryNode,
         statusValue = getHighestStatus(
-          Object.values(status || {}).map((s2) => s2.status)
+          Object.values(status || {}).map((s2) => s2.status),
         ),
         [icon, textColor] = statusMapping[statusValue];
       return import_react15.default.createElement(
@@ -6107,7 +6111,7 @@ var Container = newStyled.div((props) => ({
             },
             ...(item.type === 'docs' && { docsMode }),
           },
-          item.renderLabel?.(item, api) || item.name
+          item.renderLabel?.(item, api) || item.name,
         ),
         isSelected &&
           import_react15.default.createElement(
@@ -6116,8 +6120,8 @@ var Container = newStyled.div((props) => ({
             import_react15.default.createElement(
               'a',
               { href: '#storybook-preview-wrapper' },
-              'Skip to canvas'
-            )
+              'Skip to canvas',
+            ),
           ),
         icon
           ? import_react15.default.createElement(
@@ -6139,10 +6143,10 @@ var Container = newStyled.div((props) => ({
               import_react15.default.createElement(
                 Action,
                 { type: 'button', height: 22 },
-                icon
-              )
+                icon,
+              ),
             )
-          : null
+          : null,
       );
     }
     if (item.type === 'root')
@@ -6168,7 +6172,7 @@ var Container = newStyled.div((props) => ({
             'aria-expanded': isExpanded,
           },
           import_react15.default.createElement(CollapseIcon2, { isExpanded }),
-          item.renderLabel?.(item, api) || item.name
+          item.renderLabel?.(item, api) || item.name,
         ),
         isExpanded &&
           import_react15.default.createElement(
@@ -6184,8 +6188,8 @@ var Container = newStyled.div((props) => ({
             },
             isFullyExpanded
               ? import_react15.default.createElement(CollapseIcon, null)
-              : import_react15.default.createElement(ExpandAltIcon, null)
-          )
+              : import_react15.default.createElement(ExpandAltIcon, null),
+          ),
       );
     if (item.type === 'component' || item.type === 'group') {
       let BranchNode2 = item.type === 'component' ? ComponentNode : GroupNode;
@@ -6223,7 +6227,7 @@ var Container = newStyled.div((props) => ({
               });
           },
         },
-        item.renderLabel?.(item, api) || item.name
+        item.renderLabel?.(item, api) || item.name,
       );
     }
     return null;
@@ -6237,7 +6241,7 @@ var Container = newStyled.div((props) => ({
     let setFullyExpanded = (0, import_react15.useCallback)(
       () =>
         setExpanded({ ids: expandableDescendants, value: !isFullyExpanded }),
-      [setExpanded, isFullyExpanded, expandableDescendants]
+      [setExpanded, isFullyExpanded, expandableDescendants],
     );
     return import_react15.default.createElement(Node2, {
       ...props,
@@ -6275,9 +6279,9 @@ var Container = newStyled.div((props) => ({
                 acc
               );
             },
-            [[], [], {}]
+            [[], [], {}],
           ),
-        [data]
+        [data],
       ),
       { expandableDescendants } = (0, import_react15.useMemo)(
         () =>
@@ -6286,13 +6290,13 @@ var Container = newStyled.div((props) => ({
               (acc.expandableDescendants[nodeId] = getDescendantIds(
                 data,
                 nodeId,
-                !1
+                !1,
               ).filter((d2) => !['story', 'docs'].includes(data[d2].type))),
               acc
             ),
-            { orphansFirst: [], expandableDescendants: {} }
+            { orphansFirst: [], expandableDescendants: {} },
           ),
-        [data, rootIds, orphanIds]
+        [data, rootIds, orphanIds],
       ),
       singleStoryComponentIds = (0, import_react15.useMemo)(
         () =>
@@ -6308,14 +6312,14 @@ var Container = newStyled.div((props) => ({
                 ? isStoryHoistable(onlyChild.name, name)
                 : !1;
           }),
-        [data]
+        [data],
       ),
       collapsedItems = (0, import_react15.useMemo)(
         () =>
           Object.keys(data).filter(
-            (id) => !singleStoryComponentIds.includes(id)
+            (id) => !singleStoryComponentIds.includes(id),
           ),
-        [singleStoryComponentIds]
+        [singleStoryComponentIds],
       ),
       collapsedData = (0, import_react15.useMemo)(
         () =>
@@ -6338,18 +6342,18 @@ var Container = newStyled.div((props) => ({
                 acc
               );
             },
-            { ...data }
+            { ...data },
           ),
-        [data]
+        [data],
       ),
       ancestry = (0, import_react15.useMemo)(
         () =>
           collapsedItems.reduce(
             (acc, id) =>
               Object.assign(acc, { [id]: getAncestorIds(collapsedData, id) }),
-            {}
+            {},
           ),
-        [collapsedItems, collapsedData]
+        [collapsedItems, collapsedData],
       ),
       [expanded, setExpanded] = useExpanded({
         containerRef,
@@ -6365,7 +6369,7 @@ var Container = newStyled.div((props) => ({
       }),
       groupStatus = (0, import_react15.useMemo)(
         () => getGroupStatus(collapsedData, status),
-        [collapsedData, status]
+        [collapsedData, status],
       ),
       treeItems = (0, import_react15.useMemo)(
         () =>
@@ -6403,7 +6407,7 @@ var Container = newStyled.div((props) => ({
               color,
               docsMode,
               isOrphan: orphanIds.some(
-                (oid) => itemId === oid || itemId.startsWith(`${oid}-`)
+                (oid) => itemId === oid || itemId.startsWith(`${oid}-`),
               ),
               isDisplayed,
               isSelected: selectedStoryId === itemId,
@@ -6427,13 +6431,13 @@ var Container = newStyled.div((props) => ({
           selectedStoryId,
           setExpanded,
           status,
-        ]
+        ],
       );
     return import_react15.default.createElement(
       Container,
       { ref: containerRef, hasOrphans: isMain && orphanIds.length > 0 },
       import_react15.default.createElement(IconSymbols, null),
-      treeItems
+      treeItems,
     );
   });
 var Wrapper2 = newStyled.div(({ isMain }) => ({
@@ -6499,7 +6503,7 @@ var Wrapper2 = newStyled.div(({ isMain }) => ({
       } = props,
       length = (0, import_react16.useMemo)(
         () => (index ? Object.keys(index).length : 0),
-        [index]
+        [index],
       ),
       indicatorRef = (0, import_react16.useRef)(null),
       isMain = refId === DEFAULT_REF_ID,
@@ -6512,7 +6516,7 @@ var Wrapper2 = newStyled.div(({ isMain }) => ({
         isLoading,
         !!loginUrl && length === 0,
         !!indexError,
-        !isLoading && length === 0
+        !isLoading && length === 0,
       ),
       [isExpanded, setExpanded] = (0, import_react16.useState)(expanded);
     (0, import_react16.useEffect)(() => {
@@ -6520,16 +6524,16 @@ var Wrapper2 = newStyled.div(({ isMain }) => ({
     }, [setExpanded, index, selectedStoryId]);
     let handleClick = (0, import_react16.useCallback)(
         () => setExpanded((value) => !value),
-        [setExpanded]
+        [setExpanded],
       ),
       setHighlightedItemId = (0, import_react16.useCallback)(
         (itemId) => setHighlighted({ itemId, refId }),
-        [setHighlighted]
+        [setHighlighted],
       ),
       onSelectStoryId = (0, import_react16.useCallback)(
         (storyId) =>
           api && api.selectStory(storyId, void 0, { ref: !isMain && refId }),
-        [api, isMain, refId]
+        [api, isMain, refId],
       );
     return import_react16.default.createElement(
       import_react16.default.Fragment,
@@ -6545,13 +6549,13 @@ var Wrapper2 = newStyled.div(({ isMain }) => ({
             CollapseButton2,
             { 'data-action': 'collapse-ref', onClick: handleClick },
             import_react16.default.createElement(CollapseIcon2, { isExpanded }),
-            import_react16.default.createElement(RefTitle, { title }, title)
+            import_react16.default.createElement(RefTitle, { title }, title),
           ),
           import_react16.default.createElement(RefIndicator, {
             ...props,
             state,
             ref: indicatorRef,
-          })
+          }),
         ),
       isExpanded &&
         import_react16.default.createElement(
@@ -6582,8 +6586,8 @@ var Wrapper2 = newStyled.div(({ isMain }) => ({
               onSelectStoryId,
               highlightedRef,
               setHighlightedItemId,
-            })
-        )
+            }),
+        ),
     );
   });
 var import_react17 = __toESM(require_react());
@@ -6600,14 +6604,14 @@ var { document: document5, window: globalWindow4 } = scope,
     let initialHighlight = fromSelection(selected),
       highlightedRef = (0, import_react17.useRef)(initialHighlight),
       [highlighted, setHighlighted] = (0, import_react17.useState)(
-        initialHighlight
+        initialHighlight,
       ),
       api = useStorybookApi(),
       updateHighlighted = (0, import_react17.useCallback)(
         (highlight) => {
           (highlightedRef.current = highlight), setHighlighted(highlight);
         },
-        [highlightedRef]
+        [highlightedRef],
       ),
       highlightElement = (0, import_react17.useCallback)(
         (element, center = !1) => {
@@ -6618,7 +6622,7 @@ var { document: document5, window: globalWindow4 } = scope,
             (updateHighlighted({ itemId, refId }),
             scrollIntoView(element, center));
         },
-        [updateHighlighted]
+        [updateHighlighted],
       );
     return (
       (0, import_react17.useEffect)(() => {
@@ -6628,9 +6632,9 @@ var { document: document5, window: globalWindow4 } = scope,
           setTimeout(() => {
             scrollIntoView(
               containerRef.current?.querySelector(
-                `[data-item-id="${itemId}"][data-ref-id="${refId}"]`
+                `[data-item-id="${itemId}"][data-ref-id="${refId}"]`,
               ),
-              !0
+              !0,
             );
           }, 0);
         }
@@ -6661,20 +6665,20 @@ var { document: document5, window: globalWindow4 } = scope,
               target.hasAttribute('data-action') && target.blur();
               let highlightable = Array.from(
                   containerRef.current.querySelectorAll(
-                    '[data-highlightable=true]'
-                  )
+                    '[data-highlightable=true]',
+                  ),
                 ),
                 currentIndex = highlightable.findIndex(
                   (el) =>
                     el.getAttribute('data-item-id') ===
                       highlightedRef.current?.itemId &&
                     el.getAttribute('data-ref-id') ===
-                      highlightedRef.current?.refId
+                      highlightedRef.current?.refId,
                 ),
                 nextIndex = cycle(
                   highlightable,
                   currentIndex,
-                  isArrowUp ? -1 : 1
+                  isArrowUp ? -1 : 1,
                 ),
                 didRunAround = isArrowUp
                   ? nextIndex === highlightable.length - 1
@@ -6687,7 +6691,7 @@ var { document: document5, window: globalWindow4 } = scope,
                 let { itemId, refId } = highlightedRef.current,
                   item = api.resolveStory(
                     itemId,
-                    refId === 'storybook_internal' ? void 0 : refId
+                    refId === 'storybook_internal' ? void 0 : refId,
                   );
                 item.type === 'component' &&
                   api.emit(PRELOAD_ENTRIES, {
@@ -6759,8 +6763,8 @@ var Explorer = import_react19.default.memo(function ({
         selectedStoryId: selected?.refId === ref.id ? selected.storyId : null,
         highlightedRef,
         setHighlighted,
-      })
-    )
+      }),
+    ),
   );
 });
 function _objectWithoutPropertiesLoose(source, excluded) {
@@ -6976,14 +6980,14 @@ var t2 = (t3) => typeof t3 == 'object' && t3 != null && t3.nodeType === 1,
             ? 0
             : Math.max(
                 0,
-                Math.min(h4 + T3 / X, e4.scrollHeight - n3 / X + V2)
+                Math.min(h4 + T3 / X, e4.scrollHeight - n3 / X + V2),
               )),
           (B3 =
             S2 === 0
               ? 0
               : Math.max(
                   0,
-                  Math.min(t4 + B3 / S2, e4.scrollWidth - l3 / S2 + F3)
+                  Math.min(t4 + B3 / S2, e4.scrollWidth - l3 / S2 + F3),
                 )),
           (k2 += h4 - T3),
           (D2 += t4 - B3);
@@ -7110,7 +7114,7 @@ function getElementProps(element) {
 }
 function requiredProp(fnName, propName) {
   console.error(
-    'The property "' + propName + '" is required in "' + fnName + '"'
+    'The property "' + propName + '" is required in "' + fnName + '"',
   );
 }
 var stateKeys = [
@@ -7171,7 +7175,7 @@ function getHighlightedIndex(start, offset, items, isItemDisabled2, circular) {
     offset < 0,
     items,
     isItemDisabled2,
-    circular
+    circular,
   );
   return highlightedIndex === -1
     ? start >= count
@@ -7184,7 +7188,7 @@ function getNonDisabledIndex(
   backwards,
   items,
   isItemDisabled2,
-  circular
+  circular,
 ) {
   circular === void 0 && (circular = !1);
   var count = items.length;
@@ -7199,7 +7203,7 @@ function getNonDisabledIndex(
         backwards ? count - 1 : 0,
         backwards,
         items,
-        isItemDisabled2
+        isItemDisabled2,
       )
     : -1;
 }
@@ -7207,7 +7211,7 @@ function targetWithinDownshift(
   target,
   downshiftElements,
   environment,
-  checkActiveElement
+  checkActiveElement,
 ) {
   return (
     checkActiveElement === void 0 && (checkActiveElement = !0),
@@ -7220,7 +7224,7 @@ function targetWithinDownshift(
               isOrContainsNode(
                 contextNode,
                 environment.document.activeElement,
-                environment
+                environment,
               )))
         );
       })
@@ -7236,7 +7240,7 @@ validateControlledUnchanged = function (state, prevProps, nextProps) {
           'downshift: A component has changed the controlled prop "' +
             propKey +
             '" to be uncontrolled. ' +
-            warningDescription
+            warningDescription,
         )
       : prevProps[propKey] === void 0 &&
         nextProps[propKey] !== void 0 &&
@@ -7244,7 +7248,7 @@ validateControlledUnchanged = function (state, prevProps, nextProps) {
           'downshift: A component has changed the uncontrolled prop "' +
             propKey +
             '" to be controlled. ' +
-            warningDescription
+            warningDescription,
         );
   });
 };
@@ -7375,14 +7379,14 @@ var unknown = '__autocomplete_unknown__',
           }),
           (_this.setHighlightedIndex = function (
             highlightedIndex,
-            otherStateToSet
+            otherStateToSet,
           ) {
             highlightedIndex === void 0 &&
               (highlightedIndex = _this.props.defaultHighlightedIndex),
               otherStateToSet === void 0 && (otherStateToSet = {}),
               (otherStateToSet = pickState(otherStateToSet)),
               _this.internalSetState(
-                _extends({ highlightedIndex }, otherStateToSet)
+                _extends({ highlightedIndex }, otherStateToSet),
               );
           }),
           (_this.clearSelection = function (cb) {
@@ -7393,7 +7397,7 @@ var unknown = '__autocomplete_unknown__',
                 highlightedIndex: _this.props.defaultHighlightedIndex,
                 isOpen: _this.props.defaultIsOpen,
               },
-              cb
+              cb,
             );
           }),
           (_this.selectItem = function (item, otherStateToSet, cb) {
@@ -7406,9 +7410,9 @@ var unknown = '__autocomplete_unknown__',
                     selectedItem: item,
                     inputValue: _this.props.itemToString(item),
                   },
-                  otherStateToSet
+                  otherStateToSet,
                 ),
-                cb
+                cb,
               );
           }),
           (_this.selectItemAtIndex = function (itemIndex, otherStateToSet, cb) {
@@ -7419,7 +7423,7 @@ var unknown = '__autocomplete_unknown__',
             return _this.selectItemAtIndex(
               _this.getState().highlightedIndex,
               otherStateToSet,
-              cb
+              cb,
             );
           }),
           (_this.internalSetState = function (stateToSet, cb) {
@@ -7432,7 +7436,7 @@ var unknown = '__autocomplete_unknown__',
                 stateToSet.hasOwnProperty('inputValue') &&
                 _this.props.onInputValueChange(
                   stateToSet.inputValue,
-                  _extends({}, _this.getStateAndHelpers(), stateToSet)
+                  _extends({}, _this.getStateAndHelpers(), stateToSet),
                 ),
               _this.setState(
                 function (state) {
@@ -7443,7 +7447,7 @@ var unknown = '__autocomplete_unknown__',
                     : stateToSet;
                   (newStateToSet = _this.props.stateReducer(
                     state,
-                    newStateToSet
+                    newStateToSet,
                   )),
                     (isItemSelected =
                       newStateToSet.hasOwnProperty('selectedItem'));
@@ -7466,7 +7470,7 @@ var unknown = '__autocomplete_unknown__',
                       newStateToSet.hasOwnProperty('inputValue') &&
                       _this.props.onInputValueChange(
                         newStateToSet.inputValue,
-                        _extends({}, _this.getStateAndHelpers(), newStateToSet)
+                        _extends({}, _this.getStateAndHelpers(), newStateToSet),
                       ),
                     nextState
                   );
@@ -7478,23 +7482,23 @@ var unknown = '__autocomplete_unknown__',
                   hasMoreStateThanType &&
                     _this.props.onStateChange(
                       onStateChangeArg,
-                      _this.getStateAndHelpers()
+                      _this.getStateAndHelpers(),
                     ),
                     isItemSelected &&
                       _this.props.onSelect(
                         stateToSet.selectedItem,
-                        _this.getStateAndHelpers()
+                        _this.getStateAndHelpers(),
                       ),
                     onChangeArg !== void 0 &&
                       _this.props.onChange(
                         onChangeArg,
-                        _this.getStateAndHelpers()
+                        _this.getStateAndHelpers(),
                       ),
                     _this.props.onUserAction(
                       onStateChangeArg,
-                      _this.getStateAndHelpers()
+                      _this.getStateAndHelpers(),
                     );
-                }
+                },
               )
             );
           }),
@@ -7526,7 +7530,7 @@ var unknown = '__autocomplete_unknown__',
               (_extends2['aria-owns'] = isOpen ? _this.menuId : void 0),
               (_extends2['aria-labelledby'] = _this.labelId),
               _extends2),
-              rest
+              rest,
             );
           }),
           (_this.keyDownHandlers = {
@@ -7548,13 +7552,13 @@ var unknown = '__autocomplete_unknown__',
                           1,
                           { length: itemCount },
                           _this2.isItemDisabled,
-                          !0
+                          !0,
                         );
                       _this2.setHighlightedIndex(nextHighlightedIndex, {
                         type: keyDownArrowDown,
                       });
                     }
-                  }
+                  },
                 );
             },
             ArrowUp: function (event) {
@@ -7575,13 +7579,13 @@ var unknown = '__autocomplete_unknown__',
                           -1,
                           { length: itemCount },
                           _this3.isItemDisabled,
-                          !0
+                          !0,
                         );
                       _this3.setHighlightedIndex(nextHighlightedIndex, {
                         type: keyDownArrowUp,
                       });
                     }
-                  }
+                  },
                 );
             },
             Enter: function (event) {
@@ -7607,8 +7611,11 @@ var unknown = '__autocomplete_unknown__',
                 this.reset(
                   _extends(
                     { type: keyDownEscape },
-                    !this.state.isOpen && { selectedItem: null, inputValue: '' }
-                  )
+                    !this.state.isOpen && {
+                      selectedItem: null,
+                      inputValue: '',
+                    },
+                  ),
                 );
             },
           }),
@@ -7630,7 +7637,7 @@ var unknown = '__autocomplete_unknown__',
                     0,
                     !1,
                     { length: itemCount },
-                    this.isItemDisabled
+                    this.isItemDisabled,
                   );
                   this.setHighlightedIndex(newHighlightedIndex, {
                     type: keyDownHome,
@@ -7649,7 +7656,7 @@ var unknown = '__autocomplete_unknown__',
                     itemCount - 1,
                     !0,
                     { length: itemCount },
-                    this.isItemDisabled
+                    this.isItemDisabled,
                   );
                   this.setHighlightedIndex(newHighlightedIndex, {
                     type: keyDownEnd,
@@ -7672,7 +7679,7 @@ var unknown = '__autocomplete_unknown__',
                 onClick: callAllEventHandlers(onClick, _this.buttonHandleClick),
                 onKeyDown: callAllEventHandlers(
                   onKeyDown,
-                  _this.buttonHandleKeyDown
+                  _this.buttonHandleKeyDown,
                 ),
                 onKeyUp: callAllEventHandlers(onKeyUp, _this.buttonHandleKeyUp),
                 onBlur: callAllEventHandlers(onBlur, _this.buttonHandleBlur),
@@ -7687,7 +7694,7 @@ var unknown = '__autocomplete_unknown__',
                 'data-toggle': !0,
               },
               eventHandlers,
-              rest
+              rest,
             );
           }),
           (_this.buttonHandleKeyUp = function (event) {
@@ -7724,7 +7731,7 @@ var unknown = '__autocomplete_unknown__',
           (_this.getLabelProps = function (props) {
             return _extends(
               { htmlFor: _this.inputId, id: _this.labelId },
-              props
+              props,
             );
           }),
           (_this.getInputProps = function (_temp4) {
@@ -7749,15 +7756,15 @@ var unknown = '__autocomplete_unknown__',
                 (_eventHandlers[onChangeKey] = callAllEventHandlers(
                   onChange,
                   onInput,
-                  _this.inputHandleChange
+                  _this.inputHandleChange,
                 )),
                 (_eventHandlers.onKeyDown = callAllEventHandlers(
                   onKeyDown,
-                  _this.inputHandleKeyDown
+                  _this.inputHandleKeyDown,
                 )),
                 (_eventHandlers.onBlur = callAllEventHandlers(
                   onBlur,
-                  _this.inputHandleBlur
+                  _this.inputHandleBlur,
                 )),
                 _eventHandlers);
             }
@@ -7778,7 +7785,7 @@ var unknown = '__autocomplete_unknown__',
                 id: _this.inputId,
               },
               eventHandlers,
-              rest
+              rest,
             );
           }),
           (_this.inputHandleKeyDown = function (event) {
@@ -7838,7 +7845,7 @@ var unknown = '__autocomplete_unknown__',
                   props && props['aria-label'] ? void 0 : _this.labelId),
                 (_extends3.id = _this.menuId),
                 _extends3),
-                props
+                props,
               )
             );
           }),
@@ -7877,14 +7884,14 @@ var unknown = '__autocomplete_unknown__',
                     onMouseDown,
                     function (event) {
                       event.preventDefault();
-                    }
+                    },
                   ),
                 }),
                 (_enabledEventHandlers[onSelectKey] = callAllEventHandlers(
                   customClickHandler,
                   function () {
                     _this.selectItemAtIndex(index, { type: clickItem });
-                  }
+                  },
                 )),
                 _enabledEventHandlers),
               eventHandlers = rest.disabled
@@ -7897,7 +7904,7 @@ var unknown = '__autocomplete_unknown__',
                 'aria-selected': _this.getState().highlightedIndex === index,
               },
               eventHandlers,
-              rest
+              rest,
             );
           }),
           (_this.clearItems = function () {
@@ -7914,7 +7921,7 @@ var unknown = '__autocomplete_unknown__',
                     highlightedIndex: _this.props.defaultHighlightedIndex,
                     inputValue: _this.props.itemToString(selectedItem),
                   },
-                  otherStateToSet
+                  otherStateToSet,
                 );
               }, cb);
           }),
@@ -7929,7 +7936,7 @@ var unknown = '__autocomplete_unknown__',
                     isOpen && {
                       highlightedIndex: _this.props.defaultHighlightedIndex,
                     },
-                    otherStateToSet
+                    otherStateToSet,
                   );
                 },
                 function () {
@@ -7941,10 +7948,10 @@ var unknown = '__autocomplete_unknown__',
                     typeof highlightedIndex == 'number' &&
                     _this.setHighlightedIndex(
                       highlightedIndex,
-                      otherStateToSet
+                      otherStateToSet,
                     ),
                     cbToCb(cb)();
-                }
+                },
               );
           }),
           (_this.openMenu = function (cb) {
@@ -7971,8 +7978,8 @@ var unknown = '__autocomplete_unknown__',
                       resultCount,
                       highlightedItem: item,
                     },
-                    state
-                  )
+                    state,
+                  ),
                 );
               (_this.previousResultCount = resultCount),
                 setStatus(status, _this.props.environment.document);
@@ -8039,14 +8046,14 @@ var unknown = '__autocomplete_unknown__',
         (_proto.getItemNodeFromIndex = function (index) {
           return this.props.environment
             ? this.props.environment.document.getElementById(
-                this.getItemId(index)
+                this.getItemId(index),
               )
             : null;
         }),
         (_proto.scrollHighlightedItemIntoView = function () {
           {
             var node = this.getItemNodeFromIndex(
-              this.getState().highlightedIndex
+              this.getState().highlightedIndex,
             );
             this.props.scrollIntoView(node, this._menuNode);
           }
@@ -8061,7 +8068,7 @@ var unknown = '__autocomplete_unknown__',
               amount,
               { length: itemCount },
               this.isItemDisabled,
-              !0
+              !0,
             );
             this.setHighlightedIndex(nextHighlightedIndex, otherStateToSet);
           }
@@ -8128,7 +8135,7 @@ var unknown = '__autocomplete_unknown__',
               !this.getMenuProps.suppressRefError &&
               validateGetMenuPropsCalledCorrectly(
                 this._menuNode,
-                this.getMenuProps
+                this.getMenuProps,
               ),
             !this.props.environment)
           )
@@ -8144,13 +8151,13 @@ var unknown = '__autocomplete_unknown__',
                 var contextWithinDownshift = targetWithinDownshift(
                   event.target,
                   [_this4._rootNode, _this4._menuNode],
-                  _this4.props.environment
+                  _this4.props.environment,
                 );
                 !contextWithinDownshift &&
                   _this4.getState().isOpen &&
                   _this4.reset({ type: mouseUp }, function () {
                     return _this4.props.onOuterClick(
-                      _this4.getStateAndHelpers()
+                      _this4.getStateAndHelpers(),
                     );
                   });
               },
@@ -8165,14 +8172,14 @@ var unknown = '__autocomplete_unknown__',
                   event.target,
                   [_this4._rootNode, _this4._menuNode],
                   _this4.props.environment,
-                  !1
+                  !1,
                 );
                 !_this4.isTouchMove &&
                   !contextWithinDownshift &&
                   _this4.getState().isOpen &&
                   _this4.reset({ type: touchEnd }, function () {
                     return _this4.props.onOuterClick(
-                      _this4.getStateAndHelpers()
+                      _this4.getStateAndHelpers(),
                     );
                   });
               },
@@ -8216,12 +8223,12 @@ var unknown = '__autocomplete_unknown__',
               !this.getMenuProps.suppressRefError &&
               validateGetMenuPropsCalledCorrectly(
                 this._menuNode,
-                this.getMenuProps
+                this.getMenuProps,
               ),
             isControlledProp(this.props, 'selectedItem') &&
               this.props.selectedItemChanged(
                 prevProps.selectedItem,
-                this.props.selectedItem
+                this.props.selectedItem,
               ) &&
               this.internalSetState({
                 type: controlledPropUpdatedSelectedItem,
@@ -8258,10 +8265,10 @@ var unknown = '__autocomplete_unknown__',
           if (isDOMElement(element))
             return (0, import_react20.cloneElement)(
               element,
-              this.getRootProps(getElementProps(element))
+              this.getRootProps(getElementProps(element)),
             );
           throw new Error(
-            'downshift: If you return a non-DOM element, you must apply the getRootProps function'
+            'downshift: If you return a non-DOM element, you must apply the getRootProps function',
           );
         }),
         Downshift3
@@ -8280,7 +8287,7 @@ var unknown = '__autocomplete_unknown__',
                 console.warn(
                   'downshift: An object was passed to the default implementation of `itemToString`. You should probably provide your own `itemToString` implementation. Please refer to the `itemToString` API documentation.',
                   'The object that was passed:',
-                  i2
+                  i2,
                 ),
               String(i2));
         },
@@ -8353,7 +8360,7 @@ function validateGetMenuPropsCalledCorrectly(node, _ref12) {
     console.error(
       'downshift: The ref prop "' +
         refKey +
-        '" from getMenuProps was not applied correctly on your menu element.'
+        '" from getMenuProps was not applied correctly on your menu element.',
     );
 }
 function validateGetRootPropsCalledCorrectly(element, _ref13) {
@@ -8362,21 +8369,21 @@ function validateGetRootPropsCalledCorrectly(element, _ref13) {
     isComposite = !isDOMElement(element);
   isComposite && !refKeySpecified && !(0, import_react_is.isForwardRef)(element)
     ? console.error(
-        'downshift: You returned a non-DOM element. You must specify a refKey in getRootProps'
+        'downshift: You returned a non-DOM element. You must specify a refKey in getRootProps',
       )
     : !isComposite &&
       refKeySpecified &&
       console.error(
         'downshift: You returned a DOM element. You should not specify a refKey in getRootProps. You specified "' +
           refKey +
-          '"'
+          '"',
       ),
     !(0, import_react_is.isForwardRef)(element) &&
       !getElementProps(element)[refKey] &&
       console.error(
         'downshift: You must apply the ref prop "' +
           refKey +
-          '" from getRootProps onto your root element.'
+          '" from getRootProps onto your root element.',
       );
 }
 var dropdownDefaultStateValues = {
@@ -8493,16 +8500,16 @@ function useEnhancedReducer(reducer, props, createInitialState, isStateEqual2) {
         var changes = reducer(state2, action2),
           newState = action2.props.stateReducer(
             state2,
-            _extends({}, action2, { changes })
+            _extends({}, action2, { changes }),
           );
         return newState;
       },
-      [reducer]
+      [reducer],
     ),
     _useReducer = (0, import_react20.useReducer)(
       enhancedReducer,
       props,
-      createInitialState
+      createInitialState,
     ),
     state = _useReducer[0],
     dispatch = _useReducer[1],
@@ -8511,7 +8518,7 @@ function useEnhancedReducer(reducer, props, createInitialState, isStateEqual2) {
       function (action2) {
         return dispatch(_extends({ props: propsRef.current }, action2));
       },
-      [propsRef]
+      [propsRef],
     ),
     action = actionRef.current;
   return (
@@ -8523,7 +8530,7 @@ function useEnhancedReducer(reducer, props, createInitialState, isStateEqual2) {
         shouldCallOnChangeProps && callOnChangeProps(action, prevState, state),
           (prevStateRef.current = state);
       },
-      [state, action, isStateEqual2]
+      [state, action, isStateEqual2],
     ),
     [state, dispatchWithProps]
   );
@@ -8532,13 +8539,13 @@ function useControlledReducer$1(
   reducer,
   props,
   createInitialState,
-  isStateEqual2
+  isStateEqual2,
 ) {
   var _useEnhancedReducer = useEnhancedReducer(
       reducer,
       props,
       createInitialState,
-      isStateEqual2
+      isStateEqual2,
     ),
     state = _useEnhancedReducer[0],
     dispatch = _useEnhancedReducer[1];
@@ -8618,7 +8625,7 @@ function getHighlightedIndexOnOpen(props, state, offset) {
 function useMouseAndTouchTracker(
   environment,
   downshiftElementRefs,
-  handleBlur
+  handleBlur,
 ) {
   var mouseAndTouchTrackersRef = (0, import_react20.useRef)({
     isMouseDown: !1,
@@ -8641,7 +8648,7 @@ function useMouseAndTouchTracker(
             targetWithinDownshift(
               event.target,
               downshiftElements,
-              environment
+              environment,
             ) || handleBlur();
         }
         function onTouchStart() {
@@ -8658,7 +8665,7 @@ function useMouseAndTouchTracker(
                 event.target,
                 downshiftElements,
                 environment,
-                !1
+                !1,
               ) &&
               handleBlur();
         }
@@ -8677,7 +8684,7 @@ function useMouseAndTouchTracker(
           }
         );
       },
-      [environment, handleBlur]
+      [environment, handleBlur],
     ),
     mouseAndTouchTrackersRef.current
   );
@@ -8698,7 +8705,7 @@ useGetterPropsCalledChecker = function () {
   var getterPropsCalledRef = (0, import_react20.useRef)(
     propKeys.reduce(function (acc, propKey) {
       return (acc[propKey] = {}), acc;
-    }, {})
+    }, {}),
   );
   (0, import_react20.useEffect)(function () {
     Object.keys(getterPropsCalledRef.current).forEach(function (propKey) {
@@ -8707,7 +8714,7 @@ useGetterPropsCalledChecker = function () {
         console.error(
           'downshift: You forgot to call the ' +
             propKey +
-            ' getter function on your component / element.'
+            ' getter function on your component / element.',
         );
         return;
       }
@@ -8721,7 +8728,7 @@ useGetterPropsCalledChecker = function () {
             refKey +
             '" from ' +
             propKey +
-            ' was not applied correctly on your element.'
+            ' was not applied correctly on your element.',
         );
     }),
       (isInitialMountRef.current = !1);
@@ -8730,7 +8737,7 @@ useGetterPropsCalledChecker = function () {
     propKey,
     suppressRefError,
     refKey,
-    elementRef
+    elementRef,
   ) {
     getterPropsCalledRef.current[propKey] = {
       suppressRefError,
@@ -8744,7 +8751,7 @@ function useA11yMessageStatus(
   getA11yStatusMessage2,
   options2,
   dependencyArray,
-  environment
+  environment,
 ) {
   environment === void 0 && (environment = {});
   var document10 = environment.document,
@@ -8761,7 +8768,7 @@ function useA11yMessageStatus(
           updateA11yStatus.cancel(), cleanupStatusDiv(document10);
         };
       },
-      [document10]
+      [document10],
     );
 }
 function useScrollIntoView(_ref3) {
@@ -8782,10 +8789,10 @@ function useScrollIntoView(_ref3) {
             ? (shouldScrollRef.current = !0)
             : scrollIntoViewProp(
                 getItemNodeFromIndex(highlightedIndex),
-                menuElement
+                menuElement,
               ));
       },
-      [highlightedIndex]
+      [highlightedIndex],
     ),
     shouldScrollRef
   );
@@ -8802,7 +8809,7 @@ useControlPropsValidator = function (_ref4) {
         (validateControlledUnchanged(state, prevPropsRef.current, props),
         (prevPropsRef.current = props));
     },
-    [state, props, isInitialMount]
+    [state, props, isInitialMount],
   );
 };
 function getChangesOnSelection(props, highlightedIndex, inputValue) {
@@ -8822,8 +8829,8 @@ function getChangesOnSelection(props, highlightedIndex, inputValue) {
         },
         inputValue && {
           inputValue: props.itemToString(props.items[highlightedIndex]),
-        }
-      )
+        },
+      ),
   );
 }
 function isDropdownsStateEqual(prevState, newState) {
@@ -8974,7 +8981,7 @@ validatePropTypes$2 = function (options2, caller) {
     propTypes$2,
     options2,
     'prop',
-    caller.name
+    caller.name,
   );
 };
 var ToggleButtonClick$1 = '__togglebutton_click__',
@@ -9068,7 +9075,7 @@ function downshiftSelectReducer(state, action) {
               state.highlightedIndex,
               1,
               props.items,
-              props.isItemDisabled
+              props.isItemDisabled,
             )
           : altKey && state.selectedItem == null
             ? -1
@@ -9085,7 +9092,7 @@ function downshiftSelectReducer(state, action) {
               state.highlightedIndex,
               -1,
               props.items,
-              props.isItemDisabled
+              props.isItemDisabled,
             )
           : getHighlightedIndexOnOpen(props, state, -1);
         changes = { highlightedIndex: _highlightedIndex2, isOpen: !0 };
@@ -9101,7 +9108,7 @@ function downshiftSelectReducer(state, action) {
           0,
           !1,
           props.items,
-          props.isItemDisabled
+          props.isItemDisabled,
         ),
         isOpen: !0,
       };
@@ -9112,7 +9119,7 @@ function downshiftSelectReducer(state, action) {
           props.items.length - 1,
           !0,
           props.items,
-          props.isItemDisabled
+          props.isItemDisabled,
         ),
         isOpen: !0,
       };
@@ -9123,7 +9130,7 @@ function downshiftSelectReducer(state, action) {
           state.highlightedIndex,
           -10,
           props.items,
-          props.isItemDisabled
+          props.isItemDisabled,
         ),
       };
       break;
@@ -9133,7 +9140,7 @@ function downshiftSelectReducer(state, action) {
           state.highlightedIndex,
           10,
           props.items,
-          props.isItemDisabled
+          props.isItemDisabled,
         ),
       };
       break;
@@ -9148,7 +9155,7 @@ function downshiftSelectReducer(state, action) {
             ? void 0
             : _props$items.length) && {
             selectedItem: props.items[state.highlightedIndex],
-          }
+          },
       );
       break;
     case FunctionSelectItem$1:
@@ -9185,7 +9192,7 @@ function useSelect(userProps) {
       downshiftSelectReducer,
       props,
       getInitialState$2,
-      isDropdownsStateEqual
+      isDropdownsStateEqual,
     ),
     state = _useControlledReducer[0],
     dispatch = _useControlledReducer[1],
@@ -9203,13 +9210,13 @@ function useSelect(userProps) {
       function (index) {
         return itemRefs.current[elementIds.getItemId(index)];
       },
-      [elementIds]
+      [elementIds],
     );
   useA11yMessageStatus(
     getA11yStatusMessage2,
     state,
     [isOpen, highlightedIndex, selectedItem, inputValue],
-    environment
+    environment,
   );
   var shouldScrollRef = useScrollIntoView({
     menuElement: menuRef.current,
@@ -9233,7 +9240,7 @@ function useSelect(userProps) {
       function () {
         inputValue && clearTimeoutRef.current(dispatch);
       },
-      [dispatch, inputValue]
+      [dispatch, inputValue],
     ),
     useControlPropsValidator({ props, state }),
     (0, import_react20.useEffect)(function () {
@@ -9247,18 +9254,18 @@ function useSelect(userProps) {
         function () {
           latest.current.state.isOpen && dispatch({ type: ToggleButtonBlur });
         },
-        [dispatch, latest]
-      )
+        [dispatch, latest],
+      ),
     ),
     setGetterPropCallInfo = useGetterPropsCalledChecker(
       'getMenuProps',
-      'getToggleButtonProps'
+      'getToggleButtonProps',
     );
   (0, import_react20.useEffect)(
     function () {
       isOpen || (itemRefs.current = {});
     },
-    [isOpen]
+    [isOpen],
   );
   var toggleButtonKeyDownHandlers = (0, import_react20.useMemo)(
       function () {
@@ -9318,25 +9325,25 @@ function useSelect(userProps) {
           },
         };
       },
-      [dispatch, latest]
+      [dispatch, latest],
     ),
     toggleMenu = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionToggleMenu$1 });
       },
-      [dispatch]
+      [dispatch],
     ),
     closeMenu = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionCloseMenu$1 });
       },
-      [dispatch]
+      [dispatch],
     ),
     openMenu = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionOpenMenu$1 });
       },
-      [dispatch]
+      [dispatch],
     ),
     setHighlightedIndex = (0, import_react20.useCallback)(
       function (newHighlightedIndex) {
@@ -9345,25 +9352,25 @@ function useSelect(userProps) {
           highlightedIndex: newHighlightedIndex,
         });
       },
-      [dispatch]
+      [dispatch],
     ),
     selectItem = (0, import_react20.useCallback)(
       function (newSelectedItem) {
         dispatch({ type: FunctionSelectItem$1, selectedItem: newSelectedItem });
       },
-      [dispatch]
+      [dispatch],
     ),
     reset = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionReset$2 });
       },
-      [dispatch]
+      [dispatch],
     ),
     setInputValue = (0, import_react20.useCallback)(
       function (newInputValue) {
         dispatch({ type: FunctionSetInputValue$1, inputValue: newInputValue });
       },
-      [dispatch]
+      [dispatch],
     ),
     getLabelProps = (0, import_react20.useCallback)(
       function (_temp) {
@@ -9381,10 +9388,10 @@ function useSelect(userProps) {
             htmlFor: elementIds.toggleButtonId,
             onClick: callAllEventHandlers(onClick, labelHandleClick),
           },
-          labelProps
+          labelProps,
         );
       },
-      [elementIds]
+      [elementIds],
     ),
     getMenuProps = (0, import_react20.useCallback)(
       function (_temp2, _temp3) {
@@ -9407,7 +9414,7 @@ function useSelect(userProps) {
             'getMenuProps',
             suppressRefError,
             refKey,
-            menuRef
+            menuRef,
           ),
           _extends(
             ((_extends2 = {}),
@@ -9420,14 +9427,14 @@ function useSelect(userProps) {
               rest && rest['aria-label'] ? void 0 : '' + elementIds.labelId),
             (_extends2.onMouseLeave = callAllEventHandlers(
               onMouseLeave,
-              menuHandleMouseLeave
+              menuHandleMouseLeave,
             )),
             _extends2),
-            rest
+            rest,
           )
         );
       },
-      [dispatch, setGetterPropCallInfo, elementIds]
+      [dispatch, setGetterPropCallInfo, elementIds],
     ),
     getToggleButtonProps = (0, import_react20.useCallback)(
       function (_temp4, _temp5) {
@@ -9480,26 +9487,26 @@ function useSelect(userProps) {
             (_extends3.tabIndex = 0),
             (_extends3.onBlur = callAllEventHandlers(
               onBlur,
-              toggleButtonHandleBlur
+              toggleButtonHandleBlur,
             )),
             _extends3),
-            rest
+            rest,
           );
         return (
           rest.disabled ||
             ((toggleProps.onClick = callAllEventHandlers(
               onClick,
-              toggleButtonHandleClick
+              toggleButtonHandleClick,
             )),
             (toggleProps.onKeyDown = callAllEventHandlers(
               onKeyDown,
-              toggleButtonHandleKeyDown
+              toggleButtonHandleKeyDown,
             ))),
           setGetterPropCallInfo(
             'getToggleButtonProps',
             suppressRefError,
             refKey,
-            toggleButtonRef
+            toggleButtonRef,
           ),
           toggleProps
         );
@@ -9511,7 +9518,7 @@ function useSelect(userProps) {
         mouseAndTouchTrackers,
         setGetterPropCallInfo,
         toggleButtonKeyDownHandlers,
-      ]
+      ],
     ),
     getItemProps = (0, import_react20.useCallback)(
       function (_temp6) {
@@ -9530,7 +9537,7 @@ function useSelect(userProps) {
           rest = _objectWithoutPropertiesLoose(_ref6, _excluded4$1);
         disabledProp !== void 0 &&
           console.warn(
-            'Passing "disabled" as an argument to getItemProps is not supported anymore. Please use the isItemDisabled prop from useSelect.'
+            'Passing "disabled" as an argument to getItemProps is not supported anymore. Please use the isItemDisabled prop from useSelect.',
           );
         var _latest$current = latest.current,
           latestState = _latest$current.state,
@@ -9539,7 +9546,7 @@ function useSelect(userProps) {
             itemProp,
             indexProp,
             latestProps.items,
-            'Pass either item or index to getItemProps!'
+            'Pass either item or index to getItemProps!',
           ),
           item = _getItemAndIndex[0],
           index = _getItemAndIndex[1],
@@ -9568,26 +9575,26 @@ function useSelect(userProps) {
             (_extends4.id = elementIds.getItemId(index)),
             (_extends4.role = 'option'),
             _extends4),
-            rest
+            rest,
           );
         return (
           disabled ||
             (itemProps.onClick = callAllEventHandlers(
               onClick,
-              itemHandleClick
+              itemHandleClick,
             )),
           (itemProps.onMouseMove = callAllEventHandlers(
             onMouseMove,
-            itemHandleMouseMove
+            itemHandleMouseMove,
           )),
           (itemProps.onMouseDown = callAllEventHandlers(
             onMouseDown,
-            itemHandleMouseDown
+            itemHandleMouseDown,
           )),
           itemProps
         );
       },
-      [latest, elementIds, mouseAndTouchTrackers, shouldScrollRef, dispatch]
+      [latest, elementIds, mouseAndTouchTrackers, shouldScrollRef, dispatch],
     );
   return {
     getToggleButtonProps,
@@ -9684,14 +9691,14 @@ function useControlledReducer(
   reducer,
   props,
   createInitialState,
-  isStateEqual2
+  isStateEqual2,
 ) {
   var previousSelectedItemRef = (0, import_react20.useRef)(),
     _useEnhancedReducer = useEnhancedReducer(
       reducer,
       props,
       createInitialState,
-      isStateEqual2
+      isStateEqual2,
     ),
     state = _useEnhancedReducer[0],
     dispatch = _useEnhancedReducer[1],
@@ -9716,7 +9723,7 @@ function useControlledReducer(
               : state.selectedItem;
         }
       },
-      [state.selectedItem, props.selectedItem]
+      [state.selectedItem, props.selectedItem],
     ),
     [getState(state, props), dispatch]
   );
@@ -9727,7 +9734,7 @@ validatePropTypes$1 = function (options2, caller) {
     propTypes$1,
     options2,
     'prop',
-    caller.name
+    caller.name,
   );
 };
 var defaultProps$1 = _extends({}, defaultProps$3, {
@@ -9758,7 +9765,7 @@ function downshiftUseComboboxReducer(state, action) {
               1,
               props.items,
               props.isItemDisabled,
-              !0
+              !0,
             ),
           })
         : (changes = {
@@ -9779,7 +9786,7 @@ function downshiftUseComboboxReducer(state, action) {
                 -1,
                 props.items,
                 props.isItemDisabled,
-                !0
+                !0,
               ),
             })
         : (changes = {
@@ -9793,7 +9800,7 @@ function downshiftUseComboboxReducer(state, action) {
     case InputKeyDownEscape:
       changes = _extends(
         { isOpen: !1, highlightedIndex: -1 },
-        !state.isOpen && { selectedItem: null, inputValue: '' }
+        !state.isOpen && { selectedItem: null, inputValue: '' },
       );
       break;
     case InputKeyDownPageUp:
@@ -9803,7 +9810,7 @@ function downshiftUseComboboxReducer(state, action) {
           -10,
           props.items,
           props.isItemDisabled,
-          !0
+          !0,
         ),
       };
       break;
@@ -9814,7 +9821,7 @@ function downshiftUseComboboxReducer(state, action) {
           10,
           props.items,
           props.isItemDisabled,
-          !0
+          !0,
         ),
       };
       break;
@@ -9824,7 +9831,7 @@ function downshiftUseComboboxReducer(state, action) {
           0,
           !1,
           props.items,
-          props.isItemDisabled
+          props.isItemDisabled,
         ),
       };
       break;
@@ -9834,7 +9841,7 @@ function downshiftUseComboboxReducer(state, action) {
           props.items.length - 1,
           !0,
           props.items,
-          props.isItemDisabled
+          props.isItemDisabled,
         ),
       };
       break;
@@ -9848,7 +9855,7 @@ function downshiftUseComboboxReducer(state, action) {
           action.selectItem && {
             selectedItem: props.items[state.highlightedIndex],
             inputValue: props.itemToString(props.items[state.highlightedIndex]),
-          }
+          },
       );
       break;
     case InputChange:
@@ -9916,7 +9923,7 @@ function useCombobox(userProps) {
       downshiftUseComboboxReducer,
       props,
       getInitialState$1,
-      isDropdownsStateEqual
+      isDropdownsStateEqual,
     ),
     state = _useControlledReducer[0],
     dispatch = _useControlledReducer[1],
@@ -9936,13 +9943,13 @@ function useCombobox(userProps) {
       function (index) {
         return itemRefs.current[elementIds.getItemId(index)];
       },
-      [elementIds]
+      [elementIds],
     );
   useA11yMessageStatus(
     getA11yStatusMessage2,
     state,
     [isOpen, highlightedIndex, selectedItem, inputValue],
-    environment
+    environment,
   );
   var shouldScrollRef = useScrollIntoView({
     menuElement: menuRef.current,
@@ -9968,18 +9975,18 @@ function useCombobox(userProps) {
           latest.current.state.isOpen &&
             dispatch({ type: InputBlur, selectItem: !1 });
         },
-        [dispatch, latest]
-      )
+        [dispatch, latest],
+      ),
     ),
     setGetterPropCallInfo = useGetterPropsCalledChecker(
       'getInputProps',
-      'getMenuProps'
+      'getMenuProps',
     );
   (0, import_react20.useEffect)(
     function () {
       isOpen || (itemRefs.current = {});
     },
-    [isOpen]
+    [isOpen],
   ),
     (0, import_react20.useEffect)(
       function () {
@@ -9994,7 +10001,7 @@ function useCombobox(userProps) {
           (environment.document.activeElement !== inputRef.current &&
             inputRef.current.focus());
       },
-      [isOpen, environment]
+      [isOpen, environment],
     );
   var inputKeyDownHandlers = (0, import_react20.useMemo)(
       function () {
@@ -10040,16 +10047,16 @@ function useCombobox(userProps) {
           },
         };
       },
-      [dispatch, latest]
+      [dispatch, latest],
     ),
     getLabelProps = (0, import_react20.useCallback)(
       function (labelProps) {
         return _extends(
           { id: elementIds.labelId, htmlFor: elementIds.inputId },
-          labelProps
+          labelProps,
         );
       },
-      [elementIds]
+      [elementIds],
     ),
     getMenuProps = (0, import_react20.useCallback)(
       function (_temp, _temp2) {
@@ -10069,7 +10076,7 @@ function useCombobox(userProps) {
             'getMenuProps',
             suppressRefError,
             refKey,
-            menuRef
+            menuRef,
           ),
           _extends(
             ((_extends2 = {}),
@@ -10084,14 +10091,14 @@ function useCombobox(userProps) {
               onMouseLeave,
               function () {
                 dispatch({ type: MenuMouseLeave });
-              }
+              },
             )),
             _extends2),
-            rest
+            rest,
           )
         );
       },
-      [dispatch, setGetterPropCallInfo, elementIds]
+      [dispatch, setGetterPropCallInfo, elementIds],
     ),
     getItemProps = (0, import_react20.useCallback)(
       function (_temp3) {
@@ -10111,7 +10118,7 @@ function useCombobox(userProps) {
           rest = _objectWithoutPropertiesLoose(_ref3, _excluded2$1);
         disabledProp !== void 0 &&
           console.warn(
-            'Passing "disabled" as an argument to getItemProps is not supported anymore. Please use the isItemDisabled prop from useCombobox.'
+            'Passing "disabled" as an argument to getItemProps is not supported anymore. Please use the isItemDisabled prop from useCombobox.',
           );
         var _latest$current = latest.current,
           latestProps = _latest$current.props,
@@ -10120,7 +10127,7 @@ function useCombobox(userProps) {
             itemProp,
             indexProp,
             latestProps.items,
-            'Pass either item or index to getItemProps!'
+            'Pass either item or index to getItemProps!',
           ),
           item = _getItemAndIndex[0],
           index = _getItemAndIndex[1],
@@ -10155,17 +10162,17 @@ function useCombobox(userProps) {
             ((_ref4 = {}),
             (_ref4[onSelectKey] = callAllEventHandlers(
               customClickHandler,
-              itemHandleClick
+              itemHandleClick,
             )),
             _ref4),
           {
             onMouseMove: callAllEventHandlers(onMouseMove, itemHandleMouseMove),
             onMouseDown: callAllEventHandlers(onMouseDown, itemHandleMouseDown),
           },
-          rest
+          rest,
         );
       },
-      [dispatch, elementIds, latest, mouseAndTouchTrackers, shouldScrollRef]
+      [dispatch, elementIds, latest, mouseAndTouchTrackers, shouldScrollRef],
     ),
     getToggleButtonProps = (0, import_react20.useCallback)(
       function (_temp4) {
@@ -10196,12 +10203,12 @@ function useCombobox(userProps) {
               {},
               {
                 onClick: callAllEventHandlers(onClick, toggleButtonHandleClick),
-              }
+              },
             ),
-          rest
+          rest,
         );
       },
-      [dispatch, latest, elementIds]
+      [dispatch, latest, elementIds],
     ),
     getInputProps = (0, import_react20.useCallback)(
       function (_temp5, _temp6) {
@@ -10225,7 +10232,7 @@ function useCombobox(userProps) {
           'getInputProps',
           suppressRefError,
           refKey,
-          inputRef
+          inputRef,
         );
         var latestState = latest.current.state,
           inputHandleKeyDown = function (event) {
@@ -10263,19 +10270,19 @@ function useCombobox(userProps) {
             (_eventHandlers[onChangeKey] = callAllEventHandlers(
               onChange,
               onInput,
-              inputHandleChange
+              inputHandleChange,
             )),
             (_eventHandlers.onKeyDown = callAllEventHandlers(
               onKeyDown,
-              inputHandleKeyDown
+              inputHandleKeyDown,
             )),
             (_eventHandlers.onBlur = callAllEventHandlers(
               onBlur,
-              inputHandleBlur
+              inputHandleBlur,
             )),
             (_eventHandlers.onClick = callAllEventHandlers(
               onClick,
-              inputHandleClick
+              inputHandleClick,
             )),
             _eventHandlers);
         }
@@ -10299,7 +10306,7 @@ function useCombobox(userProps) {
           (_extends5.value = latestState.inputValue),
           _extends5),
           eventHandlers,
-          rest
+          rest,
         );
       },
       [
@@ -10310,25 +10317,25 @@ function useCombobox(userProps) {
         latest,
         mouseAndTouchTrackers,
         setGetterPropCallInfo,
-      ]
+      ],
     ),
     toggleMenu = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionToggleMenu });
       },
-      [dispatch]
+      [dispatch],
     ),
     closeMenu = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionCloseMenu });
       },
-      [dispatch]
+      [dispatch],
     ),
     openMenu = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionOpenMenu });
       },
-      [dispatch]
+      [dispatch],
     ),
     setHighlightedIndex = (0, import_react20.useCallback)(
       function (newHighlightedIndex) {
@@ -10337,25 +10344,25 @@ function useCombobox(userProps) {
           highlightedIndex: newHighlightedIndex,
         });
       },
-      [dispatch]
+      [dispatch],
     ),
     selectItem = (0, import_react20.useCallback)(
       function (newSelectedItem) {
         dispatch({ type: FunctionSelectItem, selectedItem: newSelectedItem });
       },
-      [dispatch]
+      [dispatch],
     ),
     setInputValue = (0, import_react20.useCallback)(
       function (newInputValue) {
         dispatch({ type: FunctionSetInputValue, inputValue: newInputValue });
       },
-      [dispatch]
+      [dispatch],
     ),
     reset = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionReset$1 });
       },
-      [dispatch]
+      [dispatch],
     );
   return {
     getItemProps,
@@ -10433,7 +10440,7 @@ validatePropTypes = function (options2, caller) {
     propTypes,
     options2,
     'prop',
-    caller.name
+    caller.name,
   );
 };
 var SelectedItemClick = '__selected_item_click__',
@@ -10501,10 +10508,10 @@ function downshiftMultipleSelectionReducer(state, action) {
           {
             selectedItems: [].concat(
               selectedItems.slice(0, activeIndex),
-              selectedItems.slice(activeIndex + 1)
+              selectedItems.slice(activeIndex + 1),
             ),
           },
-          { activeIndex: newActiveIndex }
+          { activeIndex: newActiveIndex },
         ));
       break;
     }
@@ -10535,7 +10542,7 @@ function downshiftMultipleSelectionReducer(state, action) {
         (changes = {
           selectedItems: [].concat(
             selectedItems.slice(0, selectedItemIndex),
-            selectedItems.slice(selectedItemIndex + 1)
+            selectedItems.slice(selectedItemIndex + 1),
           ),
           activeIndex: _newActiveIndex,
         });
@@ -10584,7 +10591,7 @@ function useMultipleSelection(userProps) {
       downshiftMultipleSelectionReducer,
       props,
       getInitialState,
-      isStateEqual
+      isStateEqual,
     ),
     state = _useControlledReducer[0],
     dispatch = _useControlledReducer[1],
@@ -10599,7 +10606,7 @@ function useMultipleSelection(userProps) {
     getA11yStatusMessage2,
     state,
     [activeIndex, selectedItems],
-    environment
+    environment,
   ),
     (0, import_react20.useEffect)(
       function () {
@@ -10609,7 +10616,7 @@ function useMultipleSelection(userProps) {
             : selectedItemRefs.current[activeIndex] &&
               selectedItemRefs.current[activeIndex].focus());
       },
-      [activeIndex]
+      [activeIndex],
     ),
     useControlPropsValidator({ props, state });
   var setGetterPropCallInfo = useGetterPropsCalledChecker('getDropdownProps'),
@@ -10633,7 +10640,7 @@ function useMultipleSelection(userProps) {
           _ref
         );
       },
-      [dispatch, keyNavigationNext, keyNavigationPrevious]
+      [dispatch, keyNavigationNext, keyNavigationPrevious],
     ),
     dropdownKeyDownHandlers = (0, import_react20.useMemo)(
       function () {
@@ -10651,7 +10658,7 @@ function useMultipleSelection(userProps) {
           _ref2
         );
       },
-      [dispatch, keyNavigationPrevious]
+      [dispatch, keyNavigationPrevious],
     ),
     getSelectedItemProps = (0, import_react20.useCallback)(
       function (_temp) {
@@ -10670,7 +10677,7 @@ function useMultipleSelection(userProps) {
             selectedItemProp,
             indexProp,
             latestState.selectedItems,
-            'Pass either item or index to getSelectedItemProps!'
+            'Pass either item or index to getSelectedItemProps!',
           ),
           index = _getItemAndIndex[1],
           isFocusable = index > -1 && index === latestState.activeIndex,
@@ -10691,17 +10698,17 @@ function useMultipleSelection(userProps) {
           (_extends2.tabIndex = isFocusable ? 0 : -1),
           (_extends2.onClick = callAllEventHandlers(
             onClick,
-            selectedItemHandleClick
+            selectedItemHandleClick,
           )),
           (_extends2.onKeyDown = callAllEventHandlers(
             onKeyDown,
-            selectedItemHandleKeyDown
+            selectedItemHandleKeyDown,
           )),
           _extends2),
-          rest
+          rest,
         );
       },
-      [dispatch, latest, selectedItemKeyDownHandlers]
+      [dispatch, latest, selectedItemKeyDownHandlers],
     ),
     getDropdownProps = (0, import_react20.useCallback)(
       function (_temp2, _temp3) {
@@ -10724,7 +10731,7 @@ function useMultipleSelection(userProps) {
           'getDropdownProps',
           suppressRefError,
           refKey,
-          dropdownRef
+          dropdownRef,
         );
         var dropdownHandleKeyDown = function (event) {
             var key = normalizeArrowKey(event);
@@ -10745,22 +10752,22 @@ function useMultipleSelection(userProps) {
             onKeyDown: callAllEventHandlers(onKeyDown, dropdownHandleKeyDown),
             onClick: callAllEventHandlers(onClick, dropdownHandleClick),
           },
-          rest
+          rest,
         );
       },
-      [dispatch, dropdownKeyDownHandlers, setGetterPropCallInfo]
+      [dispatch, dropdownKeyDownHandlers, setGetterPropCallInfo],
     ),
     addSelectedItem = (0, import_react20.useCallback)(
       function (selectedItem) {
         dispatch({ type: FunctionAddSelectedItem, selectedItem });
       },
-      [dispatch]
+      [dispatch],
     ),
     removeSelectedItem = (0, import_react20.useCallback)(
       function (selectedItem) {
         dispatch({ type: FunctionRemoveSelectedItem, selectedItem });
       },
-      [dispatch]
+      [dispatch],
     ),
     setSelectedItems = (0, import_react20.useCallback)(
       function (newSelectedItems) {
@@ -10769,19 +10776,19 @@ function useMultipleSelection(userProps) {
           selectedItems: newSelectedItems,
         });
       },
-      [dispatch]
+      [dispatch],
     ),
     setActiveIndex = (0, import_react20.useCallback)(
       function (newActiveIndex) {
         dispatch({ type: FunctionSetActiveIndex, activeIndex: newActiveIndex });
       },
-      [dispatch]
+      [dispatch],
     ),
     reset = (0, import_react20.useCallback)(
       function () {
         dispatch({ type: FunctionReset });
       },
-      [dispatch]
+      [dispatch],
     );
   return {
     getSelectedItemProps,
@@ -10876,7 +10883,7 @@ function setArgType(type, obj, objKey) {
               Object.entries(typeVal.value ?? {}).forEach(
                 ([typeValKey, typeValVal]) => {
                   setArgType(typeValVal, obj[objKey], typeValKey);
-                }
+                },
               );
           }));
         break;
@@ -10981,7 +10988,7 @@ var FileListWrapper = newStyled('div')(({ theme }) => ({
             : theme.color.mediumlight,
         '> svg': { display: 'flex' },
       },
-    })
+    }),
   ),
   FileListUl = newStyled('ul')({
     margin: 0,
@@ -11123,7 +11130,7 @@ var FileListItemContentWrapperSkeleton = newStyled('div')(({ theme }) => ({
             null,
             import_react22.default.createElement(
               FileListIconWrapperSkeleton,
-              null
+              null,
             ),
             import_react22.default.createElement(
               FileListItemContentSkeleton,
@@ -11133,11 +11140,11 @@ var FileListItemContentWrapperSkeleton = newStyled('div')(({ theme }) => ({
               }),
               import_react22.default.createElement(FileListItemSkeleton, {
                 style: { width: '300px' },
-              })
-            )
-          )
-        )
-      )
+              }),
+            ),
+          ),
+        ),
+      ),
     );
 var React18 = __toESM(require_react(), 1),
   import_react_dom = __toESM(require_react_dom(), 1);
@@ -11182,7 +11189,7 @@ function memo(getDeps, fn, opts) {
             font-size: .6rem;
             font-weight: bold;
             color: hsl(${Math.max(0, Math.min(120 - 120 * resultFpsPercentage, 120))}deg 100% 31%);`,
-        opts?.key
+        opts?.key,
       );
     }
     return (_d = opts?.onChange) == null || _d.call(opts, result), result;
@@ -11248,13 +11255,13 @@ var measureElement = (element, entry, instance) => {
     let box = entry.borderBoxSize[0];
     if (box)
       return Math.round(
-        box[instance.options.horizontal ? 'inlineSize' : 'blockSize']
+        box[instance.options.horizontal ? 'inlineSize' : 'blockSize'],
       );
   }
   return Math.round(
     element.getBoundingClientRect()[
       instance.options.horizontal ? 'width' : 'height'
-    ]
+    ],
   );
 };
 var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
@@ -11361,7 +11368,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
               this.range ? this.range.startIndex : null,
               this.range ? this.range.endIndex : null,
             ],
-          }
+          },
         )),
         (this.cleanup = () => {
           this.unsubs.filter(Boolean).forEach((d2) => d2()),
@@ -11386,7 +11393,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
             this.unsubs.push(
               this.options.observeElementRect(this, (rect) => {
                 (this.scrollRect = rect), this.maybeNotify();
-              })
+              }),
             ),
             this.unsubs.push(
               this.options.observeElementOffset(this, (offset) => {
@@ -11406,7 +11413,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
                         (this.scrollDirection = null),
                         this.maybeNotify();
                     }, this.options.scrollingDelay)));
-              })
+              }),
             ));
         }),
         (this.getSize = () =>
@@ -11422,7 +11429,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
             (this.pendingMeasuredCacheIndexes = []),
             { count, paddingStart, scrollMargin, getItemKey }
           ),
-          { key: !1 }
+          { key: !1 },
         )),
         (this.getFurthestMeasurement = (measurements, index) => {
           let furthestMeasurementsFound = new Map(),
@@ -11431,7 +11438,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
             let measurement = measurements[m2];
             if (furthestMeasurementsFound.has(measurement.lane)) continue;
             let previousFurthestMeasurement = furthestMeasurements.get(
-              measurement.lane
+              measurement.lane,
             );
             if (
               (previousFurthestMeasurement == null ||
@@ -11445,7 +11452,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
           }
           return furthestMeasurements.size === this.options.lanes
             ? Array.from(furthestMeasurements.values()).sort((a2, b2) =>
-                a2.end === b2.end ? a2.index - b2.index : a2.end - b2.end
+                a2.end === b2.end ? a2.index - b2.index : a2.end - b2.end,
               )[0]
             : void 0;
         }),
@@ -11453,7 +11460,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
           () => [this.memoOptions(), this.itemSizeCache],
           (
             { count, paddingStart, scrollMargin, getItemKey },
-            itemSizeCache
+            itemSizeCache,
           ) => {
             let min =
               this.pendingMeasuredCacheIndexes.length > 0
@@ -11483,7 +11490,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
             }
             return (this.measurementsCache = measurements), measurements;
           },
-          { key: 'getMeasurements', debug: () => this.options.debug }
+          { key: 'getMeasurements', debug: () => this.options.debug },
         )),
         (this.calculateRange = memo(
           () => [this.getMeasurements(), this.getSize(), this.scrollOffset],
@@ -11492,7 +11499,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
               measurements.length > 0 && outerSize > 0
                 ? calculateRange({ measurements, outerSize, scrollOffset })
                 : null),
-          { key: 'calculateRange', debug: () => this.options.debug }
+          { key: 'calculateRange', debug: () => this.options.debug },
         )),
         (this.getIndexes = memo(
           () => [
@@ -11503,7 +11510,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
           ],
           (rangeExtractor, range, overscan, count) =>
             range === null ? [] : rangeExtractor({ ...range, overscan, count }),
-          { key: 'getIndexes', debug: () => this.options.debug }
+          { key: 'getIndexes', debug: () => this.options.debug },
         )),
         (this.indexFromElement = (node) => {
           let attributeName = this.options.indexAttribute,
@@ -11511,7 +11518,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
           return indexStr
             ? parseInt(indexStr, 10)
             : (console.warn(
-                `Missing attribute name '${attributeName}={index}' on measured element.`
+                `Missing attribute name '${attributeName}={index}' on measured element.`,
               ),
               -1);
         }),
@@ -11541,7 +11548,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
               ? this.shouldAdjustScrollPositionOnItemSizeChange(
                   item,
                   delta,
-                  this
+                  this,
                 )
               : item.start < this.scrollOffset + this.scrollAdjustments) &&
               (this.options.debug && console.info('correction', delta),
@@ -11551,7 +11558,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
               })),
             this.pendingMeasuredCacheIndexes.push(item.index),
             (this.itemSizeCache = new Map(
-              this.itemSizeCache.set(item.key, size)
+              this.itemSizeCache.set(item.key, size),
             )),
             this.notify(!1));
         }),
@@ -11569,7 +11576,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
             }
             return virtualItems;
           },
-          { key: 'getIndexes', debug: () => this.options.debug }
+          { key: 'getIndexes', debug: () => this.options.debug },
         )),
         (this.getVirtualItemForOffset = (offset) => {
           let measurements = this.getMeasurements();
@@ -11579,9 +11586,9 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
                 0,
                 measurements.length - 1,
                 (index) => notUndefined(measurements[index]).start,
-                offset
+                offset,
               )
-            ]
+            ],
           );
         }),
         (this.getOffsetForAlignment = (toOffset, align) => {
@@ -11637,13 +11644,13 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
         }),
         (this.scrollToOffset = (
           toOffset,
-          { align = 'start', behavior } = {}
+          { align = 'start', behavior } = {},
         ) => {
           this.cancelScrollToIndex(),
             behavior === 'smooth' &&
               this.isDynamicMode() &&
               console.warn(
-                'The `smooth` scroll behavior is not fully supported with dynamic size.'
+                'The `smooth` scroll behavior is not fully supported with dynamic size.',
               ),
             this._scrollToOffset(this.getOffsetForAlignment(toOffset, align), {
               adjustments: void 0,
@@ -11652,14 +11659,14 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
         }),
         (this.scrollToIndex = (
           index,
-          { align: initialAlign = 'auto', behavior } = {}
+          { align: initialAlign = 'auto', behavior } = {},
         ) => {
           (index = Math.max(0, Math.min(index, this.options.count - 1))),
             this.cancelScrollToIndex(),
             behavior === 'smooth' &&
               this.isDynamicMode() &&
               console.warn(
-                'The `smooth` scroll behavior is not fully supported with dynamic size.'
+                'The `smooth` scroll behavior is not fully supported with dynamic size.',
               );
           let [toOffset, align] = this.getOffsetForIndex(index, initialAlign);
           this._scrollToOffset(toOffset, { adjustments: void 0, behavior }),
@@ -11681,7 +11688,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
             behavior === 'smooth' &&
               this.isDynamicMode() &&
               console.warn(
-                'The `smooth` scroll behavior is not fully supported with dynamic size.'
+                'The `smooth` scroll behavior is not fully supported with dynamic size.',
               ),
             this._scrollToOffset(this.scrollOffset + delta, {
               adjustments: void 0,
@@ -11703,7 +11710,7 @@ var elementScroll = (offset, { adjustments = 0, behavior }, instance) => {
                     : Math.max(
                         ...measurements
                           .slice(-this.options.lanes)
-                          .map((m2) => m2.end)
+                          .map((m2) => m2.end),
                       )),
             end - this.options.scrollMargin + this.options.paddingEnd
           );
@@ -11743,7 +11750,7 @@ function calculateRange({ measurements, outerSize, scrollOffset }) {
       0,
       count,
       (index) => measurements[index].start,
-      scrollOffset
+      scrollOffset,
     ),
     endIndex = startIndex;
   for (
@@ -11793,7 +11800,7 @@ var import_react23 = __toESM(require_react()),
           activeElement = document.activeElement,
           rowIndex = parseInt(
             activeElement.getAttribute('data-index') || '-1',
-            10
+            10,
           ),
           isActiveElementInput = activeElement.tagName === 'INPUT',
           getFirstElement = () => document.querySelector('[data-index="0"]'),
@@ -11897,7 +11904,7 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
                   ? -1
                   : 0;
           }),
-        [searchResults]
+        [searchResults],
       ),
       count = searchResults?.length || 0,
       rowVirtualizer = useVirtualizer({
@@ -11913,7 +11920,7 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
         ({ virtualItem, searchResult, itemId }) => {
           searchResult?.exportedComponents?.length > 1
             ? setSelectedItem((sItem) =>
-                sItem === virtualItem.index ? null : virtualItem.index
+                sItem === virtualItem.index ? null : virtualItem.index,
               )
             : searchResult?.exportedComponents?.length === 1 &&
               onNewStory({
@@ -11925,7 +11932,7 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
                 componentExportCount: 1,
               });
         },
-        [onNewStory]
+        [onNewStory],
       ),
       handleFileItemComponentSelection = (0, import_react24.useCallback)(
         ({ searchResult, component, id }) => {
@@ -11937,7 +11944,7 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
             componentExportCount: searchResult.exportedComponents.length,
           });
         },
-        [onNewStory]
+        [onNewStory],
       ),
       ListItem = (0, import_react24.useCallback)(
         ({ virtualItem, selected, searchResult }) => {
@@ -11963,7 +11970,7 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
               import_react24.default.createElement(
                 FileListIconWrapper,
                 { error: itemError },
-                import_react24.default.createElement(ComponentIcon, null)
+                import_react24.default.createElement(ComponentIcon, null),
               ),
               import_react24.default.createElement(
                 FileListItemContent,
@@ -11971,23 +11978,23 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
                 import_react24.default.createElement(
                   FileListItemLabel,
                   { error: itemError },
-                  searchResult.filepath.split('/').at(-1)
+                  searchResult.filepath.split('/').at(-1),
                 ),
                 import_react24.default.createElement(
                   FileListItemPath,
                   null,
-                  searchResult.filepath
-                )
+                  searchResult.filepath,
+                ),
               ),
               itemSelected
                 ? import_react24.default.createElement(
                     ChevronDownIconStyled,
-                    null
+                    null,
                   )
                 : import_react24.default.createElement(
                     ChevronRightIconStyled,
-                    null
-                  )
+                    null,
+                  ),
             ),
             searchResult?.exportedComponents?.length > 1 &&
               itemSelected &&
@@ -12044,7 +12051,7 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
                         null,
                         import_react24.default.createElement(
                           ComponentIcon,
-                          null
+                          null,
                         ),
                         component.default
                           ? import_react24.default.createElement(
@@ -12057,32 +12064,32 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
                                   .split('/')
                                   .at(-1)
                                   ?.split('.')
-                                  ?.at(0)
+                                  ?.at(0),
                               ),
                               import_react24.default.createElement(
                                 DefaultExport,
                                 null,
-                                'Default export'
-                              )
+                                'Default export',
+                              ),
                             )
-                          : component.name
+                          : component.name,
                       ),
                       import_react24.default.createElement(
                         ChevronRightIconStyled,
-                        null
-                      )
+                        null,
+                      ),
                     );
-                  }
-                )
-              )
+                  },
+                ),
+              ),
           );
         },
-        [handleFileItemComponentSelection, errorItemId]
+        [handleFileItemComponentSelection, errorItemId],
       );
     return isLoading && (searchResults === null || searchResults?.length === 0)
       ? import_react24.default.createElement(
           FileSearchListLoadingSkeleton,
-          null
+          null,
         )
       : searchResults?.length === 0
         ? import_react24.default.createElement(
@@ -12091,13 +12098,13 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
             import_react24.default.createElement(
               'p',
               null,
-              'We could not find any file with that name'
+              'We could not find any file with that name',
             ),
             import_react24.default.createElement(
               NoResultsDescription,
               null,
-              'You may want to try using different keywords, check for typos, and adjust your filters'
-            )
+              'You may want to try using different keywords, check for typos, and adjust your filters',
+            ),
           )
         : sortedSearchResults?.length > 0
           ? import_react24.default.createElement(
@@ -12159,14 +12166,14 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
                                   note: noExports
                                     ? "We can't evaluate exports for this file. You can't create a story for it automatically"
                                     : null,
-                                }
+                                },
                               ),
                             },
                             import_react24.default.createElement(ListItem, {
                               searchResult,
                               selected: selectedItem,
                               virtualItem,
-                            })
+                            }),
                           )
                         : import_react24.default.createElement(ListItem, {
                             ...itemProps,
@@ -12174,11 +12181,11 @@ var ChevronRightIconStyled = newStyled(ChevronRightIcon)(({ theme }) => ({
                             searchResult,
                             selected: selectedItem,
                             virtualItem,
-                          })
+                          }),
                     );
-                  })
-                )
-              )
+                  }),
+                ),
+              ),
             )
           : null;
   });
@@ -12302,11 +12309,11 @@ var MODAL_HEIGHT = 418,
   }) => {
     let [modalContentRef, modalContentDimensions] = useMeasure(),
       [modalMaxHeight, setModalMaxHeight] = (0, import_react26.useState)(
-        modalContentDimensions.height
+        modalContentDimensions.height,
       ),
       [, startTransition] = (0, import_react26.useTransition)(),
       [searchInputValue, setSearchInputValue] = (0, import_react26.useState)(
-        fileSearchQuery
+        fileSearchQuery,
       );
     return (
       (0, import_react26.useEffect)(() => {
@@ -12345,13 +12352,13 @@ var MODAL_HEIGHT = 418,
               import_react26.default.createElement(
                 Modal.Title,
                 null,
-                'Add a new story'
+                'Add a new story',
               ),
               import_react26.default.createElement(
                 Modal.Description,
                 null,
-                'We will create a new story for your component'
-              )
+                'We will create a new story for your component',
+              ),
             ),
             import_react26.default.createElement(
               SearchField,
@@ -12359,7 +12366,7 @@ var MODAL_HEIGHT = 418,
               import_react26.default.createElement(
                 SearchIconWrapper,
                 null,
-                import_react26.default.createElement(SearchIcon, null)
+                import_react26.default.createElement(SearchIcon, null),
               ),
               import_react26.default.createElement(ModalInput, {
                 placeholder: './components/**/*.tsx',
@@ -12379,16 +12386,16 @@ var MODAL_HEIGHT = 418,
                 import_react26.default.createElement(
                   LoadingIcon,
                   null,
-                  import_react26.default.createElement(SyncIcon, null)
-                )
+                  import_react26.default.createElement(SyncIcon, null),
+                ),
             ),
             import_react26.default.createElement(FileSearchList, {
               errorItemId: error?.selectedItemId,
               isLoading,
               searchResults,
               onNewStory: onCreateNewStory,
-            })
-          )
+            }),
+          ),
         ),
         error &&
           fileSearchQuery !== '' &&
@@ -12400,21 +12407,21 @@ var MODAL_HEIGHT = 418,
               onClick: () => {
                 setError(null);
               },
-            })
-          )
+            }),
+          ),
       )
     );
   };
 var stringifyArgs = (args) =>
     JSON.stringify(args, (_2, value) =>
-      typeof value == 'function' ? '__sb_empty_function_arg__' : value
+      typeof value == 'function' ? '__sb_empty_function_arg__' : value,
     ),
   CreateNewStoryFileModal = ({ open, onOpenChange }) => {
     let [isLoading, setLoading] = (0, import_react27.useState)(!1),
       [fileSearchQuery, setFileSearchQuery] = (0, import_react27.useState)(''),
       fileSearchQueryDebounced = useDebounce(fileSearchQuery, 600),
       fileSearchQueryDeferred = (0, import_react27.useDeferredValue)(
-        fileSearchQueryDebounced
+        fileSearchQueryDebounced,
       ),
       emittedValue = (0, import_react27.useRef)(null),
       [error, setError] = (0, import_react27.useState)(null),
@@ -12433,7 +12440,7 @@ var stringifyArgs = (args) =>
           }),
             onOpenChange(!1);
         },
-        [api, onOpenChange]
+        [api, onOpenChange],
       ),
       handleStoryAlreadyExists = (0, import_react27.useCallback)(() => {
         api.addNotification({
@@ -12493,7 +12500,7 @@ var stringifyArgs = (args) =>
                   componentFilePath,
                   componentIsDefaultExport,
                   componentExportCount,
-                }
+                },
               );
             setError(null);
             let storyId = createNewStoryResult.storyId;
@@ -12504,7 +12511,7 @@ var stringifyArgs = (args) =>
                     channel,
                     ARGTYPES_INFO_REQUEST,
                     ARGTYPES_INFO_RESPONSE,
-                    { storyId }
+                    { storyId },
                   )
                 ).argTypes,
                 requiredArgs = extractSeededRequiredArgs(argTypes);
@@ -12516,7 +12523,7 @@ var stringifyArgs = (args) =>
                   args: stringifyArgs(requiredArgs),
                   importPath: createNewStoryResult.storyFilePath,
                   csfId: storyId,
-                }
+                },
               );
             } catch {}
             handleSuccessfullyCreatedStory(componentExportName),
@@ -12539,7 +12546,7 @@ var stringifyArgs = (args) =>
           handleSuccessfullyCreatedStory,
           handleFileSearch,
           handleStoryAlreadyExists,
-        ]
+        ],
       );
     return (
       (0, import_react27.useEffect)(() => {
@@ -12547,7 +12554,7 @@ var stringifyArgs = (args) =>
       }, [fileSearchQueryDeferred]),
       (0, import_react27.useEffect)(
         () => handleFileSearch(),
-        [handleFileSearch]
+        [handleFileSearch],
       ),
       import_react27.default.createElement(FileSearchModal, {
         error,
@@ -12684,7 +12691,7 @@ var { document: document6 } = scope,
     let api = useStorybookApi(),
       inputRef = (0, import_react28.useRef)(null),
       [inputPlaceholder, setPlaceholder] = (0, import_react28.useState)(
-        'Find components'
+        'Find components',
       ),
       [allComponents, showAllComponents] = (0, import_react28.useState)(!1),
       searchShortcut = api
@@ -12703,15 +12710,15 @@ var { document: document6 } = scope,
                     status && status[item.id]
                       ? getHighestStatus(
                           Object.values(status[item.id] || {}).map(
-                            (s2) => s2.status
-                          )
+                            (s2) => s2.status,
+                          ),
                         )
                       : null;
                   return {
                     ...searchItem(item, dataset.hash[refId]),
                     status: statusValue || groupStatus[item.id] || null,
                   };
-                })
+                }),
               ),
             acc
           );
@@ -12733,13 +12740,13 @@ var { document: document6 } = scope,
                   item.type === 'story'
                 ) || resultIds.has(item.parent)
                   ? !1
-                  : (resultIds.add(item.id), !0)
+                  : (resultIds.add(item.id), !0),
               );
           return (
             distinctResults.length &&
               ((results = distinctResults.slice(
                 0,
-                allComponents ? 1e3 : DEFAULT_MAX_SEARCH_RESULTS
+                allComponents ? 1e3 : DEFAULT_MAX_SEARCH_RESULTS,
               )),
               distinctResults.length > DEFAULT_MAX_SEARCH_RESULTS &&
                 !allComponents &&
@@ -12752,7 +12759,7 @@ var { document: document6 } = scope,
             results
           );
         },
-        [allComponents, makeFuse]
+        [allComponents, makeFuse],
       ),
       onSelect = (0, import_react28.useCallback)(
         (selectedItem) => {
@@ -12767,13 +12774,13 @@ var { document: document6 } = scope,
           }
           isExpandType(selectedItem) && selectedItem.showAll();
         },
-        [api]
+        [api],
       ),
       onInputValueChange = (0, import_react28.useCallback)(
         (inputValue, stateAndHelpers) => {
           showAllComponents(!1);
         },
-        []
+        [],
       ),
       stateReducer2 = (0, import_react28.useCallback)((state, changes) => {
         switch (changes.type) {
@@ -12836,7 +12843,7 @@ var { document: document6 } = scope,
                 item =
                   story.type === 'story' ? data.index[story.parent] : story;
               acc.some(
-                (res) => res.item.refId === refId && res.item.id === item.id
+                (res) => res.item.refId === refId && res.item.id === item.id,
               ) ||
                 acc.push({
                   item: searchItem(item, dataset.hash[refId]),
@@ -12870,7 +12877,7 @@ var { document: document6 } = scope,
           import_react28.default.createElement(
             ScreenReaderLabel,
             { ...labelProps },
-            'Search for components'
+            'Search for components',
           ),
           import_react28.default.createElement(
             SearchBar,
@@ -12884,7 +12891,7 @@ var { document: document6 } = scope,
               import_react28.default.createElement(
                 SearchIconWrapper2,
                 null,
-                import_react28.default.createElement(SearchIcon, null)
+                import_react28.default.createElement(SearchIcon, null),
               ),
               import_react28.default.createElement(Input, { ...inputProps }),
               !isMobile &&
@@ -12900,18 +12907,18 @@ var { document: document6 } = scope,
                         import_react28.default.createElement(
                           FocusKeyCmd,
                           null,
-                          '\u2318'
+                          '\u2318',
                         ),
-                        'K'
+                        'K',
                       )
-                    : searchShortcut
+                    : searchShortcut,
                 ),
               isOpen &&
                 import_react28.default.createElement(
                   ClearIcon,
                   { onClick: () => clearSelection() },
-                  import_react28.default.createElement(CloseIcon, null)
-                )
+                  import_react28.default.createElement(CloseIcon, null),
+                ),
             ),
             showCreateStoryButton &&
               import_react28.default.createElement(
@@ -12924,7 +12931,7 @@ var { document: document6 } = scope,
                     hasChrome: !1,
                     tooltip: import_react28.default.createElement(
                       TooltipNoteWrapper,
-                      { note: 'Create a new story' }
+                      { note: 'Create a new story' },
                     ),
                   },
                   import_react28.default.createElement(
@@ -12935,14 +12942,14 @@ var { document: document6 } = scope,
                       },
                       variant: 'outline',
                     },
-                    import_react28.default.createElement(PlusIcon, null)
-                  )
+                    import_react28.default.createElement(PlusIcon, null),
+                  ),
                 ),
                 import_react28.default.createElement(CreateNewStoryFileModal, {
                   open: isFileSearchModalOpen,
                   onOpenChange: setIsFileSearchModalOpen,
-                })
-              )
+                }),
+              ),
           ),
           import_react28.default.createElement(
             FocusContainer,
@@ -12956,10 +12963,10 @@ var { document: document6 } = scope,
               getMenuProps,
               getItemProps,
               highlightedIndex,
-            })
-          )
+            }),
+          ),
         );
-      }
+      },
     );
   });
 var import_react29 = __toESM(require_react());
@@ -13034,27 +13041,27 @@ var { document: document7 } = scope,
             import_react29.default.createElement(
               'span',
               { key: `${index}-1` },
-              value.slice(cursor, start)
-            )
+              value.slice(cursor, start),
+            ),
           ),
           nodes.push(
             import_react29.default.createElement(
               Mark,
               { key: `${index}-2` },
-              value.slice(start, end + 1)
-            )
+              value.slice(start, end + 1),
+            ),
           ),
           index === length - 1 &&
             nodes.push(
               import_react29.default.createElement(
                 'span',
                 { key: `${index}-3` },
-                value.slice(end + 1)
-              )
+                value.slice(end + 1),
+              ),
             ),
           { cursor: end + 1, nodes }
         ),
-        { cursor: 0, nodes: [] }
+        { cursor: 0, nodes: [] },
       );
     return import_react29.default.createElement('span', null, result);
   }),
@@ -13094,7 +13101,7 @@ var { document: document7 } = scope,
         (event) => {
           event.preventDefault(), onClick?.(event);
         },
-        [onClick]
+        [onClick],
       ),
       api = useStorybookApi();
     (0, import_react29.useEffect)(() => {
@@ -13104,7 +13111,7 @@ var { document: document7 } = scope,
         api.emit(
           PRELOAD_ENTRIES,
           { ids: [item.children[0]] },
-          { options: { target: item.refId } }
+          { options: { target: item.refId } },
         );
     }, [props.isHighlighted, item]);
     let nameMatch = matches.find((match) => match.key === 'name'),
@@ -13127,13 +13134,13 @@ var { document: document7 } = scope,
             },
             import_react29.default.createElement(UseSymbol, {
               type: 'component',
-            })
+            }),
           ),
         item.type === 'story' &&
           import_react29.default.createElement(
             TypeIcon,
             { viewBox: '0 0 14 14', width: '14', height: '14', type: 'story' },
-            import_react29.default.createElement(UseSymbol, { type: 'story' })
+            import_react29.default.createElement(UseSymbol, { type: 'story' }),
           ),
         !(item.type === 'component' || item.type === 'story') &&
           import_react29.default.createElement(
@@ -13146,8 +13153,8 @@ var { document: document7 } = scope,
             },
             import_react29.default.createElement(UseSymbol, {
               type: 'document',
-            })
-          )
+            }),
+          ),
       ),
       import_react29.default.createElement(
         ResultRowContent,
@@ -13158,8 +13165,8 @@ var { document: document7 } = scope,
           import_react29.default.createElement(
             Highlight,
             { match: nameMatch },
-            item.name
-          )
+            item.name,
+          ),
         ),
         import_react29.default.createElement(
           Path,
@@ -13172,16 +13179,16 @@ var { document: document7 } = scope,
                 Highlight,
                 {
                   match: pathMatches.find(
-                    (match) => match.arrayIndex === index
+                    (match) => match.arrayIndex === index,
                   ),
                 },
-                group
-              )
-            )
-          )
-        )
+                group,
+              ),
+            ),
+          ),
+        ),
       ),
-      item.status ? i2 : null
+      item.status ? i2 : null,
     );
   }),
   SearchResults = import_react29.default.memo(function ({
@@ -13219,7 +13226,7 @@ var { document: document7 } = scope,
           refId = currentTarget.getAttribute('data-refid'),
           item = api.resolveStory(
             storyId,
-            refId === 'storybook_internal' ? void 0 : refId
+            refId === 'storybook_internal' ? void 0 : refId,
           );
         item?.type === 'component' &&
           api.emit(PRELOAD_ENTRIES, {
@@ -13245,8 +13252,8 @@ var { document: document7 } = scope,
               className: 'search-result-recentlyOpened-clear',
               onClick: handleClearLastViewed,
             },
-            import_react29.default.createElement(TrashIcon, null)
-          )
+            import_react29.default.createElement(TrashIcon, null),
+          ),
         ),
       results.length === 0 &&
         query &&
@@ -13259,15 +13266,15 @@ var { document: document7 } = scope,
             import_react29.default.createElement(
               'strong',
               null,
-              'No components found'
+              'No components found',
             ),
             import_react29.default.createElement('br', null),
             import_react29.default.createElement(
               'small',
               null,
-              'Find components by name or path.'
-            )
-          )
+              'Find components by name or path.',
+            ),
+          ),
         ),
       results.map((result, index) => {
         if (isExpandType(result))
@@ -13283,8 +13290,8 @@ var { document: document7 } = scope,
               },
               'Show ',
               result.moreCount,
-              ' more results'
-            )
+              ' more results',
+            ),
           );
         let { item } = result,
           key = `${item.refId}::${item.id}`;
@@ -13298,7 +13305,7 @@ var { document: document7 } = scope,
           onMouseOver: mouseOverHandler,
           className: 'search-result-item',
         });
-      })
+      }),
     );
   });
 var import_debounce = __toESM(require_debounce()),
@@ -13306,7 +13313,7 @@ var import_debounce = __toESM(require_debounce()),
   import_store2 = __toESM(require_store2()),
   save = (0, import_debounce.default)(
     (value) => import_store2.default.set('lastViewedStoryIds', value),
-    1e3
+    1e3,
   ),
   useLastViewed = (selection) => {
     let initialLastViewedStoryIds = (0, import_react30.useMemo)(() => {
@@ -13314,7 +13321,7 @@ var import_debounce = __toESM(require_debounce()),
         return !items || !Array.isArray(items)
           ? []
           : items.some(
-                (item) => typeof item == 'object' && item.storyId && item.refId
+                (item) => typeof item == 'object' && item.storyId && item.refId,
               )
             ? items
             : [];
@@ -13325,7 +13332,7 @@ var import_debounce = __toESM(require_debounce()),
           let items = lastViewedRef.current,
             index = items.findIndex(
               ({ storyId, refId }) =>
-                storyId === story.storyId && refId === story.refId
+                storyId === story.storyId && refId === story.refId,
             );
           index !== 0 &&
             (index === -1
@@ -13337,7 +13344,7 @@ var import_debounce = __toESM(require_debounce()),
                 ]),
             save(lastViewedRef.current));
         },
-        [lastViewedRef]
+        [lastViewedRef],
       );
     return (
       (0, import_react30.useEffect)(() => {
@@ -13346,7 +13353,7 @@ var import_debounce = __toESM(require_debounce()),
       {
         getLastViewed: (0, import_react30.useCallback)(
           () => lastViewedRef.current,
-          [lastViewedRef]
+          [lastViewedRef],
         ),
         clearLastViewed: (0, import_react30.useCallback)(() => {
           (lastViewedRef.current = lastViewedRef.current.slice(0, 1)),
@@ -13394,13 +13401,13 @@ var DEFAULT_REF_ID = 'storybook_internal',
       import_react31.default.createElement(
         'div',
         { style: { display: condition ? 'block' : 'none' } },
-        a2
+        a2,
       ),
       import_react31.default.createElement(
         'div',
         { style: { display: condition ? 'none' : 'block' } },
-        b2
-      )
+        b2,
+      ),
     );
   }),
   useCombination = (index, indexError, previewInitialized, status, refs) => {
@@ -13417,11 +13424,11 @@ var DEFAULT_REF_ID = 'storybook_internal',
         },
         ...refs,
       }),
-      [refs, index, indexError, previewInitialized, status]
+      [refs, index, indexError, previewInitialized, status],
     );
     return (0, import_react31.useMemo)(
       () => ({ hash, entries: Object.entries(hash) }),
-      [hash]
+      [hash],
     );
   },
   Sidebar = import_react31.default.memo(function ({
@@ -13442,14 +13449,14 @@ var DEFAULT_REF_ID = 'storybook_internal',
   }) {
     let selected = (0, import_react31.useMemo)(
         () => storyId && { storyId, refId },
-        [storyId, refId]
+        [storyId, refId],
       ),
       dataset = useCombination(
         index,
         indexError,
         previewInitialized,
         status,
-        refs
+        refs,
       ),
       isLoading = !index && !indexError,
       lastViewedProps = useLastViewed(selected);
@@ -13507,10 +13514,10 @@ var DEFAULT_REF_ID = 'storybook_internal',
                   enableShortcuts,
                   isLoading,
                   clearLastViewed: lastViewedProps.clearLastViewed,
-                })
-              )
-          )
-        )
+                }),
+              ),
+          ),
+        ),
       ),
       isLoading
         ? null
@@ -13518,9 +13525,9 @@ var DEFAULT_REF_ID = 'storybook_internal',
             Bottom,
             { className: 'sb-bar' },
             bottom.map(({ id, render: Render }) =>
-              import_react31.default.createElement(Render, { key: id })
-            )
-          )
+              import_react31.default.createElement(Render, { key: id }),
+            ),
+          ),
     );
   });
 var import_react32 = __toESM(require_react());
@@ -13551,7 +13558,7 @@ var focusableUIElements = {
   & + & {
     margin-left: 6px;
   }
-`
+`,
   ),
   Shortcut = ({ keys }) =>
     import_react32.default.createElement(
@@ -13564,10 +13571,10 @@ var focusableUIElements = {
           import_react32.default.createElement(
             KeyChild,
             { key },
-            shortcutToHumanString([key])
-          )
-        )
-      )
+            shortcutToHumanString([key]),
+          ),
+        ),
+      ),
     ),
   useMenu = (
     state,
@@ -13576,7 +13583,7 @@ var focusableUIElements = {
     isFullscreen,
     isPanelShown,
     isNavShown,
-    enableShortcuts
+    enableShortcuts,
   ) => {
     let theme = useTheme(),
       shortcutKeys = api.getShortcutKeys(),
@@ -13587,7 +13594,7 @@ var focusableUIElements = {
           onClick: () => api.changeSettingsTab('about'),
           icon: import_react32.default.createElement(InfoIcon, null),
         }),
-        [api]
+        [api],
       ),
       documentation = (0, import_react32.useMemo)(
         () => ({
@@ -13596,7 +13603,7 @@ var focusableUIElements = {
           href: api.getDocsUrl({ versioned: !0, renderer: !0 }),
           icon: import_react32.default.createElement(ShareAltIcon, null),
         }),
-        [api]
+        [api],
       ),
       whatsNewNotificationsEnabled =
         state.whatsNewData?.status === 'SUCCESS' &&
@@ -13613,11 +13620,11 @@ var focusableUIElements = {
             import_react32.default.createElement(
               Badge,
               { status: 'positive' },
-              'Check it out'
+              'Check it out',
             ),
           icon: import_react32.default.createElement(WandIcon, null),
         }),
-        [api, whatsNewNotificationsEnabled, isWhatsNewUnread]
+        [api, whatsNewNotificationsEnabled, isWhatsNewUnread],
       ),
       shortcuts = (0, import_react32.useMemo)(
         () => ({
@@ -13631,7 +13638,12 @@ var focusableUIElements = {
             : null,
           style: { borderBottom: `4px solid ${theme.appBorderColor}` },
         }),
-        [api, enableShortcuts, shortcutKeys.shortcutsPage, theme.appBorderColor]
+        [
+          api,
+          enableShortcuts,
+          shortcutKeys.shortcutsPage,
+          theme.appBorderColor,
+        ],
       ),
       sidebarToggle = (0, import_react32.useMemo)(
         () => ({
@@ -13648,7 +13660,7 @@ var focusableUIElements = {
             ? import_react32.default.createElement(CheckIcon, null)
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys, isNavShown]
+        [api, enableShortcuts, shortcutKeys, isNavShown],
       ),
       toolbarToogle = (0, import_react32.useMemo)(
         () => ({
@@ -13665,7 +13677,7 @@ var focusableUIElements = {
             ? import_react32.default.createElement(CheckIcon, null)
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys, showToolbar]
+        [api, enableShortcuts, shortcutKeys, showToolbar],
       ),
       addonsToggle = (0, import_react32.useMemo)(
         () => ({
@@ -13682,7 +13694,7 @@ var focusableUIElements = {
             ? import_react32.default.createElement(CheckIcon, null)
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys, isPanelShown]
+        [api, enableShortcuts, shortcutKeys, isPanelShown],
       ),
       addonsOrientationToggle = (0, import_react32.useMemo)(
         () => ({
@@ -13695,7 +13707,7 @@ var focusableUIElements = {
               })
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys]
+        [api, enableShortcuts, shortcutKeys],
       ),
       fullscreenToggle = (0, import_react32.useMemo)(
         () => ({
@@ -13712,7 +13724,7 @@ var focusableUIElements = {
             ? import_react32.default.createElement(CheckIcon, null)
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys, isFullscreen]
+        [api, enableShortcuts, shortcutKeys, isFullscreen],
       ),
       searchToggle = (0, import_react32.useMemo)(
         () => ({
@@ -13726,7 +13738,7 @@ var focusableUIElements = {
               })
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys]
+        [api, enableShortcuts, shortcutKeys],
       ),
       up = (0, import_react32.useMemo)(
         () => ({
@@ -13739,7 +13751,7 @@ var focusableUIElements = {
               })
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys]
+        [api, enableShortcuts, shortcutKeys],
       ),
       down = (0, import_react32.useMemo)(
         () => ({
@@ -13752,7 +13764,7 @@ var focusableUIElements = {
               })
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys]
+        [api, enableShortcuts, shortcutKeys],
       ),
       prev = (0, import_react32.useMemo)(
         () => ({
@@ -13765,7 +13777,7 @@ var focusableUIElements = {
               })
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys]
+        [api, enableShortcuts, shortcutKeys],
       ),
       next = (0, import_react32.useMemo)(
         () => ({
@@ -13778,7 +13790,7 @@ var focusableUIElements = {
               })
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys]
+        [api, enableShortcuts, shortcutKeys],
       ),
       collapse = (0, import_react32.useMemo)(
         () => ({
@@ -13791,7 +13803,7 @@ var focusableUIElements = {
               })
             : null,
         }),
-        [api, enableShortcuts, shortcutKeys]
+        [api, enableShortcuts, shortcutKeys],
       ),
       getAddonsShortcuts = (0, import_react32.useCallback)(() => {
         let addonsShortcuts = api.getAddonsShortcuts(),
@@ -13846,7 +13858,7 @@ var focusableUIElements = {
         next,
         collapse,
         getAddonsShortcuts,
-      ]
+      ],
     );
   };
 var Sidebar3 = import_react33.default.memo(function ({ onMenuClick }) {
@@ -13873,24 +13885,24 @@ var Sidebar3 = import_react33.default.memo(function ({ onMenuClick }) {
               api.getIsFullscreen(),
               api.getIsPanelShown(),
               api.getIsNavShown(),
-              enableShortcuts
+              enableShortcuts,
             ),
             whatsNewNotificationsEnabled =
               state.whatsNewData?.status === 'SUCCESS' &&
               !state.disableWhatsNewNotifications,
             bottomItems = api.getElements(
-              Addon_TypesEnum.experimental_SIDEBAR_BOTTOM
+              Addon_TypesEnum.experimental_SIDEBAR_BOTTOM,
             ),
             topItems = api.getElements(
-              Addon_TypesEnum.experimental_SIDEBAR_TOP
+              Addon_TypesEnum.experimental_SIDEBAR_TOP,
             ),
             bottom = (0, import_react33.useMemo)(
               () => Object.values(bottomItems),
-              [Object.keys(bottomItems).join('')]
+              [Object.keys(bottomItems).join('')],
             ),
             top = (0, import_react33.useMemo)(
               () => Object.values(topItems),
-              [Object.keys(topItems).join('')]
+              [Object.keys(topItems).join('')],
             );
           return {
             title: name,
@@ -13916,7 +13928,7 @@ var Sidebar3 = import_react33.default.memo(function ({ onMenuClick }) {
         import_react33.default.createElement(Sidebar, {
           ...fromState,
           onMenuClick,
-        })
+        }),
     );
   }),
   Sidebar_default = Sidebar3;
@@ -13950,7 +13962,7 @@ var PreviewContainer = newStyled.main({
       width: '100%',
       height: '100%',
     },
-    ({ show }) => ({ display: show ? 'grid' : 'none' })
+    ({ show }) => ({ display: show ? 'grid' : 'none' }),
   ),
   UnstyledLink = newStyled(Link2)({
     color: 'inherit',
@@ -14001,7 +14013,7 @@ var initialZoom = 1,
       return import_react34.default.createElement(
         Context.Provider,
         { value: { value: shouldScale ? value : initialZoom, set } },
-        children
+        children,
       );
     }
   },
@@ -14013,18 +14025,18 @@ var initialZoom = 1,
       import_react34.default.createElement(
         IconButton,
         { key: 'zoomin', onClick: zoomIn, title: 'Zoom in' },
-        import_react34.default.createElement(ZoomIcon, null)
+        import_react34.default.createElement(ZoomIcon, null),
       ),
       import_react34.default.createElement(
         IconButton,
         { key: 'zoomout', onClick: zoomOut, title: 'Zoom out' },
-        import_react34.default.createElement(ZoomOutIcon, null)
+        import_react34.default.createElement(ZoomOutIcon, null),
       ),
       import_react34.default.createElement(
         IconButton,
         { key: 'zoomreset', onClick: reset, title: 'Reset zoom' },
-        import_react34.default.createElement(ZoomResetIcon, null)
-      )
+        import_react34.default.createElement(ZoomResetIcon, null),
+      ),
     );
   });
 var ZoomWrapper = (0, import_react34.memo)(function ({ set, value }) {
@@ -14032,19 +14044,19 @@ var ZoomWrapper = (0, import_react34.memo)(function ({ set, value }) {
       (e3) => {
         e3.preventDefault(), set(0.8 * value);
       },
-      [set, value]
+      [set, value],
     ),
     zoomOut = (0, import_react34.useCallback)(
       (e3) => {
         e3.preventDefault(), set(1.25 * value);
       },
-      [set, value]
+      [set, value],
     ),
     reset = (0, import_react34.useCallback)(
       (e3) => {
         e3.preventDefault(), set(initialZoom);
       },
-      [set, initialZoom]
+      [set, initialZoom],
     );
   return import_react34.default.createElement(Zoom2, {
     key: 'zoom',
@@ -14058,9 +14070,9 @@ function ZoomToolRenderer() {
     import_react34.default.Fragment,
     null,
     import_react34.default.createElement(ZoomConsumer, null, ({ set, value }) =>
-      import_react34.default.createElement(ZoomWrapper, { set, value })
+      import_react34.default.createElement(ZoomWrapper, { set, value }),
     ),
-    import_react34.default.createElement(Separator, null)
+    import_react34.default.createElement(Separator, null),
   );
 }
 var zoomTool = {
@@ -14083,8 +14095,8 @@ var ApplyWrappers = ({ wrappers, id, storyId, children }) =>
             id,
             storyId,
           }),
-        children
-      )
+        children,
+      ),
     ),
   defaultWrappers = [
     {
@@ -14094,7 +14106,7 @@ var ApplyWrappers = ({ wrappers, id, storyId, children }) =>
         import_react35.default.createElement(
           IframeWrapper,
           { id: 'storybook-preview-wrapper' },
-          p2.children
+          p2.children,
         ),
     },
   ];
@@ -14136,13 +14148,13 @@ var { PREVIEW_URL, document: document8 } = scope,
                   key: 'copy',
                   onClick: () =>
                     (0, import_copy_to_clipboard.default)(
-                      getStoryHref(baseUrl, storyId, queryParams)
+                      getStoryHref(baseUrl, storyId, queryParams),
                     ),
                   title: 'Copy canvas link',
                 },
-                import_react36.default.createElement(LinkIcon, null)
+                import_react36.default.createElement(LinkIcon, null),
               )
-            : null
+            : null,
       ),
   };
 var import_react37 = __toESM(require_react());
@@ -14179,10 +14191,10 @@ var { PREVIEW_URL: PREVIEW_URL2 } = scope,
                     rel: 'noopener noreferrer',
                     title: 'Open canvas in new tab',
                   },
-                  import_react37.default.createElement(ShareAltIcon, null)
-                )
+                  import_react37.default.createElement(ShareAltIcon, null),
+                ),
               )
-            : null
+            : null,
       ),
   };
 var import_react38 = __toESM(require_react());
@@ -14217,9 +14229,9 @@ var menuMapper = ({ api, state }) => ({
               },
               panelPosition === 'bottom'
                 ? import_react38.default.createElement(BottomBarIcon, null)
-                : import_react38.default.createElement(SidebarAltIcon, null)
-            )
-          )
+                : import_react38.default.createElement(SidebarAltIcon, null),
+            ),
+          ),
       ),
   };
 var import_react39 = __toESM(require_react());
@@ -14229,7 +14241,7 @@ var StyledAnimatedIconButton = newStyled(IconButton)(
       svg: {
         animation: animating && `${theme.animation.rotate360} 1000ms ease-out`,
       },
-    })
+    }),
   ),
   menuMapper2 = ({ api, state }) => {
     let { storyId } = state;
@@ -14267,10 +14279,10 @@ var StyledAnimatedIconButton = newStyled(IconButton)(
                 animating: isAnimating,
                 disabled: !storyId,
               },
-              import_react39.default.createElement(SyncIcon, null)
+              import_react39.default.createElement(SyncIcon, null),
             )
           );
-        }
+        },
       ),
   };
 var fullScreenMapper = ({ api, state }) => ({
@@ -14306,8 +14318,8 @@ var fullScreenMapper = ({ api, state }) => ({
                 },
                 isFullscreen
                   ? import_react40.default.createElement(CloseIcon, null)
-                  : import_react40.default.createElement(ExpandIcon, null)
-              )
+                  : import_react40.default.createElement(ExpandIcon, null),
+              ),
           );
     },
   };
@@ -14356,17 +14368,17 @@ var ToolbarComp = import_react40.default.memo(function ({
                             },
                             key: tab.id || `tab-${index}`,
                           },
-                          tab.title
-                        )
-                      )
+                          tab.title,
+                        ),
+                      ),
                     ),
-                    import_react40.default.createElement(Separator, null)
+                    import_react40.default.createElement(Separator, null),
                   )
                 : null,
               import_react40.default.createElement(Tools, {
                 key: 'left',
                 list: tools,
-              })
+              }),
             ),
             import_react40.default.createElement(
               ToolbarRight,
@@ -14374,9 +14386,9 @@ var ToolbarComp = import_react40.default.memo(function ({
               import_react40.default.createElement(Tools, {
                 key: 'right',
                 list: toolsExtra,
-              })
-            )
-          )
+              }),
+            ),
+          ),
         )
       : null;
   }),
@@ -14387,8 +14399,8 @@ var ToolbarComp = import_react40.default.memo(function ({
       list.filter(Boolean).map(({ render: Render, id, ...t3 }, index) =>
         import_react40.default.createElement(Render, {
           key: id || t3.key || `f-${index}`,
-        })
-      )
+        }),
+      ),
     );
   });
 function toolbarItemHasBeenExcluded(item, entry) {
@@ -14399,7 +14411,7 @@ function toolbarItemHasBeenExcluded(item, entry) {
     { toolbar: toolbarItemsFromAddonsConfig } = addons.getConfig(),
     toolbarItems = merge_default(
       toolbarItemsFromAddonsConfig,
-      toolbarItemsFromStoryParameters
+      toolbarItemsFromStoryParameters,
     );
   return toolbarItems ? !!toolbarItems[item?.id]?.hidden : !1;
 }
@@ -14480,7 +14492,7 @@ function IFrame(props) {
       allowFullScreen,
       ref: iFrameRef,
       ...rest,
-    })
+    }),
   );
 }
 var import_qs = __toESM(require_lib()),
@@ -14532,7 +14544,7 @@ var getActive = (refId, refs) =>
       { current: frames } = (0, import_react42.useRef)({}),
       refsToLoad = Object.values(refs).filter(
         (ref) => ref.type === 'auto-inject' || ref.id === refId,
-        {}
+        {},
       );
     return (
       frames['storybook-preview-iframe'] ||
@@ -14569,9 +14581,9 @@ var getActive = (refId, refs) =>
                       tabIndex: 0,
                       title: 'Skip to sidebar',
                     },
-                    'Skip to sidebar'
-                  )
-                )
+                    'Skip to sidebar',
+                  ),
+                ),
         ),
         Object.entries(frames).map(([id, src]) =>
           import_react42.default.createElement(
@@ -14585,9 +14597,9 @@ var getActive = (refId, refs) =>
               src,
               allowFullScreen: !0,
               scale,
-            })
-          )
-        )
+            }),
+          ),
+        ),
       )
     );
   };
@@ -14655,7 +14667,7 @@ var canvasMapper = ({ state, api }) => ({
           import_react43.default.createElement(
             W,
             { key: 'description' },
-            import_react43.default.createElement('title', null, description)
+            import_react43.default.createElement('title', null, description),
           ),
         import_react43.default.createElement(
           ZoomProvider,
@@ -14679,7 +14691,7 @@ var canvasMapper = ({ state, api }) => ({
                 import_react43.default.createElement(
                   IframeWrapper,
                   null,
-                  tabContent({ active: !0 })
+                  tabContent({ active: !0 }),
                 ),
               import_react43.default.createElement(
                 CanvasWrap,
@@ -14688,11 +14700,11 @@ var canvasMapper = ({ state, api }) => ({
                   withLoader,
                   baseUrl,
                   wrappers,
-                })
-              )
-            )
-          )
-        )
+                }),
+              ),
+            ),
+          ),
+        ),
       )
     );
   });
@@ -14740,7 +14752,7 @@ var Canvas = ({ baseUrl, withLoader, wrappers }) =>
                   id: 'preview-loader',
                   role: 'progressbar',
                   progress,
-                })
+                }),
               ),
             import_react43.default.createElement(
               ApplyWrappers,
@@ -14752,7 +14764,7 @@ var Canvas = ({ baseUrl, withLoader, wrappers }) =>
                     id,
                     baseUrl,
                     scale,
-                    queryParams
+                    queryParams,
                   )
                 : import_react43.default.createElement(FramesRenderer, {
                     baseUrl,
@@ -14763,11 +14775,11 @@ var Canvas = ({ baseUrl, withLoader, wrappers }) =>
                     refId,
                     queryParams,
                     storyId,
-                  })
-            )
-          )
+                  }),
+            ),
+          ),
       );
-    }
+    },
   );
 function filterTabs(panels, parameters) {
   let { previewTabs } = addons.getConfig(),
@@ -14835,10 +14847,10 @@ var menuMapper3 = ({ api, state }) => ({
                 onClick: toggle,
                 title: 'Show sidebar',
               },
-              import_react44.default.createElement(MenuIcon, null)
+              import_react44.default.createElement(MenuIcon, null),
             ),
-            import_react44.default.createElement(Separator, null)
-          )
+            import_react44.default.createElement(Separator, null),
+          ),
       ),
   };
 var defaultTabs = [createCanvasTab()],
@@ -14850,29 +14862,29 @@ var defaultTabs = [createCanvasTab()],
       showTabs
         ? filterTabs(
             [...defaultTabs, ...Object.values(tabElements)],
-            parameters
+            parameters,
           )
-        : emptyTabsList
+        : emptyTabsList,
   ),
   memoizedTools = (0, import_memoizerific2.default)(1)(
     (_2, toolElements, filterProps) =>
       filterToolsSide(
         [...defaultTools, ...Object.values(toolElements)],
-        ...filterProps
-      )
+        ...filterProps,
+      ),
   ),
   memoizedExtra = (0, import_memoizerific2.default)(1)(
     (_2, extraElements, filterProps) =>
       filterToolsSide(
         [...defaultToolsExtra, ...Object.values(extraElements)],
-        ...filterProps
-      )
+        ...filterProps,
+      ),
   ),
   memoizedWrapper = (0, import_memoizerific2.default)(1)(
     (_2, previewElements) => [
       ...defaultWrappers,
       ...Object.values(previewElements),
-    ]
+    ],
   ),
   { PREVIEW_URL: PREVIEW_URL3 } = scope,
   splitTitleAddExtraSpace = (input) =>
@@ -14902,18 +14914,18 @@ var defaultTabs = [createCanvasTab()],
       wrapperList = Object.values(api.getElements(Addon_TypesEnum.PREVIEW)),
       toolsList = Object.values(api.getElements(Addon_TypesEnum.TOOL)),
       toolsExtraList = Object.values(
-        api.getElements(Addon_TypesEnum.TOOLEXTRA)
+        api.getElements(Addon_TypesEnum.TOOLEXTRA),
       ),
       tabId = api.getQueryParam('tab'),
       tools = memoizedTools(
         toolsList.length,
         api.getElements(Addon_TypesEnum.TOOL),
-        [entry, viewMode, location, path, tabId]
+        [entry, viewMode, location, path, tabId],
       ),
       toolsExtra = memoizedExtra(
         toolsExtraList.length,
         api.getElements(Addon_TypesEnum.TOOLEXTRA),
-        [entry, viewMode, location, path, tabId]
+        [entry, viewMode, location, path, tabId],
       );
     return {
       api,
@@ -14931,11 +14943,11 @@ var defaultTabs = [createCanvasTab()],
         tabsList.length,
         api.getElements(Addon_TypesEnum.TAB),
         entry ? entry.parameters : void 0,
-        layout.showTabs
+        layout.showTabs,
       ),
       wrappers: memoizedWrapper(
         wrapperList.length,
-        api.getElements(Addon_TypesEnum.PREVIEW)
+        api.getElements(Addon_TypesEnum.PREVIEW),
       ),
       tabId,
     };
@@ -14948,7 +14960,7 @@ var defaultTabs = [createCanvasTab()],
         import_react45.default.createElement(Preview, {
           ...props,
           ...fromState,
-        })
+        }),
     );
   }),
   Preview_default = PreviewConnected;
@@ -14969,7 +14981,7 @@ var SafeTab = class extends import_react46.Component {
         ? import_react46.default.createElement(
             'h1',
             null,
-            'Something went wrong.'
+            'Something went wrong.',
           )
         : children;
     }
@@ -14997,7 +15009,7 @@ var SafeTab = class extends import_react46.Component {
             description: import_react46.default.createElement(
               import_react46.default.Fragment,
               null,
-              'Integrate your tools with Storybook to connect workflows and unlock advanced features.'
+              'Integrate your tools with Storybook to connect workflows and unlock advanced features.',
             ),
             footer: import_react46.default.createElement(
               Link22,
@@ -15007,7 +15019,7 @@ var SafeTab = class extends import_react46.Component {
                 withArrow: !0,
               },
               import_react46.default.createElement(DocumentIcon, null),
-              ' Explore integrations catalog'
+              ' Explore integrations catalog',
             ),
           }),
           tools: import_react46.default.createElement(
@@ -15027,12 +15039,12 @@ var SafeTab = class extends import_react46.Component {
                     panelPosition === 'bottom'
                       ? import_react46.default.createElement(
                           SidebarAltIcon,
-                          null
+                          null,
                         )
                       : import_react46.default.createElement(
                           BottomBarIcon,
-                          null
-                        )
+                          null,
+                        ),
                   ),
                   import_react46.default.createElement(
                     IconButton,
@@ -15041,8 +15053,8 @@ var SafeTab = class extends import_react46.Component {
                       onClick: actions.toggleVisibility,
                       title: `Hide addons [${shortcutToHumanString(shortcuts.togglePanel)}]`,
                     },
-                    import_react46.default.createElement(CloseIcon, null)
-                  )
+                    import_react46.default.createElement(CloseIcon, null),
+                  ),
                 )
               : import_react46.default.createElement(
                   IconButton,
@@ -15050,8 +15062,8 @@ var SafeTab = class extends import_react46.Component {
                     onClick: () => setMobilePanelOpen(!1),
                     title: 'Close addon panel',
                   },
-                  import_react46.default.createElement(CloseIcon, null)
-                )
+                  import_react46.default.createElement(CloseIcon, null),
+                ),
           ),
           id: 'storybook-panel-root',
         },
@@ -15066,11 +15078,11 @@ var SafeTab = class extends import_react46.Component {
                   ? import_react46.default.createElement(v2.title, null)
                   : v2.title,
             },
-            v2.render
-          )
-        )
+            v2.render,
+          ),
+        ),
       );
-    }
+    },
   );
 AddonPanel.displayName = 'AddonPanel';
 var Actions = newStyled.div({ display: 'flex', alignItems: 'center', gap: 6 });
@@ -15112,7 +15124,7 @@ var createPanelActions = (0, import_memoizerific3.default)(1)((api) => ({
         import_react47.default.createElement(AddonPanel, {
           ...props,
           ...customProps,
-        })
+        }),
     ),
   Panel_default = Panel;
 var import_react59 = __toESM(require_react());
@@ -15162,7 +15174,7 @@ function useDragging({ setState, isPanelShown, isDesktop }) {
                     isDragging: !1,
                     rightPanelWidth: RIGHT_PANEL_MIN_WIDTH_PX,
                   }
-                : { ...state, isDragging: !1 }
+                : { ...state, isDragging: !1 },
           ),
             window.removeEventListener('mousemove', onDrag),
             window.removeEventListener('mouseup', onDragEnd),
@@ -15187,7 +15199,7 @@ function useDragging({ setState, isPanelShown, isDesktop }) {
                         navSize: interpolate(
                           MIN_WIDTH_STIFFNESS,
                           sidebarDragX,
-                          SIDEBAR_MIN_WIDTH_PX
+                          SIDEBAR_MIN_WIDTH_PX,
                         ),
                       }
                     : {
@@ -15216,7 +15228,7 @@ function useDragging({ setState, isPanelShown, isDesktop }) {
                   [sizeAxisState]: interpolate(
                     MIN_WIDTH_STIFFNESS,
                     panelDragSize,
-                    RIGHT_PANEL_MIN_WIDTH_PX
+                    RIGHT_PANEL_MIN_WIDTH_PX,
                   ),
                 };
               let sizeAxisMax =
@@ -15504,8 +15516,8 @@ var UNMOUNTED = 'unmounted',
             ? children(status, childProps)
             : import_react50.default.cloneElement(
                 import_react50.default.Children.only(children),
-                childProps
-              )
+                childProps,
+              ),
         );
       }),
       Transition2
@@ -15523,13 +15535,13 @@ Transition.propTypes = {
             componentName,
             location,
             propFullName,
-            secret
+            secret,
           ) {
             var value = propValue[key];
             return import_prop_types4.default.instanceOf(
               value && 'ownerDocument' in value
                 ? value.ownerDocument.defaultView.Element
-                : Element
+                : Element,
             )(propValue, key, componentName, location, propFullName, secret);
           },
   }),
@@ -15597,12 +15609,12 @@ var UpgradeBlock = ({ onNavigateToWhatsNew }) => {
         'strong',
         null,
         'You are on Storybook ',
-        api.getCurrentVersion().version
+        api.getCurrentVersion().version,
       ),
       import_react51.default.createElement(
         'p',
         null,
-        'Run the following script to check for updates and upgrade to the latest version.'
+        'Run the following script to check for updates and upgrade to the latest version.',
       ),
       import_react51.default.createElement(
         Tabs2,
@@ -15610,27 +15622,27 @@ var UpgradeBlock = ({ onNavigateToWhatsNew }) => {
         import_react51.default.createElement(
           ButtonTab,
           { active: activeTab === 'npm', onClick: () => setActiveTab('npm') },
-          'npm'
+          'npm',
         ),
         import_react51.default.createElement(
           ButtonTab,
           { active: activeTab === 'pnpm', onClick: () => setActiveTab('pnpm') },
-          'pnpm'
-        )
+          'pnpm',
+        ),
       ),
       import_react51.default.createElement(
         Code,
         null,
         activeTab === 'npm'
           ? 'npx storybook@latest upgrade'
-          : 'pnpm dlx storybook@latest upgrade'
+          : 'pnpm dlx storybook@latest upgrade',
       ),
       onNavigateToWhatsNew &&
         import_react51.default.createElement(
           Link22,
           { onClick: onNavigateToWhatsNew },
-          "See what's new in Storybook"
-        )
+          "See what's new in Storybook",
+        ),
     );
   },
   Container3 = newStyled.div(({ theme }) => ({
@@ -15686,7 +15698,7 @@ var MobileAbout = () => {
               title: 'Close about section',
             },
             import_react52.default.createElement(ArrowLeftIcon, null),
-            'Back'
+            'Back',
           ),
           import_react52.default.createElement(
             LinkContainer,
@@ -15701,9 +15713,9 @@ var MobileAbout = () => {
                 LinkLeft,
                 null,
                 import_react52.default.createElement(GithubIcon, null),
-                import_react52.default.createElement('span', null, 'Github')
+                import_react52.default.createElement('span', null, 'Github'),
               ),
-              import_react52.default.createElement(ShareAltIcon, { width: 12 })
+              import_react52.default.createElement(ShareAltIcon, { width: 12 }),
             ),
             import_react52.default.createElement(
               LinkLine,
@@ -15718,11 +15730,11 @@ var MobileAbout = () => {
                 import_react52.default.createElement(
                   'span',
                   null,
-                  'Documentation'
-                )
+                  'Documentation',
+                ),
               ),
-              import_react52.default.createElement(ShareAltIcon, { width: 12 })
-            )
+              import_react52.default.createElement(ShareAltIcon, { width: 12 }),
+            ),
           ),
           import_react52.default.createElement(UpgradeBlock, null),
           import_react52.default.createElement(
@@ -15733,7 +15745,7 @@ var MobileAbout = () => {
             import_react52.default.createElement(
               Link22,
               { href: 'https://chromatic.com', target: '_blank' },
-              'Chromatic'
+              'Chromatic',
             ),
             ' ',
             'and the',
@@ -15743,10 +15755,10 @@ var MobileAbout = () => {
               {
                 href: 'https://github.com/storybookjs/storybook/graphs/contributors',
               },
-              'Storybook Community'
-            )
-          )
-        )
+              'Storybook Community',
+            ),
+          ),
+        ),
     );
   },
   Container4 = newStyled.div(({ theme, state, transitionDuration }) => ({
@@ -15853,11 +15865,11 @@ var MobileMenuDrawer = ({ children }) => {
                 import_react53.default.createElement(
                   SidebarContainer,
                   { ref: sidebarRef, state: sidebarState },
-                  children
-                )
+                  children,
+                ),
             ),
-            import_react53.default.createElement(MobileAbout, null)
-          )
+            import_react53.default.createElement(MobileAbout, null),
+          ),
       ),
       import_react53.default.createElement(
         Transition_default,
@@ -15874,8 +15886,8 @@ var MobileMenuDrawer = ({ children }) => {
             state,
             onClick: () => setMobileMenuOpen(!1),
             'aria-label': 'Close navigation menu',
-          })
-      )
+          }),
+      ),
     );
   },
   Container5 = newStyled.div(({ theme, state }) => ({
@@ -15996,7 +16008,7 @@ var useFullStoryName = () => {
                 title: 'Open navigation menu',
               },
               import_react55.default.createElement(MenuIcon, null),
-              import_react55.default.createElement(Text2, null, fullStoryName)
+              import_react55.default.createElement(Text2, null, fullStoryName),
             ),
             showPanel &&
               import_react55.default.createElement(
@@ -16005,9 +16017,9 @@ var useFullStoryName = () => {
                   onClick: () => setMobilePanelOpen(!0),
                   title: 'Open addon panel',
                 },
-                import_react55.default.createElement(BottomBarToggleIcon, null)
-              )
-          )
+                import_react55.default.createElement(BottomBarToggleIcon, null),
+              ),
+          ),
     );
   },
   Container7 = newStyled.div(({ theme }) => ({
@@ -16082,7 +16094,7 @@ var slideIn = keyframes({
           background: theme.color.secondary,
           animation: `${grow} ${duration}ms linear forwards reverse`,
         },
-      }
+      },
   ),
   NotificationWithInteractiveStates = newStyled(Notification)(() => ({
     cursor: 'pointer',
@@ -16158,7 +16170,7 @@ var slideIn = keyframes({
                 import_react56.default.createElement(Icons, {
                   icon: icon.name,
                   color: icon.color || defaultColor,
-                })
+                }),
         ),
       import_react56.default.createElement(
         NotificationTextWrapper,
@@ -16166,11 +16178,11 @@ var slideIn = keyframes({
         import_react56.default.createElement(
           Headline,
           { title: headline, hasIcon: !!icon },
-          headline
+          headline,
         ),
         subHeadline &&
-          import_react56.default.createElement(SubHeadline, null, subHeadline)
-      )
+          import_react56.default.createElement(SubHeadline, null, subHeadline),
+      ),
     );
   },
   DismissButtonWrapper = newStyled(IconButton)(({ theme }) => ({
@@ -16187,7 +16199,7 @@ var slideIn = keyframes({
           e3.preventDefault(), e3.stopPropagation(), onDismiss();
         },
       },
-      import_react56.default.createElement(CloseAltIcon, { size: 12 })
+      import_react56.default.createElement(CloseAltIcon, { size: 12 }),
     ),
   NotificationItemSpacer = newStyled.div({ height: 48 }),
   NotificationItem = ({
@@ -16218,7 +16230,7 @@ var slideIn = keyframes({
           import_react56.default.createElement(ItemContent, { icon, content }),
           import_react56.default.createElement(DismissNotificationItem, {
             onDismiss,
-          })
+          }),
         )
       : onClick
         ? import_react56.default.createElement(
@@ -16230,7 +16242,7 @@ var slideIn = keyframes({
             }),
             import_react56.default.createElement(DismissNotificationItem, {
               onDismiss,
-            })
+            }),
           )
         : import_react56.default.createElement(
             Notification,
@@ -16241,7 +16253,7 @@ var slideIn = keyframes({
             }),
             import_react56.default.createElement(DismissNotificationItem, {
               onDismiss,
-            })
+            }),
           );
   },
   NotificationItem_default = NotificationItem;
@@ -16255,8 +16267,8 @@ var NotificationList = ({ notifications, clearNotification }) =>
             key: notification.id,
             onDismissNotification: (id) => clearNotification(id),
             notification,
-          })
-        )
+          }),
+        ),
     ),
   List = newStyled.div({
     zIndex: 200,
@@ -16279,7 +16291,7 @@ var mapper3 = ({ state, api }) => ({
         import_react58.default.createElement(NotificationList, {
           ...props,
           ...fromState,
-        })
+        }),
     );
 var MINIMUM_CONTENT_WIDTH_PX = 100,
   layoutStateIsEqual = (state, other) =>
@@ -16301,7 +16313,7 @@ var MINIMUM_CONTENT_WIDTH_PX = 100,
       internalDraggingSizeState.isDragging ||
         layoutStateIsEqual(
           managerLayoutState,
-          prevManagerLayoutStateRef.current
+          prevManagerLayoutStateRef.current,
         ) ||
         ((prevManagerLayoutStateRef.current = managerLayoutState),
         setInternalDraggingSizeState((state) => ({
@@ -16394,7 +16406,7 @@ var MINIMUM_CONTENT_WIDTH_PX = 100,
         import_react59.default.createElement(
           PagesContainer,
           null,
-          slots.slotPages
+          slots.slotPages,
         ),
       import_react59.default.createElement(
         Match,
@@ -16403,8 +16415,8 @@ var MINIMUM_CONTENT_WIDTH_PX = 100,
           import_react59.default.createElement(
             ContentContainer,
             { shown: !!match },
-            slots.slotMain
-          )
+            slots.slotMain,
+          ),
       ),
       isDesktop &&
         import_react59.default.createElement(
@@ -16416,7 +16428,7 @@ var MINIMUM_CONTENT_WIDTH_PX = 100,
             import_react59.default.createElement(Drag, {
               ref: sidebarResizerRef,
             }),
-            slots.slotSidebar
+            slots.slotSidebar,
           ),
           showPanel &&
             import_react59.default.createElement(
@@ -16428,15 +16440,15 @@ var MINIMUM_CONTENT_WIDTH_PX = 100,
                 position: panelPosition === 'bottom' ? 'left' : 'right',
                 ref: panelResizerRef,
               }),
-              slots.slotPanel
-            )
+              slots.slotPanel,
+            ),
         ),
       isMobile &&
         import_react59.default.createElement(MobileNavigation, {
           menu: slots.slotSidebar,
           panel: slots.slotPanel,
           showPanel,
-        })
+        }),
     );
   },
   LayoutContainer = newStyled.div(
@@ -16468,7 +16480,7 @@ var MINIMUM_CONTENT_WIDTH_PX = 100,
               : `"sidebar content content"
                 "sidebar panel   panel"`,
       },
-    })
+    }),
   ),
   SidebarContainer2 = newStyled.div(({ theme }) => ({
     backgroundColor: theme.background.app,
@@ -16534,7 +16546,7 @@ var MINIMUM_CONTENT_WIDTH_PX = 100,
             left: 0,
             '&:after': { width: '100%', height: 1, marginTop: 6 },
             '&:hover': { cursor: 'row-resize' },
-          }
+          },
   );
 var App = ({ managerLayoutState, setManagerLayoutState, pages, hasTab }) => {
   let { setMobileAboutOpen } = useLayout();
@@ -16555,9 +16567,9 @@ var App = ({ managerLayoutState, setManagerLayoutState, pages, hasTab }) => {
       }),
       slotPanel: import_react60.default.createElement(Panel_default, null),
       slotPages: pages.map(({ id, render: Content2 }) =>
-        import_react60.default.createElement(Content2, { key: id })
+        import_react60.default.createElement(Content2, { key: id }),
       ),
-    })
+    }),
   );
 };
 var Provider = class {
@@ -16622,7 +16634,7 @@ var Container8 = newStyled.div({
         null,
         import_react61.default.createElement(StorybookLogo, {
           alt: 'Storybook',
-        })
+        }),
       ),
       import_react61.default.createElement(UpgradeBlock, {
         onNavigateToWhatsNew,
@@ -16640,8 +16652,8 @@ var Container8 = newStyled.div({
               'a',
               { href: 'https://github.com/storybookjs/storybook' },
               import_react61.default.createElement(GithubIcon, null),
-              'GitHub'
-            )
+              'GitHub',
+            ),
           ),
           import_react61.default.createElement(
             Button,
@@ -16652,9 +16664,9 @@ var Container8 = newStyled.div({
               import_react61.default.createElement(DocumentIcon, {
                 style: { display: 'inline', marginRight: 5 },
               }),
-              'Documentation'
-            )
-          )
+              'Documentation',
+            ),
+          ),
         ),
         import_react61.default.createElement(
           'div',
@@ -16664,7 +16676,7 @@ var Container8 = newStyled.div({
           import_react61.default.createElement(
             StyledLink,
             { href: 'https://www.chromatic.com/' },
-            'Chromatic'
+            'Chromatic',
           ),
           ' and the',
           ' ',
@@ -16673,10 +16685,10 @@ var Container8 = newStyled.div({
             {
               href: 'https://github.com/storybookjs/storybook/graphs/contributors',
             },
-            'Storybook Community'
-          )
-        )
-      )
+            'Storybook Community',
+          ),
+        ),
+      ),
     );
 var NotificationClearer = class extends import_react62.Component {
     componentDidMount() {
@@ -16702,7 +16714,7 @@ var NotificationClearer = class extends import_react62.Component {
           state.whatsNewData?.status === 'SUCCESS'
             ? onNavigateToWhatsNew
             : void 0,
-      })
+      }),
     );
   };
 var import_react65 = __toESM(require_react());
@@ -16728,7 +16740,7 @@ var Footer2 = newStyled.div(({ theme }) => ({
           cancel: !1,
           target: '_blank',
         },
-        'Docs'
+        'Docs',
       ),
       import_react63.default.createElement(
         Link22,
@@ -16738,7 +16750,7 @@ var Footer2 = newStyled.div(({ theme }) => ({
           cancel: !1,
           target: '_blank',
         },
-        'GitHub'
+        'GitHub',
       ),
       import_react63.default.createElement(
         Link22,
@@ -16748,8 +16760,8 @@ var Footer2 = newStyled.div(({ theme }) => ({
           cancel: !1,
           target: '_blank',
         },
-        'Support'
-      )
+        'Support',
+      ),
     ),
   SettingsFooter_default = SettingsFooter;
 var Header2 = newStyled.header(({ theme }) => ({
@@ -16799,7 +16811,7 @@ var Header2 = newStyled.header(({ theme }) => ({
       paddingLeft: 4,
       paddingRight: 4,
       textAlign: 'center',
-    }
+    },
   ),
   Fade = keyframes`
 0%,100% { opacity: 0; }
@@ -16816,7 +16828,7 @@ var Header2 = newStyled.header(({ theme }) => ({
       marginLeft: 10,
       height: 14,
       width: 14,
-    }
+    },
   ),
   Container9 = newStyled.div(({ theme }) => ({
     fontSize: theme.typography.size.s2,
@@ -16851,7 +16863,7 @@ function toShortcutState(shortcutKeys) {
       fixedShortcuts.includes(feature)
         ? acc
         : { ...acc, [feature]: { shortcut, error: !1 } },
-    {}
+    {},
   );
 }
 var ShortcutsScreen = class extends import_react64.Component {
@@ -16866,7 +16878,7 @@ var ShortcutsScreen = class extends import_react64.Component {
         ([feature, { shortcut: existingShortcut }]) =>
           feature !== activeFeature &&
           existingShortcut &&
-          shortcutMatchesShortcut(shortcut, existingShortcut)
+          shortcutMatchesShortcut(shortcut, existingShortcut),
       );
       return this.setState({
         shortcutKeys: { ...shortcutKeys, [activeFeature]: { shortcut, error } },
@@ -16935,7 +16947,7 @@ var ShortcutsScreen = class extends import_react64.Component {
           import_react64.default.createElement(
             Description,
             null,
-            shortcutLabels[feature] || addonsShortcutLabels[feature]
+            shortcutLabels[feature] || addonsShortcutLabels[feature],
           ),
           import_react64.default.createElement(TextInput, {
             spellCheck: 'false',
@@ -16950,8 +16962,8 @@ var ShortcutsScreen = class extends import_react64.Component {
           }),
           import_react64.default.createElement(SuccessIcon, {
             valid: this.displaySuccessMessage(feature),
-          })
-        )
+          }),
+        ),
       );
     };
     this.renderKeyForm = () =>
@@ -16962,9 +16974,9 @@ var ShortcutsScreen = class extends import_react64.Component {
           GridHeaderRow,
           null,
           import_react64.default.createElement(HeaderItem, null, 'Commands'),
-          import_react64.default.createElement(HeaderItem, null, 'Shortcut')
+          import_react64.default.createElement(HeaderItem, null, 'Shortcut'),
         ),
-        this.renderKeyInput()
+        this.renderKeyInput(),
       );
     this.state = {
       activeFeature: void 0,
@@ -16988,9 +17000,9 @@ var ShortcutsScreen = class extends import_react64.Component {
           id: 'restoreDefaultsHotkeys',
           onClick: this.restoreDefaults,
         },
-        'Restore defaults'
+        'Restore defaults',
       ),
-      import_react64.default.createElement(SettingsFooter_default, null)
+      import_react64.default.createElement(SettingsFooter_default, null),
     );
   }
 };
@@ -17013,7 +17025,7 @@ var ShortcutsPage = () =>
         setShortcut,
         restoreDefaultShortcut,
         restoreAllDefaultShortcuts,
-      })
+      }),
   );
 var import_react67 = __toESM(require_react());
 var import_react66 = __toESM(require_react());
@@ -17070,27 +17082,27 @@ var Centered = newStyled.div({
         import_react66.default.createElement(
           'div',
           null,
-          'Share this with your team.'
+          'Share this with your team.',
         ),
         import_react66.default.createElement(
           Button,
           { onClick: copyLink, size: 'small', variant: 'ghost' },
-          copyText
-        )
+          copyText,
+        ),
       ),
       isNotificationsEnabled
         ? import_react66.default.createElement(
             Button,
             { size: 'small', variant: 'ghost', onClick: onToggleNotifications },
             import_react66.default.createElement(EyeCloseIcon, null),
-            'Hide notifications'
+            'Hide notifications',
           )
         : import_react66.default.createElement(
             Button,
             { size: 'small', variant: 'ghost', onClick: onToggleNotifications },
             import_react66.default.createElement(EyeIcon, null),
-            'Show notifications'
-          )
+            'Show notifications',
+          ),
     );
   },
   Iframe = newStyled.iframe(
@@ -17107,10 +17119,10 @@ var Centered = newStyled.div({
       height: 'calc(100% - 80px)',
       background: 'white',
     },
-    ({ isLoaded }) => ({ visibility: isLoaded ? 'visible' : 'hidden' })
+    ({ isLoaded }) => ({ visibility: isLoaded ? 'visible' : 'hidden' }),
   ),
   AlertIcon2 = newStyled((props) =>
-    import_react66.default.createElement(AlertIcon, { ...props })
+    import_react66.default.createElement(AlertIcon, { ...props }),
   )(({ theme }) => ({
     color: theme.textMutedColor,
     width: 32,
@@ -17124,9 +17136,9 @@ var Centered = newStyled.div({
       import_react66.default.createElement(
         LoaderWrapper2,
         null,
-        import_react66.default.createElement(Loader, null)
+        import_react66.default.createElement(Loader, null),
       ),
-      import_react66.default.createElement(Message2, null, 'Loading...')
+      import_react66.default.createElement(Message2, null, 'Loading...'),
     ),
   MaxWaitTimeMessaging = () =>
     import_react66.default.createElement(
@@ -17136,8 +17148,8 @@ var Centered = newStyled.div({
       import_react66.default.createElement(
         Message2,
         null,
-        "The page couldn't be loaded. Check your internet connection and try again."
-      )
+        "The page couldn't be loaded. Check your internet connection and try again.",
+      ),
     ),
   PureWhatsNewScreen = ({
     didHitMaxWaitTime,
@@ -17169,8 +17181,8 @@ var Centered = newStyled.div({
               isNotificationsEnabled,
               onToggleNotifications,
               onCopyLink,
-            })
-          )
+            }),
+          ),
     ),
   MAX_WAIT_TIME = 1e4,
   WhatsNewScreen = () => {
@@ -17179,13 +17191,13 @@ var Centered = newStyled.div({
       { whatsNewData } = state,
       [isLoaded, setLoaded] = (0, import_react66.useState)(!1),
       [didHitMaxWaitTime, setDidHitMaxWaitTime] = (0, import_react66.useState)(
-        !1
+        !1,
       );
     if (
       ((0, import_react66.useEffect)(() => {
         let timer = setTimeout(
           () => !isLoaded && setDidHitMaxWaitTime(!0),
-          MAX_WAIT_TIME
+          MAX_WAIT_TIME,
         );
         return () => clearTimeout(timer);
       }, [isLoaded]),
@@ -17203,13 +17215,13 @@ var Centered = newStyled.div({
       isNotificationsEnabled,
       onCopyLink: () => {
         navigator.clipboard?.writeText(
-          whatsNewData.blogUrl ?? whatsNewData.url
+          whatsNewData.blogUrl ?? whatsNewData.url,
         );
       },
       onToggleNotifications: () => {
         isNotificationsEnabled
           ? scope.confirm(
-              'All update notifications will no longer be shown. Are you sure?'
+              'All update notifications will no longer be shown. Are you sure?',
             ) && api.toggleWhatsNewNotifications()
           : api.toggleWhatsNewNotifications();
       },
@@ -17247,7 +17259,7 @@ var { document: document9 } = scope,
           onClick: () => changeTab(id),
           role: 'tab',
         },
-        title
+        title,
       );
     });
   }),
@@ -17292,7 +17304,7 @@ var { document: document9 } = scope,
             id: 'shortcuts',
             title: 'Keyboard shortcuts',
             changeTab,
-          })
+          }),
         ),
         import_react68.default.createElement(
           IconButton,
@@ -17300,8 +17312,8 @@ var { document: document9 } = scope,
             onClick: (e3) => (e3.preventDefault(), onClose()),
             title: 'Close settings page',
           },
-          import_react68.default.createElement(CloseIcon, null)
-        )
+          import_react68.default.createElement(CloseIcon, null),
+        ),
       ),
       import_react68.default.createElement(
         Content,
@@ -17309,23 +17321,23 @@ var { document: document9 } = scope,
         import_react68.default.createElement(
           Route2,
           { path: 'about' },
-          import_react68.default.createElement(AboutPage, { key: 'about' })
+          import_react68.default.createElement(AboutPage, { key: 'about' }),
         ),
         import_react68.default.createElement(
           Route2,
           { path: 'whats-new' },
           import_react68.default.createElement(WhatsNewPage, {
             key: 'whats-new',
-          })
+          }),
         ),
         import_react68.default.createElement(
           Route2,
           { path: 'shortcuts' },
           import_react68.default.createElement(ShortcutsPage, {
             key: 'shortcuts',
-          })
-        )
-      )
+          }),
+        ),
+      ),
     )
   ),
   SettingsPages = () => {
@@ -17348,7 +17360,7 @@ var { document: document9 } = scope,
       import_react68.default.createElement(
         Route2,
         { path: '/settings/', startsWith: !0 },
-        import_react68.default.createElement(SettingsPages, null)
+        import_react68.default.createElement(SettingsPages, null),
       ),
   };
 ThemeProvider.displayName = 'ThemeProvider';
@@ -17360,8 +17372,8 @@ var Root3 = ({ provider }) =>
       import_react69.default.createElement(
         LocationProvider,
         { key: 'location.provider' },
-        import_react69.default.createElement(Main, { provider })
-      )
+        import_react69.default.createElement(Main, { provider }),
+      ),
     ),
   Main = ({ provider }) => {
     let navigate = useNavigate2();
@@ -17384,14 +17396,14 @@ var Root3 = ({ provider }) =>
                 (sizes) => {
                   api.setSizes(sizes);
                 },
-                [api]
+                [api],
               ),
               pages = (0, import_react69.useMemo)(
                 () => [
                   settingsPageAddon,
                   ...Object.values(api.getElements(typesX.experimental_PAGE)),
                 ],
-                [Object.keys(api.getElements(typesX.experimental_PAGE)).join()]
+                [Object.keys(api.getElements(typesX.experimental_PAGE)).join()],
               );
             return import_react69.default.createElement(
               ThemeProvider,
@@ -17408,18 +17420,18 @@ var Root3 = ({ provider }) =>
                   },
                   hasTab: !!api.getQueryParam('tab'),
                   setManagerLayoutState,
-                })
-              )
+                }),
+              ),
             );
-          }
-        )
+          },
+        ),
     );
   };
 function renderStorybookUI(domNode, provider) {
   if (!(provider instanceof Provider))
     throw new ProviderDoesNotExtendBaseProviderError();
   (0, import_client.createRoot)(domNode).render(
-    import_react69.default.createElement(Root3, { key: 'root', provider })
+    import_react69.default.createElement(Root3, { key: 'root', provider }),
   );
 }
 export { Provider, Root3 as Root, renderStorybookUI };

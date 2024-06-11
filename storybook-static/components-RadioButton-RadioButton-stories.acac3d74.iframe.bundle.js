@@ -6,7 +6,7 @@
     './src/components/RadioButton/RadioButton.stories.tsx': (
       __unused_webpack_module,
       __webpack_exports__,
-      __webpack_require__
+      __webpack_require__,
     ) => {
       __webpack_require__.r(__webpack_exports__),
         __webpack_require__.d(__webpack_exports__, {
@@ -18,19 +18,19 @@
         _templateObject2,
         react = __webpack_require__('./node_modules/react/index.js'),
         taggedTemplateLiteral = __webpack_require__(
-          './node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js'
+          './node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js',
         ),
         styled_components_browser_esm = __webpack_require__(
-          './node_modules/styled-components/dist/styled-components.browser.esm.js'
+          './node_modules/styled-components/dist/styled-components.browser.esm.js',
         ),
         jsx_runtime = __webpack_require__(
-          './node_modules/react/jsx-runtime.js'
+          './node_modules/react/jsx-runtime.js',
         );
       const StyledLabel = styled_components_browser_esm.Ay.label(
           _templateObject ||
             (_templateObject = (0, taggedTemplateLiteral.A)([
               '\n    margin: 5px;\n    font-size: 16px;\n',
-            ]))
+            ])),
         ),
         StyledRadio = styled_components_browser_esm.Ay.input.attrs({
           type: 'radio',
@@ -38,7 +38,7 @@
           _templateObject2 ||
             (_templateObject2 = (0, taggedTemplateLiteral.A)([
               '\n    margin-right: 5px;\n',
-            ]))
+            ])),
         ),
         RadioButton = (_ref) => {
           let { label, name, checked, onChange, value, disabled } = _ref;
@@ -106,7 +106,7 @@
         Default = Object.assign(
           ((args) => {
             const [selectedValue, setSelectedValue] = (0, react.useState)(
-                'option1'
+                'option1',
               ),
               handleChange = (event) => {
                 setSelectedValue(event.target.value);
@@ -150,7 +150,7 @@
               value: '',
               disabled: !1,
             },
-          }
+          },
         );
       Default.parameters = {
         ...Default.parameters,
