@@ -1,90 +1,147 @@
 import React, { useState } from 'react';
+import styled from 'styled-components';
 import './App.css';
-import Button from './components/Button/Button';
-import Card from './components/Card/Card';
-import Dropdown from './components/Dropdown/Dropdown';
+import Navbar from './components/Navbar/Navbar';
 import HeroImage from './components/HeroImage/HeroImage';
-import Img from './components/Img/Img';
-import Label from './components/Label/Label';
-import RadioButton from './components/RadioButton/RadioButton';
+import Project from './components/Project/Project';
+import ProjectModal from './components/ProjectModal/ProjectModal';
+import Skills from './components/Skills/Skills';
+import ContactForm from './components/ContactForm/ContactForm';
 import Table from './components/Table/Table';
-import Text from './components/Text/Text';
+//import Text from './components/Text/Text';
+import { projects } from './data';
+import { ContactFormData } from './components/ContactForm/ContactForm.types';
+import { ProjectProps } from './components/Project';
 
-function App() {
-  // const [selectedOption, setSelectedOption] = useState<string>('');
-  const [radioValue, setRadioValue] = useState<string>('option1');
+const AppContainer = styled.div`
+  padding-top: 50px; // be sure to adjust based on the navbar height
+`;
 
-  // const handleDropdownChange = (value: string) => {
-  //   setSelectedOption(value);
-  // };
+const Section = styled.section`
+  text-align: center;
+  padding: 50px 0;
+  background-color: #1a1a1a;
+  color: #ddd;
+`;
 
-  const handleRadioChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    setRadioValue(event.target.value);
+const Container = styled.div`
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+`;
+
+const Title = styled.h1`
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #fff;
+`;
+
+const Subtitle = styled.p`
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+  color: #aaa;
+`;
+
+const Grid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+`;
+
+const App = () => {
+  const [selectedProject, setSelectedProject] = useState<ProjectProps | null>(
+    null,
+  );
+
+  const handleProjectClick = (project: ProjectProps) => {
+    setSelectedProject(project);
   };
 
-  // eslint-disable-next-line @typescript-eslint/no-empty-function
-  const noOp = () => {};
+  const handleModalClose = () => {
+    setSelectedProject(null);
+  };
+
+  const skills = {
+    description: '',
+    languages: ['JavaScript', 'TypeScript', 'Python'],
+    frameworks: ['React', 'Next.js', 'Express'],
+    tools: ['Git', 'Docker', 'Jenkins'],
+  };
+
+  const navbarLinks = [
+    { name: 'Home', url: '#home' },
+    { name: 'Projects', url: '#projects' },
+    { name: 'Experience', url: '#experience' },
+    { name: 'Skills', url: '#skills' },
+    { name: 'Contact', url: '#contact' },
+  ];
+
+  const handleContactSubmit = (data: ContactFormData) => {
+    alert(`Message sent: ${JSON.stringify(data, null, 2)}`);
+  };
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <h2>Welcome to My Component Library</h2>
-
-        <Button label="Click Me!" onClick={() => alert('Button clicked!')} />
-
-        <Card>
-          <h2>Card Title</h2>
-          <p>This App was made with React and Storybook.</p>
-        </Card>
-
-        <Dropdown
-          options={[
-            { value: 'option1', label: 'Option 1' },
-            { value: 'option2', label: 'Option 2' },
-            { value: 'option3', label: 'Option 3' },
-          ]}
-          onChange={noOp}
-        />
-
+    <AppContainer>
+      <Navbar links={navbarLinks} />
+      <Section id="home">
         <HeroImage
           bgImage="https://placehold.jp/50/20451c/ffffff/500x500.png"
-          text="The Hero Section"
+          text="Welcome to My Portfolio"
         />
-
-        <Label>Sample Label</Label>
-
-        <RadioButton
-          name="Example 1"
-          value="option1"
-          label="Option 1"
-          checked={radioValue === 'option1'}
-          onChange={handleRadioChange}
-        />
-
-        <Img
-          src="https://placehold.jp/20/20451c/ffffff/150x150.png"
-          alt="Sample"
-        />
-
+      </Section>
+      <Section id="projects">
+        <Container>
+          <Title>Projects I&apos;ve Built</Title>
+          <Subtitle>Here are some of the projects I&apos;ve built.</Subtitle>
+          <Grid>
+            {projects.map((project, index) => (
+              <Project
+                key={index}
+                {...project}
+                onClick={() => handleProjectClick(project)}
+              />
+            ))}
+          </Grid>
+        </Container>
+      </Section>
+      <Section id="experience">
+        <h2>Experience</h2>
         <Table>
           <thead>
             <tr>
-              <th>Header 1</th>
-              <th>Header 2</th>
+              <th>Company</th>
+              <th>Role</th>
+              <th>Duration</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Data 1</td>
-              <td>Data 2</td>
+              <td>ACFN</td>
+              <td>Data Technician</td>
+              <td>5 years</td>
+            </tr>
+            <tr>
+              <td>Acrodex</td>
+              <td>Service Desk</td>
+              <td>2 years</td>
             </tr>
           </tbody>
         </Table>
-
-        <Text content="Example Text" />
-      </header>
-    </div>
+      </Section>
+      <Section id="skills">
+        <h2>Skills and Technologies</h2>
+        <Skills {...skills} />
+      </Section>
+      <Section id="contact">
+        <h2>Contact</h2>
+        <ContactForm onSubmit={handleContactSubmit} />
+      </Section>
+      {selectedProject && (
+        <ProjectModal project={selectedProject} onClose={handleModalClose} />
+      )}
+    </AppContainer>
   );
-}
+};
 
 export default App;
