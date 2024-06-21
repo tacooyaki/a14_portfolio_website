@@ -18,7 +18,7 @@ const SkillsList = styled.ul`
 const SkillItem = styled.li`
   display: inline;
   margin-right: 10px;
-  background: #f0f0f0;
+  background: #031742ff;
   padding: 5px 10px;
   border-radius: 5px;
 `;

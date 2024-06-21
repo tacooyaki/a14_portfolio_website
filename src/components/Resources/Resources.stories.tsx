@@ -12,13 +12,13 @@ const Template: StoryObj<ResourcesProps> = {
     resources: [
       {
         title: 'Resource 1',
-        image: '/path-to-image.jpg',
+        image: '/images/resource1.jpg',
         summary: 'Summary of resource 1',
         link: 'https://resource1.com',
       },
       {
         title: 'Resource 2',
-        image: '/path-to-image-2.jpg',
+        image: '/images/resource2.jpg',
         summary: 'Summary of resource 2',
         link: 'https://resource2.com',
       },

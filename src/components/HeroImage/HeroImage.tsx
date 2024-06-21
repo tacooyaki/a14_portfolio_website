@@ -9,6 +9,8 @@ interface StyledHeroProps {
 const StyledHero = styled.div<StyledHeroProps>`
   width: 100%;
   height: 400px;
+  max-width: 100%;
+  max-height: 500px;
   background-size: cover;
   background-position: center;
   display: flex;

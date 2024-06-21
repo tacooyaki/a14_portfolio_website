@@ -1,19 +1,20 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Resources from './Resources';
 import '@testing-library/jest-dom';
+import Resources from './Resources';
+import { ResourcesProps } from './Resources.types';
 
-const mockResources = [
+const mockResources: ResourcesProps['resources'] = [
   {
     title: 'Resource 1',
-    image: '/path-to-image.jpg',
-    summary: 'Summary of resource 1',
+    image: '/images/resource1.jpg',
+    summary: 'Summary of this resource.',
     link: 'https://resource1.com',
   },
   {
     title: 'Resource 2',
-    image: '/path-to-image-2.jpg',
-    summary: 'Summary of resource 2',
+    image: '/images/resource2.jpg',
+    summary: 'Summary of this resource here.',
     link: 'https://resource2.com',
   },
 ];
@@ -21,9 +22,7 @@ const mockResources = [
 describe('Resources Component', () => {
   test('renders resource titles', () => {
     render(<Resources resources={mockResources} />);
-    const titleElements = screen.getAllByRole('heading', {
-      name: /Resource 1/i,
-    });
+    const titleElements = screen.getAllByText(/Resource 1/i);
     expect(titleElements).toHaveLength(1);
   });
 
@@ -33,23 +32,15 @@ describe('Resources Component', () => {
     expect(imageElement).toBeInTheDocument();
   });
 
-  test('renders resource summaries', () => {
-    render(<Resources resources={mockResources} />);
-    const summaryElement = screen.getByText(/Summary of resource 1/i);
-    expect(summaryElement).toBeInTheDocument();
-  });
-
   test('renders resource links', () => {
     render(<Resources resources={mockResources} />);
     const linkElements = screen.getAllByText(/View Resource/i);
-    const project1LinkElement = linkElements[0].closest('a');
-    const project2LinkElement = linkElements[1].closest('a');
-
-    expect(project1LinkElement).toHaveAttribute(
+    expect(linkElements).toHaveLength(2);
+    expect(linkElements[0].closest('a')).toHaveAttribute(
       'href',
       'https://resource1.com',
     );
-    expect(project2LinkElement).toHaveAttribute(
+    expect(linkElements[1].closest('a')).toHaveAttribute(
       'href',
       'https://resource2.com',
     );

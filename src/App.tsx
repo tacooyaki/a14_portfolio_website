@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
+import GlobalStyle from './globalStyles';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
 import HeroImage from './components/HeroImage/HeroImage';
@@ -7,14 +8,21 @@ import Project from './components/Project/Project';
 import ProjectModal from './components/ProjectModal/ProjectModal';
 import Skills from './components/Skills/Skills';
 import ContactForm from './components/ContactForm/ContactForm';
-import Table from './components/Table/Table';
+//import Table from './components/Table/Table';
 //import Text from './components/Text/Text';
-import { projects } from './data';
+import Resources from './components/Resources/Resources';
+import DeveloperSetup from './components/DeveloperSetup/DeveloperSetup';
+import { projects, resources, developerSetup } from './data';
 import { ContactFormData } from './components/ContactForm/ContactForm.types';
 import { ProjectProps } from './components/Project';
+import { PiGearFineBold } from 'react-icons/pi';
+import { FaDev } from 'react-icons/fa';
+import { IoCodeSlashOutline } from 'react-icons/io5';
+import { GrResources } from 'react-icons/gr';
+import { IoMdContact } from 'react-icons/io';
 
 const AppContainer = styled.div`
-  padding-top: 50px; // be sure to adjust based on the navbar height
+  padding-top: 50px; // Navbar height
 `;
 
 const Section = styled.section`
@@ -63,10 +71,10 @@ const App = () => {
   };
 
   const skills = {
-    description: '',
-    languages: ['JavaScript', 'TypeScript', 'Python'],
-    frameworks: ['React', 'Next.js', 'Express'],
-    tools: ['Git', 'Docker', 'Jenkins'],
+    description: 'These are my skills.',
+    languages: ['Java', 'TypeScript', 'JavaScript', 'Ruby'],
+    frameworks: ['React', 'Next.js', 'Express', 'Ruby on Rails'],
+    tools: ['JetBrains', 'Git', 'Docker'],
   };
 
   const navbarLinks = [
@@ -82,65 +90,79 @@ const App = () => {
   };
 
   return (
-    <AppContainer>
-      <Navbar links={navbarLinks} />
-      <Section id="home">
-        <HeroImage
-          bgImage="https://placehold.jp/50/20451c/ffffff/500x500.png"
-          text="Welcome to My Portfolio"
-        />
-      </Section>
-      <Section id="projects">
-        <Container>
-          <Title>Projects I&apos;ve Built</Title>
-          <Subtitle>Here are some of the projects I&apos;ve built.</Subtitle>
-          <Grid>
-            {projects.map((project, index) => (
-              <Project
-                key={index}
-                {...project}
-                onClick={() => handleProjectClick(project)}
-              />
-            ))}
-          </Grid>
-        </Container>
-      </Section>
-      <Section id="experience">
-        <h2>Experience</h2>
-        <Table>
-          <thead>
-            <tr>
-              <th>Company</th>
-              <th>Role</th>
-              <th>Duration</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>ACFN</td>
-              <td>Data Technician</td>
-              <td>5 years</td>
-            </tr>
-            <tr>
-              <td>Acrodex</td>
-              <td>Service Desk</td>
-              <td>2 years</td>
-            </tr>
-          </tbody>
-        </Table>
-      </Section>
-      <Section id="skills">
-        <h2>Skills and Technologies</h2>
-        <Skills {...skills} />
-      </Section>
-      <Section id="contact">
-        <h2>Contact</h2>
-        <ContactForm onSubmit={handleContactSubmit} />
-      </Section>
-      {selectedProject && (
-        <ProjectModal project={selectedProject} onClose={handleModalClose} />
-      )}
-    </AppContainer>
+    <>
+      <GlobalStyle />
+      <AppContainer>
+        <Navbar links={navbarLinks} />
+        <Section id="home">
+          <HeroImage
+            bgImage="/images/hero.jpg"
+            text="Welcome to My Portfolio"
+          />
+        </Section>
+        <Section id="projects">
+          <Container>
+            <Title>
+              <IoCodeSlashOutline />
+            </Title>
+            <Title>Projects I&apos;ve Built</Title>
+            <Subtitle>
+              Here are some of the projects I&apos;ve worked on. Click on any
+              project to learn more.
+            </Subtitle>
+            <Grid>
+              {projects.map((project, index) => (
+                <Project
+                  key={index}
+                  {...project}
+                  onClick={() => handleProjectClick(project)}
+                />
+              ))}
+            </Grid>
+          </Container>
+        </Section>
+        <Section id="skills">
+          <Container>
+            <Title>
+              <FaDev />
+            </Title>
+            <Title>Skills</Title>
+            <Skills {...skills} />
+          </Container>
+        </Section>
+        <Section id="resources">
+          <Container>
+            <Title>
+              <GrResources />
+            </Title>
+            <Title>Resources</Title>
+            <p>Resources I found helpful on my journey.</p>
+            <Resources resources={resources} />
+          </Container>
+        </Section>
+        <Section id="developer-setup">
+          <Container>
+            <Title>
+              <PiGearFineBold />
+            </Title>
+            <Title>Developer Setup</Title>
+            <DeveloperSetup {...developerSetup} />
+          </Container>
+        </Section>
+        <Section id="contact">
+          <Container>
+            <Title>
+              <IoMdContact />
+            </Title>
+            <Title>Contact</Title>
+            <ContactForm onSubmit={handleContactSubmit} />
+          </Container>
+        </Section>
+        {selectedProject && (
+          <ProjectModal project={selectedProject} onClose={handleModalClose} />
+        )}
+      </AppContainer>
+    </>
   );
 };
 

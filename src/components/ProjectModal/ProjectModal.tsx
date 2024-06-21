@@ -15,10 +15,10 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background: #fff;
+  background: rgba(37, 39, 51, 0.61);
   padding: 20px;
   border-radius: 5px;
-  max-width: 500px;
+  max-width: 950px;
   width: 100%;
   position: relative;
 `;

@@ -22,15 +22,15 @@ h2 {
 }
 
 #home {
-  background-color: #f0f0f0;
+  background-color: #1a1a1a;
 }
 
 #projects,
 #experience,
 #skills,
 #contact {
-  background-color: #fff;
-  border-bottom: 1px solid #eee;
+  background-color: #1a1a1a;
+  /*border-bottom: 1px solid #eee;*/ /* Adds a boarder between sections */
 }
 
 html {

@@ -26,6 +26,9 @@ const ProjectImage = styled.img`
   width: 100%;
   height: auto;
   margin: 10px 0;
+  max-width: 450px;
+  max-height: 350px;
+  object-fit: cover;
 `;
 
 const ProjectDescription = styled.p`
@@ -44,14 +47,27 @@ const TechList = styled.ul`
   list-style-type: none;
   padding: 0;
   margin: 10px 0;
+  display: flex;
+  justify-content: center;
 `;
 
 const TechItem = styled.li`
   display: inline;
-  margin-right: 10px;
+  margin: 0 5px;
   background: #f0f0f0;
   padding: 5px 10px;
   border-radius: 5px;
+`;
+
+const TechIconList = styled.div`
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+`;
+
+const TechIconItem = styled.div`
+  margin: 0 5px;
+  font-size: 2rem;
 `;
 
 const Overlay = styled.div`
@@ -77,6 +93,7 @@ const Project: React.FC<ProjectProps> = ({
   image,
   link,
   techList,
+  techIcons,
   onClick,
 }) => {
   return (
@@ -93,6 +110,15 @@ const Project: React.FC<ProjectProps> = ({
             <TechItem key={index}>{tech}</TechItem>
           ))}
         </TechList>
+        {techIcons && (
+          <TechIconList>
+            {techIcons.map((Icon, index) => (
+              <TechIconItem key={index}>
+                <Icon />
+              </TechIconItem>
+            ))}
+          </TechIconList>
+        )}
       </Overlay>
     </ProjectContainer>
   );
