@@ -21,7 +21,7 @@ const ResourceTitle = styled.h3`
 `;
 
 const ResourceImage = styled.img`
-  width: 100px;
+  width: 350px;
   height: auto;
   margin-bottom: 10px; /* space below the image */
 `;

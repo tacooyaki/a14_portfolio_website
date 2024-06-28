@@ -1,20 +1,21 @@
 import React from 'react';
 import { render, screen } from '@testing-library/react';
-import Work from './Work';
 import '@testing-library/jest-dom';
+import Work from './Work';
+import { ProjectProps } from '../Project';
 
-const mockProjects = [
+const mockProjects: ProjectProps[] = [
   {
     title: 'Project 1',
     description: 'Description of project 1',
-    image: '/path-to-image.jpg',
+    images: ['/path-to-image1.jpg', '/path-to-image2.jpg'], // Updated to an array of images
     link: 'https://project1.com',
     techList: ['React', 'TypeScript', 'Styled-Components'],
   },
   {
     title: 'Project 2',
     description: 'Description of project 2',
-    image: '/path-to-image-2.jpg',
+    images: ['/another-path-to-image1.jpg', '/another-path-to-image2.jpg'], // Updated to an array of images
     link: 'https://project2.com',
     techList: ['JavaScript', 'CSS', 'HTML'],
   },

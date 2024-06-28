@@ -12,11 +12,12 @@ import ContactForm from './components/ContactForm/ContactForm';
 //import Text from './components/Text/Text';
 import Resources from './components/Resources/Resources';
 import DeveloperSetup from './components/DeveloperSetup/DeveloperSetup';
-import { projects, resources, developerSetup } from './data';
+import BasicInformation from './components/BasicInformation/BasicInformation';
+import { projects, resources, developerSetup, skills } from './data';
 import { ContactFormData } from './components/ContactForm/ContactForm.types';
 import { ProjectProps } from './components/Project';
 import { PiGearFineBold } from 'react-icons/pi';
-import { FaDev } from 'react-icons/fa';
+import { GiBlackBelt } from 'react-icons/gi';
 import { IoCodeSlashOutline } from 'react-icons/io5';
 import { GrResources } from 'react-icons/gr';
 import { IoMdContact } from 'react-icons/io';
@@ -70,18 +71,12 @@ const App = () => {
     setSelectedProject(null);
   };
 
-  const skills = {
-    description: 'These are my skills.',
-    languages: ['Java', 'TypeScript', 'JavaScript', 'Ruby'],
-    frameworks: ['React', 'Next.js', 'Express', 'Ruby on Rails'],
-    tools: ['JetBrains', 'Git', 'Docker'],
-  };
-
   const navbarLinks = [
     { name: 'Home', url: '#home' },
     { name: 'Projects', url: '#projects' },
-    { name: 'Experience', url: '#experience' },
     { name: 'Skills', url: '#skills' },
+    { name: 'Resources', url: '#resources' },
+    { name: 'Developer Setup', url: '#developer-setup' },
     { name: 'Contact', url: '#contact' },
   ];
 
@@ -99,6 +94,9 @@ const App = () => {
             bgImage="/images/hero.jpg"
             text="Welcome to My Portfolio"
           />
+          <Section id="about">
+            <BasicInformation />
+          </Section>
         </Section>
         <Section id="projects">
           <Container>
@@ -124,9 +122,10 @@ const App = () => {
         <Section id="skills">
           <Container>
             <Title>
-              <FaDev />
+              <GiBlackBelt />
             </Title>
             <Title>Skills</Title>
+            Here are some of the technologies and tools I have worked with.
             <Skills {...skills} />
           </Container>
         </Section>

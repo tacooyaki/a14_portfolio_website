@@ -2,12 +2,33 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import Skills from './Skills';
 import '@testing-library/jest-dom';
+import { FaReact, FaPython } from 'react-icons/fa';
+import {
+  SiTypescript,
+  SiNextdotjs,
+  SiExpress,
+  SiGit,
+  SiDocker,
+  SiJenkins,
+} from 'react-icons/si';
 
 const mockSkills = {
   description: 'These are my skills.',
-  languages: ['JavaScript', 'TypeScript', 'Python'],
-  frameworks: ['React', 'Next.js', 'Express'],
-  tools: ['Git', 'Docker', 'Jenkins'],
+  languages: [
+    { name: 'JavaScript', icon: FaReact },
+    { name: 'TypeScript', icon: SiTypescript },
+    { name: 'Python', icon: FaPython },
+  ],
+  frameworks: [
+    { name: 'React', icon: FaReact },
+    { name: 'Next.js', icon: SiNextdotjs },
+    { name: 'Express', icon: SiExpress },
+  ],
+  tools: [
+    { name: 'Git', icon: SiGit },
+    { name: 'Docker', icon: SiDocker },
+    { name: 'Jenkins', icon: SiJenkins },
+  ],
 };
 
 describe('Skills Component', () => {

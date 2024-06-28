@@ -14,14 +14,14 @@ export const Default: StoryObj<WorkProps> = {
       {
         title: 'Project 1',
         description: 'Description of project 1',
-        image: '/path-to-image.jpg',
+        images: ['/path-to-image.jpg'],
         link: 'https://project1.com',
         techList: ['React', 'TypeScript', 'Styled-Components'],
       },
       {
         title: 'Project 2',
         description: 'Description of project 2',
-        image: '/path-to-image-2.jpg',
+        images: ['/path-to-image-2.jpg'],
         link: 'https://project2.com',
         techList: ['JavaScript', 'CSS', 'HTML'],
       },

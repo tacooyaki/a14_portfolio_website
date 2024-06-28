@@ -11,6 +11,9 @@ const ProjectContainer = styled.div`
   margin: 10px 0;
   overflow: hidden;
   cursor: pointer;
+  min-height: 480px;
+  align-items: center;
+  justify-content: center;
 
   &:hover .overlay {
     opacity: 1;
@@ -27,12 +30,14 @@ const ProjectImage = styled.img`
   height: auto;
   margin: 10px 0;
   max-width: 450px;
-  max-height: 350px;
+  max-height: 550px;
   object-fit: cover;
 `;
 
 const ProjectDescription = styled.p`
   margin: 10px 0;
+  padding-left: 40px;
+  padding-right: 40px;
 `;
 
 const ProjectLink = styled.a`
@@ -54,7 +59,7 @@ const TechList = styled.ul`
 const TechItem = styled.li`
   display: inline;
   margin: 0 5px;
-  background: #f0f0f0;
+  background: #031742ff;
   padding: 5px 10px;
   border-radius: 5px;
 `;
@@ -90,7 +95,7 @@ const Overlay = styled.div`
 const Project: React.FC<ProjectProps> = ({
   title,
   description,
-  image,
+  images,
   link,
   techList,
   techIcons,
@@ -98,7 +103,7 @@ const Project: React.FC<ProjectProps> = ({
 }) => {
   return (
     <ProjectContainer onClick={onClick}>
-      <ProjectImage src={image} alt={title} />
+      <ProjectImage src={images[0]} alt={title} />
       <Overlay className="overlay">
         <ProjectTitle>{title}</ProjectTitle>
         <ProjectDescription>{description}</ProjectDescription>

@@ -4,7 +4,7 @@ export interface ProjectProps {
   title: string;
   subtitle?: string;
   description: string;
-  image: string;
+  images: string[];
   link: string;
   techList: string[];
   techIcons?: IconType[];

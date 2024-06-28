@@ -4,23 +4,50 @@ import { SkillsProps } from './Skills.types';
 
 const SkillsContainer = styled.div`
   margin: 20px 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`;
+
+const SkillsRow = styled.div`
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
 `;
 
 const SkillsSection = styled.div`
-  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 `;
 
-const SkillsList = styled.ul`
-  list-style-type: none;
-  padding: 0;
+const SkillsList = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 
-const SkillItem = styled.li`
-  display: inline;
-  margin-right: 10px;
+const SkillItem = styled.div`
+  display: flex;
+  align-items: center;
   background: #031742ff;
-  padding: 5px 10px;
+  padding: 7px;
   border-radius: 5px;
+  min-width: 270px;
+  min-height: 45px;
+  //justify-content: center;
+`;
+
+const SkillIcon = styled.div`
+  margin-right: 10px;
+  font-size: 2.2em;
+`;
+
+const SectionTitle = styled.h3`
+  text-align: center;
+  margin-bottom: 10px;
 `;
 
 const Skills: React.FC<SkillsProps> = ({
@@ -29,33 +56,38 @@ const Skills: React.FC<SkillsProps> = ({
   frameworks,
   tools,
 }) => {
+  const renderSkills = (
+    skills: { name: string; icon: React.ComponentType }[],
+  ) =>
+    skills.map((skill, index) => {
+      const Icon = skill.icon;
+      return (
+        <SkillItem key={index}>
+          <SkillIcon>
+            <Icon />
+          </SkillIcon>
+          {skill.name}
+        </SkillItem>
+      );
+    });
+
   return (
     <SkillsContainer>
       <p>{description}</p>
-      <SkillsSection>
-        <h3>Languages</h3>
-        <SkillsList>
-          {languages.map((language, index) => (
-            <SkillItem key={index}>{language}</SkillItem>
-          ))}
-        </SkillsList>
-      </SkillsSection>
-      <SkillsSection>
-        <h3>Frameworks</h3>
-        <SkillsList>
-          {frameworks.map((framework, index) => (
-            <SkillItem key={index}>{framework}</SkillItem>
-          ))}
-        </SkillsList>
-      </SkillsSection>
-      <SkillsSection>
-        <h3>Tools</h3>
-        <SkillsList>
-          {tools.map((tool, index) => (
-            <SkillItem key={index}>{tool}</SkillItem>
-          ))}
-        </SkillsList>
-      </SkillsSection>
+      <SkillsRow>
+        <SkillsSection>
+          <SectionTitle>Languages</SectionTitle>
+          <SkillsList>{renderSkills(languages)}</SkillsList>
+        </SkillsSection>
+        <SkillsSection>
+          <SectionTitle>Frameworks</SectionTitle>
+          <SkillsList>{renderSkills(frameworks)}</SkillsList>
+        </SkillsSection>
+        <SkillsSection>
+          <SectionTitle>Tools</SectionTitle>
+          <SkillsList>{renderSkills(tools)}</SkillsList>
+        </SkillsSection>
+      </SkillsRow>
     </SkillsContainer>
   );
 };

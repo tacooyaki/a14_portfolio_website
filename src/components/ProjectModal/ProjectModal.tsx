@@ -1,6 +1,7 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ProjectProps } from '../Project';
+import { FaChevronLeft, FaChevronRight, FaTimes } from 'react-icons/fa';
 
 const ModalOverlay = styled.div`
   position: fixed;
@@ -8,72 +9,137 @@ const ModalOverlay = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 1000;
 `;
 
 const ModalContent = styled.div`
-  background: rgba(37, 39, 51, 0.61);
+  background: rgba(5, 19, 18, 0.86);
   padding: 20px;
-  border-radius: 5px;
-  max-width: 950px;
-  width: 100%;
+  width: 80%;
+  max-width: 995px;
   position: relative;
 `;
 
-const CloseButton = styled.button`
-  background: none;
-  border: none;
-  font-size: 1.5rem;
+const CloseButton = styled(FaTimes)`
   position: absolute;
   top: 10px;
   right: 10px;
   cursor: pointer;
-
   &:hover {
-    color: #0066ff;
+    color: red;
   }
 `;
 
-const ProjectModal: React.FC<{
+const ImageContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  height: 800px;
+`;
+
+const Image = styled.img`
+  max-width: 100%;
+  max-height: 100%;
+`;
+
+const NavButton = styled.button`
+  background: none;
+  border: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #fff;
+  font-size: 2rem;
+  padding: 0 10px;
+`;
+
+const PrevButton = styled(NavButton)`
+  left: -20px;
+`;
+
+const NextButton = styled(NavButton)`
+  right: -20px;
+`;
+
+const TechList = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  margin: 10px 0;
+  display: flex;
+  justify-content: center;
+`;
+
+const TechItem = styled.li`
+  display: inline;
+  margin: 0 5px;
+  background: rgba(19, 22, 42, 0.66);
+  padding: 5px 10px;
+  border-radius: 5px;
+`;
+
+interface ProjectModalProps {
   project: ProjectProps;
   onClose: () => void;
-}> = ({ project, onClose }) => {
-  const handleOutsideClick = (e: MouseEvent) => {
-    const target = e.target as HTMLElement;
-    if (target.id === 'modal-overlay') {
-      onClose();
-    }
-  };
+}
+
+const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   useEffect(() => {
-    document.addEventListener('click', handleOutsideClick);
-    return () => {
-      document.removeEventListener('click', handleOutsideClick);
+    const handleClickOutside = (event: MouseEvent) => {
+      if ((event.target as HTMLElement).id === 'modal-overlay') {
+        onClose();
+      }
     };
-  }, []);
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClose]);
+
+  const handlePrevClick = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === 0 ? project.images.length - 1 : prevIndex - 1,
+    );
+  };
+
+  const handleNextClick = () => {
+    setCurrentImageIndex((prevIndex) =>
+      prevIndex === project.images.length - 1 ? 0 : prevIndex + 1,
+    );
+  };
 
   return (
     <ModalOverlay id="modal-overlay">
       <ModalContent>
-        <CloseButton onClick={onClose}>&times;</CloseButton>
+        <CloseButton onClick={onClose} />
         <h2>{project.title}</h2>
-        <img
-          src={project.image}
-          alt={project.title}
-          style={{ width: '100%', height: 'auto' }}
-        />
+        <ImageContainer>
+          <PrevButton onClick={handlePrevClick}>
+            <FaChevronLeft />
+          </PrevButton>
+          <Image src={project.images[currentImageIndex]} alt={project.title} />
+          <NextButton onClick={handleNextClick}>
+            <FaChevronRight />
+          </NextButton>
+        </ImageContainer>
         <p>{project.description}</p>
-        <ul>
-          {project.techList.map((tech, index) => (
-            <li key={index}>{tech}</li>
-          ))}
-        </ul>
         <a href={project.link} target="_blank" rel="noopener noreferrer">
           View Project
         </a>
+        <TechList>
+          {project.techList.map((tech, index) => (
+            <TechItem key={index}>{tech}</TechItem>
+          ))}
+        </TechList>
       </ModalContent>
     </ModalOverlay>
   );
