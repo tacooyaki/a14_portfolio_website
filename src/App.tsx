@@ -11,6 +11,7 @@ import ContactForm from './components/ContactForm/ContactForm';
 //import Text from './components/Text/Text';
 import Resources from './components/Resources/Resources';
 import DeveloperSetup from './components/DeveloperSetup/DeveloperSetup';
+import Footer from './components/Footer/Footer';
 import BasicInformation from './components/BasicInformation/BasicInformation';
 import { projects, resources, developerSetup, skills } from './data';
 import { ContactFormData } from './components/ContactForm/ContactForm.types';
@@ -71,12 +72,12 @@ const App = () => {
   };
 
   const navbarLinks = [
-    { name: 'Home', url: '#about' },
-    { name: 'Projects', url: '#projects' },
-    { name: 'Skills', url: '#skills' },
-    { name: 'Resources', url: '#resources' },
-    { name: 'Developer Setup', url: '#developer-setup' },
     { name: 'Contact', url: '#contact' },
+    { name: 'Developer Setup', url: '#developer-setup' },
+    { name: 'Resources', url: '#resources' },
+    { name: 'Skills', url: '#skills' },
+    { name: 'Projects', url: '#projects' },
+    { name: 'Home', url: '#about' },
   ];
 
   const handleContactSubmit = (data: ContactFormData) => {
@@ -153,6 +154,7 @@ const App = () => {
         {selectedProject && (
           <ProjectModal project={selectedProject} onClose={handleModalClose} />
         )}
+        <Footer />
       </AppContainer>
     </>
   );

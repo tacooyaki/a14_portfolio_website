@@ -24,7 +24,7 @@ export const projects = [
     title: 'E-commerce Web Application',
     subtitle: 'Ruby and Ruby on Rails',
     description:
-      'This e-commerce platform built on Ruby on Rails. It utilizes Bulma and includes a product management system, dynamic shopping cart, and secure checkout. Key features include real-time form validation, AJAX-driven interactions, and extensive user account management.',
+      'This e-commerce platform is built on Ruby on Rails. It utilizes Bulma and includes a product management system, dynamic shopping cart, and secure checkout. Key features include real-time form validation, AJAX-driven interactions, and extensive user account management.',
     images: [
       '/images/ecomm1.png',
       '/images/ecomm2.png',
@@ -66,7 +66,7 @@ export const projects = [
     subtitle: 'React',
     description:
       'This application demonstrates the capacity of React to create interactive data visualizations. Using a public API, this project applies complex data handling, component-based architecture, and dynamic CSS.',
-    images: ['/images/reactapp1.png'],
+    images: ['/images/reactapp1.png', '/images/reactapp2.png'],
     link: 'https://codesandbox.io/p/sandbox/prod-sun-3l9389?file=%2Fsrc%2Fmvp.css',
     techList: ['React', 'MVP.css', 'Public API'],
     techIcons: [FaReact],
@@ -109,7 +109,7 @@ export const developerSetup = {
     'productivity plugins such as CodeGlance Pro.',
   terminalSetup:
     'For my terminal, I prefer using Windows Terminal with PowerShell Core. ' +
-    'I have customized my terminal with Terminal Tab Tailor for dynamically renaming ' +
+    'I have customized my terminal with Terminal Tab Tailor for renaming ' +
     'terminal tabs.',
   preferredFont:
     'My preferred editor font is Fira Code, which includes font ligatures that make the code more ' +
@@ -121,7 +121,7 @@ export const skills = {
   languages: [
     { name: 'Java', icon: FaJava },
     { name: 'TypeScript', icon: SiTypescript },
-    { name: 'JavaScript', icon: FaReact },
+    { name: 'JavaScript', icon: SiJavascript },
     { name: 'Python', icon: FaPython },
   ],
   frameworks: [

@@ -1,61 +1,33 @@
-# Running this React App for Docker
+# Portfolio Site
 
 This project includes a Create React App to display a portfolio website.
 
-## Prerequisites
+## Getting Started
 
-- Have Docker installed on your machine.
+### Prerequisites
 
-## Dockerfile Overview
+- Docker must be installed on your local machine.
 
-The Dockerfile does the following:
+### Building the Docker Image
 
-1. Uses Node.js runtime.
-2. Sets directory to `/usr/src/app/mercredi_patrick_ui_garden`.
-3. Copies project files into the container.
-4. Installs project dependencies.
-5. Builds App for production.
-6. Builds Storybook web app.
-7. Installs `serve` and `http-server`.
-8. Exposes port 8083 for the Create React App and port 8084 for Storybook.
-9. Serves both Create React App and Storybook.
+1. Build the Docker image:
+   ```bash
+   docker build -t mercredi_patrick_coding_assignment14 .
+   ```
 
-## Building the Image
+### Running the Docker Container
 
-To build, navigate to the project directory and run:
+1. Run the Docker container:
 
-```sh
-docker build -t mercredi_patrick_coding_assignment13 .
-```
+   ```bash
+   docker run -p 5575:5575 mercredi_patrick_coding_assignment14
+   ```
 
-## Running the Container
+2. Open your browser and navigate to `http://localhost:5575`
 
-After building the container, run the following command:
+## Project Structure
 
-```sh
-docker run -d --name mercredi_patrick_coding_assignment13 -p 8018:8018 -p 8084:8084 mercredi_patrick_coding_assignment13
-```
-
-## Accessing the Applications
-
-Once the container is running, you can access the apps in your browser:
-
-React App: http://localhost:8018
-
-Storybook: http://localhost:8084
-
-## Code Quality Checks
-
-This project uses Husky to run pre-commit checks of:
-
-Prettier
-
-ESLint
-
-Tests
-
-## GitHub Actions Workflow
-
-The GitHub Actions workflow is configured in .github/workflows/ci.yml so
-that the same checks are run for every code submission, and the user will
-be notified if the build fails.
+- `src`: Contains the source code for the React application.
+- `public`: Contains the static files.
+- `Dockerfile`: Used to build the Docker image.
+- `README.md`: This file.
