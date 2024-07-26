@@ -11,7 +11,7 @@ header {
 }
 
 section {
-  padding: 2rem 1rem;
+  padding: 0.5rem 1rem;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -30,7 +30,6 @@ h2 {
 #skills,
 #contact {
   background-color: #1a1a1a;
-  /*border-bottom: 1px solid #eee;*/ /* Adds a boarder between sections */
 }
 
 html {

@@ -38,6 +38,7 @@ const ProjectDescription = styled.p`
   margin: 10px 0;
   padding-left: 40px;
   padding-right: 40px;
+  text-align: left;
 `;
 
 const ProjectLink = styled.a`

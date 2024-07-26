@@ -13,7 +13,7 @@ const Nav = styled.nav`
 `;
 
 const NavLink = styled.a`
-  float: left;
+  float: right;
   display: block;
   color: #f2f2f2;
   text-align: center;

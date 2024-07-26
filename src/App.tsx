@@ -3,7 +3,6 @@ import styled from 'styled-components';
 import GlobalStyle from './globalStyles';
 import './App.css';
 import Navbar from './components/Navbar/Navbar';
-import HeroImage from './components/HeroImage/HeroImage';
 import Project from './components/Project/Project';
 import ProjectModal from './components/ProjectModal/ProjectModal';
 import Skills from './components/Skills/Skills';
@@ -28,7 +27,7 @@ const AppContainer = styled.div`
 
 const Section = styled.section`
   text-align: center;
-  padding: 50px 0;
+  padding: 15px 0;
   background-color: #1a1a1a;
   color: #ddd;
 `;
@@ -72,7 +71,7 @@ const App = () => {
   };
 
   const navbarLinks = [
-    { name: 'Home', url: '#home' },
+    { name: 'Home', url: '#about' },
     { name: 'Projects', url: '#projects' },
     { name: 'Skills', url: '#skills' },
     { name: 'Resources', url: '#resources' },
@@ -89,14 +88,8 @@ const App = () => {
       <GlobalStyle />
       <AppContainer>
         <Navbar links={navbarLinks} />
-        <Section id="home">
-          <HeroImage
-            bgImage="/images/hero.jpg"
-            text="Welcome to My Portfolio"
-          />
-          <Section id="about">
-            <BasicInformation />
-          </Section>
+        <Section id="about">
+          <BasicInformation />
         </Section>
         <Section id="projects">
           <Container>

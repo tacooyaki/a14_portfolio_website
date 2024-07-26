@@ -1,15 +1,14 @@
-// Placeholder for projects/resources/devsetup with example descriptions. Change once you have details. P.M
-import { DiRuby, DiPostgresql, DiHtml5 } from 'react-icons/di';
-import { SiJavascript, SiBulma } from 'react-icons/si';
-import { BsFiletypeScss } from 'react-icons/bs';
 import {
-  FaReact,
-  FaNodeJs,
-  FaPython,
-  FaJava,
-  FaCss3Alt,
-  FaDocker,
-} from 'react-icons/fa';
+  DiRuby,
+  DiPostgresql,
+  DiHtml5,
+  DiPhp,
+  DiJqueryUiLogo,
+  DiBootstrap,
+} from 'react-icons/di';
+import { SiJavascript, SiBulma, SiMysql } from 'react-icons/si';
+import { BsFiletypeScss } from 'react-icons/bs';
+import { FaReact, FaPython, FaJava, FaDocker } from 'react-icons/fa';
 import {
   SiTypescript,
   SiNextdotjs,
@@ -24,7 +23,8 @@ export const projects = [
   {
     title: 'E-commerce Web Application',
     subtitle: 'Ruby and Ruby on Rails',
-    description: 'This is a project built with Ruby on Rails and PostgreSQL.',
+    description:
+      'This e-commerce platform built on Ruby on Rails. It utilizes Bulma and includes a product management system, dynamic shopping cart, and secure checkout. Key features include real-time form validation, AJAX-driven interactions, and extensive user account management.',
     images: [
       '/images/ecomm1.png',
       '/images/ecomm2.png',
@@ -32,8 +32,8 @@ export const projects = [
       '/images/ecomm4.png',
       '/images/ecomm5.png',
     ],
-    link: 'https://project1.com',
-    techList: ['Ruby on Rails', 'PostgreSQL', 'Other tech...'],
+    link: 'https://github.com/tacooyaki/ERProject',
+    techList: ['Ruby on Rails', 'PostgreSQL', 'Scss'],
     techIcons: [
       DiRuby,
       DiPostgresql,
@@ -48,7 +48,8 @@ export const projects = [
   {
     title: 'Custom CMS - Secadia Mycological Society',
     subtitle: 'PHP & CSS',
-    description: 'This is a project built using PHP and so on',
+    description:
+      'This CMS utilizes PHP and MySQL to manage mycological data. Using the AMP stack, it offers role-based access control, enabling administrators and researchers to manage detailed mushroom records. Features include advanced search, user comments, and image management.',
     images: [
       '/images/cms1.png',
       '/images/cms2.png',
@@ -56,9 +57,9 @@ export const projects = [
       '/images/cms4.png',
       '/images/cms5.png',
     ],
-    link: 'https://project2.com',
-    techList: ['PHP', 'CSS', 'HTML'],
-    techIcons: [FaReact, FaNodeJs, FaCss3Alt],
+    link: 'https://github.com/tacooyaki/Secadia_CMS',
+    techList: ['PHP', 'Mysql', 'Bootstrap'],
+    techIcons: [DiPhp, SiMysql, DiHtml5, DiJqueryUiLogo, DiBootstrap],
   },
   {
     title: 'Interactive Data Visualization App',

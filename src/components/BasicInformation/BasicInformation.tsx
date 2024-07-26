@@ -27,8 +27,8 @@ const TextContainer = styled.div`
 `;
 
 const IntroText = styled.p`
-  font-size: 1.2rem;
-  margin-bottom: 10px;
+  font-size: 1.1rem;
+  margin-bottom: 20px;
   color: #ccc;
 `;
 
@@ -37,13 +37,13 @@ const Title = styled.h1`
   margin-bottom: 20px;
   color: white;
   @media (min-width: 768px) {
-    font-size: 4rem;
+    font-size: 3.9rem;
   }
 `;
 
 const Subtitle = styled.p`
   margin-bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   line-height: 1.5;
   color: #ddd;
 `;
@@ -91,8 +91,8 @@ const BasicInformation: React.FC = () => {
       <Container>
         <TextContainer>
           <Title>
-            <IntroText>Hi, I&apos;m Patrick Mercredi.</IntroText>I create
-            innovative web solutions.
+            <IntroText>Hi, my name is Patrick Mercredi.</IntroText>I create
+            innovative web solutions
           </Title>
           <Subtitle>
             I&apos;m a full stack web developer specializing in creating
@@ -110,7 +110,7 @@ const BasicInformation: React.FC = () => {
           </ButtonContainer>
         </TextContainer>
         <ImageContainer>
-          <Image src="./coding.svg" alt="Coding" />
+          <Image src="./images/hero.jpg" alt="Coding" />
         </ImageContainer>
       </Container>
     </Section>
