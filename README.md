@@ -4,7 +4,7 @@ This project includes a Create React App to display a portfolio website.
 
 ## Getting Started
 
-### Prerequisites
+### Prereqs
 
 - Docker must be installed on your local machine.
 
