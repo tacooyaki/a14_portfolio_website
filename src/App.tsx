@@ -81,9 +81,8 @@ const App = () => {
   ];
 
   const handleContactSubmit = (data: ContactFormData) => {
-    alert(`Message sent: ${JSON.stringify(data, null, 2)}`);
+    console.log('Form submitted:', data);
   };
-
   return (
     <>
       <GlobalStyle />
