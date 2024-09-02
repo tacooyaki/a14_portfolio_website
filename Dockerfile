@@ -2,7 +2,7 @@
 FROM node:latest
 
 # Set the working directory
-WORKDIR /usr/src/app/lastName_firstName_fs
+WORKDIR /usr/src/app/mercredi_patrick_final_site
 
 # Copy package.json and package-lock.json
 COPY package*.json ./
