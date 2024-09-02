@@ -81,7 +81,9 @@ const App = () => {
   ];
 
   const handleContactSubmit = (data: ContactFormData) => {
-    console.log('Form submitted:', data);
+    alert(
+      `Thank you, ${data.name}! Your message has been sent. We will contact you at ${data.email} soon.`,
+    );
   };
   return (
     <>
