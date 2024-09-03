@@ -14,7 +14,7 @@ import DeveloperSetup from './components/DeveloperSetup/DeveloperSetup';
 import Footer from './components/Footer/Footer';
 import BasicInformation from './components/BasicInformation/BasicInformation';
 import { projects, resources, developerSetup, skills } from './data';
-import { ContactFormData } from './components/ContactForm/ContactForm.types';
+//import { ContactFormData } from './components/ContactForm/ContactForm.types';
 import { ProjectProps } from './components/Project';
 import { PiGearFineBold } from 'react-icons/pi';
 import { GiBlackBelt } from 'react-icons/gi';
@@ -80,11 +80,6 @@ const App = () => {
     { name: 'Home', url: '#about' },
   ];
 
-  const handleContactSubmit = (data: ContactFormData) => {
-    alert(
-      `Thank you, ${data.name}! Your message has been sent. We will contact you at ${data.email} soon.`,
-    );
-  };
   return (
     <>
       <GlobalStyle />
@@ -149,7 +144,7 @@ const App = () => {
               <IoMdContact />
             </Title>
             <Title>Contact</Title>
-            <ContactForm onSubmit={handleContactSubmit} />
+            <ContactForm />
           </Container>
         </Section>
         {selectedProject && (

@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
+// ContactForm.tsx
+import React, { useState, ChangeEvent, FormEvent } from 'react';
 import styled from 'styled-components';
-import { ContactFormProps } from './ContactForm.types';
+//import { ContactFormProps } from './ContactForm.types';
 
 const FormContainer = styled.form`
   display: flex;
@@ -39,17 +40,33 @@ const Button = styled.button`
   }
 `;
 
-const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [message, setMessage] = useState('');
+const ContactForm: React.FC = () => {
+  const [formState, setFormState] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (
+    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  ) => {
+    setFormState({ ...formState, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    onSubmit({ name, email, message });
-    setName('');
-    setEmail('');
-    setMessage('');
+
+    const form = e.target as HTMLFormElement;
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data as Record<string, string>).toString(),
+    })
+      .then(() => alert('Success!'))
+      .catch((error) => alert(error));
   };
 
   return (
@@ -63,28 +80,28 @@ const ContactForm: React.FC<ContactFormProps> = ({ onSubmit }) => {
       <input type="hidden" name="form-name" value="contact" />
       <Input
         type="text"
-        placeholder="Your Name"
-        value={name}
-        onChange={(e) => setName(e.target.value)}
-        required
         name="name"
+        value={formState.name}
+        onChange={handleChange}
+        placeholder="Your Name"
+        required
       />
       <Input
         type="email"
-        placeholder="Your Email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
         name="email"
+        value={formState.email}
+        onChange={handleChange}
+        placeholder="Your Email"
+        required
       />
       <TextArea
-        placeholder="Your Message"
-        value={message}
-        onChange={(e) => setMessage(e.target.value)}
-        required
         name="message"
+        value={formState.message}
+        onChange={handleChange}
+        placeholder="Your Message"
+        required
       />
-      <Button type="submit">Send Message</Button>
+      <Button type="submit">Send</Button>
     </FormContainer>
   );
 };
